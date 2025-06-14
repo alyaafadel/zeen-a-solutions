@@ -1,4 +1,3 @@
-
 import { GraduationCap, ArrowRight, CheckCircle, Home, Book, Users, Award, Target, Code, TrendingUp, Headphones, Clock, Brain, Settings, Briefcase, UserCheck, Bot, Calendar, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -64,7 +63,7 @@ const TrainingServices = () => {
       icon: Code,
       features: ["تطوير المواقع الحديثة", "تطبيقات الموبايل", "قواعد البيانات", "البرمجة المتقدمة"],
       target: "للأفراد الراغبين في دخول مجال التقنية",
-      levels: ["مبتدئ", "متوسط", "متقدم"]
+      price: "حسب المستوى والمدة"
     },
     {
       title: "تدريب التسويق الإلكتروني",
@@ -73,7 +72,7 @@ const TrainingServices = () => {
       icon: TrendingUp,
       features: ["إدارة وسائل التواصل", "الإعلانات المدفوعة", "تحسين محركات البحث", "تحليل البيانات والمبيعات"],
       target: "للأفراد والمسوقين الجدد",
-      levels: ["أساسي", "متقدم", "خبير"]
+      price: "حسب البرنامج المختار"
     },
     {
       title: "تدريب الموارد البشرية",
@@ -82,7 +81,7 @@ const TrainingServices = () => {
       icon: Users,
       features: ["التوظيف والاختيار الذكي", "إدارة الأداء", "التدريب والتطوير", "قوانين العمل السعودية"],
       target: "للأفراد الراغبين في العمل بالموارد البشرية",
-      levels: ["مبتدئ", "متوسط", "متخصص"]
+      price: "حسب مستوى التخصص"
     },
     {
       title: "تدريب الذكاء الاصطناعي للأفراد",
@@ -91,7 +90,7 @@ const TrainingServices = () => {
       icon: Bot,
       features: ["استخدام أدوات الذكاء الاصطناعي", "تطوير المحتوى بالذكاء الاصطناعي", "أتمتة المهام الشخصية", "بناء حلول ذكية"],
       target: "للأفراد في جميع المجالات",
-      levels: ["مبتدئ", "متقدم"]
+      price: "حسب مستوى التدريب"
     }
   ];
 
@@ -263,30 +262,28 @@ const TrainingServices = () => {
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {individualTraining.map((course, index) => (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white">
-                <CardHeader className="bg-slate-50 text-center">
-                  <div className="w-16 h-16 bg-slate-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <course.icon className="h-8 w-8 text-white" />
-                  </div>
-                  <CardTitle className="text-xl text-slate-700 mb-2">{course.title}</CardTitle>
-                  <CardDescription className="text-slate-600 text-base">
-                    {course.description}
-                  </CardDescription>
-                  <div className="mt-4 pt-4 border-t border-slate-200">
-                    <div className="text-sm text-slate-500 mb-2">المدة: {course.duration}</div>
-                    <div className="text-sm text-slate-700 font-medium mb-2">{course.target}</div>
-                    <div className="flex gap-2 justify-center">
-                      {course.levels.map((level, levelIndex) => (
-                        <span key={levelIndex} className="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">
-                          {level}
-                        </span>
-                      ))}
+              <Card key={index} className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+                <CardHeader>
+                  <div className="flex items-start space-x-4 space-x-reverse">
+                    <div className="w-14 h-14 bg-slate-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <course.icon className="h-7 w-7 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <CardTitle className="text-xl text-slate-700 mb-2">{course.title}</CardTitle>
+                      <CardDescription className="text-slate-600 text-base mb-3">
+                        {course.description}
+                      </CardDescription>
+                      <div className="flex justify-between text-sm mb-2">
+                        <span className="text-slate-500">المدة: {course.duration}</span>
+                        <span className="text-slate-600 font-medium">{course.price}</span>
+                      </div>
+                      <div className="text-sm text-slate-700 font-medium">{course.target}</div>
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent className="pt-6">
+                <CardContent>
                   <div className="grid grid-cols-1 gap-2 mb-6">
                     {course.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center space-x-2 space-x-reverse text-sm">
