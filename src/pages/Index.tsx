@@ -77,7 +77,7 @@ const Index = () => {
             <div className="flex items-center space-x-3 space-x-reverse">
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/8838bb20-a5cc-4ab1-9fce-30cdb0f93521.png" 
+                  src="/lovable-uploads/0d3776e6-7b4a-4e6a-8a39-8a3f4e987156.png" 
                   alt="Zeen A Plus Solutions Logo" 
                   className="w-12 h-12 object-contain"
                 />
