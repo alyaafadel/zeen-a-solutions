@@ -56,7 +56,7 @@ const TranslationServices = () => {
                 <span>الرئيسية</span>
               </Button>
               <span className="text-gray-400">/</span>
-              <Languages className="h-5 w-5 text-blue-600" />
+              <Languages className="h-5 w-5 text-blue-500" />
               <span className="font-semibold text-gray-800">خدمات الترجمة</span>
             </div>
             <WhatsAppButton 
@@ -72,10 +72,10 @@ const TranslationServices = () => {
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
-            <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-blue-600 rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-lg">
+            <div className="w-24 h-24 bg-gradient-to-r from-blue-400 to-blue-500 rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-lg">
               <Languages className="h-12 w-12 text-white" />
             </div>
-            <h1 className="text-5xl font-bold text-blue-800 mb-6">خدمات الترجمة الاحترافية</h1>
+            <h1 className="text-5xl font-bold text-blue-700 mb-6">خدمات الترجمة الاحترافية</h1>
             <p className="text-xl text-blue-600 mb-12 leading-relaxed">
               نقدم خدمات ترجمة احترافية ومعتمدة للوثائق الرسمية والأكاديمية والتجارية بأعلى معايير الجودة والدقة
             </p>
@@ -86,12 +86,12 @@ const TranslationServices = () => {
       {/* Services Grid */}
       <section className="py-16 bg-white/50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-blue-800 mb-12">خدماتنا المتخصصة</h2>
+          <h2 className="text-3xl font-bold text-center text-blue-700 mb-12">خدماتنا المتخصصة</h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {translationServices.map((service, index) => (
               <Card key={index} className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
                 <CardHeader className="bg-blue-50 pb-6">
-                  <CardTitle className="text-2xl text-blue-800 mb-2 text-right">{service.title}</CardTitle>
+                  <CardTitle className="text-2xl text-blue-700 mb-2 text-right">{service.title}</CardTitle>
                   <CardDescription className="text-blue-600 leading-relaxed text-base text-right">
                     {service.description}
                   </CardDescription>
@@ -108,7 +108,7 @@ const TranslationServices = () => {
                   <div className="grid grid-cols-2 gap-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center space-x-2 space-x-reverse text-sm">
-                        <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-blue-500 flex-shrink-0" />
                         <span className="text-blue-600">{feature}</span>
                       </div>
                     ))}
@@ -130,15 +130,15 @@ const TranslationServices = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <Globe className="h-16 w-16 text-blue-600 mx-auto mb-4" />
-            <h3 className="text-3xl font-bold text-blue-800 mb-4">اللغات المدعومة</h3>
+            <Globe className="h-16 w-16 text-blue-500 mx-auto mb-4" />
+            <h3 className="text-3xl font-bold text-blue-700 mb-4">اللغات المدعومة</h3>
             <p className="text-xl text-blue-600">نقدم خدمات الترجمة بين مختلف اللغات العالمية</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {supportedLanguages.map((language, index) => (
               <div key={index} className="text-center p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                <div className="text-lg font-semibold text-blue-800">{language}</div>
+                <div className="text-lg font-semibold text-blue-700">{language}</div>
               </div>
             ))}
           </div>
@@ -146,7 +146,7 @@ const TranslationServices = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-700 text-white">
+      <section className="py-20 bg-gradient-to-br from-blue-500 to-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h3 className="text-4xl font-bold mb-4">هل تحتاج إلى ترجمة احترافية؟</h3>
           <p className="text-xl mb-8 opacity-90">تواصل معنا الآن واحصل على عرض سعر مخصص</p>

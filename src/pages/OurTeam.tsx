@@ -97,13 +97,13 @@ const OurTeam = () => {
             <Button
               variant="ghost"
               onClick={() => navigate('/')}
-              className="flex items-center space-x-2 space-x-reverse text-blue-700 hover:text-blue-800"
+              className="flex items-center space-x-2 space-x-reverse text-blue-600 hover:text-blue-700"
             >
               <ArrowLeft className="h-5 w-5" />
               <span>العودة للرئيسية</span>
             </Button>
             <div className="text-center">
-              <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+              <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
                 فريقنا المتميز
               </h1>
               <p className="text-blue-600 mt-2">الخبراء المؤسسون وراء نجاح Zeen A Plus Solutions</p>
@@ -114,7 +114,7 @@ const OurTeam = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-700 to-blue-800 text-white">
+      <section className="py-16 bg-gradient-to-r from-blue-500 to-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">نحن فريق من الخبراء المتخصصين</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
@@ -128,16 +128,16 @@ const OurTeam = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-blue-800 mb-4">قيمنا المؤسسية</h3>
+            <h3 className="text-3xl font-bold text-blue-700 mb-4">قيمنا المؤسسية</h3>
             <p className="text-lg text-blue-600">المبادئ التي توجه عملنا وتحدد هويتنا</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {companyValues.map((value, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <value.icon className="h-8 w-8 text-white" />
                 </div>
-                <h4 className="text-xl font-bold text-blue-800 mb-2">{value.title}</h4>
+                <h4 className="text-xl font-bold text-blue-700 mb-2">{value.title}</h4>
                 <p className="text-blue-600">{value.description}</p>
               </div>
             ))}
@@ -149,7 +149,7 @@ const OurTeam = () => {
       <section className="py-20 bg-gradient-to-br from-blue-50 to-blue-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h3 className="text-4xl font-bold text-blue-800 mb-4">الخبراء المؤسسون</h3>
+            <h3 className="text-4xl font-bold text-blue-700 mb-4">الخبراء المؤسسون</h3>
             <p className="text-lg text-blue-600 max-w-3xl mx-auto">
               تعرف على فريق القيادة الذي يقود رؤية الشركة ويضع استراتيجيات النجاح
             </p>
@@ -159,10 +159,10 @@ const OurTeam = () => {
             {founders.map((founder, index) => (
               <Card key={index} className="group hover:shadow-2xl transition-all duration-500 bg-white border-0 shadow-lg overflow-hidden">
                 <CardHeader className="text-center pb-4">
-                  <div className="w-32 h-32 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl">
+                  <div className="w-32 h-32 bg-gradient-to-br from-blue-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl">
                     <Users className="h-16 w-16 text-white" />
                   </div>
-                  <h4 className="text-2xl font-bold text-blue-800 mb-2">{founder.name}</h4>
+                  <h4 className="text-2xl font-bold text-blue-700 mb-2">{founder.name}</h4>
                   <p className="text-lg font-semibold text-blue-600 mb-2">{founder.position}</p>
                   <p className="text-blue-600">{founder.expertise}</p>
                 </CardHeader>
@@ -177,12 +177,12 @@ const OurTeam = () => {
                   <div className="text-center">
                     <p className="text-sm text-blue-600 mb-3">{founder.education}</p>
                     
-                    <div className="space-y-2 text-sm text-blue-700">
-                      <h5 className="font-semibold text-blue-800">الإنجازات الرئيسية:</h5>
+                    <div className="space-y-2 text-sm text-blue-600">
+                      <h5 className="font-semibold text-blue-700">الإنجازات الرئيسية:</h5>
                       <ul className="space-y-1">
                         {founder.achievements.map((achievement, idx) => (
                           <li key={idx} className="flex items-start space-x-2 space-x-reverse">
-                            <span className="text-blue-500 mt-1">•</span>
+                            <span className="text-blue-400 mt-1">•</span>
                             <span>{achievement}</span>
                           </li>
                         ))}
@@ -218,7 +218,7 @@ const OurTeam = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-blue-700 to-blue-800 text-white">
+      <section className="py-16 bg-gradient-to-r from-blue-500 to-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h3 className="text-3xl font-bold mb-4">مستعدون لخدمتكم</h3>
           <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
@@ -228,7 +228,7 @@ const OurTeam = () => {
             <Button
               size="lg"
               onClick={() => navigate('/custom-request')}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              className="bg-blue-400 hover:bg-blue-500 text-white px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             >
               ابدأ مشروعك معنا
             </Button>
@@ -236,7 +236,7 @@ const OurTeam = () => {
               variant="outline"
               size="lg"
               onClick={() => navigate('/')}
-              className="border-white text-white hover:bg-white hover:text-blue-800 px-8 py-3 transition-all duration-300"
+              className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 transition-all duration-300"
             >
               تصفح خدماتنا
             </Button>
