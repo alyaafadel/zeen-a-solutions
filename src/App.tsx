@@ -16,6 +16,7 @@ import ProgrammingServices from "./pages/ProgrammingServices";
 import LogisticsServices from "./pages/LogisticsServices";
 import TrainingServices from "./pages/TrainingServices";
 import CareerServices from "./pages/CareerServices";
+import AIServices from "./pages/AIServices";
 import OurTeam from "./pages/OurTeam";
 import NotFound from "./pages/NotFound";
 
@@ -41,6 +42,7 @@ const App = () => (
           <Route path="/logistics-services" element={<LogisticsServices />} />
           <Route path="/training-services" element={<TrainingServices />} />
           <Route path="/career-services" element={<CareerServices />} />
+          <Route path="/ai-services" element={<AIServices />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -1,5 +1,5 @@
 
-import { Users, Languages, Megaphone, Code, Truck, GraduationCap, Briefcase, Star } from "lucide-react";
+import { Users, Languages, Megaphone, Code, Truck, GraduationCap, Briefcase, Star, Bot } from "lucide-react";
 import Header from "@/components/home/Header";
 import HeroSection from "@/components/home/HeroSection";
 import FeaturesSection from "@/components/home/FeaturesSection";
@@ -59,6 +59,18 @@ const Index = () => {
       iconColor: "text-blue-500",
       route: "/programming-services",
       features: ["المواقع الإلكترونية", "تطبيقات الجوال", "الأنظمة الإدارية", "الصيانة والدعم"]
+    },
+    {
+      title: "الذكاء الاصطناعي",
+      brandName: "Zeen AI Solutions",
+      logo: "🤖",
+      description: "استخدام تقنيات الذكاء الاصطناعي لتطوير الأعمال وزيادة الكفاءة للشركات والأفراد",
+      icon: Bot,
+      color: "from-blue-500 to-blue-600",
+      bgColor: "bg-blue-50",
+      iconColor: "text-blue-500",
+      route: "/ai-services",
+      features: ["أتمتة العمليات", "تحليل البيانات", "الذكاء الاصطناعي التوليدي", "الحلول المخصصة"]
     },
     {
       title: "الخدمات اللوجستية",
