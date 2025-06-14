@@ -1,4 +1,3 @@
-
 import { ArrowLeft, Target, Eye, Users, Award, Clock, MapPin, Lightbulb, Shield, Handshake, Star, TrendingUp, CheckCircle, Heart, Globe, Zap, UserPlus, Building2, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -46,12 +45,36 @@ const About = () => {
   ];
 
   const whyChooseUs = [
-    { text: "متخصصون في العمل مع الشركات الناشئة والمتوسطة", icon: Building2 },
-    { text: "نعمل كأعضاء في فريقكم، ليس كمورد خارجي", icon: UserPlus },
-    { text: "مسؤولية كاملة عن جودة الخدمة المقدمة", icon: Shield },
-    { text: "توفير تكلفة توظيف فريق كامل", icon: TrendingUp },
-    { text: "مرونة في التعامل مع المشاريع المختلفة", icon: Zap },
-    { text: "خبرة عملية في بيئة الأعمال السعودية", icon: Globe }
+    { 
+      text: "وفر 70% من تكلفة توظيف فريق كامل واحصل على نفس النتائج", 
+      icon: TrendingUp,
+      description: "بدلاً من دفع رواتب شهرية لفريق كامل، ادفع فقط مقابل العمل المنجز"
+    },
+    { 
+      text: "خبراء متخصصون جاهزون للعمل فوراً دون فترة تدريب", 
+      icon: Zap,
+      description: "لا تنتظر شهور لتوظيف وتدريب موظفين جدد، فريقنا جاهز من اليوم الأول"
+    },
+    { 
+      text: "مرونة كاملة في زيادة أو تقليل حجم العمل حسب احتياجاتك", 
+      icon: UserPlus,
+      description: "وسع فريقك في المواسم المزدحمة وقلصه في الأوقات الهادئة دون التزامات"
+    },
+    { 
+      text: "لا تكاليف إضافية: لا تأمينات، لا إجازات، لا مكاتب", 
+      icon: Shield,
+      description: "تخلص من جميع التكاليف الخفية المرتبطة بالتوظيف التقليدي"
+    },
+    { 
+      text: "نتائج مضمونة أو نعيد أموالك - نحن واثقون من جودة عملنا", 
+      icon: Award,
+      description: "ضمان كامل على جودة الخدمة المقدمة مع إمكانية استرداد المبلغ"
+    },
+    { 
+      text: "دعم مستمر 24/7 من فريق يفهم السوق السعودي", 
+      icon: Globe,
+      description: "تواصل مباشر مع خبراء محليين يفهمون ثقافة وتحديات الأعمال السعودية"
+    }
   ];
 
   return (
@@ -196,21 +219,50 @@ const About = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-700 mb-4">لماذا تختار Zeen A Plus Solutions؟</h2>
-            <div className="w-20 h-1 bg-slate-400 mx-auto mb-4"></div>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              مزايا فريدة تجعلنا الشريك المثالي للشركات التي تريد خبرات متخصصة بمرونة عالية
+            <div className="w-20 h-1 bg-slate-400 mx-auto mb-6"></div>
+            <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed mb-4">
+              <span className="font-semibold text-slate-700">توقف عن دفع رواتب شهرية لفرق كاملة</span> واحصل على خبرات متخصصة تعمل معك كأعضاء فريق بتكلفة أقل ومرونة أكبر
+            </p>
+            <p className="text-lg text-slate-500 max-w-3xl mx-auto leading-relaxed">
+              أكثر من 200 شركة وفرت مئات الآلاف واستفادت من خدماتنا المتخصصة
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {whyChooseUs.map((reason, index) => (
-              <div key={index} className="flex items-center space-x-4 space-x-reverse bg-slate-50 p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-slate-200">
-                <div className="w-12 h-12 bg-gradient-to-br from-slate-500 to-slate-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
-                  <reason.icon className="h-6 w-6 text-white" />
-                </div>
-                <p className="text-slate-600 font-medium leading-relaxed">{reason.text}</p>
-              </div>
+              <Card key={index} className="bg-slate-50 border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4 space-x-reverse">
+                    <div className="w-14 h-14 bg-gradient-to-br from-slate-500 to-slate-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+                      <reason.icon className="h-7 w-7 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-bold text-slate-700 mb-2 leading-tight">{reason.text}</h3>
+                      <p className="text-slate-600 leading-relaxed text-sm">{reason.description}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             ))}
+          </div>
+
+          {/* Added testimonial-style section */}
+          <div className="mt-16 text-center">
+            <div className="bg-slate-50 rounded-2xl p-8 max-w-4xl mx-auto border border-slate-200">
+              <div className="text-3xl text-slate-300 mb-4">"</div>
+              <p className="text-xl text-slate-600 leading-relaxed mb-6 italic">
+                "كنا نحتاج متخصص تسويق لـ 3 أشهر فقط. بدلاً من توظيف موظف براتب 8000 ريال شهرياً + تأمينات + تدريب، 
+                تعاملنا مع Zeen ووفرنا أكثر من 60% وحصلنا على نتائج أفضل من المتوقع"
+              </p>
+              <div className="flex items-center justify-center space-x-2 space-x-reverse">
+                <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <span className="text-slate-500 text-sm font-medium">- أحد شركائنا</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
