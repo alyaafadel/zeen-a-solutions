@@ -119,16 +119,16 @@ const About = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="py-6 bg-gradient-to-br from-slate-600 to-slate-700">
+      <section className="py-4 bg-gradient-to-br from-slate-600 to-slate-700">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-2xl md:text-3xl font-bold mb-3 text-white leading-tight">
+            <h1 className="text-3xl font-bold mb-3 text-white leading-tight">
               من نحن: Zeen A Plus Solutions
             </h1>
             <p className="text-lg text-slate-200 mb-4 leading-relaxed">
               في Zeen A Plus Solutions، نؤمن بأن النجاح في عالم الأعمال اليوم يتطلب مرونة استثنائية، وصولاً سريعاً للخبرات المتخصصة، وشراكات مبنية على الثقة والاحترافية.
             </p>
-            <p className="text-base text-slate-300 mb-6 leading-relaxed">
+            <p className="text-base text-slate-300 mb-4 leading-relaxed">
               نحن لسنا مجرد مزودين للخدمات، بل <span className="font-semibold text-white">شركاء استراتيجيون</span> ننضم إلى فريق عملكم لتقديم حلول متكاملة ومصممة خصيصاً لتلبية احتياجاتكم الفريدة وتحقيق أهدافكم الطموحة.
             </p>
             
@@ -150,31 +150,36 @@ const About = () => {
         </div>
       </section>
 
-      {/* Vision and Mission */}
-      <section className="py-6 bg-white">
+      {/* Vision */}
+      <section className="py-4 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto space-y-6">
-            {/* Vision */}
-            <div className="flex items-start space-x-4 space-x-reverse">
-              <div className="w-10 h-10 bg-gradient-to-br from-slate-500 to-slate-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Eye className="h-5 w-5 text-white" />
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-start space-x-4 space-x-reverse bg-slate-50 rounded-lg p-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Eye className="h-6 w-6 text-white" />
               </div>
               <div className="flex-1">
-                <h2 className="text-xl font-bold text-slate-700 mb-2">رؤيتنا</h2>
-                <p className="text-slate-600 leading-relaxed">
+                <h2 className="text-2xl font-bold text-blue-600 mb-3">رؤيتنا</h2>
+                <p className="text-slate-700 leading-relaxed text-lg">
                   أن نكون الشريك المفضل للشركات والأفراد الباحثين عن حلول مبتكرة وفعالة، تمكنهم من تجاوز التحديات وتحقيق أقصى إمكاناتهم في بيئة عمل متغيرة باستمرار.
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Mission */}
-            <div className="flex items-start space-x-4 space-x-reverse">
-              <div className="w-10 h-10 bg-gradient-to-br from-slate-500 to-slate-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Target className="h-5 w-5 text-white" />
+      {/* Mission */}
+      <section className="py-4 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-start space-x-4 space-x-reverse bg-white rounded-lg p-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Target className="h-6 w-6 text-white" />
               </div>
               <div className="flex-1">
-                <h2 className="text-xl font-bold text-slate-700 mb-2">رسالتنا</h2>
-                <p className="text-slate-600 leading-relaxed">
+                <h2 className="text-2xl font-bold text-blue-600 mb-3">رسالتنا</h2>
+                <p className="text-slate-700 leading-relaxed text-lg">
                   تقديم خدمات استشارية وتنفيذية عالية الجودة في مجالات متعددة، من خلال فريق من الخبراء المتخصصين الذين يعملون بمرونة وكفاءة، لضمان إنجاز المهام بدقة واحترافية، وتحقيق قيمة مضافة حقيقية لعملائنا.
                 </p>
               </div>
@@ -184,23 +189,23 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-6 bg-slate-50">
+      <section className="py-4 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-slate-700 mb-2">قيمنا الأساسية</h2>
+            <div className="text-center mb-4">
+              <h2 className="text-2xl font-bold text-blue-600 mb-2">قيمنا الأساسية</h2>
               <p className="text-slate-600">المبادئ التي تحكم طريقة عملنا وتوجه كل قراراتنا في رحلة الشراكة معكم</p>
             </div>
             
-            <div className="space-y-4">
+            <div className="space-y-3">
               {coreValues.map((value, index) => (
-                <div key={index} className="flex items-start space-x-4 space-x-reverse bg-white rounded-lg p-4 shadow-sm">
-                  <div className="w-10 h-10 bg-gradient-to-br from-slate-500 to-slate-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div key={index} className="flex items-start space-x-4 space-x-reverse bg-slate-50 rounded-lg p-4">
+                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <value.icon className="h-5 w-5 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-bold text-slate-700 mb-2">{value.title}</h3>
-                    <p className="text-slate-600 leading-relaxed">{value.description}</p>
+                    <h3 className="text-lg font-bold text-blue-600 mb-2">{value.title}</h3>
+                    <p className="text-slate-700 leading-relaxed">{value.description}</p>
                   </div>
                 </div>
               ))}
@@ -210,23 +215,23 @@ const About = () => {
       </section>
 
       {/* What Makes Us Different */}
-      <section className="py-6 bg-white">
+      <section className="py-4 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-slate-700 mb-2">ما يميزنا</h2>
+            <div className="text-center mb-4">
+              <h2 className="text-2xl font-bold text-blue-600 mb-2">ما يميزنا</h2>
               <p className="text-slate-600">نجمع بين الخبرة العميقة والمرونة الاستثنائية لنكون شركاؤكم الأمثل في تحقيق النجاح</p>
             </div>
             
-            <div className="space-y-4">
+            <div className="space-y-3">
               {whatMakesUsDifferent.map((item, index) => (
-                <div key={index} className="flex items-start space-x-4 space-x-reverse bg-slate-50 rounded-lg p-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-slate-500 to-slate-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div key={index} className="flex items-start space-x-4 space-x-reverse bg-white rounded-lg p-4">
+                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <item.icon className="h-5 w-5 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-bold text-slate-700 mb-2">{item.title}</h3>
-                    <p className="text-slate-600 leading-relaxed">{item.description}</p>
+                    <h3 className="text-lg font-bold text-blue-600 mb-2">{item.title}</h3>
+                    <p className="text-slate-700 leading-relaxed">{item.description}</p>
                   </div>
                 </div>
               ))}
@@ -236,17 +241,17 @@ const About = () => {
       </section>
 
       {/* How We Work */}
-      <section className="py-6 bg-slate-50">
+      <section className="py-4 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="flex items-start space-x-4 space-x-reverse bg-white rounded-lg p-6 shadow-sm">
-              <div className="w-12 h-12 bg-gradient-to-br from-slate-500 to-slate-600 rounded-lg flex items-center justify-center flex-shrink-0">
+            <div className="flex items-start space-x-4 space-x-reverse bg-slate-50 rounded-lg p-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                 <Users className="h-6 w-6 text-white" />
               </div>
               <div className="flex-1">
-                <h2 className="text-xl font-bold text-slate-700 mb-3">كيف نعمل؟</h2>
-                <p className="text-slate-600 leading-relaxed mb-4">
-                  نحن نعمل <span className="font-bold text-slate-700">كجزء من فريقكم</span>، نقدم الخبرة والدعم اللازمين لإنجاز المهام بكفاءة. 
+                <h2 className="text-2xl font-bold text-blue-600 mb-3">كيف نعمل؟</h2>
+                <p className="text-slate-700 leading-relaxed mb-3">
+                  نحن نعمل <span className="font-bold text-blue-600">كجزء من فريقكم</span>، نقدم الخبرة والدعم اللازمين لإنجاز المهام بكفاءة. 
                   سواء كنتم بحاجة إلى استشارات متخصصة، إدارة مشاريع، أو تنفيذ مهام محددة، فإننا هنا لتقديم الدعم الذي يمكنكم الاعتماد عليه.
                 </p>
                 <div className="flex items-center space-x-2 space-x-reverse">
@@ -264,12 +269,12 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-8 bg-gradient-to-br from-slate-600 to-slate-700">
+      <section className="py-6 bg-gradient-to-br from-blue-600 to-blue-700">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-3 text-white leading-tight">
             انضموا إلى قائمة شركائنا الناجحين
           </h2>
-          <p className="text-lg mb-6 text-slate-200 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg mb-6 text-blue-100 max-w-3xl mx-auto leading-relaxed">
             تواصلوا معنا اليوم لمناقشة كيف يمكن لـ Zeen A Plus Solutions أن تكون شريككم الأمثل في رحلة النجاح
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -278,13 +283,13 @@ const About = () => {
               message="مرحباً، أريد التعرف أكثر على خدماتكم وكيف يمكنكم أن تكونوا شركائنا في النجاح"
               variant="cta"
               text="تواصل معنا الآن"
-              className="bg-white text-slate-600 hover:bg-slate-50 border-0 px-6 py-2 text-base font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              className="bg-white text-blue-600 hover:bg-blue-50 border-0 px-6 py-2 text-base font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             />
             <Button
               variant="outline"
               size="lg"
               onClick={() => navigate('/')}
-              className="border-2 border-white text-white hover:bg-white hover:text-slate-600 px-6 py-2 text-base font-bold transition-all duration-300"
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 py-2 text-base font-bold transition-all duration-300"
             >
               اكتشف خدماتنا
             </Button>
