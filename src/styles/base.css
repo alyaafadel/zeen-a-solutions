@@ -1,0 +1,116 @@
+
+/* Base Styles */
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 1) 0%, 
+    rgba(224, 242, 247, 0.3) 50%, 
+    rgba(224, 242, 247, 0.5) 100%);
+  min-height: 100vh;
+}
+
+/* Typography improvements */
+p {
+  display: block;
+  clear: both;
+  margin-bottom: 1.5rem;
+  line-height: 1.75;
+  position: relative;
+  z-index: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  display: block;
+  clear: both;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+  position: relative;
+  z-index: 1;
+}
+
+section {
+  display: block;
+  clear: both;
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: visible;
+}
+
+ul, ol {
+  display: block;
+  clear: both;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+li {
+  display: list-item;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  position: relative;
+}
+
+/* Content container */
+.content-container {
+  display: block;
+  width: 100%;
+  clear: both;
+  position: relative;
+  overflow: visible;
+}
+
+.content-container > * {
+  display: block;
+  margin-bottom: 1.5rem;
+  clear: both;
+  position: relative;
+}
+
+/* Touch optimization */
+.touch-manipulation {
+  touch-action: manipulation;
+}
+
+/* Mobile improvements */
+@media (max-width: 768px) {
+  p {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    padding: 0 0.5rem;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.3;
+    padding: 0 0.5rem;
+  }
+
+  section {
+    padding: 2.5rem 0;
+    margin-bottom: 2.5rem;
+  }
+
+  ul, ol {
+    margin-bottom: 2.5rem;
+    padding-left: 1.25rem;
+  }
+  
+  li {
+    margin-bottom: 1.25rem;
+    line-height: 1.7;
+  }
+
+  button, .btn, [role="button"] {
+    min-height: 48px;
+    min-width: 48px;
+    touch-action: manipulation;
+  }
+}
