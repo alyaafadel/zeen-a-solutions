@@ -16,7 +16,7 @@ const Index = () => {
       logo: "👥",
       description: "خدمات شاملة في التوظيف والتدريب وإدارة الأداء لبناء فريق أحلامك",
       icon: Users,
-      color: "from-blue-400 to-blue-500",
+      color: "from-blue-500 to-blue-600",
       bgColor: "bg-blue-50",
       iconColor: "text-blue-500",
       route: "/hr-services",
@@ -28,7 +28,7 @@ const Index = () => {
       logo: "🌐",
       description: "ترجمة احترافية ودقيقة للوثائق الرسمية والأكاديمية بجودة عالية",
       icon: Languages,
-      color: "from-blue-400 to-blue-500",
+      color: "from-blue-500 to-blue-600",
       bgColor: "bg-blue-50",
       iconColor: "text-blue-500",
       route: "/translation-services", 
@@ -52,7 +52,7 @@ const Index = () => {
       logo: "💻",
       description: "تطوير مواقع وتطبيقات احترافية بأحدث التقنيات والمعايير العالمية",
       icon: Code,
-      color: "from-blue-400 to-blue-500",
+      color: "from-blue-500 to-blue-600",
       bgColor: "bg-blue-50",
       iconColor: "text-blue-500",
       route: "/programming-services",
@@ -76,7 +76,7 @@ const Index = () => {
       logo: "🎓",
       description: "برامج تدريبية متخصصة ومكثفة لتطوير المهارات المهنية والشخصية",
       icon: GraduationCap,
-      color: "from-blue-400 to-blue-500",
+      color: "from-blue-500 to-blue-600",
       bgColor: "bg-blue-50",
       iconColor: "text-blue-500",
       route: "/training-services",
@@ -165,7 +165,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-4 space-x-reverse">
-              <div className="w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-500 rounded-2xl flex items-center justify-center shadow-xl border-2 border-white">
+              <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-xl border-2 border-white">
                 <img 
                   src="/lovable-uploads/8838bb20-a5cc-4ab1-9fce-30cdb0f93521.png" 
                   alt="Zeen A Plus Solutions Logo" 
@@ -173,7 +173,7 @@ const Index = () => {
                 />
               </div>
               <div>
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">{companyInfo.name}</h1>
+                <h1 className="text-2xl font-bold text-blue-500">{companyInfo.name}</h1>
                 <p className="text-sm text-blue-500 font-medium">{companyInfo.slogan}</p>
               </div>
             </div>
@@ -182,7 +182,7 @@ const Index = () => {
                 href={companyInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="p-3 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                 title="تابعونا على LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
@@ -204,7 +204,7 @@ const Index = () => {
                 variant="ghost"
                 size="sm"
                 onClick={() => navigate('/about')}
-                className="text-blue-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-200 font-medium"
+                className="text-blue-500 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium"
               >
                 <Info className="ml-2 h-4 w-4" />
                 من نحن
@@ -214,7 +214,7 @@ const Index = () => {
                 variant="ghost"
                 size="sm"
                 onClick={() => navigate('/our-team')}
-                className="text-blue-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-200 font-medium"
+                className="text-blue-500 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium"
               >
                 <Users className="ml-2 h-4 w-4" />
                 فريقنا
@@ -225,7 +225,7 @@ const Index = () => {
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="text-blue-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-200 font-medium"
+                    className="text-blue-500 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium"
                   >
                     <Settings className="ml-2 h-4 w-4" />
                     خدماتنا
@@ -249,7 +249,7 @@ const Index = () => {
                 variant="ghost"
                 size="sm"
                 onClick={() => navigate('/join-us')}
-                className="text-blue-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-200 font-medium"
+                className="text-blue-500 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium"
               >
                 <UserPlus className="ml-2 h-4 w-4" />
                 انضم إلينا
@@ -260,7 +260,7 @@ const Index = () => {
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="text-blue-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-200 font-medium"
+                    className="text-blue-500 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium"
                   >
                     <Phone className="ml-2 h-4 w-4" />
                     تواصل معنا
@@ -271,21 +271,21 @@ const Index = () => {
                     onClick={() => handleContactOption('whatsapp')}
                     className="cursor-pointer"
                   >
-                    <MessageSquare className="ml-2 h-4 w-4 text-blue-600" />
+                    <MessageSquare className="ml-2 h-4 w-4 text-blue-500" />
                     <span>واتس آب</span>
                   </DropdownMenuItem>
                   <DropdownMenuItem 
                     onClick={() => handleContactOption('linkedin')}
                     className="cursor-pointer"
                   >
-                    <Linkedin className="ml-2 h-4 w-4 text-blue-600" />
+                    <Linkedin className="ml-2 h-4 w-4 text-blue-500" />
                     <span>لينكد إن</span>
                   </DropdownMenuItem>
                   <DropdownMenuItem 
                     onClick={() => handleContactOption('email')}
                     className="cursor-pointer"
                   >
-                    <Mail className="ml-2 h-4 w-4 text-blue-600" />
+                    <Mail className="ml-2 h-4 w-4 text-blue-500" />
                     <span>البريد الإلكتروني</span>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
@@ -295,7 +295,7 @@ const Index = () => {
                 variant="outline"
                 size="sm"
                 onClick={() => navigate('/custom-request')}
-                className="bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white border-0 px-6 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white border-0 px-6 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
               >
                 طلبك المخصص
               </Button>
@@ -306,13 +306,13 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 via-blue-500/10 to-blue-600/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-blue-500/10 to-blue-600/10"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 bg-clip-text text-transparent leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-blue-500 leading-tight">
               حلول متكاملة لنجاح أعمالك
             </h1>
-            <p className="text-xl md:text-2xl text-blue-600 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-blue-500 mb-8 leading-relaxed">
               نقدم خدمات احترافية متنوعة من الموارد البشرية إلى التطوير التقني والتسويق الرقمي لتحقيق أهدافك
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -327,7 +327,7 @@ const Index = () => {
                 variant="outline"
                 size="lg"
                 onClick={() => navigate('/about')}
-                className="px-8 py-3 text-lg border-2 border-blue-300 hover:border-blue-400 hover:text-blue-600 transition-all duration-300"
+                className="px-8 py-3 text-lg border-2 border-blue-500 hover:border-blue-600 text-blue-500 hover:text-blue-600 transition-all duration-300"
               >
                 اعرف المزيد عنا
               </Button>
@@ -336,9 +336,9 @@ const Index = () => {
         </div>
         
         {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-blue-200/30 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-16 h-16 bg-blue-300/30 rounded-full animate-pulse delay-75"></div>
-        <div className="absolute top-40 right-20 w-12 h-12 bg-blue-200/30 rounded-full animate-pulse delay-150"></div>
+        <div className="absolute top-20 left-10 w-20 h-20 bg-blue-500/30 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-16 h-16 bg-blue-500/30 rounded-full animate-pulse delay-75"></div>
+        <div className="absolute top-40 right-20 w-12 h-12 bg-blue-500/30 rounded-full animate-pulse delay-150"></div>
       </section>
 
       {/* Features Section */}
@@ -347,11 +347,11 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <feature.icon className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-blue-700 mb-2">{feature.title}</h3>
-                <p className="text-blue-600">{feature.description}</p>
+                <h3 className="text-xl font-bold text-blue-500 mb-2">{feature.title}</h3>
+                <p className="text-blue-500">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -362,8 +362,8 @@ const Index = () => {
       <section className="py-20 bg-gradient-to-br from-blue-50 to-blue-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-blue-700 mb-4">خدماتنا المتميزة</h2>
-            <p className="text-lg text-blue-600 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-blue-500 mb-4">خدماتنا المتميزة</h2>
+            <p className="text-lg text-blue-500 max-w-3xl mx-auto">
               نقدم مجموعة شاملة من الخدمات المهنية لتلبية جميع احتياجات شركتك
             </p>
           </div>
@@ -379,15 +379,15 @@ const Index = () => {
                   <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                     <service.icon className="h-8 w-8 text-white" />
                   </div>
-                  <CardTitle className="text-lg font-bold text-blue-700 group-hover:text-blue-600 transition-colors duration-300">
+                  <CardTitle className="text-lg font-bold text-blue-500 group-hover:text-blue-600 transition-colors duration-300">
                     {service.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
-                  <CardDescription className="text-blue-600 mb-4 leading-relaxed">
+                  <CardDescription className="text-blue-500 mb-4 leading-relaxed">
                     {service.description}
                   </CardDescription>
-                  <div className="flex items-center justify-center text-blue-600 group-hover:text-blue-500 transition-colors duration-300">
+                  <div className="flex items-center justify-center text-blue-500 group-hover:text-blue-600 transition-colors duration-300">
                     <span className="text-sm font-medium ml-2">اعرف المزيد</span>
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
@@ -423,14 +423,14 @@ const Index = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-blue-700 mb-6">لماذا تختار Zeen A Plus Solutions؟</h2>
-            <p className="text-lg text-blue-600 mb-8 leading-relaxed">
+            <h2 className="text-3xl font-bold text-blue-500 mb-6">لماذا تختار Zeen A Plus Solutions؟</h2>
+            <p className="text-lg text-blue-500 mb-8 leading-relaxed">
               {companyInfo.description}
             </p>
             <Button
               size="lg"
               onClick={() => navigate('/about')}
-              className="bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             >
               اعرف المزيد عن قصتنا
             </Button>
@@ -441,14 +441,14 @@ const Index = () => {
       {/* Join Us Section */}
       <section className="py-16 bg-gradient-to-br from-blue-50 to-blue-100">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-blue-700 mb-4">انضم إلى فريق المتميزين</h2>
-          <p className="text-lg text-blue-600 mb-8 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-blue-500 mb-4">انضم إلى فريق المتميزين</h2>
+          <p className="text-lg text-blue-500 mb-8 max-w-2xl mx-auto">
             هل تمتلك خبرة في أحد مجالاتنا؟ انضم إلى شبكة الفريلانسرز المتميزة لدينا
           </p>
           <Button
             size="lg"
             onClick={() => navigate('/join-us')}
-            className="bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
           >
             <UserPlus className="ml-2 h-5 w-5" />
             ابدأ رحلتك معنا
