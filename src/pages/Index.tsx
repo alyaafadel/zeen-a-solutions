@@ -1,8 +1,6 @@
-
 import { Users, Languages, Megaphone, Code, Truck, GraduationCap, Briefcase, Star, Bot, Scale } from "lucide-react";
 import Header from "@/components/home/Header";
 import HeroSection from "@/components/home/HeroSection";
-import FeaturesSection from "@/components/home/FeaturesSection";
 import ServicesSection from "@/components/home/ServicesSection";
 import StatsSection from "@/components/home/StatsSection";
 import AboutPreviewSection from "@/components/home/AboutPreviewSection";
@@ -91,17 +89,12 @@ const Index = () => {
       <Header services={services} companyInfo={companyInfo} />
       
       {/* Hero Section with reduced mobile spacing */}
-      <div className="mb-8 sm:mb-12 md:mb-16">
+      <div className="mb-6 sm:mb-8 md:mb-10">
         <HeroSection companyInfo={companyInfo} />
       </div>
       
-      {/* Features Section with reduced mobile spacing */}
+      {/* Services Section - now directly after Hero */}
       <div className="mb-12 sm:mb-16 md:mb-20">
-        <FeaturesSection />
-      </div>
-      
-      {/* Services Section with enhanced mobile spacing */}
-      <div className="mb-16 sm:mb-20 md:mb-24">
         <ServicesSection services={services} />
       </div>
       

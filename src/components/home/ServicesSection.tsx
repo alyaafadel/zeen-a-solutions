@@ -78,48 +78,48 @@ const ServicesSection = ({ services }: ServicesSectionProps) => {
   });
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-pattern-subtle">
+    <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-pattern-subtle">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-12 sm:mb-16 md:mb-20">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-brand-blue-dark mb-4 sm:mb-6">خدماتنا المتخصصة</h2>
-          <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed px-2 mb-3">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-blue-dark mb-3 sm:mb-4">خدماتنا المتخصصة</h2>
+          <p className="text-sm sm:text-base md:text-lg text-slate-600 max-w-4xl mx-auto leading-relaxed px-2 mb-2">
             نقدم خدمات احترافية متنوعة للشركات والأفراد - كشركاء متخصصين لإنجاز مهامكم دون الحاجة لتوظيف فرق دائمة
           </p>
-          <p className="text-sm sm:text-base text-brand-blue font-semibold">
+          <p className="text-xs sm:text-sm text-brand-blue font-semibold">
             كل خدمة مصممة خصيصاً لتحقيق أهدافكم وتوفير قيمة حقيقية لأعمالكم
           </p>
         </div>
 
         {/* تحسين الشبكة مع مساحات أقل */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
           {enhancedServices.map((service, index) => (
             <Card 
               key={index} 
               className="group cursor-pointer hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 bg-white/95 backdrop-blur-sm border-0 shadow-lg text-center h-full flex flex-col"
               onClick={() => navigate(service.route)}
             >
-              <CardHeader className="pb-3 sm:pb-4 flex-shrink-0">
-                <div className={`w-14 sm:w-16 h-14 sm:h-16 ${
+              <CardHeader className="pb-2 sm:pb-3 flex-shrink-0 px-3 sm:px-4 pt-3 sm:pt-4">
+                <div className={`w-12 sm:w-14 h-12 sm:h-14 ${
                   index % 3 === 0 ? 'bg-gradient-blue' : 
                   index % 3 === 1 ? 'bg-gradient-blue-light' : 
                   'bg-gradient-dark-blue'
-                } rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className="h-7 w-7 sm:h-8 sm:w-8 text-white" />
+                } rounded-2xl flex items-center justify-center mx-auto mb-2 sm:mb-3 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                  <service.icon className="h-6 w-6 sm:h-7 sm:w-7 text-white" />
                 </div>
-                <CardTitle className="text-lg sm:text-xl font-bold text-brand-blue-dark group-hover:text-brand-blue transition-colors duration-300 mb-2 sm:mb-3 px-2 leading-tight">
+                <CardTitle className="text-base sm:text-lg font-bold text-brand-blue-dark group-hover:text-brand-blue transition-colors duration-300 mb-1 sm:mb-2 px-1 leading-tight">
                   {service.title}
                 </CardTitle>
-                <CardDescription className="text-slate-600 leading-relaxed text-sm sm:text-base px-2">
+                <CardDescription className="text-slate-600 leading-relaxed text-xs sm:text-sm px-1 line-height-tight">
                   {service.description}
                 </CardDescription>
               </CardHeader>
               
               {service.benefits && (
-                <div className="px-3 sm:px-4 mb-3 flex-grow">
-                  <div className="text-xs sm:text-sm text-brand-blue font-semibold mb-2">المزايا الرئيسية:</div>
-                  <ul className="text-xs sm:text-sm text-slate-600 space-y-1">
+                <div className="px-2 sm:px-3 mb-2 flex-grow">
+                  <div className="text-xs text-brand-blue font-semibold mb-1">المزايا الرئيسية:</div>
+                  <ul className="text-xs text-slate-600 space-y-0.5">
                     {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center justify-center">
+                      <li key={idx} className="flex items-center justify-center leading-tight">
                         <span className="w-1 h-1 bg-brand-blue rounded-full mr-2 flex-shrink-0"></span>
                         {benefit}
                       </li>
@@ -128,7 +128,7 @@ const ServicesSection = ({ services }: ServicesSectionProps) => {
                 </div>
               )}
               
-              <CardContent className="pt-0 px-3 sm:px-4 mt-auto">
+              <CardContent className="pt-0 px-2 sm:px-3 mt-auto pb-3">
                 <WhatsAppButton 
                   phoneNumber="+966570513821"
                   message={`مرحباً، أريد الاستفسار عن خدمات ${service.title}`}
@@ -138,11 +138,11 @@ const ServicesSection = ({ services }: ServicesSectionProps) => {
                     index % 3 === 0 ? 'bg-gradient-blue hover:bg-brand-accent-blue' : 
                     index % 3 === 1 ? 'bg-gradient-blue-light hover:bg-brand-blue' : 
                     'bg-gradient-dark-blue hover:bg-brand-blue-dark'
-                  } text-white border-0 py-2 sm:py-2.5 mb-2 sm:mb-3 shadow-md hover:shadow-lg transition-all duration-300 text-sm sm:text-base`}
+                  } text-white border-0 py-1.5 sm:py-2 mb-2 shadow-md hover:shadow-lg transition-all duration-300 text-xs sm:text-sm`}
                 />
                 <div className="flex items-center justify-center text-slate-600 group-hover:text-brand-blue transition-colors duration-300">
-                  <span className="text-xs sm:text-sm font-medium ml-2">اعرف المزيد عن الخدمة</span>
-                  <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  <span className="text-xs font-medium ml-1">اعرف المزيد</span>
+                  <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform duration-300" />
                 </div>
               </CardContent>
             </Card>
