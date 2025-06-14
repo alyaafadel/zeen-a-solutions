@@ -4,7 +4,6 @@ import HeroSection from "@/components/home/HeroSection";
 import ServicesSection from "@/components/home/ServicesSection";
 import StatsSection from "@/components/home/StatsSection";
 import AboutPreviewSection from "@/components/home/AboutPreviewSection";
-import JoinUsSection from "@/components/home/JoinUsSection";
 import ContactSection from "@/components/home/ContactSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Footer from "@/components/Footer";
@@ -108,12 +107,7 @@ const Index = () => {
         <AboutPreviewSection companyInfo={companyInfo} />
       </div>
       
-      {/* Join Us Section with enhanced mobile spacing */}
-      <div className="mb-16 sm:mb-20 md:mb-24">
-        <JoinUsSection />
-      </div>
-      
-      {/* Contact Section */}
+      {/* Contact Section - now directly after About section */}
       <ContactSection companyInfo={companyInfo} />
 
       {/* Enhanced Floating WhatsApp Button - Mobile Optimized */}
