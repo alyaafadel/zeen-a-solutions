@@ -1,4 +1,4 @@
-import { Users, Languages, Megaphone, Code, Truck, ArrowRight, CheckCircle, MessageSquare } from "lucide-react";
+import { Users, Languages, Megaphone, Code, Truck, ArrowRight, CheckCircle, MessageSquare, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
@@ -67,6 +67,18 @@ const Index = () => {
       iconColor: "text-teal-600",
       route: "/logistics-services",
       features: ["التخزين والمستودعات", "النقل والتوصيل", "إدارة سلسلة التوريد", "خدمات 3PL"]
+    },
+    {
+      title: "التدريب المهني والتطوير",
+      brandName: "Zeen Learning Academy",
+      logo: "🎓",
+      description: "برامج تدريبية متخصصة لتطوير المهارات المهنية",
+      icon: GraduationCap,
+      color: "from-indigo-500 to-indigo-600",
+      bgColor: "bg-indigo-50",
+      iconColor: "text-indigo-600",
+      route: "/training-services",
+      features: ["دورات تدريبية متخصصة", "ورش عمل تطبيقية", "التدريب الرقمي", "شهادات معتمدة"]
     }
   ];
 
