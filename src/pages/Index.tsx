@@ -52,8 +52,7 @@ const Index = () => {
   ];
 
   const companyInfo = {
-    name: "شركة زين إيه بلس للحلول",
-    englishName: "Zeen A Plus Solutions",
+    name: "Zeen A Plus Solutions",
     slogan: "شريكك المتميز في النجاح والتطوير",
     phone: "+966123456789",
     email: "info@zeenaplusolutions.com",
@@ -73,7 +72,6 @@ const Index = () => {
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-gray-800">{companyInfo.name}</h1>
-                <p className="text-sm text-gray-500">{companyInfo.englishName}</p>
                 <p className="text-sm text-gray-600">{companyInfo.slogan}</p>
               </div>
             </div>
@@ -93,7 +91,6 @@ const Index = () => {
             <h2 className="text-6xl font-bold text-gray-800 mb-4">
               {companyInfo.name}
             </h2>
-            <p className="text-xl text-blue-600 font-semibold mb-2">{companyInfo.englishName}</p>
             <p className="text-2xl text-gray-700 font-medium mb-6">{companyInfo.slogan}</p>
           </div>
           
@@ -189,7 +186,7 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <WhatsAppButton 
               phoneNumber={companyInfo.whatsapp}
-              message="مرحباً، أريد الاستفسار عن خدمات شركة زين إيه بلس للحلول"
+              message="مرحباً، أريد الاستفسار عن خدمات Zeen A Plus Solutions"
               variant="cta"
               text="تواصل عبر الواتس آب"
             />
@@ -205,7 +202,7 @@ const Index = () => {
       <div className="fixed bottom-6 left-6 z-50">
         <WhatsAppButton 
           phoneNumber={companyInfo.whatsapp}
-          message="مرحباً، أريد الاستفسار عن خدمات شركة زين إيه بلس للحلول"
+          message="مرحباً، أريد الاستفسار عن خدمات Zeen A Plus Solutions"
           variant="floating"
           text="تحدث معنا"
         />
