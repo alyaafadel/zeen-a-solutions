@@ -1,110 +1,80 @@
 
-import { ArrowRight, CheckCircle, Mail, Phone, MapPin, Users, Target, Award, UserCheck, TrendingUp, Briefcase, MessageSquare, Globe, FileText, Calendar, Clock, Star } from "lucide-react";
+import { Users, ArrowRight, CheckCircle, Home, User, FileText, Clock, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import { useNavigate } from "react-router-dom";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const HRServices = () => {
   const navigate = useNavigate();
 
-  const mainServices = [
+  const hrServices = [
     {
-      title: "استقطاب وتوظيف المواهب",
-      description: "البحث عن أفضل المواهب والكفاءات المناسبة لشركتك، مع فحص شامل للمهارات والخبرات وضمان الجودة في الاختيار",
-      icon: Users,
-      specialist: "خبير التوظيف والاستقطاب",
-      services: ["البحث عن المواهب", "فحص وتقييم المرشحين", "إجراء المقابلات", "التحقق من المراجع"],
-      whatsappMessage: "مرحباً، أريد الاستفسار عن خدمات التوظيف والاستقطاب",
+      title: "الاستقطاب والتوظيف",
+      description: "خدمات شاملة لاستقطاب أفضل المواهب لشركتكم",
       duration: "2-4 أسابيع",
-      price: "من 500 ريال"
+      features: ["البحث عن المواهب", "إجراء المقابلات", "فحص المرشحين", "التوصية بالمرشحين المناسبين"]
     },
     {
-      title: "إعداد الهياكل التنظيمية",
-      description: "تصميم وبناء الهياكل التنظيمية المناسبة لطبيعة عملك، مع تحديد الأدوار والمسؤوليات وخطوط التواصل",
-      icon: Target,
-      specialist: "خبير التنظيم الإداري",
-      services: ["تصميم الهياكل التنظيمية", "تحديد الأدوار والمسؤوليات", "إعداد الوصف الوظيفي", "تحسين سير العمل"],
-      whatsappMessage: "مرحباً، أريد الاستفسار عن خدمات الهياكل التنظيمية",
-      duration: "1-2 أسبوع",
-      price: "من 300 ريال"
+      title: "تطوير السياسات والإجراءات",
+      description: "وضع السياسات والإجراءات الإدارية المناسبة",
+      duration: "3-6 أسابيع",
+      features: ["سياسات الموارد البشرية", "دليل الموظفين", "إجراءات العمل", "نظام الحوافز والمكافآت"]
     },
     {
-      title: "التدريب وتطوير الموظفين",
-      description: "برامج تدريبية مخصصة لتطوير مهارات فريق العمل وزيادة الإنتاجية، مع متابعة مستمرة لقياس التقدم",
-      icon: TrendingUp,
-      specialist: "مدرب الموارد البشرية",
-      services: ["تصميم البرامج التدريبية", "التدريب عن بُعد", "تقييم المهارات", "خطط التطوير الشخصي"],
-      whatsappMessage: "مرحباً، أريد الاستفسار عن خدمات التدريب والتطوير",
-      duration: "1-4 أسابيع",
-      price: "من 400 ريال"
+      title: "إدارة الأداء والتطوير",
+      description: "تقييم وتطوير أداء الموظفين بطرق علمية",
+      duration: "عملية مستمرة",
+      features: ["تقييم الأداء", "خطط التطوير", "برامج التدريب", "إدارة المواهب"]
     },
     {
-      title: "إدارة الأداء والتقييم",
-      description: "نظم متطورة لقياس وتقييم أداء الموظفين، مع إعداد تقارير شاملة وخطط تحسين الأداء المستمر",
-      icon: Award,
-      specialist: "خبير تقييم الأداء",
-      services: ["أنظمة تقييم الأداء", "تقارير الأداء", "خطط التحسين", "مراجعات دورية"],
-      whatsappMessage: "مرحباً، أريد الاستفسار عن خدمات إدارة الأداء",
-      duration: "2-3 أسابيع",
-      price: "من 600 ريال"
-    },
-    {
-      title: "استشارات الموارد البشرية",
-      description: "استشارات شاملة في جميع جوانب إدارة الموارد البشرية، من السياسات واللوائح إلى حل المشكلات الإدارية",
-      icon: UserCheck,
-      specialist: "مستشار الموارد البشرية",
-      services: ["وضع السياسات", "حل المشكلات الإدارية", "تحسين بيئة العمل", "الامتثال القانوني"],
-      whatsappMessage: "مرحباً، أريد الاستفسار عن الاستشارات الإدارية",
-      duration: "حسب المشروع",
-      price: "من 200 ريال"
-    },
-    {
-      title: "إعداد العقود والوثائق",
-      description: "صياغة عقود العمل والوثائق الرسمية بما يتوافق مع القوانين المحلية، مع ضمان حماية حقوق جميع الأطراف",
-      icon: FileText,
-      specialist: "أخصائي العقود والوثائق",
-      services: ["عقود العمل", "اللوائح الداخلية", "الوثائق القانونية", "مراجعة العقود"],
-      whatsappMessage: "مرحباً، أريد الاستفسار عن خدمات إعداد العقود",
-      duration: "3-7 أيام",
-      price: "من 150 ريال"
+      title: "الاستشارات الإدارية",
+      description: "استشارات متخصصة في إدارة الموارد البشرية",
+      duration: "حسب الحاجة",
+      features: ["تحليل الاحتياجات", "إعادة الهيكلة", "تحسين العمليات", "الامتثال القانوني"]
     }
   ];
 
-  const companyInfo = {
-    name: "خدمات الموارد البشرية المتخصصة",
-    phone: "+966123456789",
-    email: "hr.services@gmail.com",
-    whatsapp: "+966123456789"
-  };
+  const benefits = [
+    {
+      icon: User,
+      title: "خبرة متخصصة",
+      description: "فريق من خبراء الموارد البشرية مع سنوات من الخبرة"
+    },
+    {
+      icon: TrendingUp,
+      title: "نتائج مضمونة",
+      description: "نضمن تحسين كفاءة إدارة الموارد البشرية في شركتكم"
+    },
+    {
+      icon: FileText,
+      title: "حلول مخصصة",
+      description: "نقدم حلول مصممة خصيصاً لتناسب احتياجات شركتكم"
+    }
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100" dir="rtl">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100" dir="rtl">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b sticky top-0 z-50">
+      <header className="bg-white/80 backdrop-blur-sm shadow-sm border-b sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-4 space-x-reverse">
-              <Button 
-                variant="ghost" 
+            <div className="flex items-center space-x-2 space-x-reverse">
+              <Button
+                variant="ghost"
+                size="sm"
                 onClick={() => navigate('/')}
                 className="flex items-center space-x-2 space-x-reverse"
               >
-                <ArrowRight className="h-4 w-4 rotate-180" />
-                <span>العودة للرئيسية</span>
+                <Home className="h-4 w-4" />
+                <span>الرئيسية</span>
               </Button>
-              <div className="h-6 w-px bg-gray-300"></div>
-              <div className="flex items-center space-x-2 space-x-reverse">
-                <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <Users className="text-white h-5 w-5" />
-                </div>
-                <h1 className="text-xl font-bold text-gray-800">خدمات الموارد البشرية</h1>
-              </div>
+              <span className="text-gray-400">/</span>
+              <Users className="h-5 w-5 text-sky-500" />
+              <span className="font-semibold text-gray-800">خدمات الموارد البشرية</span>
             </div>
             <WhatsAppButton 
-              phoneNumber={companyInfo.whatsapp}
+              phoneNumber="+966123456789"
               message="مرحباً، أريد الاستفسار عن خدمات الموارد البشرية"
               variant="header"
             />
@@ -113,63 +83,73 @@ const HRServices = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="py-16">
+      <section className="py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-gray-800 mb-6">
-            خدمات <span className="text-blue-600">الموارد البشرية</span> الشاملة
-          </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-            نقدم مجموعة شاملة من خدمات الموارد البشرية المصممة خصيصاً لتلبية احتياجات شركتك
-          </p>
+          <div className="max-w-4xl mx-auto">
+            <div className="w-24 h-24 bg-gradient-to-r from-sky-400 to-sky-500 rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-lg">
+              <Users className="h-12 w-12 text-white" />
+            </div>
+            <h1 className="text-5xl font-bold text-sky-700 mb-6">خدمات الموارد البشرية</h1>
+            <p className="text-xl text-sky-600 mb-12 leading-relaxed">
+              نساعد الشركات في إدارة وتطوير مواردها البشرية بأحدث الممارسات العالمية وأفضل الحلول المتخصصة
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-16 bg-white">
+      {/* Benefits Section */}
+      <section className="py-16 bg-white/50">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-8">
-            {mainServices.map((service, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg overflow-hidden">
-                <CardHeader className="bg-gradient-to-r from-blue-50 to-purple-50 pb-6">
-                  <div className="flex items-center space-x-4 space-x-reverse mb-4">
-                    <div className="w-16 h-16 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full flex items-center justify-center">
-                      <service.icon className="h-8 w-8 text-blue-600" />
-                    </div>
-                    <div className="flex-1">
-                      <CardTitle className="text-xl text-gray-800 mb-1">{service.title}</CardTitle>
-                      <p className="text-sm text-blue-600 font-medium">{service.specialist}</p>
-                    </div>
-                  </div>
-                  <CardDescription className="text-gray-600 leading-relaxed text-base">
+          <h2 className="text-3xl font-bold text-center text-sky-700 mb-12">لماذا تختار خدماتنا؟</h2>
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-sky-400 to-sky-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <benefit.icon className="h-8 w-8 text-white" />
+                </div>
+                <h4 className="text-xl font-bold text-sky-700 mb-2">{benefit.title}</h4>
+                <p className="text-sky-600">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-sky-700 mb-12">خدماتنا المتخصصة</h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {hrServices.map((service, index) => (
+              <Card key={index} className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+                <CardHeader className="bg-sky-50 pb-6">
+                  <CardTitle className="text-2xl text-sky-700 mb-2 text-right">{service.title}</CardTitle>
+                  <CardDescription className="text-sky-600 leading-relaxed text-base text-right">
                     {service.description}
                   </CardDescription>
-                </CardHeader>
-                <CardContent className="pt-6">
-                  <div className="flex justify-between items-center mb-4">
-                    <div className="flex items-center space-x-2 space-x-reverse">
-                      <Clock className="h-4 w-4 text-gray-500" />
-                      <span className="text-sm text-gray-600">المدة: {service.duration}</span>
-                    </div>
-                    <div className="flex items-center space-x-2 space-x-reverse">
-                      <Star className="h-4 w-4 text-yellow-500" />
-                      <span className="text-sm font-semibold text-green-600">{service.price}</span>
+                  <div className="flex justify-between items-center mt-4 pt-4 border-t border-sky-200">
+                    <div className="text-right">
+                      <div className="text-sm text-sky-500 flex items-center">
+                        <Clock className="h-4 w-4 ml-1" />
+                        {service.duration}
+                      </div>
                     </div>
                   </div>
-                  
-                  <h4 className="font-semibold text-gray-800 mb-3">ما نقدمه:</h4>
-                  <div className="grid grid-cols-1 gap-2 mb-6">
-                    {service.services.map((item, serviceIndex) => (
-                      <div key={serviceIndex} className="flex items-center space-x-2 space-x-reverse text-sm">
-                        <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                        <span className="text-gray-600">{item}</span>
+                </CardHeader>
+                <CardContent className="pt-6">
+                  <div className="grid grid-cols-2 gap-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center space-x-2 space-x-reverse text-sm">
+                        <CheckCircle className="h-4 w-4 text-sky-500 flex-shrink-0" />
+                        <span className="text-sky-600">{feature}</span>
                       </div>
                     ))}
                   </div>
                   <WhatsAppButton 
-                    phoneNumber={companyInfo.whatsapp}
-                    message={service.whatsappMessage}
+                    phoneNumber="+966123456789"
+                    message={`مرحباً، أريد الاستفسار عن ${service.title}`}
                     variant="service"
-                    text="اطلب هذه الخدمة"
+                    text="اطلب الخدمة الآن"
                   />
                 </CardContent>
               </Card>
@@ -178,32 +158,32 @@ const HRServices = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20 bg-gray-50">
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-br from-sky-500 to-sky-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h3 className="text-3xl font-bold text-gray-800 mb-6">جاهز لبدء مشروعك؟</h3>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            تواصل معنا اليوم واحصل على استشارة مجانية في خدمات الموارد البشرية
-          </p>
+          <h3 className="text-4xl font-bold mb-4">استثمر في مواردك البشرية</h3>
+          <p className="text-xl mb-8 opacity-90">فريقنا المتخصص جاهز لمساعدتك في تطوير إدارة الموارد البشرية في شركتك</p>
           
-          <WhatsAppButton 
-            phoneNumber={companyInfo.whatsapp}
-            message="مرحباً، أريد الاستفسار عن خدمات الموارد البشرية بالتفصيل"
-            variant="cta"
-            text="ابدأ الآن - تواصل معنا"
-          />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <WhatsAppButton 
+              phoneNumber="+966123456789"
+              message="مرحباً، أريد استشارة مجانية حول خدمات الموارد البشرية"
+              variant="cta"
+              text="احصل على استشارة مجانية"
+              className="bg-white text-sky-600 hover:bg-gray-100"
+            />
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={() => navigate('/')}
+              className="border-white text-white hover:bg-white hover:text-sky-600 px-8"
+            >
+              <ArrowRight className="ml-2 h-5 w-5" />
+              العودة للرئيسية
+            </Button>
+          </div>
         </div>
       </section>
-
-      {/* Floating WhatsApp Button */}
-      <div className="fixed bottom-6 left-6 z-50">
-        <WhatsAppButton 
-          phoneNumber={companyInfo.whatsapp}
-          message="مرحباً، أريد الاستفسار عن خدمات الموارد البشرية"
-          variant="floating"
-          text="تحدث معنا"
-        />
-      </div>
     </div>
   );
 };

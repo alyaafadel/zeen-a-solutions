@@ -1,5 +1,5 @@
 
-import { Truck, Shield, CheckCircle, Users, TrendingUp, Clock, ArrowLeft, MessageSquare, Warehouse, MapPin, Package } from "lucide-react";
+import { Truck, ArrowRight, CheckCircle, Home, Package, MapPin, Clock, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
@@ -10,107 +10,75 @@ const LogisticsServices = () => {
 
   const logisticsServices = [
     {
-      title: "النقل والتوصيل",
-      description: "حلول نقل موثوقة وفعالة لتلبية احتياجات عملك",
-      icon: Truck,
-      features: ["أسطول حديث من الشاحنات", "تغطية واسعة النطاق", "تتبع الشحنات في الوقت الفعلي", "توصيل سريع وآمن"],
-      color: "from-teal-500 to-teal-600"
+      title: "خدمات النقل والشحن",
+      description: "نقل آمن وسريع للبضائع داخل وخارج المملكة",
+      duration: "حسب الوجهة",
+      features: ["الشحن المحلي", "الشحن الدولي", "النقل السريع", "التتبع المباشر"]
     },
     {
-      title: "التخزين والمستودعات",
-      description: "مرافق تخزين آمنة وحلول إدارة مخزون متكاملة",
-      icon: Warehouse,
-      features: ["مستودعات حديثة ومجهزة", "إدارة المخزون بكفاءة", "أنظمة أمان متقدمة", "تقارير دورية"],
-      color: "from-blue-500 to-blue-600"
+      title: "إدارة سلسلة التوريد",
+      description: "حلول شاملة لإدارة وتحسين سلسلة التوريد",
+      duration: "مستمر",
+      features: ["تخطيط التوريد", "إدارة المخزون", "تحسين التكاليف", "تحليل الأداء"]
     },
     {
-      title: "التخليص الجمركي",
-      description: "تخليص جمركي سريع وسهل لضمان وصول شحناتك في الوقت المحدد",
-      icon: CheckCircle,
-      features: ["إجراءات تخليص مبسطة", "خبرة في جميع أنواع الشحنات", "التزام باللوائح والقوانين", "استشارات جمركية"],
-      color: "from-green-500 to-green-600"
+      title: "خدمات التخزين",
+      description: "مستودعات آمنة ومجهزة بأحدث التقنيات",
+      duration: "شهري/سنوي",
+      features: ["تخزين آمن", "إدارة المخزون", "مراقبة الحرارة", "نظام أمني متقدم"]
     },
     {
-      title: "إدارة سلسلة الإمداد",
-      description: "حلول متكاملة لإدارة سلسلة الإمداد بكفاءة وفعالية",
-      icon: Users,
-      features: ["تحسين العمليات اللوجستية", "تقليل التكاليف", "زيادة الكفاءة", "التخطيط الاستراتيجي"],
-      color: "from-purple-500 to-purple-600"
-    },
-    {
-      title: "حلول التجارة الإلكترونية",
-      description: "حلول لوجستية متكاملة لدعم نمو تجارتك الإلكترونية",
-      icon: TrendingUp,
-      features: ["تكامل مع منصات التجارة الإلكترونية", "توصيل سريع وموثوق", "إدارة المرتجعات", "خدمة العملاء"],
-      color: "from-orange-500 to-orange-600"
-    },
-    {
-      title: "خدمات 3PL المتخصصة",
-      description: "خدمات طرف ثالث شاملة لإدارة جميع عملياتك اللوجستية",
-      icon: Package,
-      features: ["إدارة شاملة للخدمات اللوجستية", "تقليل التكاليف التشغيلية", "مرونة في التوسع", "تقارير تحليلية مفصلة"],
-      color: "from-indigo-500 to-indigo-600"
+      title: "الاستشارات اللوجستية",
+      description: "استشارات متخصصة لتحسين العمليات اللوجستية",
+      duration: "مشاريع",
+      features: ["تحليل العمليات", "تحسين الطرق", "تقليل التكاليف", "زيادة الكفاءة"]
     }
   ];
 
-  const features = [
+  const serviceAreas = [
+    "الرياض", "جدة", "الدمام", "مكة المكرمة", "المدينة المنورة", "تبوك", "أبها", "جميع مناطق المملكة"
+  ];
+
+  const benefits = [
     {
       icon: Shield,
-      title: "أمان موثوق",
-      description: "نضمن سلامة شحناتك بأعلى معايير الأمان"
+      title: "أمان وموثوقية",
+      description: "نضمن وصول بضائعكم بأمان وفي الوقت المحدد"
     },
     {
       icon: Clock,
       title: "توقيت دقيق",
-      description: "التزام بالمواعيد المحددة وتسليم في الوقت المناسب"
+      description: "التزام بمواعيد التسليم مع إمكانية التتبع المباشر"
     },
     {
-      icon: MapPin,
-      title: "تغطية شاملة",
-      description: "شبكة واسعة تغطي جميع مناطق المملكة"
-    },
-    {
-      icon: TrendingUp,
-      title: "كفاءة عالية",
-      description: "حلول مبتكرة لتحسين أداء سلسلة التوريد"
+      icon: Package,
+      title: "عناية فائقة",
+      description: "التعامل مع البضائع بأعلى معايير الجودة والحماية"
     }
   ];
 
-  const companyInfo = {
-    name: "Zeen Logistics & 3PL",
-    phone: "+966570513821",
-    whatsapp: "+966570513821",
-    location: "الرياض، المملكة العربية السعودية"
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50 to-blue-100" dir="rtl">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100" dir="rtl">
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-sm shadow-sm border-b sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-4 space-x-reverse">
+            <div className="flex items-center space-x-2 space-x-reverse">
               <Button
                 variant="ghost"
+                size="sm"
                 onClick={() => navigate('/')}
                 className="flex items-center space-x-2 space-x-reverse"
               >
-                <ArrowLeft className="h-5 w-5" />
-                <span>العودة للرئيسية</span>
+                <Home className="h-4 w-4" />
+                <span>الرئيسية</span>
               </Button>
-              <div className="h-6 w-px bg-gray-300"></div>
-              <div className="flex items-center space-x-3 space-x-reverse">
-                <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-teal-600 rounded-xl flex items-center justify-center shadow-lg">
-                  <Truck className="text-white h-6 w-6" />
-                </div>
-                <div>
-                  <h1 className="text-xl font-bold text-gray-800">{companyInfo.name}</h1>
-                  <p className="text-sm text-gray-600">{companyInfo.location}</p>
-                </div>
-              </div>
+              <span className="text-gray-400">/</span>
+              <Truck className="h-5 w-5 text-sky-500" />
+              <span className="font-semibold text-gray-800">الخدمات اللوجستية</span>
             </div>
             <WhatsAppButton 
-              phoneNumber={companyInfo.whatsapp}
+              phoneNumber="+966123456789"
               message="مرحباً، أريد الاستفسار عن الخدمات اللوجستية"
               variant="header"
             />
@@ -121,73 +89,69 @@ const LogisticsServices = () => {
       {/* Hero Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
-          <div className="mb-12">
-            <div className="w-24 h-24 bg-gradient-to-r from-teal-500 to-teal-600 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
-              <Truck className="text-white h-12 w-12" />
+          <div className="max-w-4xl mx-auto">
+            <div className="w-24 h-24 bg-gradient-to-r from-sky-400 to-sky-500 rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-lg">
+              <Truck className="h-12 w-12 text-white" />
             </div>
-            <h2 className="text-5xl font-bold text-gray-800 mb-4">
-              {companyInfo.name}
-            </h2>
-            <p className="text-2xl text-gray-700 font-medium mb-6">حلول لوجستية متكاملة وخدمات 3PL احترافية</p>
-          </div>
-          
-          <p className="text-xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
-            نقدم خدمات لوجستية شاملة تشمل النقل، التخزين، التخليص الجمركي، وإدارة سلسلة الإمداد بأحدث التقنيات وأعلى معايير الجودة
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <WhatsAppButton 
-              phoneNumber={companyInfo.whatsapp}
-              message="أريد الاستفسار عن الخدمات اللوجستية وحلول 3PL"
-              variant="cta"
-              text="احصل على عرض أسعار"
-            />
-            <Button variant="outline" size="lg" className="text-lg">
-              <MapPin className="ml-2 h-5 w-5" />
-              تتبع الشحنات
-            </Button>
+            <h1 className="text-5xl font-bold text-sky-700 mb-6">الخدمات اللوجستية</h1>
+            <p className="text-xl text-sky-600 mb-12 leading-relaxed">
+              نقدم حلول لوجستية متكاملة تشمل النقل والشحن والتخزين وإدارة سلسلة التوريد بأعلى معايير الجودة والكفاءة
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Services */}
-      <section className="py-20 bg-white/50">
+      {/* Benefits Section */}
+      <section className="py-16 bg-white/50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h3 className="text-4xl font-bold text-gray-800 mb-4">خدماتنا اللوجستية</h3>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              حلول شاملة لجميع احتياجاتك اللوجستية من النقل إلى التخزين وإدارة سلسلة التوريد
-            </p>
+          <h2 className="text-3xl font-bold text-center text-sky-700 mb-12">لماذا تختار خدماتنا اللوجستية؟</h2>
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-sky-400 to-sky-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <benefit.icon className="h-8 w-8 text-white" />
+                </div>
+                <h4 className="text-xl font-bold text-sky-700 mb-2">{benefit.title}</h4>
+                <p className="text-sky-600">{benefit.description}</p>
+              </div>
+            ))}
           </div>
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Services Grid */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-sky-700 mb-12">خدماتنا اللوجستية</h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {logisticsServices.map((service, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-300 border-0 shadow-lg overflow-hidden">
-                <CardHeader className="bg-gray-50 pb-6">
-                  <div className="flex items-center space-x-4 space-x-reverse mb-4">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center shadow-lg`}>
-                      <service.icon className="h-8 w-8 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <CardTitle className="text-xl text-gray-800 mb-2">{service.title}</CardTitle>
-                      <CardDescription className="text-gray-600 text-sm">
-                        {service.description}
-                      </CardDescription>
+              <Card key={index} className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+                <CardHeader className="bg-sky-50 pb-6">
+                  <CardTitle className="text-2xl text-sky-700 mb-2 text-right">{service.title}</CardTitle>
+                  <CardDescription className="text-sky-600 leading-relaxed text-base text-right">
+                    {service.description}
+                  </CardDescription>
+                  <div className="flex justify-between items-center mt-4 pt-4 border-t border-sky-200">
+                    <div className="text-right">
+                      <div className="text-sm text-sky-500">{service.duration}</div>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent className="pt-6">
-                  <div className="space-y-3 mb-6">
+                  <div className="grid grid-cols-2 gap-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center space-x-2 space-x-reverse text-sm">
-                        <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                        <span className="text-gray-600">{feature}</span>
+                        <CheckCircle className="h-4 w-4 text-sky-500 flex-shrink-0" />
+                        <span className="text-sky-600">{feature}</span>
                       </div>
                     ))}
                   </div>
-                  <Button className={`w-full bg-gradient-to-r ${service.color} hover:opacity-90 text-white`}>
-                    اطلب الخدمة
-                  </Button>
+                  <WhatsAppButton 
+                    phoneNumber="+966123456789"
+                    message={`مرحباً، أريد الاستفسار عن ${service.title}`}
+                    variant="service"
+                    text="اطلب الخدمة الآن"
+                  />
                 </CardContent>
               </Card>
             ))}
@@ -195,24 +159,19 @@ const LogisticsServices = () => {
         </div>
       </section>
 
-      {/* Features */}
-      <section className="py-20">
+      {/* Service Areas Section */}
+      <section className="py-16 bg-white/50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h3 className="text-4xl font-bold text-gray-800 mb-4">لماذا تختار خدماتنا اللوجستية؟</h3>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              نقدم حلول لوجستية متميزة بأعلى معايير الجودة والكفاءة
-            </p>
+          <div className="text-center mb-12">
+            <MapPin className="h-16 w-16 text-sky-500 mx-auto mb-4" />
+            <h3 className="text-3xl font-bold text-sky-700 mb-4">مناطق الخدمة</h3>
+            <p className="text-xl text-sky-600">نخدم جميع مناطق المملكة العربية السعودية</p>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-gradient-to-r from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <feature.icon className="h-8 w-8 text-white" />
-                </div>
-                <h4 className="text-xl font-bold text-gray-800 mb-2">{feature.title}</h4>
-                <p className="text-gray-600">{feature.description}</p>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            {serviceAreas.map((area, index) => (
+              <div key={index} className="text-center p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                <div className="text-lg font-semibold text-sky-700">{area}</div>
               </div>
             ))}
           </div>
@@ -220,37 +179,31 @@ const LogisticsServices = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-teal-600 to-blue-600 text-white">
+      <section className="py-20 bg-gradient-to-br from-sky-500 to-sky-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h3 className="text-4xl font-bold mb-4">ابدأ مع أفضل الحلول اللوجستية</h3>
-          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            تواصل معنا الآن واحصل على استشارة مجانية لجميع احتياجاتك اللوجستية
-          </p>
+          <h3 className="text-4xl font-bold mb-4">احصل على عرض سعر مخصص</h3>
+          <p className="text-xl mb-8 opacity-90">تواصل معنا للحصول على حلول لوجستية تناسب احتياجاتك</p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <WhatsAppButton 
-              phoneNumber={companyInfo.whatsapp}
-              message="أريد معرفة المزيد عن الخدمات اللوجستية وحلول 3PL"
+              phoneNumber="+966123456789"
+              message="مرحباً، أريد عرض سعر للخدمات اللوجستية"
               variant="cta"
-              text="احجز استشارة مجانية"
+              text="احصل على عرض سعر"
+              className="bg-white text-sky-600 hover:bg-gray-100"
             />
-            <div className="flex items-center space-x-2 space-x-reverse text-white/80">
-              <MessageSquare className="h-5 w-5" />
-              <span>أو اتصل على: {companyInfo.phone}</span>
-            </div>
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={() => navigate('/')}
+              className="border-white text-white hover:bg-white hover:text-sky-600 px-8"
+            >
+              <ArrowRight className="ml-2 h-5 w-5" />
+              العودة للرئيسية
+            </Button>
           </div>
         </div>
       </section>
-
-      {/* Floating WhatsApp Button */}
-      <div className="fixed bottom-6 left-6 z-50">
-        <WhatsAppButton 
-          phoneNumber={companyInfo.whatsapp}
-          message="مرحباً، أريد الاستفسار عن الخدمات اللوجستية"
-          variant="floating"
-          text="تحدث معنا"
-        />
-      </div>
     </div>
   );
 };
