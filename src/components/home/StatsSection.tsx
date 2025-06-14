@@ -4,26 +4,32 @@ import EnhancedIcon from "@/components/ui/enhanced-icon";
 
 const StatsSection = () => {
   const stats = [
-    { icon: Briefcase, number: "250+", label: "مشروع مكتمل", color: "text-blue-500" },
-    { icon: Users, number: "120+", label: "عميل راضٍ", color: "text-blue-500" },
-    { icon: Shield, number: "8+", label: "سنوات خبرة", color: "text-blue-500" },
-    { icon: Heart, number: "24/7", label: "دعم مستمر", color: "text-blue-500" }
+    { icon: Briefcase, number: "250+", label: "مشروع مكتمل", color: "text-white" },
+    { icon: Users, number: "120+", label: "عميل راضٍ", color: "text-white" },
+    { icon: Shield, number: "8+", label: "سنوات خبرة", color: "text-white" },
+    { icon: Heart, number: "24/7", label: "دعم مستمر", color: "text-white" }
   ];
 
   return (
-    <section className="py-8 sm:py-10 md:py-12 bg-gradient-to-r from-slate-600 to-slate-700 text-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-6 sm:mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-2">إنجازاتنا بالأرقام</h2>
-          <p className="text-base sm:text-lg opacity-90">نفخر بالثقة التي منحتموها لنا</p>
+    <section className="py-20 md:py-32 bg-gradient-to-r from-neutral-800 to-neutral-700 text-white relative overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 bg-pattern-dots opacity-20"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-16 md:mb-20">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">إنجازاتنا بالأرقام</h2>
+          <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
+            نفخر بالثقة التي منحتموها لنا وبالنتائج التي حققناها معاً
+          </p>
         </div>
-        <div className="grid md:grid-cols-4 gap-6 sm:gap-8">
+        
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {stats.map((stat, index) => (
             <div key={index} className="text-center group">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-white/30 transition-all duration-300 group-hover:scale-110">
+              <div className="w-20 h-20 md:w-24 md:h-24 bg-white/20 backdrop-blur-sm rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:bg-white/30 group-hover:scale-110 transition-all duration-300 shadow-lg">
                 <EnhancedIcon
                   icon={stat.icon}
-                  size="lg"
+                  size="xl"
                   variant="interactive"
                   className="text-white"
                   ariaLabel={`أيقونة ${stat.label}`}
@@ -31,8 +37,12 @@ const StatsSection = () => {
                   animate={true}
                 />
               </div>
-              <div className="text-3xl sm:text-4xl font-bold mb-1 text-slate-100 group-hover:text-white transition-colors duration-300">{stat.number}</div>
-              <div className="text-base sm:text-lg opacity-90 group-hover:opacity-100 transition-opacity duration-300">{stat.label}</div>
+              <div className="text-4xl md:text-5xl font-bold mb-3 text-white group-hover:text-brand-light-blue transition-colors duration-300">
+                {stat.number}
+              </div>
+              <div className="text-lg md:text-xl opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                {stat.label}
+              </div>
             </div>
           ))}
         </div>

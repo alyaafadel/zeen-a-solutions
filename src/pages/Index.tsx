@@ -13,61 +13,61 @@ const Index = () => {
   const services = [
     {
       title: "خدمات الموارد البشرية",
-      description: "حلول شاملة ومتكاملة في إدارة وتطوير الموارد البشرية للشركات والمؤسسات من جميع الأحجام، تشمل التوظيف والاختيار، إدارة الأداء، وتطوير الكفاءات",
+      description: "حلول شاملة في إدارة وتطوير الموارد البشرية تشمل التوظيف والاختيار، تقييم الأداء، وتطوير السياسات المؤسسية",
       icon: Users,
       route: "/hr-services"
     },
     {
       title: "التطوير المهني للأفراد",
-      description: "خدمات شاملة لتطوير المسار المهني وبناء الهوية المهنية المتميزة للأفراد الطموحين، مع استراتيجيات مخصصة لتحقيق الأهداف المهنية",
+      description: "خدمات تطوير المسار المهني وبناء الهوية المهنية مع استراتيجيات مخصصة لتحقيق الأهداف المهنية",
       icon: Briefcase,
       route: "/career-services"
     },
     {
       title: "التدريب المهني",
-      description: "برامج تدريبية متخصصة ومصممة بعناية للشركات والأفراد الراغبين في تطوير مهاراتهم وقدراتهم في مختلف المجالات المهنية والتقنية",
+      description: "برامج تدريبية متخصصة للشركات والأفراد في المهارات التقنية والقيادية مع شهادات معتمدة",
       icon: GraduationCap,
       route: "/training-services"
     },
     {
       title: "خدمات الترجمة",
-      description: "ترجمة احترافية ودقيقة للوثائق الرسمية والأكاديمية والتجارية للشركات والأفراد، مع ضمان الجودة والدقة اللغوية والمصطلحات المتخصصة",
+      description: "ترجمة احترافية للوثائق الرسمية والأكاديمية والتجارية مع ضمان الدقة اللغوية والمصطلحات المتخصصة",
       icon: Languages,
       route: "/translation-services"
     },
     {
       title: "التطوير التقني والبرمجة",
-      description: "تطوير حلول تقنية متطورة ومواقع وتطبيقات احترافية تلبي احتياجات الأعمال الحديثة باستخدام أحدث التقنيات والممارسات العالمية",
+      description: "تطوير مواقع وتطبيقات احترافية وحلول تقنية متطورة باستخدام أحدث التقنيات والممارسات العالمية",
       icon: Code,
       route: "/programming-services"
     },
     {
       title: "التسويق الرقمي المتكامل",
-      description: "استراتيجيات تسويق رقمية مبتكرة ومدروسة لزيادة الوصول والمبيعات وبناء الهوية التجارية القوية عبر جميع القنوات الرقمية",
+      description: "استراتيجيات تسويق رقمية مبتكرة لزيادة الوصول والمبيعات وبناء الهوية التجارية القوية",
       icon: Megaphone,
       route: "/digital-marketing"
     },
     {
       title: "الاستشارات القانونية للشركات",
-      description: "خدمات قانونية متخصصة وشاملة للشركات والمؤسسات، تشمل التأسيس القانوني، صياغة العقود، الامتثال التنظيمي، وجميع الاستشارات القانونية التجارية",
+      description: "خدمات قانونية متخصصة تشمل التأسيس القانوني، صياغة العقود، والامتثال التنظيمي",
       icon: Scale,
       route: "/legal-services"
     },
     {
       title: "الذكاء الاصطناعي",
-      description: "استخدام تقنيات الذكاء الاصطناعي المتقدمة لتطوير الأعمال وزيادة الكفاءة التشغيلية للشركات والأفراد من خلال حلول ذكية ومبتكرة",
+      description: "تقنيات الذكاء الاصطناعي المتقدمة لتطوير الأعمال وزيادة الكفاءة التشغيلية بحلول ذكية ومبتكرة",
       icon: Bot,
       route: "/ai-services"
     },
     {
       title: "الخدمات اللوجستية",
-      description: "حلول لوجستية متكاملة وخدمات 3PL احترافية للشركات والمشاريع الناشئة، تشمل إدارة سلسلة التوريد والتخزين والتوزيع",
+      description: "حلول لوجستية متكاملة وخدمات 3PL تشمل إدارة سلسلة التوريد والتخزين والتوزيع",
       icon: Truck,
       route: "/logistics-services"
     },
     {
       title: "الحلول المخصصة",
-      description: "حلول مبتكرة ومخصصة حسب الطلب للشركات والأفراد لتلبية احتياجاتهم الفريدة والمتخصصة التي تتطلب خبرات ونهج مخصص",
+      description: "حلول مبتكرة ومخصصة حسب احتياجاتكم الفريدة مع خبرات متخصصة ونهج مخصص",
       icon: Star,
       route: "/custom-solutions"
     }
@@ -85,7 +85,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-pattern-subtle" dir="rtl">
+    <div className="min-h-screen bg-white" dir="rtl">
       <SEO 
         title="الصفحة الرئيسية"
         description="Zeen A Plus Solutions - شريكك المتخصص في الموارد البشرية، التطوير التقني، التسويق الرقمي، والخدمات المهنية في السعودية"
@@ -95,21 +95,23 @@ const Index = () => {
       {/* Header with Logo, Navigation and Mobile Menu */}
       <Header services={services} companyInfo={companyInfo} />
       
-      {/* Hero Section with reduced spacing */}
-      <HeroSection companyInfo={companyInfo} />
+      {/* Hero Section with improved spacing */}
+      <div className="pb-16 md:pb-24">
+        <HeroSection companyInfo={companyInfo} />
+      </div>
       
-      {/* Services Section */}
-      <div className="mb-6 sm:mb-8 md:mb-10">
+      {/* Services Section with better spacing */}
+      <div className="pb-20 md:pb-32">
         <ServicesSection services={services} />
       </div>
       
-      {/* Stats Section */}
-      <div className="mb-6 sm:mb-8 md:mb-10">
+      {/* Stats Section with improved spacing */}
+      <div className="pb-20 md:pb-32">
         <StatsSection />
       </div>
       
-      {/* About Preview Section */}
-      <div className="mb-6 sm:mb-8 md:mb-10">
+      {/* About Preview Section with better spacing */}
+      <div className="pb-16 md:pb-24">
         <AboutPreviewSection companyInfo={companyInfo} />
       </div>
 
