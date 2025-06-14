@@ -15,29 +15,29 @@ const HeroSection = ({ companyInfo }: HeroSectionProps) => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative py-20 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-500/5 via-indigo-500/5 to-blue-500/5"></div>
-      <div className="container mx-auto px-4 text-center relative z-10">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-slate-700 leading-tight">
+    <section className="relative py-24 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/5 via-brand-emerald/5 to-brand-blue-dark/5"></div>
+      <div className="container mx-auto px-6 text-center relative z-10">
+        <div className="max-w-5xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-bold mb-8 text-slate-700 leading-tight">
             Zeen-A Solutions: شركاؤكم الاستراتيجيون في تحقيق التميز والنمو
           </h1>
-          <p className="text-xl md:text-2xl text-slate-600 mb-8 leading-relaxed">
+          <p className="text-xl md:text-2xl text-slate-600 mb-12 leading-relaxed max-w-4xl mx-auto">
             في Zeen-A Solutions، نقدم حلولاً متكاملة ومخصصة للشركات والأفراد في مجالات حيوية تشمل الموارد البشرية، التطوير التقني، التسويق الرقمي، والتطوير المهني. نعمل كجزء لا يتجزأ من فريقكم، ملتزمين بتقديم خبرات متخصصة تضمن إنجاز مهامكم بأعلى معايير الجودة والاحترافية، وتحقيق أهدافكم الاستراتيجية بفعالية.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <WhatsAppButton 
               phoneNumber={companyInfo.whatsapp}
               message="مرحباً، أريد الاستفسار عن خدماتكم المتخصصة"
               variant="cta"
               text="احصل على خدمتك الآن"
-              className="bg-gradient-to-r from-slate-500 to-slate-600 hover:from-slate-600 hover:to-slate-700 text-white border-0 px-8 py-3 text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              className="bg-gradient-purple hover:bg-gradient-to-r hover:from-brand-purple-dark hover:to-brand-purple text-white border-0 px-10 py-4 text-lg font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 rounded-xl"
             />
             <Button
               variant="outline"
               size="lg"
               onClick={() => navigate('/about')}
-              className="px-8 py-3 text-lg border-2 border-slate-400 hover:border-slate-500 text-slate-600 hover:text-slate-700 transition-all duration-300"
+              className="px-10 py-4 text-lg border-2 border-brand-purple hover:border-brand-purple-dark text-brand-purple hover:text-white hover:bg-brand-purple transition-all duration-300 rounded-xl shadow-lg hover:shadow-xl"
             >
               اعرف المزيد عنا
             </Button>
@@ -45,10 +45,11 @@ const HeroSection = ({ companyInfo }: HeroSectionProps) => {
         </div>
       </div>
       
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-slate-400/20 rounded-full animate-pulse"></div>
-      <div className="absolute bottom-20 right-10 w-16 h-16 bg-indigo-400/20 rounded-full animate-pulse delay-75"></div>
-      <div className="absolute top-40 right-20 w-12 h-12 bg-blue-400/20 rounded-full animate-pulse delay-150"></div>
+      {/* Enhanced Floating Elements */}
+      <div className="absolute top-20 left-10 w-20 h-20 bg-brand-purple/20 rounded-full animate-pulse shadow-lg"></div>
+      <div className="absolute bottom-20 right-10 w-16 h-16 bg-brand-emerald/20 rounded-full animate-pulse delay-75 shadow-lg"></div>
+      <div className="absolute top-40 right-20 w-12 h-12 bg-brand-blue-dark/20 rounded-full animate-pulse delay-150 shadow-lg"></div>
+      <div className="absolute bottom-40 left-20 w-14 h-14 bg-brand-purple/15 rounded-full animate-pulse delay-300 shadow-lg"></div>
     </section>
   );
 };

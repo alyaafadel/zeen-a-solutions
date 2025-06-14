@@ -83,21 +83,21 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100" dir="rtl">
+    <div className="min-h-screen bg-pattern-subtle" dir="rtl">
       {/* Header */}
-      <header className="bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200 sticky top-0 z-50">
-        <div className="container mx-auto px-6 py-4">
+      <header className="bg-white/95 backdrop-blur-md shadow-lg border-b border-slate-200 sticky top-0 z-50">
+        <div className="container mx-auto px-6 py-5">
           <div className="flex justify-between items-center">
             <Button
               variant="ghost"
               onClick={() => navigate('/')}
-              className="flex items-center space-x-2 space-x-reverse text-slate-600 hover:text-slate-700 hover:bg-slate-50 transition-all duration-300"
+              className="flex items-center space-x-2 space-x-reverse text-slate-600 hover:text-brand-purple hover:bg-brand-purple/10 transition-all duration-300 rounded-xl px-4 py-3"
             >
               <ArrowLeft className="h-5 w-5" />
               <span className="font-medium">العودة للرئيسية</span>
             </Button>
             <div className="flex items-center space-x-4 space-x-reverse">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center shadow-md border-2 border-white">
+              <div className="w-12 h-12 bg-gradient-purple rounded-xl flex items-center justify-center shadow-lg border-2 border-white">
                 <img 
                   src="/lovable-uploads/8838bb20-a5cc-4ab1-9fce-30cdb0f93521.png" 
                   alt="Zeen A Plus Solutions Logo" 
@@ -113,178 +113,193 @@ const About = () => {
         </div>
       </header>
 
-      <div className="container mx-auto px-6 py-12 max-w-4xl">
-        {/* Main Title */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-blue-600 mb-6 leading-tight">
+      <div className="container mx-auto px-6 py-16 max-w-5xl">
+        {/* Main Title Section */}
+        <section className="text-center mb-20">
+          <h1 className="text-4xl md:text-5xl font-bold text-brand-purple mb-8 leading-tight">
             من نحن: Zeen-A Solutions
           </h1>
-          <h2 className="text-2xl md:text-3xl font-semibold text-slate-700 mb-8">
+          <h2 className="text-2xl md:text-3xl font-semibold text-slate-700 mb-10">
             شركاؤكم في التميز والإنجاز
           </h2>
-          <div className="max-w-3xl mx-auto space-y-6 text-lg text-slate-600 leading-relaxed">
-            <p>
+          <div className="max-w-4xl mx-auto space-y-8 text-lg text-slate-600 leading-relaxed">
+            <p className="text-xl leading-relaxed">
               في Zeen A Plus Solutions، نؤمن بأن النجاح في عالم الأعمال اليوم يتطلب مرونة استثنائية، وصولاً سريعاً للخبرات المتخصصة، وشراكات مبنية على الثقة والاحترافية.
             </p>
-            <p>
-              نحن لسنا مجرد مزودين للخدمات، بل <span className="font-semibold text-blue-600">شركاء استراتيجيون</span> ننضم إلى فريق عملكم لتقديم حلول متكاملة ومصممة خصيصاً لتلبية احتياجاتكم الفريدة وتحقيق أهدافكم الطموحة.
+            <p className="text-lg leading-relaxed">
+              نحن لسنا مجرد مزودين للخدمات، بل <span className="font-semibold text-brand-purple">شركاء استراتيجيون</span> ننضم إلى فريق عملكم لتقديم حلول متكاملة ومصممة خصيصاً لتلبية احتياجاتكم الفريدة وتحقيق أهدافكم الطموحة.
             </p>
           </div>
-        </div>
+        </section>
 
-        <Separator className="mb-16" />
+        <Separator className="mb-20 bg-gradient-purple h-1 rounded-full" />
 
-        {/* Vision and Mission */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <Card className="h-full">
-            <CardHeader className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Eye className="h-8 w-8 text-white" />
-              </div>
-              <CardTitle className="text-2xl text-blue-600">رؤيتنا</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-slate-700 leading-relaxed text-lg text-center">
-                أن نكون الشريك المفضل للشركات والأفراد الباحثين عن حلول مبتكرة وفعالة، تمكنهم من تجاوز التحديات وتحقيق أقصى إمكاناتهم في بيئة عمل متغيرة باستمرار.
-              </p>
-            </CardContent>
-          </Card>
+        {/* Vision and Mission Section */}
+        <section className="mb-24">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-brand-purple mb-4">رؤيتنا ورسالتنا</h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              الأسس التي تحرك رحلتنا نحو التميز والريادة في تقديم الخدمات المتخصصة
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="h-full group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-0 shadow-lg bg-white/95 backdrop-blur-sm">
+              <CardHeader className="text-center pb-6">
+                <div className="w-20 h-20 bg-gradient-purple rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Eye className="h-10 w-10 text-white" />
+                </div>
+                <CardTitle className="text-2xl text-brand-purple group-hover:text-brand-purple-dark transition-colors duration-300">رؤيتنا</CardTitle>
+              </CardHeader>
+              <CardContent className="px-8 pb-8">
+                <p className="text-slate-700 leading-relaxed text-lg text-center">
+                  أن نكون الشريك المفضل للشركات والأفراد الباحثين عن حلول مبتكرة وفعالة، تمكنهم من تجاوز التحديات وتحقيق أقصى إمكاناتهم في بيئة عمل متغيرة باستمرار.
+                </p>
+              </CardContent>
+            </Card>
 
-          <Card className="h-full">
-            <CardHeader className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="h-8 w-8 text-white" />
-              </div>
-              <CardTitle className="text-2xl text-blue-600">رسالتنا</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-slate-700 leading-relaxed text-lg text-center">
-                تقديم خدمات استشارية وتنفيذية عالية الجودة في مجالات متعددة، من خلال فريق من الخبراء المتخصصين الذين يعملون بمرونة وكفاءة، لضمان إنجاز المهام بدقة واحترافية، وتحقيق قيمة مضافة حقيقية لعملائنا.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
+            <Card className="h-full group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-0 shadow-lg bg-white/95 backdrop-blur-sm">
+              <CardHeader className="text-center pb-6">
+                <div className="w-20 h-20 bg-gradient-purple-emerald rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Target className="h-10 w-10 text-white" />
+                </div>
+                <CardTitle className="text-2xl text-brand-purple group-hover:text-brand-emerald transition-colors duration-300">رسالتنا</CardTitle>
+              </CardHeader>
+              <CardContent className="px-8 pb-8">
+                <p className="text-slate-700 leading-relaxed text-lg text-center">
+                  تقديم خدمات استشارية وتنفيذية عالية الجودة في مجالات متعددة، من خلال فريق من الخبراء المتخصصين الذين يعملون بمرونة وكفاءة، لضمان إنجاز المهام بدقة واحترافية، وتحقيق قيمة مضافة حقيقية لعملائنا.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
 
-        <Separator className="mb-16" />
+        <Separator className="mb-20 bg-gradient-purple-emerald h-1 rounded-full" />
 
-        {/* Core Values */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-blue-600 mb-4">قيمنا الأساسية</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+        {/* Core Values Section */}
+        <section className="mb-24">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-brand-purple mb-6">قيمنا الأساسية</h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
               المبادئ التي تحكم طريقة عملنا وتوجه كل قراراتنا في رحلة الشراكة معكم
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {coreValues.map((value, index) => (
-              <Card key={index} className="h-full hover:shadow-lg transition-shadow duration-300">
+              <Card key={index} className="h-full group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-0 shadow-lg bg-white/95 backdrop-blur-sm">
                 <CardHeader className="text-center pb-4">
-                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <value.icon className="h-7 w-7 text-white" />
+                  <div className={`w-16 h-16 ${
+                    index % 3 === 0 ? 'bg-gradient-purple' : 
+                    index % 3 === 1 ? 'bg-gradient-purple-emerald' : 
+                    'bg-gradient-blue-purple'
+                  } rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                    <value.icon className="h-8 w-8 text-white" />
                   </div>
-                  <CardTitle className="text-xl text-blue-600">{value.title}</CardTitle>
+                  <CardTitle className="text-xl text-brand-purple group-hover:text-brand-purple-dark transition-colors duration-300">{value.title}</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="px-6 pb-6">
                   <p className="text-slate-700 leading-relaxed text-center">{value.description}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
-        </div>
+        </section>
 
-        <Separator className="mb-16" />
+        <Separator className="mb-20 bg-gradient-blue-purple h-1 rounded-full" />
 
-        {/* What Makes Us Different */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-blue-600 mb-4">ما يميزنا</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+        {/* What Makes Us Different Section */}
+        <section className="mb-24">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-brand-purple mb-6">ما يميزنا</h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
               نجمع بين الخبرة العميقة والمرونة الاستثنائية لنكون شركاؤكم الأمثل في تحقيق النجاح
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {whatMakesUsDifferent.map((item, index) => (
-              <Card key={index} className="h-full hover:shadow-lg transition-shadow duration-300">
-                <CardHeader>
+              <Card key={index} className="h-full group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-0 shadow-lg bg-white/95 backdrop-blur-sm">
+                <CardHeader className="pb-4">
                   <div className="flex items-center space-x-4 space-x-reverse">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <item.icon className="h-6 w-6 text-white" />
+                    <div className={`w-14 h-14 ${
+                      index % 3 === 0 ? 'bg-gradient-purple' : 
+                      index % 3 === 1 ? 'bg-gradient-purple-emerald' : 
+                      'bg-gradient-blue-purple'
+                    } rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      <item.icon className="h-7 w-7 text-white" />
                     </div>
-                    <CardTitle className="text-xl text-blue-600">{item.title}</CardTitle>
+                    <CardTitle className="text-xl text-brand-purple group-hover:text-brand-purple-dark transition-colors duration-300">{item.title}</CardTitle>
                   </div>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="px-6 pb-6">
                   <p className="text-slate-700 leading-relaxed">{item.description}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
-        </div>
+        </section>
 
-        <Separator className="mb-16" />
+        <Separator className="mb-20 bg-gradient-purple h-1 rounded-full" />
 
-        {/* How We Work */}
-        <div className="mb-16">
-          <Card className="bg-gradient-to-br from-blue-50 to-slate-50">
-            <CardHeader className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="h-8 w-8 text-white" />
+        {/* How We Work Section */}
+        <section className="mb-24">
+          <Card className="bg-gradient-to-br from-brand-purple/5 to-brand-emerald/5 border-0 shadow-xl">
+            <CardHeader className="text-center pb-6">
+              <div className="w-20 h-20 bg-gradient-purple rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <Users className="h-10 w-10 text-white" />
               </div>
-              <CardTitle className="text-3xl text-blue-600 mb-4">كيف نعمل؟</CardTitle>
+              <CardTitle className="text-3xl text-brand-purple mb-6">كيف نعمل؟</CardTitle>
             </CardHeader>
-            <CardContent className="text-center space-y-6">
-              <p className="text-lg text-slate-700 leading-relaxed max-w-3xl mx-auto">
-                نحن نعمل <span className="font-bold text-blue-600">كجزء من فريقكم</span>، نقدم الخبرة والدعم اللازمين لإنجاز المهام بكفاءة. 
+            <CardContent className="text-center space-y-8 px-8 pb-8">
+              <p className="text-lg text-slate-700 leading-relaxed max-w-4xl mx-auto">
+                نحن نعمل <span className="font-bold text-brand-purple">كجزء من فريقكم</span>، نقدم الخبرة والدعم اللازمين لإنجاز المهام بكفاءة. 
                 سواء كنتم بحاجة إلى استشارات متخصصة، إدارة مشاريع، أو تنفيذ مهام محددة، فإننا هنا لتقديم الدعم الذي يمكنكم الاعتماد عليه.
               </p>
-              <div className="flex items-center justify-center space-x-2 space-x-reverse">
+              <div className="flex items-center justify-center space-x-3 space-x-reverse">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="h-6 w-6 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <span className="text-slate-600">تقييم شركائنا لجودة خدماتنا</span>
+                <span className="text-slate-600 font-medium">تقييم شركائنا لجودة خدماتنا</span>
               </div>
             </CardContent>
           </Card>
-        </div>
+        </section>
 
-        <Separator className="mb-16" />
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <Card className="bg-gradient-to-br from-blue-600 to-blue-700 text-white">
-            <CardHeader>
-              <CardTitle className="text-3xl md:text-4xl font-bold mb-4">
+        {/* Call to Action Section */}
+        <section className="text-center">
+          <Card className="bg-gradient-to-br from-brand-purple to-brand-purple-dark text-white border-0 shadow-2xl">
+            <CardHeader className="pb-6">
+              <CardTitle className="text-3xl md:text-4xl font-bold mb-6">
                 دعوة للعمل
               </CardTitle>
-              <CardDescription className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              <CardDescription className="text-xl text-brand-purple-light mb-10 max-w-4xl mx-auto leading-relaxed">
                 انضموا إلى قائمة شركائنا الناجحين. تواصلوا معنا اليوم لمناقشة كيف يمكن لـ Zeen A Plus Solutions أن تكون شريككم الأمثل في رحلة النجاح
               </CardDescription>
             </CardHeader>
-            <CardContent>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <CardContent className="px-8 pb-8">
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <WhatsAppButton 
                   phoneNumber={companyInfo.whatsapp}
                   message="مرحباً، أريد التعرف أكثر على خدماتكم وكيف يمكنكم أن تكونوا شركائنا في النجاح"
                   variant="cta"
                   text="تواصل معنا الآن"
-                  className="bg-white text-blue-600 hover:bg-blue-50 border-0 px-8 py-3 text-lg font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                  className="bg-white text-brand-purple hover:bg-brand-purple-light hover:text-white border-0 px-10 py-4 text-lg font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 rounded-xl"
                 />
                 <Button
                   variant="outline"
                   size="lg"
                   onClick={() => navigate('/')}
-                  className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg font-bold transition-all duration-300"
+                  className="border-2 border-white text-white hover:bg-white hover:text-brand-purple px-10 py-4 text-lg font-bold transition-all duration-300 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
                   اكتشف خدماتنا
                 </Button>
               </div>
             </CardContent>
           </Card>
-        </div>
+        </section>
       </div>
     </div>
   );

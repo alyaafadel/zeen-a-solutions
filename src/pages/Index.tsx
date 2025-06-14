@@ -82,21 +82,48 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-pattern-subtle" dir="rtl">
       <Header services={services} companyInfo={companyInfo} />
-      <HeroSection companyInfo={companyInfo} />
-      <FeaturesSection />
-      <ServicesSection services={services} />
-      <StatsSection />
-      <AboutPreviewSection companyInfo={companyInfo} />
-      <JoinUsSection />
+      
+      {/* Hero Section with improved spacing */}
+      <div className="mb-16">
+        <HeroSection companyInfo={companyInfo} />
+      </div>
+      
+      {/* Features Section with improved spacing */}
+      <div className="mb-20">
+        <FeaturesSection />
+      </div>
+      
+      {/* Services Section with improved spacing */}
+      <div className="mb-20">
+        <ServicesSection services={services} />
+      </div>
+      
+      {/* Stats Section with improved spacing */}
+      <div className="mb-20">
+        <StatsSection />
+      </div>
+      
+      {/* About Preview Section with improved spacing */}
+      <div className="mb-20">
+        <AboutPreviewSection companyInfo={companyInfo} />
+      </div>
+      
+      {/* Join Us Section with improved spacing */}
+      <div className="mb-20">
+        <JoinUsSection />
+      </div>
+      
+      {/* Contact Section */}
       <ContactSection companyInfo={companyInfo} />
 
-      {/* Floating WhatsApp Button */}
+      {/* Enhanced Floating WhatsApp Button */}
       <div className="fixed bottom-6 left-6 z-50">
         <WhatsAppButton 
           phoneNumber={companyInfo.whatsapp}
           message="مرحباً، أريد الاستفسار عن خدماتكم المتخصصة"
           variant="floating"
           text="تحدث معنا"
+          className="shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300"
         />
       </div>
 
