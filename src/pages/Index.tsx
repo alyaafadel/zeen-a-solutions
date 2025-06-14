@@ -1,4 +1,3 @@
-
 import { Users, Languages, Megaphone, Code, Truck, ArrowRight, CheckCircle, MessageSquare, GraduationCap, Linkedin, Briefcase, Info, UserPlus, Phone, Settings, Star, Mail, Zap, Shield, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -110,13 +109,13 @@ const Index = () => {
 
   const companyInfo = {
     name: "Zeen A Plus Solutions",
-    slogan: "شريكك المتميز في النجاح والتطوير",
+    slogan: "شريكك المتخصص في إنجاز المشاريع",
     phone: "+966570513821",
     email: "info@zeenaplusolutions.com",
     whatsapp: "+966570513821",
     linkedin: "https://www.linkedin.com/company/zeen-a-solutions-establishment/",
     location: "الرياض، المملكة العربية السعودية",
-    description: "شركة متخصصة في تقديم حلول متكاملة للأعمال تشمل الموارد البشرية، الترجمة، التسويق الرقمي، التطوير التقني، والخدمات اللوجستية."
+    description: "نعمل كشركاء متخصصين مع الشركات الناشئة والمتوسطة، نقدم خدماتنا كأعضاء فريق مؤقتين لإنجاز مشاريعكم دون الحاجة لتوظيف فرق دائمة. نحن مسؤولون عن كل خدمة نقدمها بجودة عالية واحترافية تامة"
   };
 
   const stats = [
@@ -310,10 +309,11 @@ const Index = () => {
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-slate-700 leading-tight">
-              حلول متكاملة لنجاح أعمالك
+              شركاؤكم المتخصصون في إنجاز المشاريع
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 mb-8 leading-relaxed">
-              نقدم خدمات احترافية متنوعة من الموارد البشرية إلى التطوير التقني والتسويق الرقمي لتحقيق أهدافك
+              نعمل معكم كأعضاء فريق متخصصين لإنجاز مشاريعكم في الموارد البشرية، التطوير التقني، والتسويق الرقمي - 
+              دون الحاجة لتوظيف فرق دائمة. نحن مسؤولون عن كل خدمة نقدمها بجودة عالية واحترافية تامة
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <WhatsAppButton 
@@ -362,9 +362,9 @@ const Index = () => {
       <section className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-700 mb-4">خدماتنا المتميزة</h2>
+            <h2 className="text-4xl font-bold text-slate-700 mb-4">خدماتنا المتخصصة</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              نقدم مجموعة شاملة من الخدمات المهنية لتلبية جميع احتياجات شركتك
+              نقدم خدمات احترافية متخصصة كشركاء مؤقتين لشركتكم - بدون تكاليف التوظيف الدائم
             </p>
           </div>
 
@@ -441,9 +441,9 @@ const Index = () => {
       {/* Join Us Section */}
       <section className="py-16 bg-gradient-to-br from-slate-50 to-indigo-50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-slate-700 mb-4">انضم إلى فريق المتميزين</h2>
+          <h2 className="text-3xl font-bold text-slate-700 mb-4">انضم إلى شبكة المتخصصين لدينا</h2>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-            هل تمتلك خبرة في أحد مجالاتنا؟ انضم إلى شبكة الفريلانسرز المتميزة لدينا
+            هل تمتلك خبرة متخصصة؟ انضم إلى شبكة الخبراء المستقلين لدينا وكن جزءاً من مشاريع مميزة
           </p>
           <Button
             size="lg"
@@ -459,9 +459,9 @@ const Index = () => {
       {/* Contact Section */}
       <section className="py-16 bg-gradient-to-br from-slate-600 to-slate-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">هل أنت مستعد لبدء مشروعك؟</h2>
+          <h2 className="text-3xl font-bold mb-4">هل لديك مشروع تريد إنجازه؟</h2>
           <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
-            تواصل معنا اليوم واحصل على استشارة مجانية لجميع خدماتنا
+            تواصل معنا اليوم وسنعمل معك كفريق متخصص لإنجاز مشروعك بأعلى جودة
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
