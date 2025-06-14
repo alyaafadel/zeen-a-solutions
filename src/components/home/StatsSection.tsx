@@ -11,22 +11,38 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-r from-neutral-800 to-neutral-700 text-white relative overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 bg-pattern-dots opacity-20"></div>
+    <section className="py-24 lg:py-32 relative overflow-hidden">
+      {/* Enhanced gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-neutral-800 via-neutral-700 to-neutral-800"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/10 via-transparent to-brand-accent-blue/10"></div>
       
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16 md:mb-20">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">إنجازاتنا بالأرقام</h2>
-          <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
+      {/* Subtle pattern overlay */}
+      <div className="absolute inset-0 opacity-10" style={{
+        backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.1) 1px, transparent 0)`,
+        backgroundSize: '32px 32px'
+      }}></div>
+      
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
+        {/* Section Header */}
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl shadow-lg mb-8">
+            <span className="text-2xl font-bold text-white">📊</span>
+          </div>
+          
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight">
+            إنجازاتنا بالأرقام
+          </h2>
+          <p className="text-xl lg:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
             نفخر بالثقة التي منحتموها لنا وبالنتائج التي حققناها معاً
           </p>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+        {/* Stats Grid */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {stats.map((stat, index) => (
             <div key={index} className="text-center group">
-              <div className="w-20 h-20 md:w-24 md:h-24 bg-white/20 backdrop-blur-sm rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:bg-white/30 group-hover:scale-110 transition-all duration-300 shadow-lg">
+              {/* Icon Container */}
+              <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white/20 backdrop-blur-sm rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:bg-white/30 group-hover:scale-110 transition-all duration-300 shadow-xl border border-white/10">
                 <EnhancedIcon
                   icon={stat.icon}
                   size="xl"
@@ -37,16 +53,24 @@ const StatsSection = () => {
                   animate={true}
                 />
               </div>
-              <div className="text-4xl md:text-5xl font-bold mb-3 text-white group-hover:text-brand-light-blue transition-colors duration-300">
+              
+              {/* Number */}
+              <div className="text-5xl lg:text-6xl font-bold mb-4 text-white group-hover:text-brand-light-blue transition-colors duration-300">
                 {stat.number}
               </div>
-              <div className="text-lg md:text-xl opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+              
+              {/* Label */}
+              <div className="text-lg lg:text-xl text-white/90 group-hover:text-white transition-colors duration-300 font-medium">
                 {stat.label}
               </div>
             </div>
           ))}
         </div>
       </div>
+      
+      {/* Decorative elements */}
+      <div className="absolute top-20 left-10 w-32 h-32 bg-white/5 rounded-full blur-xl"></div>
+      <div className="absolute bottom-20 right-10 w-40 h-40 bg-brand-blue/10 rounded-full blur-xl"></div>
     </section>
   );
 };

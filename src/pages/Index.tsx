@@ -1,4 +1,3 @@
-
 import { Users, Languages, Megaphone, Code, Truck, GraduationCap, Briefcase, Star, Bot, Scale } from "lucide-react";
 import Header from "@/components/home/Header";
 import HeroSection from "@/components/home/HeroSection";
@@ -85,38 +84,30 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white" dir="rtl">
+    <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-blue-50/30" dir="rtl">
       <SEO 
         title="الصفحة الرئيسية"
         description="Zeen A Plus Solutions - شريكك المتخصص في الموارد البشرية، التطوير التقني، التسويق الرقمي، والخدمات المهنية في السعودية"
         keywords="خدمات الموارد البشرية السعودية، التطوير التقني، التسويق الرقمي، الترجمة المعتمدة، الاستشارات القانونية، التدريب المهني"
       />
       
-      {/* Header with Logo, Navigation and Mobile Menu */}
+      {/* Header */}
       <Header services={services} companyInfo={companyInfo} />
       
-      {/* Hero Section with improved spacing */}
-      <div className="pb-16 md:pb-24">
-        <HeroSection companyInfo={companyInfo} />
-      </div>
+      {/* Hero Section - No spacing above, natural flow */}
+      <HeroSection companyInfo={companyInfo} />
       
-      {/* Services Section with better spacing */}
-      <div className="pb-20 md:pb-32">
-        <ServicesSection services={services} />
-      </div>
+      {/* Services Section */}
+      <ServicesSection services={services} />
       
-      {/* Stats Section with improved spacing */}
-      <div className="pb-20 md:pb-32">
-        <StatsSection />
-      </div>
+      {/* Stats Section */}
+      <StatsSection />
       
-      {/* About Preview Section with better spacing */}
-      <div className="pb-16 md:pb-24">
-        <AboutPreviewSection companyInfo={companyInfo} />
-      </div>
+      {/* About Preview Section */}
+      <AboutPreviewSection companyInfo={companyInfo} />
 
-      {/* Enhanced Floating WhatsApp Button - Mobile Optimized */}
-      <div className="fixed bottom-4 left-4 sm:bottom-6 sm:left-6 z-50">
+      {/* Floating WhatsApp Button */}
+      <div className="fixed bottom-6 left-6 z-50">
         <WhatsAppButton 
           phoneNumber={companyInfo.whatsapp}
           message="مرحباً، أريد الاستفسار عن خدماتكم المتخصصة"

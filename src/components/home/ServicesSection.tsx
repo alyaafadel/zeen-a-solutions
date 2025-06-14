@@ -20,13 +20,29 @@ const ServicesSection = ({ services }: ServicesSectionProps) => {
   const navigate = useNavigate();
 
   return (
-    <section className="py-20 md:py-32 bg-neutral-50">
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-16 md:mb-24">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-800 mb-6 md:mb-8">
-            خدماتنا المتخصصة
+    <section className="py-24 lg:py-32 relative overflow-hidden">
+      {/* Consistent background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-neutral-50/50 via-white to-blue-50/30"></div>
+      <div className="absolute inset-0 opacity-[0.02]" style={{
+        backgroundImage: `linear-gradient(rgba(33, 150, 243, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(33, 150, 243, 0.03) 1px, transparent 1px)`,
+        backgroundSize: '24px 24px'
+      }}></div>
+      
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
+        {/* Section Header */}
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-brand-blue to-brand-accent-blue rounded-2xl shadow-lg mb-8">
+            <span className="text-2xl font-bold text-white">⚡</span>
+          </div>
+          
+          <h2 className="text-4xl lg:text-5xl font-bold mb-8">
+            <span className="text-neutral-800">خدماتنا</span>
+            <span className="block mt-2 bg-gradient-to-r from-brand-blue to-brand-accent-blue bg-clip-text text-transparent">
+              المتخصصة
+            </span>
           </h2>
-          <p className="text-xl md:text-2xl text-neutral-600 max-w-4xl mx-auto leading-relaxed mb-4">
+          
+          <p className="text-xl lg:text-2xl text-neutral-600 max-w-4xl mx-auto leading-relaxed mb-4">
             نقدم خدمات احترافية متنوعة للشركات والأفراد
           </p>
           <p className="text-lg text-brand-blue font-semibold">
@@ -34,19 +50,20 @@ const ServicesSection = ({ services }: ServicesSectionProps) => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-10">
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="group cursor-pointer hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 bg-white border-0 shadow-lg h-full flex flex-col rounded-2xl overflow-hidden"
+              className="group cursor-pointer bg-white/90 backdrop-blur-sm border border-blue-100/50 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 h-full flex flex-col rounded-3xl overflow-hidden hover:border-brand-blue/30"
               onClick={() => navigate(service.route)}
             >
-              <CardHeader className="pb-4 flex-shrink-0 p-8">
+              <CardHeader className="pb-6 flex-shrink-0 p-8">
                 <div className={`w-16 h-16 ${
-                  index % 3 === 0 ? 'bg-gradient-blue' : 
-                  index % 3 === 1 ? 'bg-gradient-blue-light' : 
-                  'bg-gradient-dark-blue'
-                } rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                  index % 3 === 0 ? 'bg-gradient-to-r from-brand-blue to-brand-accent-blue' : 
+                  index % 3 === 1 ? 'bg-gradient-to-r from-brand-accent-blue to-brand-blue-dark' : 
+                  'bg-gradient-to-r from-brand-blue-dark to-brand-blue'
+                } rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300`}>
                   <EnhancedIcon
                     icon={service.icon}
                     size="lg"
@@ -59,7 +76,7 @@ const ServicesSection = ({ services }: ServicesSectionProps) => {
                 <CardTitle className="text-xl font-bold text-neutral-800 group-hover:text-brand-blue transition-colors duration-300 mb-4 text-right leading-tight">
                   {service.title}
                 </CardTitle>
-                <CardDescription className="text-neutral-600 leading-relaxed text-base text-right">
+                <CardDescription className="text-neutral-600 leading-relaxed text-base text-right line-height-relaxed">
                   {service.description}
                 </CardDescription>
               </CardHeader>
@@ -69,12 +86,12 @@ const ServicesSection = ({ services }: ServicesSectionProps) => {
                   phoneNumber="+966570513821"
                   message={`مرحباً، أريد الاستفسار عن خدمات ${service.title}`}
                   variant="service"
-                  text="اطلب استشارة مجانية"
+                  text="استشارة مجانية"
                   className={`w-full ${
-                    index % 3 === 0 ? 'bg-gradient-blue hover:bg-brand-accent-blue' : 
-                    index % 3 === 1 ? 'bg-gradient-blue-light hover:bg-brand-blue' : 
-                    'bg-gradient-dark-blue hover:bg-brand-blue-dark'
-                  } text-white border-0 py-3 mb-4 shadow-md hover:shadow-lg transition-all duration-300 text-base font-medium`}
+                    index % 3 === 0 ? 'bg-gradient-to-r from-brand-blue to-brand-accent-blue hover:from-brand-blue-dark hover:to-brand-blue' : 
+                    index % 3 === 1 ? 'bg-gradient-to-r from-brand-accent-blue to-brand-blue-dark hover:from-brand-blue hover:to-brand-accent-blue' : 
+                    'bg-gradient-to-r from-brand-blue-dark to-brand-blue hover:from-brand-accent-blue hover:to-brand-blue-dark'
+                  } text-white border-0 py-3 mb-4 shadow-md hover:shadow-lg transition-all duration-300 text-base font-medium rounded-xl`}
                 />
                 <div className="flex items-center justify-center text-neutral-600 group-hover:text-brand-blue transition-colors duration-300">
                   <span className="text-base font-medium ml-2">اعرف المزيد</span>
