@@ -1,3 +1,4 @@
+
 import { Users, Info, UserPlus, Phone, Grid3X3, Linkedin, MessageSquare, Mail, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
@@ -56,15 +57,15 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
     <>
       <header className="bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200 sticky top-0 z-50">
         {/* Single Line Layout - Logo, Company Name, and Navigation */}
-        <div className="container mx-auto px-4 sm:px-6 py-2">
+        <div className="container mx-auto px-4 sm:px-6 py-1.5">
           <div className="flex justify-between items-center">
-            {/* Logo and Company Section - Compact */}
+            {/* Logo and Company Section - More Compact */}
             <div className="flex items-center space-x-2 space-x-reverse">
-              <div className="w-8 h-8 sm:w-9 sm:h-9 bg-gradient-blue rounded-lg flex items-center justify-center shadow-md border border-white">
+              <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-blue rounded-lg flex items-center justify-center shadow-md border border-white">
                 <img 
                   src="/lovable-uploads/8838bb20-a5cc-4ab1-9fce-30cdb0f93521.png" 
                   alt="Zeen A Plus Solutions Logo" 
-                  className="w-5 h-5 sm:w-6 sm:h-6 object-contain filter brightness-200"
+                  className="w-4 h-4 sm:w-5 sm:h-5 object-contain filter brightness-200"
                 />
               </div>
               <div>
@@ -79,7 +80,7 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
                 variant="ghost"
                 size="sm"
                 onClick={() => navigate('/about')}
-                className="text-slate-600 hover:text-brand-blue hover:bg-brand-light-blue transition-all duration-200 font-medium text-xs px-2 py-1.5"
+                className="text-slate-600 hover:text-brand-blue hover:bg-brand-light-blue transition-all duration-200 font-medium text-xs px-3 py-2"
               >
                 <Info className="ml-1 h-3 w-3" />
                 من نحن
@@ -90,7 +91,7 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="text-slate-600 hover:text-brand-blue hover:bg-brand-light-blue transition-all duration-200 font-medium text-xs px-2 py-1.5"
+                    className="text-slate-600 hover:text-brand-blue hover:bg-brand-light-blue transition-all duration-200 font-medium text-xs px-3 py-2"
                   >
                     <Grid3X3 className="ml-1 h-3 w-3 text-brand-blue" />
                     خدماتنا المتنوعة
@@ -117,7 +118,7 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
                 variant="ghost"
                 size="sm"
                 onClick={() => navigate('/join-us')}
-                className="text-slate-600 hover:text-brand-accent-blue hover:bg-blue-50 transition-all duration-200 font-medium text-xs px-2 py-1.5"
+                className="text-slate-600 hover:text-brand-accent-blue hover:bg-blue-50 transition-all duration-200 font-medium text-xs px-3 py-2"
               >
                 <UserPlus className="ml-1 h-3 w-3" />
                 انضم إلينا
@@ -128,7 +129,7 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="text-slate-600 hover:text-brand-blue-dark hover:bg-blue-50 transition-all duration-200 font-medium text-xs px-2 py-1.5"
+                    className="text-slate-600 hover:text-brand-blue-dark hover:bg-blue-50 transition-all duration-200 font-medium text-xs px-3 py-2"
                   >
                     <Phone className="ml-1 h-3 w-3" />
                     تواصل معنا
@@ -173,7 +174,7 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
                 phoneNumber={companyInfo.whatsapp}
                 message="مرحباً، أريد بدء مشروع جديد مع Zeen A Plus Solutions"
                 variant="header"
-                className="text-xs px-2 py-1.5"
+                className="text-xs px-3 py-2"
               />
             </div>
 
@@ -197,7 +198,7 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
         </div>
       </header>
 
-      {/* Mobile Off-Canvas Menu - Unchanged */}
+      {/* Mobile Off-Canvas Menu */}
       {isMobileMenuOpen && (
         <>
           {/* Overlay */}

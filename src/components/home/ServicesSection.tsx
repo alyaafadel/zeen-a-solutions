@@ -78,11 +78,11 @@ const ServicesSection = ({ services }: ServicesSectionProps) => {
   });
 
   return (
-    <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-pattern-subtle">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-pattern-subtle">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-16 sm:mb-20 md:mb-24">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-blue-dark mb-6 sm:mb-8">خدماتنا المتخصصة</h2>
-          <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed px-2 mb-4">
+        <div className="text-center mb-12 sm:mb-16 md:mb-20">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-brand-blue-dark mb-4 sm:mb-6">خدماتنا المتخصصة</h2>
+          <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed px-2 mb-3">
             نقدم خدمات احترافية متنوعة للشركات والأفراد - كشركاء متخصصين لإنجاز مهامكم دون الحاجة لتوظيف فرق دائمة
           </p>
           <p className="text-sm sm:text-base text-brand-blue font-semibold">
@@ -90,23 +90,23 @@ const ServicesSection = ({ services }: ServicesSectionProps) => {
           </p>
         </div>
 
-        {/* تحسين الشبكة لتكون أكثر سلاسة على الهواتف المحمولة */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
+        {/* تحسين الشبكة مع مساحات أقل */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-10">
           {enhancedServices.map((service, index) => (
             <Card 
               key={index} 
               className="group cursor-pointer hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 bg-white/95 backdrop-blur-sm border-0 shadow-lg text-center h-full flex flex-col"
               onClick={() => navigate(service.route)}
             >
-              <CardHeader className="pb-4 sm:pb-6 flex-shrink-0">
-                <div className={`w-16 sm:w-20 h-16 sm:h-20 ${
+              <CardHeader className="pb-3 sm:pb-4 flex-shrink-0">
+                <div className={`w-14 sm:w-16 h-14 sm:h-16 ${
                   index % 3 === 0 ? 'bg-gradient-blue' : 
                   index % 3 === 1 ? 'bg-gradient-blue-light' : 
                   'bg-gradient-dark-blue'
-                } rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
+                } rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                  <service.icon className="h-7 w-7 sm:h-8 sm:w-8 text-white" />
                 </div>
-                <CardTitle className="text-lg sm:text-xl font-bold text-brand-blue-dark group-hover:text-brand-blue transition-colors duration-300 mb-3 sm:mb-4 px-2">
+                <CardTitle className="text-lg sm:text-xl font-bold text-brand-blue-dark group-hover:text-brand-blue transition-colors duration-300 mb-2 sm:mb-3 px-2 leading-tight">
                   {service.title}
                 </CardTitle>
                 <CardDescription className="text-slate-600 leading-relaxed text-sm sm:text-base px-2">
@@ -115,7 +115,7 @@ const ServicesSection = ({ services }: ServicesSectionProps) => {
               </CardHeader>
               
               {service.benefits && (
-                <div className="px-4 sm:px-6 mb-4 flex-grow">
+                <div className="px-3 sm:px-4 mb-3 flex-grow">
                   <div className="text-xs sm:text-sm text-brand-blue font-semibold mb-2">المزايا الرئيسية:</div>
                   <ul className="text-xs sm:text-sm text-slate-600 space-y-1">
                     {service.benefits.map((benefit, idx) => (
@@ -128,7 +128,7 @@ const ServicesSection = ({ services }: ServicesSectionProps) => {
                 </div>
               )}
               
-              <CardContent className="pt-0 px-4 sm:px-6 mt-auto">
+              <CardContent className="pt-0 px-3 sm:px-4 mt-auto">
                 <WhatsAppButton 
                   phoneNumber="+966570513821"
                   message={`مرحباً، أريد الاستفسار عن خدمات ${service.title}`}
@@ -138,7 +138,7 @@ const ServicesSection = ({ services }: ServicesSectionProps) => {
                     index % 3 === 0 ? 'bg-gradient-blue hover:bg-brand-accent-blue' : 
                     index % 3 === 1 ? 'bg-gradient-blue-light hover:bg-brand-blue' : 
                     'bg-gradient-dark-blue hover:bg-brand-blue-dark'
-                  } text-white border-0 py-2 sm:py-3 mb-3 sm:mb-4 shadow-md hover:shadow-lg transition-all duration-300 text-sm sm:text-base`}
+                  } text-white border-0 py-2 sm:py-2.5 mb-2 sm:mb-3 shadow-md hover:shadow-lg transition-all duration-300 text-sm sm:text-base`}
                 />
                 <div className="flex items-center justify-center text-slate-600 group-hover:text-brand-blue transition-colors duration-300">
                   <span className="text-xs sm:text-sm font-medium ml-2">اعرف المزيد عن الخدمة</span>
