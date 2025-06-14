@@ -1,4 +1,3 @@
-
 import { ArrowLeft, Target, Eye, Users, Award, Clock, MapPin, Lightbulb, Shield, Handshake, Star, TrendingUp, CheckCircle, Heart, Globe, Zap, UserPlus, Building2, Rocket, Sparkles, Trophy, Compass } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -84,29 +83,29 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-pattern-subtle about-page-container" dir="rtl">
-      {/* Enhanced Mobile-Friendly Header */}
+      {/* Enhanced Mobile-Friendly Header with reduced padding */}
       <header className="bg-white/95 backdrop-blur-md shadow-lg border-b border-slate-200 sticky top-0 z-50">
-        <div className="container mx-auto px-4 sm:px-6 md:px-8 py-3 sm:py-4">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 py-2 sm:py-3">
           <div className="flex justify-between items-center">
             <Button
               variant="ghost"
               onClick={() => navigate('/')}
-              className="flex items-center space-x-2 space-x-reverse text-slate-600 hover:text-brand-blue hover:bg-brand-light-blue transition-all duration-300 rounded-xl px-4 sm:px-6 py-2 sm:py-3 touch-manipulation"
+              className="flex items-center space-x-2 space-x-reverse text-slate-600 hover:text-brand-blue hover:bg-brand-light-blue transition-all duration-300 rounded-xl px-3 sm:px-4 py-2 touch-manipulation"
             >
               <ArrowLeft className="h-4 w-4 sm:h-5 sm:w-5" />
               <span className="font-medium text-sm sm:text-base lg:text-lg">العودة للرئيسية</span>
             </Button>
-            <div className="flex items-center space-x-3 sm:space-x-4 space-x-reverse">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-blue rounded-xl flex items-center justify-center shadow-lg border-2 border-white">
+            <div className="flex items-center space-x-2 sm:space-x-3 space-x-reverse">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-blue rounded-xl flex items-center justify-center shadow-lg border-2 border-white">
                 <img 
                   src="/lovable-uploads/8838bb20-a5cc-4ab1-9fce-30cdb0f93521.png" 
                   alt="Zeen A Plus Solutions Logo" 
-                  className="w-8 h-8 sm:w-10 sm:h-10 object-contain filter brightness-200"
+                  className="w-6 h-6 sm:w-8 sm:h-8 object-contain filter brightness-200"
                 />
               </div>
               <div>
-                <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-brand-blue-dark leading-tight">{companyInfo.name}</h1>
-                <p className="text-sm sm:text-base text-slate-600 leading-tight">شركاؤكم في التميز والإنجاز</p>
+                <h1 className="text-base sm:text-lg lg:text-xl font-bold text-brand-blue-dark leading-tight">{companyInfo.name}</h1>
+                <p className="text-xs sm:text-sm text-slate-600 leading-tight">شركاؤكم في التميز والإنجاز</p>
               </div>
             </div>
           </div>
