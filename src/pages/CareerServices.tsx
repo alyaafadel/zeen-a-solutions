@@ -99,10 +99,28 @@ const CareerServices = () => {
             <div className="w-24 h-24 bg-gradient-to-r from-sky-400 to-sky-500 rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-lg">
               <Briefcase className="h-12 w-12 text-white" />
             </div>
-            <h1 className="text-5xl font-bold text-sky-700 mb-6">خدمات التطوير المهني</h1>
-            <p className="text-xl text-sky-600 mb-12 leading-relaxed">
-              نساعدك في بناء مسار مهني ناجح من خلال استشارات متخصصة وخدمات شاملة تشمل بناء بروفايل LinkedIn الاحترافي والبحث عن الوظائف
+            <h1 className="text-5xl font-bold text-sky-700 mb-6">خدمات التطوير المهني للأفراد</h1>
+            <p className="text-xl text-sky-600 mb-8 leading-relaxed">
+              نساعد الأفراد في بناء مسار مهني ناجح من خلال خدمات متخصصة تشمل كتابة السيرة الذاتية الاحترافية، 
+              بناء بروفايل LinkedIn متميز، والتدريب على المقابلات الشخصية
             </p>
+            <div className="bg-sky-50 rounded-xl p-6 max-w-3xl mx-auto">
+              <h3 className="text-lg font-semibold text-sky-700 mb-3">خدماتنا تشمل:</h3>
+              <div className="grid md:grid-cols-3 gap-4 text-center">
+                <div className="flex flex-col items-center">
+                  <FileText className="h-8 w-8 text-sky-600 mb-2" />
+                  <span className="text-sky-700 font-medium">كتابة السيرة الذاتية</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <Linkedin className="h-8 w-8 text-sky-600 mb-2" />
+                  <span className="text-sky-700 font-medium">بناء بروفايل LinkedIn</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <User className="h-8 w-8 text-sky-600 mb-2" />
+                  <span className="text-sky-700 font-medium">استشارات مهنية</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -170,8 +188,8 @@ const CareerServices = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <FileText className="h-16 w-16 text-sky-500 mx-auto mb-4" />
-            <h3 className="text-3xl font-bold text-sky-700 mb-4">من نخدم</h3>
-            <p className="text-xl text-sky-600">خدماتنا مصممة لتناسب جميع فئات الباحثين عن التطوير المهني</p>
+            <h3 className="text-3xl font-bold text-sky-700 mb-4">للأفراد الذين يريدون تطوير مساراتهم المهنية</h3>
+            <p className="text-xl text-sky-600">خدماتنا مصممة خصيصاً للأفراد الراغبين في الحصول على وظائف أفضل وتطوير مهاراتهم المهنية</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
@@ -187,13 +205,13 @@ const CareerServices = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-sky-500 to-sky-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h3 className="text-4xl font-bold mb-4">ابدأ تطوير مسارك المهني</h3>
-          <p className="text-xl mb-8 opacity-90">احصل على استشارة مهنية مجانية وخطة عمل واضحة</p>
+          <h3 className="text-4xl font-bold mb-4">ابدأ تطوير مسارك المهني اليوم</h3>
+          <p className="text-xl mb-8 opacity-90">احصل على سيرة ذاتية احترافية وبروفايل LinkedIn متميز واستشارة مهنية مجانية</p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <WhatsAppButton 
               phoneNumber="+966570513821"
-              message="مرحباً، أريد استشارة مهنية مجانية"
+              message="مرحباً، أريد استشارة مهنية مجانية وكتابة سيرة ذاتية احترافية"
               variant="cta"
               text="احصل على استشارة مجانية"
               className="bg-white text-sky-600 hover:bg-gray-100"
