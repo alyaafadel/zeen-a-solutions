@@ -1,4 +1,3 @@
-
 import { GraduationCap, Users, Award, Clock, BookOpen, Target, CheckCircle, ArrowLeft, MessageSquare, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -68,8 +67,9 @@ const TrainingServices = () => {
 
   const companyInfo = {
     name: "Zeen Learning Academy",
-    phone: "+966123456789",
-    whatsapp: "+966123456789"
+    phone: "+966570513821",
+    whatsapp: "+966570513821",
+    location: "الرياض، المملكة العربية السعودية"
   };
 
   return (
@@ -94,7 +94,7 @@ const TrainingServices = () => {
                 </div>
                 <div>
                   <h1 className="text-xl font-bold text-gray-800">{companyInfo.name}</h1>
-                  <p className="text-sm text-gray-600">التدريب المهني والتطوير</p>
+                  <p className="text-sm text-gray-600">{companyInfo.location}</p>
                 </div>
               </div>
             </div>

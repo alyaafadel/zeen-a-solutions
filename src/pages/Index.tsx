@@ -85,9 +85,10 @@ const Index = () => {
   const companyInfo = {
     name: "Zeen A Plus Solutions",
     slogan: "شريكك المتميز في النجاح والتطوير",
-    phone: "+966123456789",
+    phone: "+966570513821",
     email: "info@zeenaplusolutions.com",
-    whatsapp: "+966123456789",
+    whatsapp: "+966570513821",
+    location: "الرياض، المملكة العربية السعودية",
     description: "شركة متخصصة في تقديم حلول متكاملة للأعمال تشمل الموارد البشرية، الترجمة، التسويق الرقمي، التطوير التقني، والخدمات اللوجستية."
   };
 
@@ -107,7 +108,7 @@ const Index = () => {
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-gray-800">{companyInfo.name}</h1>
-                <p className="text-sm text-gray-600">{companyInfo.slogan}</p>
+                <p className="text-sm text-gray-600">{companyInfo.location}</p>
               </div>
             </div>
             <WhatsAppButton 
