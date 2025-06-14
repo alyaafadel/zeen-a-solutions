@@ -86,12 +86,12 @@ const About = () => {
     <div className="min-h-screen bg-pattern-subtle about-page-container" dir="rtl">
       {/* Enhanced Mobile-Friendly Header */}
       <header className="bg-white/95 backdrop-blur-md shadow-lg border-b border-slate-200 sticky top-0 z-50">
-        <div className="container mx-auto px-4 sm:px-6 md:px-8 py-4 sm:py-6">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 py-3 sm:py-4">
           <div className="flex justify-between items-center">
             <Button
               variant="ghost"
               onClick={() => navigate('/')}
-              className="flex items-center space-x-2 space-x-reverse text-slate-600 hover:text-brand-blue hover:bg-brand-light-blue transition-all duration-300 rounded-xl px-4 sm:px-6 py-3 sm:py-4 touch-manipulation"
+              className="flex items-center space-x-2 space-x-reverse text-slate-600 hover:text-brand-blue hover:bg-brand-light-blue transition-all duration-300 rounded-xl px-4 sm:px-6 py-2 sm:py-3 touch-manipulation"
             >
               <ArrowLeft className="h-4 w-4 sm:h-5 sm:w-5" />
               <span className="font-medium text-sm sm:text-base lg:text-lg">العودة للرئيسية</span>
@@ -113,51 +113,51 @@ const About = () => {
         </div>
       </header>
 
-      {/* Content Container with Proper Mobile Spacing and Fixed Overlapping */}
-      <div className="container mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16 max-w-6xl">
-        {/* Main Title Section with Enhanced Mobile Typography and Spacing Fix */}
-        <section className="text-center mb-16 clear-both">
-          <div className="space-y-8 sm:space-y-10 md:space-y-12">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-blue mb-8 clear-both">
+      {/* Content Container with Reduced Spacing */}
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 py-6 sm:py-8 md:py-10 max-w-6xl">
+        {/* Main Title Section with Reduced Spacing */}
+        <section className="text-center mb-8 clear-both">
+          <div className="space-y-4 sm:space-y-6 md:space-y-8">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-blue mb-4 clear-both">
               من نحن: Zeen-A Solutions
             </h1>
             
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-brand-blue-dark mb-8 clear-both">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-brand-blue-dark mb-4 clear-both">
               شركاؤكم في التميز والإنجاز
             </h2>
             
-            <div className="max-w-5xl mx-auto space-y-8 sm:space-y-10">
-              <p className="text-base sm:text-lg md:text-xl leading-relaxed text-slate-700 mb-8 clear-both block">
+            <div className="max-w-5xl mx-auto space-y-4 sm:space-y-6">
+              <p className="text-base sm:text-lg md:text-xl leading-relaxed text-slate-700 mb-4 clear-both block">
                 في Zeen A Plus Solutions، نؤمن بأن النجاح في عالم الأعمال اليوم يتطلب مرونة استثنائية، وصولاً سريعاً للخبرات المتخصصة، وشراكات مبنية على الثقة والاحترافية.
               </p>
               
-              <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-600 mb-8 clear-both block">
+              <p className="text-sm sm:text-base md:text-lg leading-relaxed text-slate-600 mb-4 clear-both block">
                 نحن لسنا مجرد مزودين للخدمات، بل <span className="font-semibold text-brand-blue">شركاء استراتيجيون</span> ننضم إلى فريق عملكم لتقديم حلول متكاملة ومصممة خصيصاً لتلبية احتياجاتكم الفريدة وتحقيق أهدافكم الطموحة.
               </p>
             </div>
           </div>
         </section>
 
-        <Separator className="my-16 bg-gradient-blue h-1 rounded-full" />
+        <Separator className="my-8 bg-gradient-blue h-1 rounded-full" />
 
-        {/* Vision and Mission Section with Enhanced Mobile Layout and Spacing Fix */}
-        <section className="mb-16 clear-both">
-          <div className="text-center mb-12">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-brand-blue mb-8 clear-both">رؤيتنا ورسالتنا</h2>
-            <p className="text-sm sm:text-base md:text-lg text-slate-600 max-w-4xl mx-auto mb-8 clear-both">
+        {/* Vision and Mission Section with Reduced Spacing */}
+        <section className="mb-8 clear-both">
+          <div className="text-center mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-brand-blue mb-4 clear-both">رؤيتنا ورسالتنا</h2>
+            <p className="text-sm sm:text-base md:text-lg text-slate-600 max-w-4xl mx-auto mb-4 clear-both">
               الأسس التي تحرك رحلتنا نحو التميز والريادة في تقديم الخدمات المتخصصة
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 mt-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mt-6">
             <Card className="h-full group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-0 shadow-lg bg-white/95 backdrop-blur-sm">
-              <CardHeader className="text-center pb-6">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-blue rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300 mb-6">
+              <CardHeader className="text-center pb-4">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-blue rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300 mb-4">
                   <Eye className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
                 </div>
-                <CardTitle className="text-lg sm:text-xl md:text-2xl text-brand-blue group-hover:text-brand-blue-dark transition-colors duration-300 mb-6">رؤيتنا</CardTitle>
+                <CardTitle className="text-lg sm:text-xl md:text-2xl text-brand-blue group-hover:text-brand-blue-dark transition-colors duration-300 mb-3">رؤيتنا</CardTitle>
               </CardHeader>
-              <CardContent className="p-6">
+              <CardContent className="p-4">
                 <p className="text-slate-700 leading-relaxed text-sm sm:text-base md:text-lg text-center">
                   أن نكون الشريك المفضل للشركات والأفراد الباحثين عن حلول مبتكرة وفعالة، تمكنهم من تجاوز التحديات وتحقيق أقصى إمكاناتهم في بيئة عمل متغيرة باستمرار.
                 </p>
@@ -165,13 +165,13 @@ const About = () => {
             </Card>
 
             <Card className="h-full group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-0 shadow-lg bg-white/95 backdrop-blur-sm">
-              <CardHeader className="text-center pb-6">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-blue-light rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300 mb-6">
+              <CardHeader className="text-center pb-4">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-blue-light rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300 mb-4">
                   <Target className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
                 </div>
-                <CardTitle className="text-lg sm:text-xl md:text-2xl text-brand-blue group-hover:text-brand-accent-blue transition-colors duration-300 mb-6">رسالتنا</CardTitle>
+                <CardTitle className="text-lg sm:text-xl md:text-2xl text-brand-blue group-hover:text-brand-accent-blue transition-colors duration-300 mb-3">رسالتنا</CardTitle>
               </CardHeader>
-              <CardContent className="p-6">
+              <CardContent className="p-4">
                 <p className="text-slate-700 leading-relaxed text-sm sm:text-base md:text-lg text-center">
                   تقديم خدمات استشارية وتنفيذية عالية الجودة في مجالات متعددة، من خلال فريق من الخبراء المتخصصين الذين يعملون بمرونة وكفاءة، لضمان إنجاز المهام بدقة واحترافية، وتحقيق قيمة مضافة حقيقية لعملائنا.
                 </p>
@@ -180,31 +180,31 @@ const About = () => {
           </div>
         </section>
 
-        <Separator className="my-16 bg-gradient-blue-light h-1 rounded-full" />
+        <Separator className="my-8 bg-gradient-blue-light h-1 rounded-full" />
 
-        {/* Core Values Section with Mobile-Optimized Grid and Spacing Fix */}
-        <section className="mb-16 clear-both">
-          <div className="text-center mb-12">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-brand-blue mb-8 clear-both">قيمنا الأساسية</h2>
-            <p className="text-sm sm:text-base md:text-lg text-slate-600 max-w-4xl mx-auto mb-8 clear-both">
+        {/* Core Values Section with Reduced Spacing */}
+        <section className="mb-8 clear-both">
+          <div className="text-center mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-brand-blue mb-4 clear-both">قيمنا الأساسية</h2>
+            <p className="text-sm sm:text-base md:text-lg text-slate-600 max-w-4xl mx-auto mb-4 clear-both">
               المبادئ التي تحكم طريقة عملنا وتوجه كل قراراتنا في رحلة الشراكة معكم
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 mt-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-6">
             {coreValues.map((value, index) => (
               <Card key={index} className="h-full group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-0 shadow-lg bg-white/95 backdrop-blur-sm">
-                <CardHeader className="text-center pb-6">
+                <CardHeader className="text-center pb-3">
                   <div className={`w-14 h-14 sm:w-16 sm:h-16 ${
                     index % 3 === 0 ? 'bg-gradient-blue' : 
                     index % 3 === 1 ? 'bg-gradient-blue-light' : 
                     'bg-gradient-dark-blue'
-                  } rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300 mb-6`}>
+                  } rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300 mb-3`}>
                     <value.icon className="h-7 w-7 sm:h-8 sm:w-8 text-white" />
                   </div>
-                  <CardTitle className="text-base sm:text-lg md:text-xl text-brand-blue group-hover:text-brand-blue-dark transition-colors duration-300 mb-6">{value.title}</CardTitle>
+                  <CardTitle className="text-base sm:text-lg md:text-xl text-brand-blue group-hover:text-brand-blue-dark transition-colors duration-300 mb-3">{value.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="p-6">
+                <CardContent className="p-4">
                   <p className="text-slate-700 leading-relaxed text-center text-sm sm:text-base">{value.description}</p>
                 </CardContent>
               </Card>
@@ -212,21 +212,21 @@ const About = () => {
           </div>
         </section>
 
-        <Separator className="my-16 bg-gradient-dark-blue h-1 rounded-full" />
+        <Separator className="my-8 bg-gradient-dark-blue h-1 rounded-full" />
 
-        {/* What Makes Us Different Section with Enhanced Mobile Layout and Spacing Fix */}
-        <section className="mb-16 clear-both">
-          <div className="text-center mb-12">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-brand-blue mb-8 clear-both">ما يميزنا</h2>
-            <p className="text-sm sm:text-base md:text-lg text-slate-600 max-w-4xl mx-auto mb-8 clear-both">
+        {/* What Makes Us Different Section with Reduced Spacing */}
+        <section className="mb-8 clear-both">
+          <div className="text-center mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-brand-blue mb-4 clear-both">ما يميزنا</h2>
+            <p className="text-sm sm:text-base md:text-lg text-slate-600 max-w-4xl mx-auto mb-4 clear-both">
               نجمع بين الخبرة العميقة والمرونة الاستثنائية لنكون شركاؤكم الأمثل في تحقيق النجاح
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 mt-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mt-6">
             {whatMakesUsDifferent.map((item, index) => (
               <Card key={index} className="h-full group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-0 shadow-lg bg-white/95 backdrop-blur-sm">
-                <CardHeader className="pb-6">
+                <CardHeader className="pb-3">
                   <div className="flex items-center space-x-3 sm:space-x-4 space-x-reverse">
                     <div className={`w-12 h-12 sm:w-14 sm:h-14 ${
                       index % 3 === 0 ? 'bg-gradient-blue' : 
@@ -238,7 +238,7 @@ const About = () => {
                     <CardTitle className="text-base sm:text-lg md:text-xl text-brand-blue group-hover:text-brand-blue-dark transition-colors duration-300">{item.title}</CardTitle>
                   </div>
                 </CardHeader>
-                <CardContent className="p-6">
+                <CardContent className="p-4">
                   <p className="text-slate-700 leading-relaxed text-sm sm:text-base">{item.description}</p>
                 </CardContent>
               </Card>
@@ -246,23 +246,23 @@ const About = () => {
           </div>
         </section>
 
-        <Separator className="my-16 bg-gradient-blue h-1 rounded-full" />
+        <Separator className="my-8 bg-gradient-blue h-1 rounded-full" />
 
-        {/* How We Work Section with Mobile-Optimized Typography and Spacing Fix */}
-        <section className="mb-16 clear-both">
+        {/* How We Work Section with Reduced Spacing */}
+        <section className="mb-8 clear-both">
           <Card className="bg-gradient-to-br from-brand-light-blue/50 to-brand-light-blue/30 border-0 shadow-xl">
-            <CardHeader className="text-center pb-6">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-blue rounded-full flex items-center justify-center mx-auto shadow-lg mb-6">
+            <CardHeader className="text-center pb-4">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-blue rounded-full flex items-center justify-center mx-auto shadow-lg mb-4">
                 <Users className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
               </div>
-              <CardTitle className="text-xl sm:text-2xl md:text-3xl text-brand-blue mb-6">كيف نعمل؟</CardTitle>
+              <CardTitle className="text-xl sm:text-2xl md:text-3xl text-brand-blue mb-3">كيف نعمل؟</CardTitle>
             </CardHeader>
-            <CardContent className="text-center p-8">
-              <p className="text-sm sm:text-base md:text-lg text-slate-700 leading-relaxed max-w-4xl mx-auto mb-8">
+            <CardContent className="text-center p-6">
+              <p className="text-sm sm:text-base md:text-lg text-slate-700 leading-relaxed max-w-4xl mx-auto mb-4">
                 نحن نعمل <span className="font-bold text-brand-blue">كجزء من فريقكم</span>، نقدم الخبرة والدعم اللازمين لإنجاز المهام بكفاءة. 
                 سواء كنتم بحاجة إلى استشارات متخصصة، إدارة مشاريع، أو تنفيذ مهام محددة، فإننا هنا لتقديم الدعم الذي يمكنكم الاعتماد عليه.
               </p>
-              <div className="flex items-center justify-center space-x-2 sm:space-x-3 space-x-reverse mt-8">
+              <div className="flex items-center justify-center space-x-2 sm:space-x-3 space-x-reverse mt-4">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="h-5 w-5 sm:h-6 sm:w-6 fill-yellow-400 text-yellow-400" />
@@ -274,19 +274,19 @@ const About = () => {
           </Card>
         </section>
 
-        {/* Call to Action Section with Enhanced Mobile Buttons and Spacing Fix */}
-        <section className="text-center mb-16 clear-both">
+        {/* Call to Action Section with Reduced Spacing */}
+        <section className="text-center mb-8 clear-both">
           <Card className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white border-0 shadow-2xl">
-            <CardHeader className="pb-6">
-              <CardTitle className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
+            <CardHeader className="pb-4">
+              <CardTitle className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3">
                 دعوة للعمل
               </CardTitle>
-              <CardDescription className="text-base sm:text-lg md:text-xl text-brand-light-blue max-w-4xl mx-auto mb-6">
+              <CardDescription className="text-base sm:text-lg md:text-xl text-brand-light-blue max-w-4xl mx-auto mb-3">
                 انضموا إلى قائمة شركائنا الناجحين. تواصلوا معنا اليوم لمناقشة كيف يمكن لـ Zeen A Plus Solutions أن تكون شريككم الأمثل في رحلة النجاح
               </CardDescription>
             </CardHeader>
-            <CardContent className="p-8">
-              <div className="flex flex-col space-y-4 sm:space-y-6 md:space-y-0 md:flex-row md:gap-6 lg:gap-8 justify-center items-center mt-8">
+            <CardContent className="p-6">
+              <div className="flex flex-col space-y-4 sm:space-y-6 md:space-y-0 md:flex-row md:gap-6 lg:gap-8 justify-center items-center mt-4">
                 <WhatsAppButton 
                   phoneNumber={companyInfo.whatsapp}
                   message="مرحباً، أريد التعرف أكثر على خدماتكم وكيف يمكنكم أن تكونوا شركائنا في النجاح"
