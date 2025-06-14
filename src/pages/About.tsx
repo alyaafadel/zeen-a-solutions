@@ -1,3 +1,4 @@
+
 import { ArrowLeft, Target, Eye, Users, Award, Clock, MapPin, Lightbulb, Shield, Handshake, Star, TrendingUp, CheckCircle, Heart, Globe, Zap, UserPlus, Building2, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -18,62 +19,62 @@ const About = () => {
     { icon: Building2, number: "200+", label: "شراكة ناجحة" },
     { icon: Star, number: "95%", label: "رضا الشركاء" },
     { icon: Rocket, number: "8+", label: "سنوات خبرة" },
-    { icon: UserPlus, number: "150+", label: "مشروع فردي" }
+    { icon: UserPlus, number: "150+", label: "مهمة مكتملة" }
   ];
 
   const coreValues = [
     {
-      title: "الشراكة الحقيقية",
-      description: "نعمل كجزء من فريقكم، نفهم ثقافة شركتكم وأهدافكم، ونقدم خدماتنا كأننا موظفون داخليون لديكم",
-      icon: Handshake
+      title: "ننضم لفريقكم مؤقتاً",
+      description: "نعمل كأعضاء في فريقكم لفترة محددة حتى إنجاز المهمة المطلوبة، ثم ننتقل للمهمة التالية عند الحاجة",
+      icon: UserPlus
     },
     {
-      title: "التخصص العميق",
-      description: "كل مشروع يتم تنفيذه من قبل متخصص في المجال المطلوب، مما يضمن جودة عالية وخبرة متقدمة",
+      title: "متخصصون في كل مجال",
+      description: "كل مهمة يتولاها متخصص خبير في المجال المطلوب، مما يضمن جودة عالية ونتائج احترافية",
       icon: Target
     },
     {
-      title: "المرونة والسرعة",
-      description: "نتكيف مع احتياجاتكم المتغيرة ونقدم حلول سريعة دون تعقيدات الإدارة التقليدية للفرق",
-      icon: Zap
+      title: "بدون التزامات التوظيف",
+      description: "لا رواتب شهرية، لا تأمينات، لا إجازات - فقط نتائج عالية الجودة بتكلفة المهمة فقط",
+      icon: Shield
     },
     {
-      title: "التكلفة المثلى",
-      description: "نقدم خدمات عالية الجودة بتكلفة أقل من توظيف فريق كامل، مع ضمان النتائج المطلوبة",
-      icon: Award
+      title: "جاهزون عند الطلب",
+      description: "متاحون للمهام الجديدة في أي وقت، سواء كانت مهام طارئة أو مشاريع مخطط لها مسبقاً",
+      icon: Zap
     }
   ];
 
   const whyChooseUs = [
     { 
-      text: "وفر 70% من تكلفة توظيف فريق كامل واحصل على نفس النتائج", 
-      icon: TrendingUp,
-      description: "بدلاً من دفع رواتب شهرية لفريق كامل، ادفع فقط مقابل العمل المنجز"
-    },
-    { 
-      text: "خبراء متخصصون جاهزون للعمل فوراً دون فترة تدريب", 
-      icon: Zap,
-      description: "لا تنتظر شهور لتوظيف وتدريب موظفين جدد، فريقنا جاهز من اليوم الأول"
-    },
-    { 
-      text: "مرونة كاملة في زيادة أو تقليل حجم العمل حسب احتياجاتك", 
+      text: "ننجز المهام كأعضاء فريق مؤقتين بدلاً من التوظيف الدائم", 
       icon: UserPlus,
-      description: "وسع فريقك في المواسم المزدحمة وقلصه في الأوقات الهادئة دون التزامات"
+      description: "تحصل على خبرة متخصصة لإنجاز مهامك دون تكاليف الموظف الدائم"
     },
     { 
-      text: "لا تكاليف إضافية: لا تأمينات، لا إجازات، لا مكاتب", 
-      icon: Shield,
-      description: "تخلص من جميع التكاليف الخفية المرتبطة بالتوظيف التقليدي"
+      text: "متخصصون جاهزون فوراً - لا انتظار للتوظيف والتدريب", 
+      icon: Zap,
+      description: "فريقنا مدرب ومؤهل لبدء العمل من اليوم الأول دون فترات انتظار"
     },
     { 
-      text: "نتائج مضمونة أو نعيد أموالك - نحن واثقون من جودة عملنا", 
-      icon: Award,
-      description: "ضمان كامل على جودة الخدمة المقدمة مع إمكانية استرداد المبلغ"
+      text: "ندفع فقط مقابل المهام المنجزة - لا رواتب شهرية ثابتة", 
+      icon: TrendingUp,
+      description: "وفر 60-80% من تكلفة الموظف الدائم مع ضمان إنجاز المهام بجودة عالية"
     },
     { 
-      text: "دعم مستمر 24/7 من فريق يفهم السوق السعودي", 
+      text: "مرونة كاملة - متاحون عند الحاجة فقط", 
       icon: Globe,
-      description: "تواصل مباشر مع خبراء محليين يفهمون ثقافة وتحديات الأعمال السعودية"
+      description: "اطلب خدماتنا عند الحاجة، لا التزامات طويلة المدى أو عقود معقدة"
+    },
+    { 
+      text: "نتحمل مسؤولية النتائج - ضمان الجودة أو إعادة العمل", 
+      icon: Award,
+      description: "نضمن جودة العمل المنجز ونعيد العمل مجاناً في حالة عدم الرضا"
+    },
+    { 
+      text: "خبرة متعددة التخصصات في فريق واحد", 
+      icon: Users,
+      description: "احصل على خبرات متنوعة من التقنية للتسويق للموارد البشرية من مصدر واحد"
     }
   ];
 
@@ -101,7 +102,7 @@ const About = () => {
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-slate-700">{companyInfo.name}</h1>
-                <p className="text-sm text-slate-600">شريكك المتخصص في النجاح</p>
+                <p className="text-sm text-slate-600">شركاؤكم المتخصصون</p>
               </div>
             </div>
           </div>
@@ -114,12 +115,12 @@ const About = () => {
         <div className="container mx-auto px-6 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-slate-700 leading-tight">
-              نحن <span className="text-slate-600">جزء من فريقكم</span>
+              ننضم لفريقكم 
               <br />
-              <span className="text-slate-500">بخبرة متخصصة</span>
+              <span className="text-slate-600">كشركاء متخصصين</span>
             </h1>
             <p className="text-xl mb-12 max-w-3xl mx-auto leading-relaxed text-slate-600">
-              نعمل مع الشركات الناشئة والمتوسطة كمتخصصين في فريقكم، نقدم خدمات عالية الجودة دون تكلفة توظيف فريق كامل
+              نعمل مع الشركات والأفراد كأعضاء فريق مؤقتين لإنجاز المهام المطلوبة. ننهي المهمة بجودة عالية ونكون جاهزين للمهمة التالية عند الحاجة - بدون توظيف دائم أو التزامات طويلة
             </p>
             
             <div className="grid md:grid-cols-4 gap-6 mt-12">
@@ -144,10 +145,10 @@ const About = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-700 mb-4">مفهومنا في العمل</h2>
+            <h2 className="text-4xl font-bold text-slate-700 mb-4">مفهومنا في الشراكة</h2>
             <div className="w-20 h-1 bg-slate-400 mx-auto mb-4"></div>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              نؤمن بأن الشركات الناشئة والمتوسطة تحتاج لخبرات متخصصة دون تعقيدات إدارة فرق كاملة
+              نؤمن بأن الشركات والأفراد يحتاجون لخبرات متخصصة لفترات محددة، وليس بالضرورة موظفين دائمين
             </p>
           </div>
           
@@ -161,8 +162,7 @@ const About = () => {
               </CardHeader>
               <CardContent className="text-center px-6 pb-8">
                 <p className="text-slate-600 leading-relaxed text-lg">
-                  أن نكون الخيار الأول للشركات التي تبحث عن متخصصين يعملون كجزء من فريقها، نساهم في نموها 
-                  وتطورها بمرونة عالية وتكلفة مثلى
+                  أن نكون الخيار الأول للشركات والأفراد الذين يحتاجون شركاء متخصصين ينضمون لفريقهم مؤقتاً لإنجاز المهام بجودة عالية وبدون التزامات التوظيف التقليدية
                 </p>
               </CardContent>
             </Card>
@@ -176,8 +176,7 @@ const About = () => {
               </CardHeader>
               <CardContent className="text-center px-6 pb-8">
                 <p className="text-slate-600 leading-relaxed text-lg">
-                  نقدم خدمات متخصصة في الموارد البشرية، التقنية، التسويق، والترجمة للشركات الناشئة والمتوسطة. 
-                  نعمل كأعضاء في فريقكم ونحقق أهدافكم بكفاءة ومرونة عالية
+                  نقدم خدمات متخصصة في مختلف المجالات من خلال انضمامنا لفرق العمل كشركاء مؤقتين. ننجز المهام المطلوبة بأعلى جودة ونكون متاحين للمهام الجديدة عند الحاجة
                 </p>
               </CardContent>
             </Card>
@@ -189,10 +188,10 @@ const About = () => {
       <section className="py-16 bg-gradient-to-br from-slate-50 to-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-700 mb-4">مبادئ عملنا</h2>
+            <h2 className="text-4xl font-bold text-slate-700 mb-4">كيف نعمل كشركاء</h2>
             <div className="w-20 h-1 bg-slate-400 mx-auto mb-4"></div>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              القيم التي تحكم طريقة تعاملنا مع شركائنا وتضمن نجاح الشراكة على المدى الطويل
+              المبادئ التي تحكم طريقة عملنا كشركاء متخصصين مع فرق العمل
             </p>
           </div>
           
@@ -218,13 +217,13 @@ const About = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-700 mb-4">لماذا تختار Zeen A Plus Solutions؟</h2>
+            <h2 className="text-4xl font-bold text-slate-700 mb-4">لماذا تختار Zeen كشريك؟</h2>
             <div className="w-20 h-1 bg-slate-400 mx-auto mb-6"></div>
             <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed mb-4">
-              <span className="font-semibold text-slate-700">توقف عن دفع رواتب شهرية لفرق كاملة</span> واحصل على خبرات متخصصة تعمل معك كأعضاء فريق بتكلفة أقل ومرونة أكبر
+              <span className="font-semibold text-slate-700">لا تحتاج موظفين دائمين</span> - فقط شركاء متخصصين ينضمون لفريقك عند الحاجة وينجزون المهام بجودة عالية
             </p>
             <p className="text-lg text-slate-500 max-w-3xl mx-auto leading-relaxed">
-              أكثر من 200 شركة وفرت مئات الآلاف واستفادت من خدماتنا المتخصصة
+              أكثر من 200 شريك استفاد من خدماتنا ووفر تكاليف التوظيف والإدارة
             </p>
           </div>
           
@@ -246,13 +245,13 @@ const About = () => {
             ))}
           </div>
 
-          {/* Added testimonial-style section */}
+          {/* Testimonial */}
           <div className="mt-16 text-center">
             <div className="bg-slate-50 rounded-2xl p-8 max-w-4xl mx-auto border border-slate-200">
               <div className="text-3xl text-slate-300 mb-4">"</div>
               <p className="text-xl text-slate-600 leading-relaxed mb-6 italic">
-                "كنا نحتاج متخصص تسويق لـ 3 أشهر فقط. بدلاً من توظيف موظف براتب 8000 ريال شهرياً + تأمينات + تدريب، 
-                تعاملنا مع Zeen ووفرنا أكثر من 60% وحصلنا على نتائج أفضل من المتوقع"
+                "احتجنا متخصص تسويق رقمي لمدة شهرين فقط لإطلاق منتج جديد. بدلاً من توظيف موظف دائم براتب شهري، 
+                تعاملنا مع Zeen كشركاء وانضم أحد خبرائهم لفريقنا، أنجز المهمة بتميز ووفرنا أكثر من 70% من التكلفة"
               </p>
               <div className="flex items-center justify-center space-x-2 space-x-reverse">
                 <div className="flex">
@@ -272,18 +271,18 @@ const About = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-slate-600 to-slate-700"></div>
         <div className="container mx-auto px-6 text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
-            هل تبحث عن متخصص 
+            تحتاج شريك متخصص 
             <br />
             <span className="text-slate-200">ينضم لفريقك؟</span>
           </h2>
           <p className="text-xl mb-10 text-slate-200 max-w-3xl mx-auto leading-relaxed">
-            احصل على خبرات متخصصة تعمل معك كجزء من فريقك، بمرونة عالية وتكلفة مثلى. 
-            دعنا نكون شريكك في النجاح والنمو
+            احصل على خبرات متخصصة تنضم لفريقك مؤقتاً لإنجاز المهام المطلوبة. 
+            بدون توظيف دائم، بدون التزامات طويلة، فقط نتائج عالية الجودة
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <WhatsAppButton 
               phoneNumber={companyInfo.whatsapp}
-              message="مرحباً، أريد التحدث معكم حول انضمام متخصص من فريقكم لمساعدتنا في مشاريعنا"
+              message="مرحباً، أريد شريك متخصص ينضم لفريقنا لإنجاز مهام محددة"
               variant="cta"
               text="ابدأ الشراكة معنا"
               className="bg-white text-slate-600 hover:bg-slate-50 border-0 px-8 py-3 text-lg font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
