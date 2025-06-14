@@ -33,27 +33,27 @@ const FeaturesSection = () => {
           </p>
         </div>
 
-        {/* Mobile-First Responsive Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12 md:gap-16 lg:gap-20 xl:gap-24">
+        {/* إعادة الشبكة لصف واحد على جميع الشاشات */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 md:gap-12 lg:gap-16">
           {features.map((feature, index) => (
-            <div key={index} className="group text-center px-4 sm:px-6 md:px-8 lg:px-10 py-6 sm:py-8 bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-brand-light-blue/30 hover:border-brand-blue/40">
-              {/* Responsive Icon Container */}
-              <div className={`w-20 sm:w-24 md:w-28 lg:w-32 h-20 sm:h-24 md:h-28 lg:h-32 ${feature.gradientClass} rounded-2xl sm:rounded-3xl lg:rounded-4xl flex items-center justify-center mx-auto mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-14 shadow-xl group-hover:scale-110 group-hover:shadow-2xl transition-all duration-300`}>
-                <feature.icon className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 lg:h-16 lg:w-16 text-white" />
+            <div key={index} className="group text-center px-4 sm:px-6 py-6 sm:py-8 bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-brand-light-blue/30 hover:border-brand-blue/40">
+              {/* أيقونة متجاوبة ومتوسطة الحجم */}
+              <div className={`w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 ${feature.gradientClass} rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-6 sm:mb-8 shadow-xl group-hover:scale-110 group-hover:shadow-2xl transition-all duration-300`}>
+                <feature.icon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-white" />
               </div>
               
-              {/* Responsive Title */}
-              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-brand-blue-dark group-hover:text-brand-blue transition-colors duration-300 mb-4 sm:mb-6 md:mb-8 lg:mb-10 leading-tight">
+              {/* عنوان متجاوب */}
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-brand-blue-dark group-hover:text-brand-blue transition-colors duration-300 mb-4 sm:mb-6 leading-tight">
                 {feature.title}
               </h3>
               
-              {/* Responsive Description with Better Line Height */}
-              <p className="text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed px-2 sm:px-4 mb-6 sm:mb-8 md:mb-10 lg:mb-12 line-height-mobile min-h-[80px] sm:min-h-[100px] md:min-h-[120px] flex items-center">
+              {/* وصف متجاوب مع ارتفاع ثابت */}
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed px-2 mb-6 sm:mb-8 line-height-mobile min-h-[100px] sm:min-h-[120px] flex items-center">
                 {feature.description}
               </p>
               
-              {/* Decorative Bar */}
-              <div className={`w-16 sm:w-20 md:w-24 lg:w-28 h-1 ${feature.gradientClass} rounded-full mx-auto group-hover:w-24 sm:group-hover:w-28 md:group-hover:w-32 lg:group-hover:w-40 transition-all duration-300`}></div>
+              {/* شريط زخرفي */}
+              <div className={`w-12 sm:w-16 md:w-20 h-1 ${feature.gradientClass} rounded-full mx-auto group-hover:w-16 sm:group-hover:w-20 md:group-hover:w-24 transition-all duration-300`}></div>
             </div>
           ))}
         </div>
