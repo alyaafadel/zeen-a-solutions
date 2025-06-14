@@ -1,4 +1,3 @@
-
 import { Users, Languages, Megaphone, Code, Truck, GraduationCap, Briefcase, Star, Bot } from "lucide-react";
 import Header from "@/components/home/Header";
 import HeroSection from "@/components/home/HeroSection";
@@ -9,6 +8,7 @@ import AboutPreviewSection from "@/components/home/AboutPreviewSection";
 import JoinUsSection from "@/components/home/JoinUsSection";
 import ContactSection from "@/components/home/ContactSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   const services = [
@@ -153,6 +153,8 @@ const Index = () => {
           text="تحدث معنا"
         />
       </div>
+
+      <Footer services={services} companyInfo={companyInfo} />
     </div>
   );
 };
