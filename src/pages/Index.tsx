@@ -1,7 +1,8 @@
 
-import { ArrowRight, Users, Code, Languages, TrendingUp, Truck, GraduationCap, Briefcase, CheckCircle, Star, Phone, Mail, MapPin, Clock, Award, Target, Shield, Globe } from "lucide-react";
+import { Users, Languages, Megaphone, Code, Truck, ArrowRight, CheckCircle, MessageSquare, GraduationCap, Linkedin, Briefcase, Info, UserPlus, Phone, Settings, Star, Mail, Zap, Shield, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { useNavigate } from "react-router-dom";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
@@ -10,165 +11,386 @@ const Index = () => {
 
   const services = [
     {
-      title: "خدمات الموارد البشرية",
-      description: "حلول متكاملة لإدارة وتطوير الموارد البشرية في شركتك",
+      title: "الموارد البشرية",
+      brandName: "Zeen HR Solutions",
+      logo: "👥",
+      description: "خدمات شاملة في التوظيف والتدريب وإدارة الأداء لبناء فريق أحلامك",
       icon: Users,
-      route: "/hr-services"
-    },
-    {
-      title: "خدمات البرمجة",
-      description: "تطوير تطبيقات الويب والموبايل بأحدث التقنيات",
-      icon: Code,
-      route: "/programming-services"
+      color: "from-blue-400 to-blue-500",
+      bgColor: "bg-blue-50",
+      iconColor: "text-blue-500",
+      route: "/hr-services",
+      features: ["استقطاب المواهب", "الهياكل التنظيمية", "التدريب والتطوير", "إدارة الأداء"]
     },
     {
       title: "خدمات الترجمة",
-      description: "ترجمة احترافية للوثائق والمستندات بجميع اللغات",
+      brandName: "Zeen Translation Hub",
+      logo: "🌐",
+      description: "ترجمة احترافية ودقيقة للوثائق الرسمية والأكاديمية بجودة عالية",
       icon: Languages,
-      route: "/translation-services"
+      color: "from-blue-400 to-blue-500",
+      bgColor: "bg-blue-50",
+      iconColor: "text-blue-500",
+      route: "/translation-services", 
+      features: ["الوثائق الرسمية", "الأبحاث الأكاديمية", "متعدد اللغات", "ترجمة عاجلة"]
     },
     {
-      title: "خدمات التسويق الرقمي",
-      description: "استراتيجيات تسويق رقمي مبتكرة لزيادة الوعي بعلامتك التجارية",
-      icon: TrendingUp,
-      route: "/digital-marketing"
+      title: "التسويق الرقمي",
+      brandName: "Zeen Digital Marketing",
+      logo: "📈",
+      description: "استراتيجيات تسويق مبتكرة لزيادة مبيعاتك وتنمية علامتك التجارية",
+      icon: Megaphone,
+      color: "from-blue-500 to-blue-600",
+      bgColor: "bg-blue-50",
+      iconColor: "text-blue-500",
+      route: "/digital-marketing",
+      features: ["إدارة وسائل التواصل", "الإعلانات المدفوعة", "تحسين SEO", "التسويق بالمحتوى"]
     },
     {
-      title: "خدمات اللوجستية",
-      description: "حلول لوجستية متكاملة لتلبية احتياجات أعمالك",
+      title: "البرمجة والتطوير",
+      brandName: "Zeen Tech Solutions",
+      logo: "💻",
+      description: "تطوير مواقع وتطبيقات احترافية بأحدث التقنيات والمعايير العالمية",
+      icon: Code,
+      color: "from-blue-400 to-blue-500",
+      bgColor: "bg-blue-50",
+      iconColor: "text-blue-500",
+      route: "/programming-services",
+      features: ["المواقع الإلكترونية", "تطبيقات الجوال", "الأنظمة الإدارية", "الصيانة والدعم"]
+    },
+    {
+      title: "الخدمات اللوجستية",
+      brandName: "Zeen Logistics & 3PL",
+      logo: "🚛",
+      description: "حلول لوجستية متكاملة وخدمات 3PL احترافية لضمان سلاسة عملياتك",
       icon: Truck,
-      route: "/logistics-services"
+      color: "from-blue-500 to-blue-600",
+      bgColor: "bg-blue-50",
+      iconColor: "text-blue-500",
+      route: "/logistics-services",
+      features: ["التخزين والمستودعات", "النقل والتوصيل", "إدارة سلسلة التوريد", "خدمات 3PL"]
     },
     {
-      title: "خدمات التدريب",
-      description: "برامج تدريبية مخصصة لتطوير مهارات موظفيك",
+      title: "التدريب المهني",
+      brandName: "Zeen Learning Academy",
+      logo: "🎓",
+      description: "برامج تدريبية متخصصة ومكثفة لتطوير المهارات المهنية والشخصية",
       icon: GraduationCap,
-      route: "/training-services"
+      color: "from-blue-400 to-blue-500",
+      bgColor: "bg-blue-50",
+      iconColor: "text-blue-500",
+      route: "/training-services",
+      features: ["دورات تدريبية متخصصة", "ورش عمل تطبيقية", "التدريب الرقمي", "شهادات معتمدة"]
+    },
+    {
+      title: "التوجيه المهني",
+      brandName: "Zeen Career Solutions",
+      logo: "💼",
+      description: "خدمات شاملة لتطوير مسارك المهني وبناء هويتك الوظيفية المتميزة",
+      icon: Briefcase,
+      color: "from-blue-500 to-blue-600",
+      bgColor: "bg-blue-50",
+      iconColor: "text-blue-500",
+      route: "/career-services",
+      features: ["كتابة السيرة الذاتية", "التحضير للمقابلات", "التوجيه المهني", "البحث عن عمل"]
+    },
+    {
+      title: "الحلول المخصصة",
+      brandName: "Zeen Custom Solutions",
+      logo: "⭐",
+      description: "حلول مبتكرة ومخصصة تماماً لتلبية احتياجات شركتك الفريدة والمتطورة",
+      icon: Star,
+      color: "from-blue-500 to-blue-600",
+      bgColor: "bg-blue-50",
+      iconColor: "text-blue-500",
+      route: "/custom-solutions",
+      features: ["استشارات متخصصة", "حلول مبتكرة", "تطوير حسب الطلب", "دعم شامل"]
     }
   ];
 
+  const companyInfo = {
+    name: "Zeen A Plus Solutions",
+    slogan: "شريكك المتميز في النجاح والتطوير",
+    phone: "+966570513821",
+    email: "info@zeenaplusolutions.com",
+    whatsapp: "+966570513821",
+    linkedin: "https://www.linkedin.com/company/zeen-a-solutions-establishment/",
+    location: "الرياض، المملكة العربية السعودية",
+    description: "شركة متخصصة في تقديم حلول متكاملة للأعمال تشمل الموارد البشرية، الترجمة، التسويق الرقمي، التطوير التقني، والخدمات اللوجستية."
+  };
+
   const stats = [
-    { label: "عملاء سعداء", value: "500+" },
-    { label: "مشاريع ناجحة", value: "1000+" },
-    { label: "سنوات الخبرة", value: "10+" },
-    { label: "فريق العمل", value: "50+" }
+    { icon: Briefcase, number: "250+", label: "مشروع مكتمل", color: "text-blue-500" },
+    { icon: Users, number: "120+", label: "عميل راضٍ", color: "text-blue-500" },
+    { icon: Shield, number: "8+", label: "سنوات خبرة", color: "text-blue-500" },
+    { icon: Heart, number: "24/7", label: "دعم مستمر", color: "text-blue-500" }
   ];
 
+  const features = [
+    {
+      icon: Zap,
+      title: "سرعة في التنفيذ",
+      description: "نلتزم بالمواعيد المحددة ونسلم مشاريعك في الوقت المناسب"
+    },
+    {
+      icon: Shield,
+      title: "جودة مضمونة",
+      description: "معايير عالية وضمان شامل على جميع خدماتنا ومشاريعنا"
+    },
+    {
+      icon: Heart,
+      title: "دعم مستمر",
+      description: "فريق دعم متاح على مدار الساعة لضمان رضاك التام"
+    }
+  ];
+
+  const handleContactOption = (type: string) => {
+    switch (type) {
+      case 'whatsapp':
+        window.open(`https://wa.me/${companyInfo.whatsapp}?text=مرحباً، أريد التواصل معكم`, '_blank');
+        break;
+      case 'linkedin':
+        window.open(companyInfo.linkedin, '_blank');
+        break;
+      case 'email':
+        window.open(`mailto:${companyInfo.email}?subject=استفسار عن الخدمات`, '_blank');
+        break;
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100" dir="rtl">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200" dir="rtl">
       {/* Header */}
       <header className="bg-white/95 backdrop-blur-md shadow-lg border-b border-blue-200 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            {/* Logo section with uploaded image */}
-            <div className="flex items-center space-x-3 space-x-reverse">
-              <div className="relative">
+          <div className="flex justify-between items-center">
+            <div className="flex items-center space-x-4 space-x-reverse">
+              <div className="w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-500 rounded-2xl flex items-center justify-center shadow-xl border-2 border-white">
                 <img 
-                  src="/lovable-uploads/0d3776e6-7b4a-4e6a-8a39-8a3f4e987156.png" 
+                  src="/lovable-uploads/8838bb20-a5cc-4ab1-9fce-30cdb0f93521.png" 
                   alt="Zeen A Plus Solutions Logo" 
-                  className="w-12 h-12 object-contain"
+                  className="w-9 h-9 object-contain filter brightness-200"
                 />
               </div>
               <div>
-                <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                  Zeen A Plus Solutions
-                </h1>
-                <p className="text-xs text-blue-500">حلول متقدمة لأعمالكم</p>
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">{companyInfo.name}</h1>
+                <p className="text-sm text-blue-500 font-medium">{companyInfo.slogan}</p>
               </div>
             </div>
+            <div className="flex items-center space-x-3 space-x-reverse">
+              <a
+                href={companyInfo.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                title="تابعونا على LinkedIn"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <WhatsAppButton 
+                phoneNumber={companyInfo.whatsapp}
+                message="مرحباً، أريد بدء مشروع جديد مع Zeen A Plus Solutions"
+                variant="header"
+              />
+            </div>
+          </div>
+        </div>
 
-            {/* Navigation */}
-            <nav className="hidden md:flex items-center space-x-6 space-x-reverse">
-              <Button variant="ghost" onClick={() => navigate('/about')} className="text-blue-600 hover:text-blue-700 hover:bg-blue-50">
+        {/* Navigation Bar */}
+        <div className="border-t border-blue-200 bg-white/90 backdrop-blur-sm">
+          <div className="container mx-auto px-4 py-4">
+            <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => navigate('/about')}
+                className="text-blue-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-200 font-medium"
+              >
+                <Info className="ml-2 h-4 w-4" />
                 من نحن
               </Button>
-              <Button variant="ghost" onClick={() => navigate('/our-team')} className="text-blue-600 hover:text-blue-700 hover:bg-blue-50">
+              
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => navigate('/our-team')}
+                className="text-blue-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-200 font-medium"
+              >
+                <Users className="ml-2 h-4 w-4" />
                 فريقنا
               </Button>
-              <Button onClick={() => navigate('/join-us')} className="bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+              
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="text-blue-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-200 font-medium"
+                  >
+                    <Settings className="ml-2 h-4 w-4" />
+                    خدماتنا
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-56 bg-white" align="center">
+                  {services.map((service, index) => (
+                    <DropdownMenuItem 
+                      key={index}
+                      onClick={() => navigate(service.route)}
+                      className="cursor-pointer"
+                    >
+                      <service.icon className="ml-2 h-4 w-4" />
+                      <span>{service.title}</span>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+              
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => navigate('/join-us')}
+                className="text-blue-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-200 font-medium"
+              >
+                <UserPlus className="ml-2 h-4 w-4" />
                 انضم إلينا
               </Button>
-            </nav>
-
-            {/* Mobile menu button */}
-            <Button variant="ghost" className="md:hidden">
-              <div className="w-6 h-6 flex flex-col justify-center items-center">
-                <span className="w-full h-0.5 bg-blue-600 mb-1"></span>
-                <span className="w-full h-0.5 bg-blue-600 mb-1"></span>
-                <span className="w-full h-0.5 bg-blue-600"></span>
-              </div>
-            </Button>
+              
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="text-blue-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-200 font-medium"
+                  >
+                    <Phone className="ml-2 h-4 w-4" />
+                    تواصل معنا
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-48 bg-white" align="center">
+                  <DropdownMenuItem 
+                    onClick={() => handleContactOption('whatsapp')}
+                    className="cursor-pointer"
+                  >
+                    <MessageSquare className="ml-2 h-4 w-4 text-blue-600" />
+                    <span>واتس آب</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem 
+                    onClick={() => handleContactOption('linkedin')}
+                    className="cursor-pointer"
+                  >
+                    <Linkedin className="ml-2 h-4 w-4 text-blue-600" />
+                    <span>لينكد إن</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem 
+                    onClick={() => handleContactOption('email')}
+                    className="cursor-pointer"
+                  >
+                    <Mail className="ml-2 h-4 w-4 text-blue-600" />
+                    <span>البريد الإلكتروني</span>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+              
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => navigate('/custom-request')}
+                className="bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white border-0 px-6 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              >
+                طلبك المخصص
+              </Button>
+            </div>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 lg:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-400/10 to-indigo-500/10"></div>
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 via-blue-500/10 to-blue-600/10"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
-            <div className="inline-flex items-center bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-8">
-              <Star className="h-4 w-4 ml-2" />
-              شركة رائدة في الحلول المتقدمة
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-blue-900 mb-6 leading-tight">
-              نحول أفكاركم إلى
-              <span className="block bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                نجاحات حقيقية
-              </span>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 bg-clip-text text-transparent leading-tight">
+              حلول متكاملة لنجاح أعمالك
             </h1>
-            <p className="text-xl text-blue-700 mb-8 max-w-3xl mx-auto leading-relaxed">
-              نقدم حلول متكاملة في الموارد البشرية، البرمجة، الترجمة، التسويق الرقمي، والخدمات اللوجستية بخبرة تمتد لسنوات
+            <p className="text-xl md:text-2xl text-blue-600 mb-8 leading-relaxed">
+              نقدم خدمات احترافية متنوعة من الموارد البشرية إلى التطوير التقني والتسويق الرقمي لتحقيق أهدافك
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button 
-                size="lg" 
-                onClick={() => navigate('/custom-request')}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-              >
-                ابدأ مشروعك معنا
-                <ArrowRight className="mr-2 h-5 w-5" />
-              </Button>
               <WhatsAppButton 
-                phoneNumber="+966123456789"
-                message="مرحباً، أريد معرفة المزيد عن خدماتكم"
-                variant="header"
-                text="تحدث معنا مباشرة"
-                className="px-8 py-4 text-lg"
+                phoneNumber={companyInfo.whatsapp}
+                message="مرحباً، أريد بدء مشروع جديد مع Zeen A Plus Solutions"
+                variant="cta"
+                text="ابدأ مشروعك معنا"
+                className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white border-0 px-8 py-3 text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
               />
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => navigate('/about')}
+                className="px-8 py-3 text-lg border-2 border-blue-300 hover:border-blue-400 hover:text-blue-600 transition-all duration-300"
+              >
+                اعرف المزيد عنا
+              </Button>
             </div>
+          </div>
+        </div>
+        
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-blue-200/30 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-16 h-16 bg-blue-300/30 rounded-full animate-pulse delay-75"></div>
+        <div className="absolute top-40 right-20 w-12 h-12 bg-blue-200/30 rounded-full animate-pulse delay-150"></div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16 bg-white/50">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <feature.icon className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-blue-700 mb-2">{feature.title}</h3>
+                <p className="text-blue-600">{feature.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-16 bg-white/50">
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-blue-100">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-blue-900 mb-12">خدماتنا المتنوعة</h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-blue-700 mb-4">خدماتنا المتميزة</h2>
+            <p className="text-lg text-blue-600 max-w-3xl mx-auto">
+              نقدم مجموعة شاملة من الخدمات المهنية لتلبية جميع احتياجات شركتك
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-gradient-to-br from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100">
-                <CardHeader className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white pb-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <service.icon className="h-8 w-8" />
-                    <div className="bg-white/20 rounded-full p-2">
-                      <CheckCircle className="h-6 w-6" />
-                    </div>
+              <Card 
+                key={index} 
+                className="group cursor-pointer hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-white border-0 shadow-lg overflow-hidden border-l-4 border-l-blue-500"
+                onClick={() => navigate(service.route)}
+              >
+                <CardHeader className="text-center pb-2">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                    <service.icon className="h-8 w-8 text-white" />
                   </div>
-                  <CardTitle className="text-2xl text-white mb-2 text-right">{service.title}</CardTitle>
-                  <CardDescription className="text-blue-100 leading-relaxed text-base text-right">
+                  <CardTitle className="text-lg font-bold text-blue-700 group-hover:text-blue-600 transition-colors duration-300">
+                    {service.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <CardDescription className="text-blue-600 mb-4 leading-relaxed">
                     {service.description}
                   </CardDescription>
-                </CardHeader>
-                <CardContent className="pt-4">
-                  <Button
-                    variant="outline"
-                    className="w-full justify-center text-blue-600 border-blue-300 hover:bg-blue-50"
-                    onClick={() => navigate(service.route)}
-                  >
-                    <service.icon className="h-5 w-5 ml-2" />
-                    اكتشف المزيد
-                  </Button>
+                  <div className="flex items-center justify-center text-blue-600 group-hover:text-blue-500 transition-colors duration-300">
+                    <span className="text-sm font-medium ml-2">اعرف المزيد</span>
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -177,45 +399,107 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+      <section className="py-16 bg-gradient-to-r from-blue-500 to-blue-600 text-white">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">إنجازاتنا بالأرقام</h2>
+            <p className="text-lg opacity-90">نفخر بالثقة التي منحتموها لنا</p>
+          </div>
+          <div className="grid md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="transform hover:scale-105 transition-transform duration-300">
-                <div className="text-5xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-lg text-blue-100">{stat.label}</div>
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="h-8 w-8 text-white" />
+                </div>
+                <div className="text-4xl font-bold mb-2 text-blue-100">{stat.number}</div>
+                <div className="text-lg opacity-90">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-800 to-indigo-900 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h3 className="text-4xl font-bold mb-4">تواصل معنا الآن</h3>
-          <p className="text-xl mb-8 opacity-90">نحن هنا للإجابة على جميع استفساراتكم وتقديم الدعم اللازم</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      {/* About Preview Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-blue-700 mb-6">لماذا تختار Zeen A Plus Solutions؟</h2>
+            <p className="text-lg text-blue-600 mb-8 leading-relaxed">
+              {companyInfo.description}
+            </p>
             <Button
               size="lg"
-              onClick={() => window.location.href = 'tel:+966123456789'}
-              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              onClick={() => navigate('/about')}
+              className="bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             >
-              <Phone className="ml-2 h-5 w-5" />
-              اتصل بنا
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              onClick={() => window.location.href = 'mailto:info@zeenaplusolutions.com'}
-              className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 transition-all duration-300"
-            >
-              <Mail className="ml-2 h-5 w-5" />
-              أرسل بريداً إلكترونياً
+              اعرف المزيد عن قصتنا
             </Button>
           </div>
         </div>
       </section>
+
+      {/* Join Us Section */}
+      <section className="py-16 bg-gradient-to-br from-blue-50 to-blue-100">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-blue-700 mb-4">انضم إلى فريق المتميزين</h2>
+          <p className="text-lg text-blue-600 mb-8 max-w-2xl mx-auto">
+            هل تمتلك خبرة في أحد مجالاتنا؟ انضم إلى شبكة الفريلانسرز المتميزة لدينا
+          </p>
+          <Button
+            size="lg"
+            onClick={() => navigate('/join-us')}
+            className="bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+          >
+            <UserPlus className="ml-2 h-5 w-5" />
+            ابدأ رحلتك معنا
+          </Button>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-16 bg-gradient-to-br from-blue-500 to-blue-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-4">هل أنت مستعد لبدء مشروعك؟</h2>
+          <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
+            تواصل معنا اليوم واحصل على استشارة مجانية لجميع خدماتنا
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+            <WhatsAppButton 
+              phoneNumber={companyInfo.whatsapp}
+              message="مرحباً، أريد الاستفسار عن خدمات Zeen A Plus Solutions"
+              variant="cta"
+              text="تواصل عبر الواتس آب"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            />
+            <div className="flex items-center space-x-6 space-x-reverse text-blue-200">
+              <div className="flex items-center space-x-2 space-x-reverse">
+                <Phone className="h-5 w-5" />
+                <span>{companyInfo.phone}</span>
+              </div>
+              <a
+                href={companyInfo.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 space-x-reverse hover:text-blue-100 transition-colors"
+              >
+                <Linkedin className="h-5 w-5" />
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Floating WhatsApp Button */}
+      <div className="fixed bottom-6 left-6 z-50">
+        <WhatsAppButton 
+          phoneNumber={companyInfo.whatsapp}
+          message="مرحباً، أريد الاستفسار عن خدمات Zeen A Plus Solutions"
+          variant="floating"
+          text="تحدث معنا"
+        />
+      </div>
     </div>
   );
 };

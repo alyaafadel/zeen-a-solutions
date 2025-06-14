@@ -1,5 +1,5 @@
 
-import { Users, ArrowRight, CheckCircle, Home, User, FileText, Clock, TrendingUp, ArrowLeft } from "lucide-react";
+import { Users, ArrowRight, CheckCircle, Home, User, FileText, Clock, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
@@ -159,7 +159,7 @@ const HRServices = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-500 to-blue-600 text-white">
+      <section className="py-20 bg-gradient-to-br from-sky-500 to-sky-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h3 className="text-4xl font-bold mb-4">استثمر في مواردك البشرية</h3>
           <p className="text-xl mb-8 opacity-90">فريقنا المتخصص جاهز لمساعدتك في تطوير إدارة الموارد البشرية في شركتك</p>
@@ -170,13 +170,13 @@ const HRServices = () => {
               message="مرحباً، أريد استشارة مجانية حول خدمات الموارد البشرية"
               variant="cta"
               text="احصل على استشارة مجانية"
-              className="bg-white text-blue-600 hover:bg-gray-100"
+              className="bg-white text-sky-600 hover:bg-gray-100"
             />
             <Button
               variant="outline"
               size="lg"
               onClick={() => navigate('/')}
-              className="border-white text-white hover:bg-white hover:text-blue-600 px-8"
+              className="border-white text-white hover:bg-white hover:text-sky-600 px-8"
             >
               <ArrowRight className="ml-2 h-5 w-5" />
               العودة للرئيسية
@@ -184,42 +184,6 @@ const HRServices = () => {
           </div>
         </div>
       </section>
-
-      {/* Footer Navigation */}
-      <footer className="bg-white border-t border-blue-200 py-8">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            <div className="flex items-center space-x-4 space-x-reverse">
-              <Button
-                variant="ghost"
-                onClick={() => navigate('/')}
-                className="flex items-center space-x-2 space-x-reverse text-blue-600 hover:text-blue-700"
-              >
-                <ArrowLeft className="h-4 w-4" />
-                <span>الصفحة الرئيسية</span>
-              </Button>
-              <span className="text-gray-300">|</span>
-              <Button
-                variant="ghost"
-                onClick={() => navigate('/about')}
-                className="text-blue-600 hover:text-blue-700"
-              >
-                من نحن
-              </Button>
-              <Button
-                variant="ghost"
-                onClick={() => navigate('/our-team')}
-                className="text-blue-600 hover:text-blue-700"
-              >
-                فريقنا
-              </Button>
-            </div>
-            <div className="text-sm text-blue-500">
-              © 2024 Zeen A Plus Solutions. جميع الحقوق محفوظة.
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
