@@ -56,36 +56,36 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
   return (
     <>
       <header className="bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200 sticky top-0 z-50">
-        <div className="container mx-auto px-4 sm:px-6 py-4">
+        <div className="container mx-auto px-4 sm:px-6 py-6">
           <div className="flex justify-between items-center">
-            {/* Logo and Company Section - Balanced Design */}
-            <div className="flex items-center space-x-4 space-x-reverse">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-blue rounded-2xl flex items-center justify-center shadow-lg border border-white/20">
+            {/* Logo and Company Section - Enhanced Design */}
+            <div className="flex items-center space-x-6 space-x-reverse">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-blue rounded-3xl flex items-center justify-center shadow-xl border-2 border-white/30">
                 <img 
                   src="/lovable-uploads/8838bb20-a5cc-4ab1-9fce-30cdb0f93521.png" 
                   alt="Zeen A Plus Solutions Logo" 
-                  className="w-8 h-8 sm:w-9 sm:h-9 object-contain filter brightness-200"
+                  className="w-12 h-12 sm:w-14 sm:h-14 object-contain filter brightness-200"
                 />
               </div>
-              <div className="flex flex-col justify-center">
-                <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-brand-blue-dark leading-none mb-1">
-                  {companyInfo.name}
+              <div className="flex flex-col justify-center space-y-2">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-blue-dark leading-none tracking-tight">
+                  Zeen A Plus Solutions
                 </h1>
-                <p className="text-sm sm:text-base text-slate-600 font-medium leading-tight max-w-xs">
-                  {companyInfo.slogan}
+                <p className="text-base sm:text-lg md:text-xl text-slate-600 font-medium leading-relaxed max-w-md">
+                  شريكك المتخصص في إنجاز المهام والخدمات
                 </p>
               </div>
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-1 xl:space-x-2 space-x-reverse">
+            <div className="hidden lg:flex items-center space-x-2 xl:space-x-3 space-x-reverse">
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => navigate('/about')}
-                className="text-slate-600 hover:text-brand-blue hover:bg-brand-light-blue transition-all duration-200 font-medium text-xs px-3 py-2"
+                className="text-slate-600 hover:text-brand-blue hover:bg-brand-light-blue transition-all duration-200 font-medium text-sm px-4 py-3"
               >
-                <Info className="ml-1 h-3 w-3" />
+                <Info className="ml-2 h-4 w-4" />
                 من نحن
               </Button>
               
@@ -94,9 +94,9 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="text-slate-600 hover:text-brand-blue hover:bg-brand-light-blue transition-all duration-200 font-medium text-xs px-3 py-2"
+                    className="text-slate-600 hover:text-brand-blue hover:bg-brand-light-blue transition-all duration-200 font-medium text-sm px-4 py-3"
                   >
-                    <Grid3X3 className="ml-1 h-3 w-3 text-brand-blue" />
+                    <Grid3X3 className="ml-2 h-4 w-4 text-brand-blue" />
                     خدماتنا المتنوعة
                   </Button>
                 </DropdownMenuTrigger>
@@ -121,9 +121,9 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
                 variant="ghost"
                 size="sm"
                 onClick={() => navigate('/join-us')}
-                className="text-slate-600 hover:text-brand-accent-blue hover:bg-blue-50 transition-all duration-200 font-medium text-xs px-3 py-2"
+                className="text-slate-600 hover:text-brand-accent-blue hover:bg-blue-50 transition-all duration-200 font-medium text-sm px-4 py-3"
               >
-                <UserPlus className="ml-1 h-3 w-3" />
+                <UserPlus className="ml-2 h-4 w-4" />
                 انضم إلينا
               </Button>
               
@@ -132,9 +132,9 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="text-slate-600 hover:text-brand-blue-dark hover:bg-blue-50 transition-all duration-200 font-medium text-xs px-3 py-2"
+                    className="text-slate-600 hover:text-brand-blue-dark hover:bg-blue-50 transition-all duration-200 font-medium text-sm px-4 py-3"
                   >
-                    <Phone className="ml-1 h-3 w-3" />
+                    <Phone className="ml-2 h-4 w-4" />
                     تواصل معنا
                   </Button>
                 </DropdownMenuTrigger>
@@ -163,21 +163,21 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
                 </DropdownMenuContent>
               </DropdownMenu>
 
-              {/* WhatsApp and LinkedIn buttons in the same line */}
+              {/* Social Media Buttons */}
               <a
                 href={companyInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-1.5 bg-gradient-dark-blue hover:bg-brand-blue-dark text-white rounded-md transition-all duration-300 shadow-sm hover:shadow-md transform hover:scale-105"
+                className="p-2 bg-gradient-dark-blue hover:bg-brand-blue-dark text-white rounded-lg transition-all duration-300 shadow-sm hover:shadow-md transform hover:scale-105"
                 title="تابعونا على LinkedIn"
               >
-                <Linkedin className="h-3 w-3 text-white" />
+                <Linkedin className="h-4 w-4 text-white" />
               </a>
               <WhatsAppButton 
                 phoneNumber={companyInfo.whatsapp}
                 message="مرحباً، أريد بدء مشروع جديد مع Zeen A Plus Solutions"
                 variant="header"
-                className="text-xs px-3 py-2"
+                className="text-sm px-4 py-3"
               />
             </div>
 
@@ -187,13 +187,13 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
                 variant="ghost"
                 size="sm"
                 onClick={toggleMobileMenu}
-                className="p-2 text-brand-blue hover:text-brand-blue-dark hover:bg-brand-light-blue transition-all duration-300 rounded-lg"
+                className="p-3 text-brand-blue hover:text-brand-blue-dark hover:bg-brand-light-blue transition-all duration-300 rounded-xl"
                 aria-label="فتح القائمة"
               >
                 {isMobileMenuOpen ? (
-                  <X className="h-6 w-6" />
+                  <X className="h-7 w-7" />
                 ) : (
-                  <Menu className="h-6 w-6" />
+                  <Menu className="h-7 w-7" />
                 )}
               </Button>
             </div>
