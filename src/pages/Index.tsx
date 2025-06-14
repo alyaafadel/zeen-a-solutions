@@ -1,5 +1,4 @@
-
-import { ArrowRight, CheckCircle, Mail, Phone, MapPin, Users, Target, Award, UserCheck, TrendingUp, Briefcase, MessageSquare, Globe, FileText, Calendar, Clock, Star } from "lucide-react";
+import { ArrowRight, CheckCircle, Mail, Phone, MapPin, Users, Target, Award, UserCheck, TrendingUp, Briefcase, MessageSquare, Globe, FileText, Calendar, Clock, Star, Languages, BookOpen, Shield, Users2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -70,6 +69,49 @@ const Index = () => {
     }
   ];
 
+  const translationServices = [
+    {
+      title: "ترجمة الوثائق الرسمية",
+      description: "ترجمة احترافية للوثائق الرسمية جاهزة لختم المترجم القانوني للتقديم للسفارات والمنح والجهات الحكومية",
+      icon: Shield,
+      specialist: "مترجم قانوني معتمد",
+      services: ["ترجمة الشهادات", "ترجمة العقود", "ترجمة الوثائق الحكومية", "ختم المترجم القانوني"],
+      whatsappMessage: "مرحباً، أحتاج ترجمة وثائق رسمية مع ختم المترجم القانوني",
+      duration: "1-3 أيام",
+      price: "من 50 ريال/صفحة"
+    },
+    {
+      title: "ترجمة الدراسات والأبحاث",
+      description: "ترجمة أكاديمية متخصصة للدراسات والأبحاث العلمية بدقة عالية حسب المجال والاختصاص",
+      icon: BookOpen,
+      specialist: "مترجم أكاديمي متخصص",
+      services: ["ترجمة الأبحاث العلمية", "ترجمة الأطروحات", "ترجمة المقالات الأكاديمية", "مراجعة لغوية"],
+      whatsappMessage: "مرحباً، أحتاج ترجمة دراسة أو بحث أكاديمي متخصص",
+      duration: "3-7 أيام",
+      price: "من 80 ريال/صفحة"
+    },
+    {
+      title: "ترجمة متعددة اللغات",
+      description: "خدمات ترجمة شاملة من وإلى جميع اللغات الشائعة مع فريق فريلانس متخصص جاهز للتنفيذ",
+      icon: Languages,
+      specialist: "فريق مترجمين متعددي اللغات",
+      services: ["الإنجليزية", "الفرنسية", "الألمانية", "التركية", "الصينية", "الروسية"],
+      whatsappMessage: "مرحباً، أحتاج خدمات ترجمة متعددة اللغات",
+      duration: "1-5 أيام",
+      price: "من 40 ريال/صفحة"
+    },
+    {
+      title: "ترجمة فورية وعاجلة",
+      description: "خدمة ترجمة سريعة للحالات العاجلة مع ضمان الجودة والدقة في أقصر وقت ممكن",
+      icon: Clock,
+      specialist: "فريق الترجمة السريعة",
+      services: ["ترجمة خلال 24 ساعة", "ترجمة فورية", "ترجمة عاجلة", "خدمة على مدار الساعة"],
+      whatsappMessage: "مرحباً، أحتاج ترجمة عاجلة في أسرع وقت ممكن",
+      duration: "12-24 ساعة",
+      price: "من 100 ريال/صفحة"
+    }
+  ];
+
   const whyChooseUs = [
     "خبرة عملية في مجال الموارد البشرية لأكثر من 5 سنوات",
     "تقديم حلول مخصصة تناسب طبيعة كل عمل",
@@ -106,13 +148,14 @@ const Index = () => {
             <div className="flex items-center space-x-4 space-x-reverse">
               <nav className="hidden md:flex space-x-8 space-x-reverse">
                 <a href="#home" className="text-gray-700 hover:text-blue-600 transition-colors">الرئيسية</a>
-                <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors">خدماتنا</a>
+                <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors">الموارد البشرية</a>
+                <a href="#translation" className="text-gray-700 hover:text-blue-600 transition-colors">الترجمة</a>
                 <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">من نحن</a>
                 <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">اتصل بنا</a>
               </nav>
               <WhatsAppButton 
                 phoneNumber={companyInfo.whatsapp}
-                message="مرحباً، أريد الاستفسار عن خدمات الموارد البشرية"
+                message="مرحباً، أريد الاستفسار عن خدماتكم"
                 variant="header"
               />
             </div>
@@ -124,31 +167,29 @@ const Index = () => {
       <section id="home" className="py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-5xl font-bold text-gray-800 mb-6">
-            <span className="text-blue-600">خدمات الموارد البشرية</span> المتخصصة
+            <span className="text-blue-600">خدمات الموارد البشرية</span> و <span className="text-purple-600">الترجمة المتخصصة</span>
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-            نساعدك في بناء فريق عمل متميز من خلال خدمات التوظيف والتدريب وإدارة الأداء بأعلى معايير الجودة وأسعار تنافسية
+            نقدم خدمات متكاملة في الموارد البشرية والتوظيف، بالإضافة إلى خدمات الترجمة المتخصصة للوثائق الرسمية والأكاديمية بأعلى معايير الجودة
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8">
-              <a href="#services">اكتشف خدماتنا</a>
+              <a href="#services">خدمات الموارد البشرية</a>
               <ArrowRight className="mr-2 h-5 w-5" />
             </Button>
-            <WhatsAppButton 
-              phoneNumber={companyInfo.whatsapp}
-              message="مرحباً، أريد استشارة مجانية عن خدمات الموارد البشرية"
-              variant="cta"
-              text="احصل على استشارة مجانية"
-            />
+            <Button size="lg" variant="outline" className="border-purple-500 text-purple-600 hover:bg-purple-50 px-8">
+              <a href="#translation">خدمات الترجمة</a>
+              <Languages className="mr-2 h-5 w-5" />
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* HR Services Section */}
       <section id="services" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h3 className="text-4xl font-bold text-gray-800 mb-4">خدماتنا المتخصصة</h3>
+            <h3 className="text-4xl font-bold text-gray-800 mb-4">خدمات الموارد البشرية</h3>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               نقدم مجموعة شاملة من خدمات الموارد البشرية المصممة خصيصاً لتلبية احتياجات شركتك
             </p>
@@ -201,6 +242,97 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Translation Services Section */}
+      <section id="translation" className="py-20 bg-gradient-to-br from-purple-50 to-indigo-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h3 className="text-4xl font-bold text-gray-800 mb-4">خدمات الترجمة المتخصصة</h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              ترجمة احترافية للوثائق الرسمية والأكاديمية من فريق متخصص جاهز للتنفيذ بأقصر وقت وأفضل جودة
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-8">
+            {translationServices.map((service, index) => (
+              <Card key={index} className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg overflow-hidden">
+                <CardHeader className="bg-gradient-to-r from-purple-50 to-blue-50 pb-6">
+                  <div className="flex items-center space-x-4 space-x-reverse mb-4">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-100 to-blue-100 rounded-full flex items-center justify-center">
+                      <service.icon className="h-8 w-8 text-purple-600" />
+                    </div>
+                    <div className="flex-1">
+                      <CardTitle className="text-xl text-gray-800 mb-1">{service.title}</CardTitle>
+                      <p className="text-sm text-purple-600 font-medium">{service.specialist}</p>
+                    </div>
+                  </div>
+                  <CardDescription className="text-gray-600 leading-relaxed text-base">
+                    {service.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="pt-6">
+                  <div className="flex justify-between items-center mb-4">
+                    <div className="flex items-center space-x-2 space-x-reverse">
+                      <Clock className="h-4 w-4 text-gray-500" />
+                      <span className="text-sm text-gray-600">المدة: {service.duration}</span>
+                    </div>
+                    <div className="flex items-center space-x-2 space-x-reverse">
+                      <Star className="h-4 w-4 text-yellow-500" />
+                      <span className="text-sm font-semibold text-green-600">{service.price}</span>
+                    </div>
+                  </div>
+                  
+                  <h4 className="font-semibold text-gray-800 mb-3">ما نقدمه:</h4>
+                  <div className="grid grid-cols-1 gap-2 mb-6">
+                    {service.services.map((item, serviceIndex) => (
+                      <div key={serviceIndex} className="flex items-center space-x-2 space-x-reverse text-sm">
+                        <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
+                        <span className="text-gray-600">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <WhatsAppButton 
+                    phoneNumber={companyInfo.whatsapp}
+                    message={service.whatsappMessage}
+                    variant="service"
+                    text="اطلب هذه الخدمة"
+                  />
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Translation Languages Section */}
+          <div className="mt-16">
+            <div className="bg-white rounded-2xl shadow-lg p-8">
+              <div className="text-center mb-8">
+                <h4 className="text-2xl font-bold text-gray-800 mb-2">اللغات المتاحة</h4>
+                <p className="text-gray-600">فريق متخصص من المترجمين في جميع اللغات الشائعة</p>
+              </div>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                {[
+                  "الإنجليزية", "الفرنسية", "الألمانية", "التركية", "الصينية", "الروسية",
+                  "الإسبانية", "الإيطالية", "اليابانية", "الكورية", "الهندية", "الفارسية"
+                ].map((language, index) => (
+                  <div key={index} className="text-center p-3 bg-purple-50 rounded-lg">
+                    <div className="text-purple-600 font-medium text-sm">{language}</div>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="text-center mt-8">
+                <WhatsAppButton 
+                  phoneNumber={companyInfo.whatsapp}
+                  message="مرحباً، أريد الاستفسار عن الترجمة للغة معينة"
+                  variant="cta"
+                  text="استفسر عن لغة أخرى"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
