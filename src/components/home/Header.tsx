@@ -1,4 +1,3 @@
-
 import { Users, Info, UserPlus, Phone, Grid3X3, Linkedin, MessageSquare, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
@@ -95,8 +94,9 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => navigate('/our-team')}
-              className="text-slate-600 hover:text-slate-700 hover:bg-slate-50 transition-all duration-200 font-medium"
+              disabled
+              className="text-slate-400 cursor-not-allowed opacity-60 font-medium"
+              title="قريباً - نحن في طور تشكيل فريقنا"
             >
               <Users className="ml-2 h-4 w-4" />
               فريقنا
