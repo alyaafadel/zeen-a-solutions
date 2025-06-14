@@ -90,47 +90,47 @@ const Index = () => {
     <div className="min-h-screen bg-pattern-subtle" dir="rtl">
       <Header services={services} companyInfo={companyInfo} />
       
-      {/* Hero Section with optimized spacing */}
-      <div className="mb-20">
+      {/* Hero Section with enhanced mobile spacing */}
+      <div className="mb-12 sm:mb-16 md:mb-20">
         <HeroSection companyInfo={companyInfo} />
       </div>
       
-      {/* Features Section with optimized spacing */}
-      <div className="mb-24">
+      {/* Features Section with enhanced mobile spacing */}
+      <div className="mb-16 sm:mb-20 md:mb-24">
         <FeaturesSection />
       </div>
       
-      {/* Services Section with optimized spacing */}
-      <div className="mb-24">
+      {/* Services Section with enhanced mobile spacing */}
+      <div className="mb-16 sm:mb-20 md:mb-24">
         <ServicesSection services={services} />
       </div>
       
-      {/* Stats Section with optimized spacing */}
-      <div className="mb-24">
+      {/* Stats Section with enhanced mobile spacing */}
+      <div className="mb-16 sm:mb-20 md:mb-24">
         <StatsSection />
       </div>
       
-      {/* About Preview Section with optimized spacing */}
-      <div className="mb-24">
+      {/* About Preview Section with enhanced mobile spacing */}
+      <div className="mb-16 sm:mb-20 md:mb-24">
         <AboutPreviewSection companyInfo={companyInfo} />
       </div>
       
-      {/* Join Us Section with optimized spacing */}
-      <div className="mb-24">
+      {/* Join Us Section with enhanced mobile spacing */}
+      <div className="mb-16 sm:mb-20 md:mb-24">
         <JoinUsSection />
       </div>
       
       {/* Contact Section */}
       <ContactSection companyInfo={companyInfo} />
 
-      {/* Enhanced Floating WhatsApp Button */}
-      <div className="fixed bottom-6 left-6 z-50">
+      {/* Enhanced Floating WhatsApp Button - Mobile Optimized */}
+      <div className="fixed bottom-4 left-4 sm:bottom-6 sm:left-6 z-50">
         <WhatsAppButton 
           phoneNumber={companyInfo.whatsapp}
           message="مرحباً، أريد الاستفسار عن خدماتكم المتخصصة"
           variant="floating"
           text="تحدث معنا"
-          className="shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300"
+          className="shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 min-h-[56px] min-w-[56px] touch-manipulation"
         />
       </div>
 

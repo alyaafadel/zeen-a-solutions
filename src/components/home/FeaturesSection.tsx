@@ -24,30 +24,36 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section className="py-20 sm:py-24 md:py-28 lg:py-32 bg-pattern-subtle">
+    <section className="py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32 bg-pattern-subtle">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-20 sm:mb-24 md:mb-28">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-blue-dark mb-8 sm:mb-10">لماذا نحن الخيار الأمثل؟</h2>
-          <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed px-2">
+        <div className="text-center mb-16 sm:mb-20 md:mb-24 lg:mb-28">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-brand-blue-dark mb-6 sm:mb-8 md:mb-10 leading-tight">لماذا نحن الخيار الأمثل؟</h2>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed px-2 line-height-mobile">
             نتميز بعناصر أساسية تجعلنا الشريك المثالي لتحقيق أهدافكم بأعلى جودة وكفاءة
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 sm:gap-16 md:gap-20 lg:gap-24">
+        {/* Mobile-First Responsive Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12 md:gap-16 lg:gap-20 xl:gap-24">
           {features.map((feature, index) => (
-            <div key={index} className="group text-center px-8 sm:px-10">
-              <div className={`w-24 sm:w-28 md:w-32 h-24 sm:h-28 md:h-32 ${feature.gradientClass} rounded-3xl sm:rounded-4xl flex items-center justify-center mx-auto mb-10 sm:mb-12 md:mb-14 shadow-xl group-hover:scale-110 group-hover:shadow-2xl transition-all duration-300`}>
-                <feature.icon className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 text-white" />
+            <div key={index} className="group text-center px-4 sm:px-6 md:px-8 lg:px-10 py-6 sm:py-8 bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-brand-light-blue/30 hover:border-brand-blue/40">
+              {/* Responsive Icon Container */}
+              <div className={`w-20 sm:w-24 md:w-28 lg:w-32 h-20 sm:h-24 md:h-28 lg:h-32 ${feature.gradientClass} rounded-2xl sm:rounded-3xl lg:rounded-4xl flex items-center justify-center mx-auto mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-14 shadow-xl group-hover:scale-110 group-hover:shadow-2xl transition-all duration-300`}>
+                <feature.icon className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 lg:h-16 lg:w-16 text-white" />
               </div>
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-brand-blue-dark group-hover:text-brand-blue transition-colors duration-300 mb-8 sm:mb-10">
+              
+              {/* Responsive Title */}
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-brand-blue-dark group-hover:text-brand-blue transition-colors duration-300 mb-4 sm:mb-6 md:mb-8 lg:mb-10 leading-tight">
                 {feature.title}
               </h3>
-              <p className="text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed px-2 sm:px-4 mb-10 sm:mb-12">
+              
+              {/* Responsive Description with Better Line Height */}
+              <p className="text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed px-2 sm:px-4 mb-6 sm:mb-8 md:mb-10 lg:mb-12 line-height-mobile min-h-[80px] sm:min-h-[100px] md:min-h-[120px] flex items-center">
                 {feature.description}
               </p>
               
-              {/* شريط تزييني */}
-              <div className={`w-24 sm:w-28 h-1 ${feature.gradientClass} rounded-full mx-auto group-hover:w-32 sm:group-hover:w-40 transition-all duration-300`}></div>
+              {/* Decorative Bar */}
+              <div className={`w-16 sm:w-20 md:w-24 lg:w-28 h-1 ${feature.gradientClass} rounded-full mx-auto group-hover:w-24 sm:group-hover:w-28 md:group-hover:w-32 lg:group-hover:w-40 transition-all duration-300`}></div>
             </div>
           ))}
         </div>

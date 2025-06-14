@@ -108,30 +108,109 @@
     min-height: 100vh;
   }
 
-  /* Enhanced spacing for text elements */
+  /* Enhanced Mobile-First Typography and Spacing */
   p {
-    margin-bottom: 1em;
-    line-height: 1.6;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    display: block;
+    clear: both;
+  }
+
+  /* Mobile responsive line heights */
+  @media (max-width: 768px) {
+    p {
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+    
+    .line-height-mobile {
+      line-height: 1.8 !important;
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {
     margin-top: 1.5em;
     margin-bottom: 0.8em;
     line-height: 1.4;
+    display: block;
+    clear: both;
+  }
+
+  /* Mobile responsive heading spacing */
+  @media (max-width: 768px) {
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.25em;
+      margin-bottom: 1em;
+      line-height: 1.3;
+    }
   }
 
   section {
     padding: 40px 0;
     margin-bottom: 30px;
+    display: block;
+    clear: both;
+  }
+
+  /* Mobile responsive section spacing */
+  @media (max-width: 768px) {
+    section {
+      padding: 30px 0;
+      margin-bottom: 25px;
+    }
   }
 
   ul {
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     padding-left: 20px;
+    display: block;
+    clear: both;
   }
 
   li {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.75em;
+    line-height: 1.6;
+    display: list-item;
+  }
+
+  /* Mobile responsive list spacing */
+  @media (max-width: 768px) {
+    ul {
+      margin-bottom: 1.75em;
+      padding-left: 16px;
+    }
+    
+    li {
+      margin-bottom: 1em;
+      line-height: 1.7;
+    }
+  }
+
+  /* Fix for content overlap issues */
+  .content-container {
+    display: block;
+    width: 100%;
+    clear: both;
+  }
+
+  .content-container > * {
+    display: block;
+    margin-bottom: 1rem;
+    clear: both;
+  }
+
+  /* Mobile touch optimization */
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+
+  /* Mobile button optimization */
+  @media (max-width: 768px) {
+    button, .btn, [role="button"] {
+      min-height: 48px;
+      min-width: 48px;
+      touch-action: manipulation;
+    }
   }
 }
 
@@ -225,4 +304,45 @@
     rgba(224, 242, 247, 0.2) 50%,
     rgba(224, 242, 247, 0.4) 75%,
     rgba(255, 255, 255, 1) 100%);
+}
+
+/* Mobile-specific utilities */
+@media (max-width: 768px) {
+  .mobile-stack {
+    flex-direction: column !important;
+  }
+  
+  .mobile-full-width {
+    width: 100% !important;
+  }
+  
+  .mobile-text-center {
+    text-align: center !important;
+  }
+  
+  .mobile-spacing {
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+/* Line clamping for better mobile text handling */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
