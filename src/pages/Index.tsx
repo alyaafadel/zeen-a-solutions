@@ -1,3 +1,4 @@
+
 import { Users, Languages, Megaphone, Code, Truck, GraduationCap, Briefcase, Star, Bot, Scale } from "lucide-react";
 import Header from "@/components/home/Header";
 import HeroSection from "@/components/home/HeroSection";
@@ -89,33 +90,33 @@ const Index = () => {
     <div className="min-h-screen bg-pattern-subtle" dir="rtl">
       <Header services={services} companyInfo={companyInfo} />
       
-      {/* Hero Section with reduced spacing */}
-      <div className="mb-12">
+      {/* Hero Section with optimized spacing */}
+      <div className="mb-20">
         <HeroSection companyInfo={companyInfo} />
       </div>
       
-      {/* Features Section with consistent spacing */}
-      <div className="mb-16">
+      {/* Features Section with optimized spacing */}
+      <div className="mb-24">
         <FeaturesSection />
       </div>
       
-      {/* Services Section with consistent spacing */}
-      <div className="mb-16">
+      {/* Services Section with optimized spacing */}
+      <div className="mb-24">
         <ServicesSection services={services} />
       </div>
       
-      {/* Stats Section with consistent spacing */}
-      <div className="mb-16">
+      {/* Stats Section with optimized spacing */}
+      <div className="mb-24">
         <StatsSection />
       </div>
       
-      {/* About Preview Section with consistent spacing */}
-      <div className="mb-16">
+      {/* About Preview Section with optimized spacing */}
+      <div className="mb-24">
         <AboutPreviewSection companyInfo={companyInfo} />
       </div>
       
-      {/* Join Us Section with consistent spacing */}
-      <div className="mb-16">
+      {/* Join Us Section with optimized spacing */}
+      <div className="mb-24">
         <JoinUsSection />
       </div>
       
