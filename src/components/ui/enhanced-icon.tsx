@@ -38,17 +38,18 @@ const EnhancedIcon: React.FC<EnhancedIconProps> = ({
   const animationClass = animate ? 'animate-pulse hover:animate-none' : '';
 
   return (
-    <Icon
-      className={cn(
-        sizeClasses[size],
-        variantClasses[variant],
-        animationClass,
-        className
-      )}
-      aria-label={ariaLabel}
-      title={title}
-      role={ariaLabel ? 'img' : undefined}
-    />
+    <div title={title} className="inline-flex">
+      <Icon
+        className={cn(
+          sizeClasses[size],
+          variantClasses[variant],
+          animationClass,
+          className
+        )}
+        aria-label={ariaLabel}
+        role={ariaLabel ? 'img' : undefined}
+      />
+    </div>
   );
 };
 
