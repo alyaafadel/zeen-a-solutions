@@ -87,23 +87,23 @@ const Index = () => {
     <div className="min-h-screen bg-pattern-subtle" dir="rtl">
       <Header services={services} companyInfo={companyInfo} />
       
-      {/* Hero Section with reduced spacing to Services */}
-      <div className="mb-2 sm:mb-3 md:mb-4">
+      {/* Hero Section with reduced spacing */}
+      <div className="mb-1 sm:mb-2 md:mb-3">
         <HeroSection companyInfo={companyInfo} />
       </div>
       
       {/* Services Section - now much closer to Hero */}
-      <div className="mb-12 sm:mb-16 md:mb-20">
+      <div className="mb-8 sm:mb-12 md:mb-16">
         <ServicesSection services={services} />
       </div>
       
-      {/* Stats Section with enhanced mobile spacing */}
-      <div className="mb-16 sm:mb-20 md:mb-24">
+      {/* Stats Section with reduced spacing */}
+      <div className="mb-8 sm:mb-12 md:mb-16">
         <StatsSection />
       </div>
       
-      {/* About Preview Section with enhanced mobile spacing */}
-      <div className="mb-16 sm:mb-20 md:mb-24">
+      {/* About Preview Section with reduced spacing */}
+      <div className="mb-8 sm:mb-12 md:mb-16">
         <AboutPreviewSection companyInfo={companyInfo} />
       </div>
       

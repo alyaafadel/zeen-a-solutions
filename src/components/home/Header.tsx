@@ -58,20 +58,20 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
       <header className="bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200 sticky top-0 z-50">
         <div className="container mx-auto px-4 sm:px-6 py-6">
           <div className="flex justify-between items-center">
-            {/* Logo and Company Section - Enhanced Design */}
+            {/* Logo and Company Section - Removed Blue Background */}
             <div className="flex items-center space-x-6 space-x-reverse">
-              <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-blue rounded-3xl flex items-center justify-center shadow-xl border-2 border-white/30">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
                 <img 
                   src="/lovable-uploads/8838bb20-a5cc-4ab1-9fce-30cdb0f93521.png" 
                   alt="Zeen A Plus Solutions Logo" 
-                  className="w-12 h-12 sm:w-14 sm:h-14 object-contain filter brightness-200"
+                  className="w-14 h-14 sm:w-18 sm:h-18 object-contain"
                 />
               </div>
-              <div className="flex flex-col justify-center space-y-2">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-blue-dark leading-none tracking-tight">
+              <div className="flex flex-col justify-center space-y-1">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-brand-blue-dark leading-tight tracking-tight">
                   Zeen A Plus Solutions
                 </h1>
-                <p className="text-base sm:text-lg md:text-xl text-slate-600 font-medium leading-relaxed max-w-md">
+                <p className="text-lg sm:text-xl md:text-2xl text-slate-600 font-medium leading-relaxed">
                   شريكك المتخصص في إنجاز المهام والخدمات
                 </p>
               </div>
@@ -216,11 +216,11 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
               {/* Menu Header */}
               <div className="flex items-center justify-between p-6 border-b border-slate-200 bg-gradient-to-r from-brand-light-blue to-white">
                 <div className="flex items-center space-x-3 space-x-reverse">
-                  <div className="w-12 h-12 bg-gradient-blue rounded-xl flex items-center justify-center shadow-md">
+                  <div className="w-12 h-12 flex items-center justify-center">
                     <img 
                       src="/lovable-uploads/8838bb20-a5cc-4ab1-9fce-30cdb0f93521.png" 
                       alt="Logo" 
-                      className="w-7 h-7 object-contain filter brightness-200"
+                      className="w-10 h-10 object-contain"
                     />
                   </div>
                   <div>
