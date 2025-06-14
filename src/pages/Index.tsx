@@ -1,4 +1,5 @@
-import { Users, Languages, Megaphone, Code, Truck, ArrowRight, CheckCircle, MessageSquare, GraduationCap, Linkedin, Briefcase, Info, UserPlus, Phone, Settings, Star, Mail } from "lucide-react";
+
+import { Users, Languages, Megaphone, Code, Truck, ArrowRight, CheckCircle, MessageSquare, GraduationCap, Linkedin, Briefcase, Info, UserPlus, Phone, Settings, Star, Mail, Zap, Shield, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
@@ -13,7 +14,7 @@ const Index = () => {
       title: "الموارد البشرية",
       brandName: "Zeen HR Solutions",
       logo: "👥",
-      description: "خدمات شاملة في التوظيف والتدريب وإدارة الأداء",
+      description: "خدمات شاملة في التوظيف والتدريب وإدارة الأداء لبناء فريق أحلامك",
       icon: Users,
       color: "from-blue-500 to-blue-600",
       bgColor: "bg-blue-50",
@@ -25,7 +26,7 @@ const Index = () => {
       title: "خدمات الترجمة",
       brandName: "Zeen Translation Hub",
       logo: "🌐",
-      description: "ترجمة احترافية للوثائق الرسمية والأكاديمية",
+      description: "ترجمة احترافية ودقيقة للوثائق الرسمية والأكاديمية بجودة عالية",
       icon: Languages,
       color: "from-purple-500 to-purple-600",
       bgColor: "bg-purple-50",
@@ -37,7 +38,7 @@ const Index = () => {
       title: "التسويق الرقمي",
       brandName: "Zeen Digital Marketing",
       logo: "📈",
-      description: "استراتيجيات تسويق فعالة لزيادة مبيعاتك",
+      description: "استراتيجيات تسويق مبتكرة لزيادة مبيعاتك وتنمية علامتك التجارية",
       icon: Megaphone,
       color: "from-green-500 to-green-600",
       bgColor: "bg-green-50",
@@ -49,7 +50,7 @@ const Index = () => {
       title: "البرمجة والتطوير",
       brandName: "Zeen Tech Solutions",
       logo: "💻",
-      description: "تطوير مواقع وتطبيقات احترافية بأحدث التقنيات",
+      description: "تطوير مواقع وتطبيقات احترافية بأحدث التقنيات والمعايير العالمية",
       icon: Code,
       color: "from-orange-500 to-orange-600",
       bgColor: "bg-orange-50",
@@ -61,7 +62,7 @@ const Index = () => {
       title: "الخدمات اللوجستية",
       brandName: "Zeen Logistics & 3PL",
       logo: "🚛",
-      description: "حلول لوجستية متكاملة وخدمات 3PL احترافية",
+      description: "حلول لوجستية متكاملة وخدمات 3PL احترافية لضمان سلاسة عملياتك",
       icon: Truck,
       color: "from-teal-500 to-teal-600",
       bgColor: "bg-teal-50",
@@ -73,7 +74,7 @@ const Index = () => {
       title: "التدريب المهني",
       brandName: "Zeen Learning Academy",
       logo: "🎓",
-      description: "برامج تدريبية متخصصة لتطوير المهارات المهنية",
+      description: "برامج تدريبية متخصصة ومكثفة لتطوير المهارات المهنية والشخصية",
       icon: GraduationCap,
       color: "from-indigo-500 to-indigo-600",
       bgColor: "bg-indigo-50",
@@ -85,7 +86,7 @@ const Index = () => {
       title: "التوجيه المهني",
       brandName: "Zeen Career Solutions",
       logo: "💼",
-      description: "خدمات شاملة لتطوير مسارك المهني وكتابة السيرة الذاتية",
+      description: "خدمات شاملة لتطوير مسارك المهني وبناء هويتك الوظيفية المتميزة",
       icon: Briefcase,
       color: "from-emerald-500 to-emerald-600",
       bgColor: "bg-emerald-50",
@@ -97,7 +98,7 @@ const Index = () => {
       title: "الحلول المخصصة",
       brandName: "Zeen Custom Solutions",
       logo: "⭐",
-      description: "حلول مبتكرة ومخصصة لتلبية احتياجات شركتك الفريدة",
+      description: "حلول مبتكرة ومخصصة تماماً لتلبية احتياجات شركتك الفريدة والمتطورة",
       icon: Star,
       color: "from-pink-500 to-pink-600",
       bgColor: "bg-pink-50",
@@ -118,17 +119,30 @@ const Index = () => {
     description: "شركة متخصصة في تقديم حلول متكاملة للأعمال تشمل الموارد البشرية، الترجمة، التسويق الرقمي، التطوير التقني، والخدمات اللوجستية."
   };
 
-  // Calculate positions for circular layout
-  const getCircularPosition = (index: number, total: number, radius: number) => {
-    const angle = (index * 2 * Math.PI) / total - Math.PI / 2; // Start from top
-    const x = Math.cos(angle) * radius;
-    const y = Math.sin(angle) * radius;
-    return { x, y };
-  };
+  const stats = [
+    { icon: Briefcase, number: "250+", label: "مشروع مكتمل", color: "text-blue-600" },
+    { icon: Users, number: "120+", label: "عميل راضٍ", color: "text-purple-600" },
+    { icon: Shield, number: "8+", label: "سنوات خبرة", color: "text-green-600" },
+    { icon: Heart, number: "24/7", label: "دعم مستمر", color: "text-orange-600" }
+  ];
 
-  const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const features = [
+    {
+      icon: Zap,
+      title: "سرعة في التنفيذ",
+      description: "نلتزم بالمواعيد المحددة ونسلم مشاريعك في الوقت المناسب"
+    },
+    {
+      icon: Shield,
+      title: "جودة مضمونة",
+      description: "معايير عالية وضمان شامل على جميع خدماتنا ومشاريعنا"
+    },
+    {
+      icon: Heart,
+      title: "دعم مستمر",
+      description: "فريق دعم متاح على مدار الساعة لضمان رضاك التام"
+    }
+  ];
 
   const handleContactOption = (type: string) => {
     switch (type) {
@@ -145,22 +159,22 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50" dir="rtl">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100" dir="rtl">
       {/* Header */}
-      <header className="bg-white/80 backdrop-blur-sm shadow-sm border-b sticky top-0 z-50">
+      <header className="bg-white/95 backdrop-blur-md shadow-lg border-b sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-3 space-x-reverse">
-              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg border">
+            <div className="flex items-center space-x-4 space-x-reverse">
+              <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-xl border-2 border-white">
                 <img 
                   src="/lovable-uploads/8838bb20-a5cc-4ab1-9fce-30cdb0f93521.png" 
                   alt="Zeen A Plus Solutions Logo" 
-                  className="w-8 h-8 object-contain"
+                  className="w-9 h-9 object-contain"
                 />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-800">{companyInfo.name}</h1>
-                <p className="text-xs text-gray-600">{companyInfo.location}</p>
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">{companyInfo.name}</h1>
+                <p className="text-sm text-gray-600 font-medium">{companyInfo.slogan}</p>
               </div>
             </div>
             <div className="flex items-center space-x-3 space-x-reverse">
@@ -168,10 +182,10 @@ const Index = () => {
                 href={companyInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+                className="p-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                 title="تابعونا على LinkedIn"
               >
-                <Linkedin className="h-4 w-4" />
+                <Linkedin className="h-5 w-5" />
               </a>
               <WhatsAppButton 
                 phoneNumber={companyInfo.whatsapp}
@@ -184,13 +198,13 @@ const Index = () => {
 
         {/* Navigation Bar */}
         <div className="border-t bg-white/90 backdrop-blur-sm">
-          <div className="container mx-auto px-4 py-3">
-            <div className="flex flex-wrap justify-center items-center gap-3 md:gap-6">
+          <div className="container mx-auto px-4 py-4">
+            <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => navigate('/about')}
-                className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200"
+                className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium"
               >
                 <Info className="ml-2 h-4 w-4" />
                 من نحن
@@ -201,7 +215,7 @@ const Index = () => {
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-all duration-200"
+                    className="text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-all duration-200 font-medium"
                   >
                     <Settings className="ml-2 h-4 w-4" />
                     خدماتنا
@@ -225,7 +239,7 @@ const Index = () => {
                 variant="ghost"
                 size="sm"
                 onClick={() => navigate('/join-us')}
-                className="text-gray-700 hover:text-green-600 hover:bg-green-50 transition-all duration-200"
+                className="text-gray-700 hover:text-green-600 hover:bg-green-50 transition-all duration-200 font-medium"
               >
                 <UserPlus className="ml-2 h-4 w-4" />
                 انضم إلينا
@@ -236,7 +250,7 @@ const Index = () => {
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="text-gray-700 hover:text-orange-600 hover:bg-orange-50 transition-all duration-200"
+                    className="text-gray-700 hover:text-orange-600 hover:bg-orange-50 transition-all duration-200 font-medium"
                   >
                     <Phone className="ml-2 h-4 w-4" />
                     تواصل معنا
@@ -271,7 +285,7 @@ const Index = () => {
                 variant="outline"
                 size="sm"
                 onClick={() => navigate('/custom-request')}
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white border-0 px-6"
+                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white border-0 px-6 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
               >
                 طلبك المخصص
               </Button>
@@ -280,218 +294,187 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section with Improved Circular Design */}
-      <section id="services" className="py-16 min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="container mx-auto px-4">
-          {/* Circular Services Layout */}
-          <div className="relative flex items-center justify-center" style={{ minHeight: '700px' }}>
-            {/* Central Company Info - Improved size and design */}
-            <div className="absolute inset-0 flex items-center justify-center z-10">
-              <div className="bg-white/95 backdrop-blur-sm rounded-full p-8 shadow-2xl border-4 border-gradient-to-r from-blue-200 to-purple-200 text-center w-72 h-72 flex flex-col items-center justify-center relative overflow-hidden">
-                {/* Background gradient */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 rounded-full"></div>
-                
-                {/* Content */}
-                <div className="relative z-10">
-                  <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-lg border mb-3 mx-auto">
-                    <img 
-                      src="/lovable-uploads/8838bb20-a5cc-4ab1-9fce-30cdb0f93521.png" 
-                      alt="Zeen A Plus Solutions Logo" 
-                      className="w-10 h-10 object-contain"
-                    />
-                  </div>
-                  <h2 className="text-2xl font-bold text-gray-800 mb-2 leading-tight">
-                    {companyInfo.name}
-                  </h2>
-                  <p className="text-sm text-gray-600 font-medium mb-2">{companyInfo.slogan}</p>
-                  <div className="text-xs text-gray-500">{companyInfo.location}</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Services in Circular Layout - Improved positioning and design */}
-            {services.map((service, index) => {
-              const position = getCircularPosition(index, services.length, 300);
-              return (
-                <div
-                  key={index}
-                  className="absolute transition-all duration-500 hover:scale-110 cursor-pointer z-20"
-                  style={{
-                    transform: `translate(${position.x}px, ${position.y}px)`,
-                    left: '50%',
-                    top: '50%',
-                    marginLeft: '-70px',
-                    marginTop: '-70px',
-                  }}
-                  onClick={() => navigate(service.route)}
-                >
-                  <div className={`w-36 h-36 ${service.bgColor} rounded-full flex flex-col items-center justify-center shadow-xl border-3 border-white hover:shadow-2xl transition-all duration-500 group relative overflow-hidden`}>
-                    {/* Background gradient on hover */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-90 transition-all duration-500 rounded-full flex items-center justify-center`}>
-                      <ArrowRight className="h-6 w-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    </div>
-                    
-                    {/* Icon */}
-                    <div className={`w-10 h-10 bg-gradient-to-br ${service.color} rounded-lg flex items-center justify-center shadow-lg mb-2 relative z-10 group-hover:scale-110 transition-transform duration-300`}>
-                      <service.icon className="h-5 w-5 text-white" />
-                    </div>
-                    
-                    {/* Service Title */}
-                    <div className="text-center relative z-10 group-hover:text-white transition-colors duration-300">
-                      <h3 className="text-xs font-bold leading-tight px-2">{service.title}</h3>
-                      <div className="text-xs mt-1 opacity-70">{service.logo}</div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-
-            {/* Decorative connecting lines */}
-            <div className="absolute inset-0 pointer-events-none">
-              <svg className="w-full h-full" viewBox="0 0 600 600">
-                <defs>
-                  <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.1"/>
-                    <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0.1"/>
-                  </linearGradient>
-                </defs>
-                {services.map((_, index) => {
-                  const currentPos = getCircularPosition(index, services.length, 300);
-                  const nextIndex = (index + 1) % services.length;
-                  const nextPos = getCircularPosition(nextIndex, services.length, 300);
-                  
-                  return (
-                    <line
-                      key={index}
-                      x1={300 + currentPos.x}
-                      y1={300 + currentPos.y}
-                      x2={300 + nextPos.x}
-                      y2={300 + nextPos.y}
-                      stroke="url(#lineGradient)"
-                      strokeWidth="2"
-                      strokeDasharray="5,5"
-                    />
-                  );
-                })}
-              </svg>
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-purple-600/10 to-pink-600/10"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight">
+              حلول متكاملة لنجاح أعمالك
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+              نقدم خدمات احترافية متنوعة من الموارد البشرية إلى التطوير التقني والتسويق الرقمي لتحقيق أهدافك
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <WhatsAppButton 
+                phoneNumber={companyInfo.whatsapp}
+                message="مرحباً، أريد بدء مشروع جديد مع Zeen A Plus Solutions"
+                variant="cta"
+                text="ابدأ مشروعك معنا"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white border-0 px-8 py-3 text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+              />
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => navigate('/about')}
+                className="px-8 py-3 text-lg border-2 border-gray-300 hover:border-blue-500 hover:text-blue-600 transition-all duration-300"
+              >
+                اعرف المزيد عنا
+              </Button>
             </div>
           </div>
+        </div>
+        
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-blue-200/30 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-16 h-16 bg-purple-200/30 rounded-full animate-pulse delay-75"></div>
+        <div className="absolute top-40 right-20 w-12 h-12 bg-pink-200/30 rounded-full animate-pulse delay-150"></div>
+      </section>
 
-          {/* Description below the circular design */}
-          <div className="text-center mt-12 max-w-4xl mx-auto">
-            <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              {companyInfo.description}
-            </p>
-            <p className="text-base text-gray-500">
-              انقر على أي خدمة لاستكشاف التفاصيل والحصول على عرض مخصص
-            </p>
+      {/* Features Section */}
+      <section className="py-16 bg-white/50">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <feature.icon className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-16 bg-white/50">
+      {/* Services Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-800 mb-4">لماذا تختار {companyInfo.name}؟</h3>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">خدماتنا المتميزة</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              خبرة واسعة وفريق متخصص يضمن لك أفضل الخدمات والحلول المتكاملة
+              نقدم مجموعة شاملة من الخدمات المهنية لتلبية جميع احتياجات شركتك
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-3xl font-bold text-blue-600 mb-2">150+</div>
-              <div className="text-gray-600">مشروع مكتمل</div>
-            </div>
-            <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-3xl font-bold text-purple-600 mb-2">80+</div>
-              <div className="text-gray-600">عميل راضٍ</div>
-            </div>
-            <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-3xl font-bold text-green-600 mb-2">7+</div>
-              <div className="text-gray-600">سنوات خبرة</div>
-            </div>
-            <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-3xl font-bold text-orange-600 mb-2">24/7</div>
-              <div className="text-gray-600">دعم مستمر</div>
-            </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {services.map((service, index) => (
+              <Card 
+                key={index} 
+                className="group cursor-pointer hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-white border-0 shadow-lg overflow-hidden"
+                onClick={() => navigate(service.route)}
+              >
+                <CardHeader className="text-center pb-2">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                    <service.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <CardTitle className="text-lg font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
+                    {service.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <CardDescription className="text-gray-600 mb-4 leading-relaxed">
+                    {service.description}
+                  </CardDescription>
+                  <div className="flex items-center justify-center text-blue-600 group-hover:text-purple-600 transition-colors duration-300">
+                    <span className="text-sm font-medium ml-2">اعرف المزيد</span>
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">إنجازاتنا بالأرقام</h2>
+            <p className="text-lg opacity-90">نفخر بالثقة التي منحتموها لنا</p>
+          </div>
+          <div className="grid md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="h-8 w-8 text-white" />
+                </div>
+                <div className="text-4xl font-bold mb-2">{stat.number}</div>
+                <div className="text-lg opacity-90">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Preview Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-gray-800 mb-6">لماذا تختار Zeen A Plus Solutions؟</h2>
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              {companyInfo.description}
+            </p>
+            <Button
+              size="lg"
+              onClick={() => navigate('/about')}
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            >
+              اعرف المزيد عن قصتنا
+            </Button>
           </div>
         </div>
       </section>
 
       {/* Join Us Section */}
-      <section id="join-us" className="py-16 bg-gradient-to-br from-purple-50 to-blue-50">
+      <section className="py-16 bg-gradient-to-br from-green-50 to-emerald-50">
         <div className="container mx-auto px-4 text-center">
-          <h3 className="text-3xl font-bold text-gray-800 mb-4">انضم إلى فريق {companyInfo.name}</h3>
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">انضم إلى فريق المتميزين</h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            نبحث عن المواهب المتميزة للانضمام إلى فريقنا المتنوع في جميع التخصصات
+            هل تمتلك خبرة في أحد مجالاتنا؟ انضم إلى شبكة الفريلانسرز المتميزة لدينا
           </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Users className="h-6 w-6 text-blue-600" />
-              </div>
-              <h4 className="text-xl font-bold text-gray-800 mb-2">بيئة عمل متميزة</h4>
-              <p className="text-gray-600">فريق متعاون وبيئة عمل محفزة للإبداع والنمو المهني</p>
-            </div>
-            
-            <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <GraduationCap className="h-6 w-6 text-green-600" />
-              </div>
-              <h4 className="text-xl font-bold text-gray-800 mb-2">فرص التطوير</h4>
-              <p className="text-gray-600">برامج تدريبية مستمرة وفرص نمو وظيفي واضحة</p>
-            </div>
-            
-            <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Briefcase className="h-6 w-6 text-purple-600" />
-              </div>
-              <h4 className="text-xl font-bold text-gray-800 mb-2">مزايا تنافسية</h4>
-              <p className="text-gray-600">حزمة مزايا شاملة ومرونة في العمل</p>
-            </div>
-          </div>
-          
-          <WhatsAppButton 
-            phoneNumber={companyInfo.whatsapp}
-            message="مرحباً، أريد الاستفسار عن فرص العمل المتاحة في Zeen A Plus Solutions"
-            variant="cta"
-            text="أرسل سيرتك الذاتية"
-            className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white border-0"
-          />
+          <Button
+            size="lg"
+            onClick={() => navigate('/join-us')}
+            className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+          >
+            <UserPlus className="ml-2 h-5 w-5" />
+            ابدأ رحلتك معنا
+          </Button>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="py-16 bg-gradient-to-br from-gray-800 to-gray-900 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h3 className="text-3xl font-bold text-gray-800 mb-4">ابدأ مشروعك مع {companyInfo.name}</h3>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold mb-4">هل أنت مستعد لبدء مشروعك؟</h2>
+          <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
             تواصل معنا اليوم واحصل على استشارة مجانية لجميع خدماتنا
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <WhatsAppButton 
               phoneNumber={companyInfo.whatsapp}
               message="مرحباً، أريد الاستفسار عن خدمات Zeen A Plus Solutions"
               variant="cta"
               text="تواصل عبر الواتس آب"
+              className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             />
-            <div className="flex items-center space-x-4 space-x-reverse">
-              <div className="flex items-center space-x-2 space-x-reverse text-gray-600">
-                <MessageSquare className="h-5 w-5" />
-                <span>أو اتصل على: {companyInfo.phone}</span>
+            <div className="flex items-center space-x-6 space-x-reverse text-gray-300">
+              <div className="flex items-center space-x-2 space-x-reverse">
+                <Phone className="h-5 w-5" />
+                <span>{companyInfo.phone}</span>
               </div>
               <a
                 href={companyInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 space-x-reverse text-blue-600 hover:text-blue-700 transition-colors"
+                className="flex items-center space-x-2 space-x-reverse hover:text-blue-400 transition-colors"
               >
                 <Linkedin className="h-5 w-5" />
-                <span>تابعونا على LinkedIn</span>
+                <span>LinkedIn</span>
               </a>
             </div>
           </div>
