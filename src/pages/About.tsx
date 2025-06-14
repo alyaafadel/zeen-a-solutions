@@ -149,30 +149,30 @@ const About = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mt-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mt-6">
             <Card className="h-full group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-0 shadow-lg bg-white/95 backdrop-blur-sm">
-              <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-blue rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300 mb-4">
-                  <Eye className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
+              <CardHeader className="text-center pb-2">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-blue rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300 mb-3">
+                  <Eye className="h-6 w-6 sm:h-7 sm:w-7 text-white" />
                 </div>
-                <CardTitle className="text-lg sm:text-xl md:text-2xl text-brand-blue group-hover:text-brand-blue-dark transition-colors duration-300 mb-3">رؤيتنا</CardTitle>
+                <CardTitle className="text-lg sm:text-xl text-brand-blue group-hover:text-brand-blue-dark transition-colors duration-300 mb-2">رؤيتنا</CardTitle>
               </CardHeader>
-              <CardContent className="p-4">
-                <p className="text-slate-700 leading-relaxed text-sm sm:text-base md:text-lg text-center">
+              <CardContent className="p-3">
+                <p className="text-slate-700 leading-relaxed text-sm sm:text-base text-center">
                   أن نكون الشريك المفضل للشركات والأفراد الباحثين عن حلول مبتكرة وفعالة، تمكنهم من تجاوز التحديات وتحقيق أقصى إمكاناتهم في بيئة عمل متغيرة باستمرار.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="h-full group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-0 shadow-lg bg-white/95 backdrop-blur-sm">
-              <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-blue-light rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300 mb-4">
-                  <Target className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
+              <CardHeader className="text-center pb-2">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-blue-light rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300 mb-3">
+                  <Target className="h-6 w-6 sm:h-7 sm:w-7 text-white" />
                 </div>
-                <CardTitle className="text-lg sm:text-xl md:text-2xl text-brand-blue group-hover:text-brand-accent-blue transition-colors duration-300 mb-3">رسالتنا</CardTitle>
+                <CardTitle className="text-lg sm:text-xl text-brand-blue group-hover:text-brand-accent-blue transition-colors duration-300 mb-2">رسالتنا</CardTitle>
               </CardHeader>
-              <CardContent className="p-4">
-                <p className="text-slate-700 leading-relaxed text-sm sm:text-base md:text-lg text-center">
+              <CardContent className="p-3">
+                <p className="text-slate-700 leading-relaxed text-sm sm:text-base text-center">
                   تقديم خدمات استشارية وتنفيذية عالية الجودة في مجالات متعددة، من خلال فريق من الخبراء المتخصصين الذين يعملون بمرونة وكفاءة، لضمان إنجاز المهام بدقة واحترافية، وتحقيق قيمة مضافة حقيقية لعملائنا.
                 </p>
               </CardContent>
@@ -191,21 +191,21 @@ const About = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mt-6">
             {coreValues.map((value, index) => (
               <Card key={index} className="h-full group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-0 shadow-lg bg-white/95 backdrop-blur-sm">
-                <CardHeader className="text-center pb-3">
-                  <div className={`w-14 h-14 sm:w-16 sm:h-16 ${
+                <CardHeader className="text-center pb-2">
+                  <div className={`w-10 h-10 sm:w-12 sm:h-12 ${
                     index % 3 === 0 ? 'bg-gradient-blue' : 
                     index % 3 === 1 ? 'bg-gradient-blue-light' : 
                     'bg-gradient-dark-blue'
-                  } rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300 mb-3`}>
-                    <value.icon className="h-7 w-7 sm:h-8 sm:w-8 text-white" />
+                  } rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300 mb-2`}>
+                    <value.icon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                   </div>
-                  <CardTitle className="text-base sm:text-lg md:text-xl text-brand-blue group-hover:text-brand-blue-dark transition-colors duration-300 mb-3">{value.title}</CardTitle>
+                  <CardTitle className="text-base sm:text-lg text-brand-blue group-hover:text-brand-blue-dark transition-colors duration-300 mb-2">{value.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="p-4">
-                  <p className="text-slate-700 leading-relaxed text-center text-sm sm:text-base">{value.description}</p>
+                <CardContent className="p-2">
+                  <p className="text-slate-700 leading-relaxed text-center text-xs sm:text-sm">{value.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -223,23 +223,23 @@ const About = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mt-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4 mt-6">
             {whatMakesUsDifferent.map((item, index) => (
               <Card key={index} className="h-full group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-0 shadow-lg bg-white/95 backdrop-blur-sm">
-                <CardHeader className="pb-3">
-                  <div className="flex items-center space-x-3 sm:space-x-4 space-x-reverse">
-                    <div className={`w-12 h-12 sm:w-14 sm:h-14 ${
+                <CardHeader className="pb-2">
+                  <div className="flex items-center space-x-2 sm:space-x-3 space-x-reverse">
+                    <div className={`w-10 h-10 sm:w-12 sm:h-12 ${
                       index % 3 === 0 ? 'bg-gradient-blue' : 
                       index % 3 === 1 ? 'bg-gradient-blue-light' : 
                       'bg-gradient-dark-blue'
                     } rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                      <item.icon className="h-6 w-6 sm:h-7 sm:w-7 text-white" />
+                      <item.icon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                     </div>
-                    <CardTitle className="text-base sm:text-lg md:text-xl text-brand-blue group-hover:text-brand-blue-dark transition-colors duration-300">{item.title}</CardTitle>
+                    <CardTitle className="text-base sm:text-lg text-brand-blue group-hover:text-brand-blue-dark transition-colors duration-300">{item.title}</CardTitle>
                   </div>
                 </CardHeader>
-                <CardContent className="p-4">
-                  <p className="text-slate-700 leading-relaxed text-sm sm:text-base">{item.description}</p>
+                <CardContent className="p-2">
+                  <p className="text-slate-700 leading-relaxed text-xs sm:text-sm">{item.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -251,24 +251,24 @@ const About = () => {
         {/* How We Work Section with Reduced Spacing */}
         <section className="mb-8 clear-both">
           <Card className="bg-gradient-to-br from-brand-light-blue/50 to-brand-light-blue/30 border-0 shadow-xl">
-            <CardHeader className="text-center pb-4">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-blue rounded-full flex items-center justify-center mx-auto shadow-lg mb-4">
-                <Users className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
+            <CardHeader className="text-center pb-3">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-blue rounded-full flex items-center justify-center mx-auto shadow-lg mb-3">
+                <Users className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
               </div>
-              <CardTitle className="text-xl sm:text-2xl md:text-3xl text-brand-blue mb-3">كيف نعمل؟</CardTitle>
+              <CardTitle className="text-xl sm:text-2xl md:text-3xl text-brand-blue mb-2">كيف نعمل؟</CardTitle>
             </CardHeader>
-            <CardContent className="text-center p-6">
-              <p className="text-sm sm:text-base md:text-lg text-slate-700 leading-relaxed max-w-4xl mx-auto mb-4">
+            <CardContent className="text-center p-4">
+              <p className="text-sm sm:text-base text-slate-700 leading-relaxed max-w-4xl mx-auto mb-3">
                 نحن نعمل <span className="font-bold text-brand-blue">كجزء من فريقكم</span>، نقدم الخبرة والدعم اللازمين لإنجاز المهام بكفاءة. 
                 سواء كنتم بحاجة إلى استشارات متخصصة، إدارة مشاريع، أو تنفيذ مهام محددة، فإننا هنا لتقديم الدعم الذي يمكنكم الاعتماد عليه.
               </p>
-              <div className="flex items-center justify-center space-x-2 sm:space-x-3 space-x-reverse mt-4">
+              <div className="flex items-center justify-center space-x-2 space-x-reverse mt-3">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 sm:h-6 sm:w-6 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <span className="text-slate-600 font-medium text-sm sm:text-base">تقييم شركائنا لجودة خدماتنا</span>
+                <span className="text-slate-600 font-medium text-xs sm:text-sm">تقييم شركائنا لجودة خدماتنا</span>
               </div>
             </CardContent>
           </Card>
