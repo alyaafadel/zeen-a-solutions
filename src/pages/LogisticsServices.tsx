@@ -1,303 +1,128 @@
-
-import { Truck, Package, Warehouse, MapPin, Clock, Shield, ArrowRight, CheckCircle, MessageSquare, Users, ShieldCheck, QualityIcon as Quality } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { useNavigate } from "react-router-dom";
-import WhatsAppButton from "@/components/WhatsAppButton";
+import React from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Truck, Shield, CheckCircle, Users, TrendingUp, Clock, MapPin, Phone, Mail } from 'lucide-react';
 
 const LogisticsServices = () => {
-  const navigate = useNavigate();
-
-  const services = [
-    {
-      title: "التخزين والمستودعات",
-      description: "خدمات تخزين متقدمة مع أنظمة إدارة المخزون الذكية",
-      icon: Warehouse,
-      color: "from-blue-500 to-blue-600",
-      bgColor: "bg-blue-50",
-      features: ["التخزين الآمن", "إدارة المخزون", "التحكم في درجة الحرارة", "التتبع الرقمي"]
-    },
-    {
-      title: "النقل والتوصيل", 
-      description: "حلول النقل المتكاملة للشحن المحلي والدولي",
-      icon: Truck,
-      color: "from-green-500 to-green-600",
-      bgColor: "bg-green-50",
-      features: ["النقل السريع", "التتبع المباشر", "التأمين الشامل", "التوصيل في الوقت المحدد"]
-    },
-    {
-      title: "إدارة سلسلة التوريد",
-      description: "تحسين وإدارة سلسلة التوريد بكفاءة عالية",
-      icon: Package,
-      color: "from-purple-500 to-purple-600", 
-      bgColor: "bg-purple-50",
-      features: ["تخطيط المخزون", "تحسين التكاليف", "إدارة الموردين", "تحليل البيانات"]
-    },
-    {
-      title: "خدمات 3PL المتكاملة",
-      description: "حلول الطرف الثالث اللوجستي الشاملة لجميع احتياجاتك",
-      icon: Users,
-      color: "from-orange-500 to-orange-600",
-      bgColor: "bg-orange-50", 
-      features: ["إدارة المخزون", "معالجة الطلبات", "التوزيع", "خدمة العملاء"]
-    },
-    {
-      title: "خدمات السلامة المهنية",
-      description: "تطبيق أعلى معايير السلامة والصحة المهنية في جميع العمليات اللوجستية",
-      icon: ShieldCheck,
-      color: "from-red-500 to-red-600",
-      bgColor: "bg-red-50",
-      features: ["تقييم المخاطر", "التدريب على السلامة", "فحص المعدات", "الامتثال للمعايير الدولية"]
-    },
-    {
-      title: "ضمان الجودة والتحكم",
-      description: "أنظمة ضمان الجودة الشاملة لضمان أعلى مستوى من الخدمة",
-      icon: Shield,
-      color: "from-indigo-500 to-indigo-600",
-      bgColor: "bg-indigo-50",
-      features: ["فحص الجودة", "ISO معتمد", "التحسين المستمر", "التدقيق الداخلي"]
-    }
-  ];
-
-  const features = [
-    {
-      icon: Clock,
-      title: "سرعة التنفيذ",
-      description: "التزام بالمواعيد المحددة مع أعلى معايير الجودة"
-    },
-    {
-      icon: Shield,
-      title: "الأمان والحماية", 
-      description: "أنظمة أمان متطورة لحماية البضائع والمعلومات"
-    },
-    {
-      icon: MapPin,
-      title: "تغطية شاملة",
-      description: "شبكة توزيع واسعة تغطي جميع المناطق"
-    },
-    {
-      icon: ShieldCheck,
-      title: "معايير السلامة الدولية",
-      description: "التزام كامل بمعايير السلامة والصحة المهنية العالمية"
-    }
-  ];
-
-  const companyInfo = {
-    name: "Zeen A Plus Solutions",
-    phone: "+966123456789",
-    whatsapp: "+966123456789"
-  };
-
-  const specializedServices = [
-    {
-      title: "استشارات السلامة المهنية",
-      description: "تقييم شامل لمخاطر السلامة وتطوير خطط الطوارئ",
-      icon: ShieldCheck
-    },
-    {
-      title: "إدارة الجودة الشاملة",
-      description: "تطبيق أنظمة الجودة العالمية وشهادات الاعتماد",
-      icon: Shield
-    },
-    {
-      title: "التدريب المتخصص",
-      description: "برامج تدريبية للعاملين في القطاع اللوجستي",
-      icon: Users
-    },
-    {
-      title: "الامتثال والتدقيق",
-      description: "مراجعة الامتثال للمعايير الدولية والمحلية",
-      icon: Package
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100" dir="rtl">
-      {/* Header */}
-      <header className="bg-white/80 backdrop-blur-sm shadow-sm border-b sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-3 space-x-reverse">
-              <Button
-                variant="ghost"
-                onClick={() => navigate("/")}
-                className="text-gray-600 hover:text-gray-800"
-              >
-                <ArrowRight className="h-5 w-5" />
-                العودة للرئيسية
-              </Button>
-            </div>
-            <div className="flex items-center space-x-3 space-x-reverse">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
-                <Truck className="text-white h-6 w-6" />
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-gray-800">{companyInfo.name}</h1>
-                <p className="text-sm text-gray-600">الخدمات اللوجستية والسلامة</p>
-              </div>
-            </div>
-            <WhatsAppButton 
-              phoneNumber={companyInfo.whatsapp}
-              message="مرحباً، أريد الاستفسار عن الخدمات اللوجستية والسلامة"
-              variant="header"
-            />
-          </div>
-        </div>
-      </header>
+    <div className="container mx-auto py-12">
+      <h1 className="text-3xl font-bold text-center mb-8">خدماتنا اللوجستية</h1>
 
-      {/* Hero Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="mb-12">
-            <h2 className="text-5xl font-bold text-gray-800 mb-6">
-              الخدمات اللوجستية المتكاملة والسلامة المهنية
-            </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              نقدم حلولاً لوجستية متكاملة ومتطورة تشمل التخزين، النقل، وإدارة سلسلة التوريد 
-              مع التركيز على أعلى معايير السلامة والجودة لضمان نجاح أعمالك
-            </p>
-          </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Card 1: النقل بالشاحنات */}
+        <Card>
+          <CardHeader>
+            <CardTitle><Truck className="mr-2 inline-block" /> النقل بالشاحنات</CardTitle>
+            <CardDescription>حلول نقل موثوقة وفعالة لتلبية احتياجات عملك.</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <ul className="list-disc pl-5">
+              <li>أسطول حديث من الشاحنات</li>
+              <li>تغطية واسعة النطاق</li>
+              <li>تتبع الشحنات في الوقت الفعلي</li>
+            </ul>
+            <Button className="mt-4">اكتشف المزيد</Button>
+          </CardContent>
+        </Card>
 
-          {/* Main Services Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-20">
-            {services.map((service, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-300 border-0 shadow-lg overflow-hidden">
-                <CardHeader className={`${service.bgColor} pb-6`}>
-                  <div className="flex items-center justify-center mb-4">
-                    <div className={`w-20 h-20 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center shadow-lg`}>
-                      <service.icon className="h-10 w-10 text-white" />
-                    </div>
-                  </div>
-                  <CardTitle className="text-2xl text-gray-800 mb-2 text-center">{service.title}</CardTitle>
-                  <CardDescription className="text-gray-600 leading-relaxed text-base text-center">
-                    {service.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="pt-6">
-                  <div className="grid grid-cols-2 gap-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center space-x-2 space-x-reverse text-sm">
-                        <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                        <span className="text-gray-600">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <WhatsAppButton 
-                    phoneNumber={companyInfo.whatsapp}
-                    message={`مرحباً، أريد الاستفسار عن ${service.title}`}
-                    variant="service"
-                    text="استفسر الآن"
-                  />
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+        {/* Card 2: التخزين والتوزيع */}
+        <Card>
+          <CardHeader>
+            <CardTitle><Shield className="mr-2 inline-block" /> التخزين والتوزيع</CardTitle>
+            <CardDescription>مرافق تخزين آمنة وحلول توزيع متكاملة.</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <ul className="list-disc pl-5">
+              <li>مستودعات حديثة ومجهزة</li>
+              <li>إدارة المخزون بكفاءة</li>
+              <li>توزيع سريع وموثوق</li>
+            </ul>
+            <Button className="mt-4">اكتشف المزيد</Button>
+          </CardContent>
+        </Card>
 
-      {/* Specialized Services Section */}
-      <section className="py-20 bg-white/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h3 className="text-4xl font-bold text-gray-800 mb-4">خدمات متخصصة إضافية</h3>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              خدمات مكملة ومتخصصة تضمن التميز في الأداء والامتثال للمعايير العالمية
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {specializedServices.map((service, index) => (
-              <div key={index} className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <service.icon className="h-8 w-8 text-white" />
-                </div>
-                <h4 className="text-lg font-bold text-gray-800 mb-3">{service.title}</h4>
-                <p className="text-gray-600 leading-relaxed text-sm">{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        {/* Card 3: التخليص الجمركي */}
+        <Card>
+          <CardHeader>
+            <CardTitle><CheckCircle className="mr-2 inline-block" /> التخليص الجمركي</CardTitle>
+            <CardDescription>تخليص جمركي سريع وسهل لضمان وصول شحناتك في الوقت المحدد.</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <ul className="list-disc pl-5">
+              <li>إجراءات تخليص مبسطة</li>
+              <li>خبرة في التعامل مع جميع أنواع الشحنات</li>
+              <li>التزام باللوائح والقوانين</li>
+            </ul>
+            <Button className="mt-4">اكتشف المزيد</Button>
+          </CardContent>
+        </Card>
 
-      {/* Features Section */}
-      <section className="py-20 bg-white/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h3 className="text-4xl font-bold text-gray-800 mb-4">لماذا تختار خدماتنا اللوجستية؟</h3>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              نتميز بالخبرة الواسعة والتقنيات المتطورة لتقديم أفضل الحلول اللوجستية
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {features.map((feature, index) => (
-              <div key={index} className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="h-8 w-8 text-white" />
-                </div>
-                <h4 className="text-xl font-bold text-gray-800 mb-3">{feature.title}</h4>
-                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
-              </div>
-            ))}
-          </div>
+        {/* Card 4: إدارة سلسلة الإمداد */}
+        <Card>
+          <CardHeader>
+            <CardTitle><Users className="mr-2 inline-block" /> إدارة سلسلة الإمداد</CardTitle>
+            <CardDescription>حلول متكاملة لإدارة سلسلة الإمداد بكفاءة وفعالية.</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <ul className="list-disc pl-5">
+              <li>تحسين العمليات اللوجستية</li>
+              <li>تقليل التكاليف</li>
+              <li>زيادة الكفاءة</li>
+            </ul>
+            <Button className="mt-4">اكتشف المزيد</Button>
+          </CardContent>
+        </Card>
 
-          {/* Stats */}
-          <div className="grid md:grid-cols-5 gap-6">
-            <div className="text-center p-6 bg-white rounded-2xl shadow-lg">
-              <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
-              <div className="text-gray-600">شحنة شهرياً</div>
-            </div>
-            <div className="text-center p-6 bg-white rounded-2xl shadow-lg">
-              <div className="text-4xl font-bold text-green-600 mb-2">50K+</div>
-              <div className="text-gray-600">متر مربع تخزين</div>
-            </div>
-            <div className="text-center p-6 bg-white rounded-2xl shadow-lg">
-              <div className="text-4xl font-bold text-purple-600 mb-2">99%</div>
-              <div className="text-gray-600">دقة التسليم</div>
-            </div>
-            <div className="text-center p-6 bg-white rounded-2xl shadow-lg">
-              <div className="text-4xl font-bold text-orange-600 mb-2">24/7</div>
-              <div className="text-gray-600">خدمة عملاء</div>
-            </div>
-            <div className="text-center p-6 bg-white rounded-2xl shadow-lg">
-              <div className="text-4xl font-bold text-red-600 mb-2">100%</div>
-              <div className="text-gray-600">امتثال للسلامة</div>
-            </div>
-          </div>
-        </div>
-      </section>
+        {/* Card 5: حلول التجارة الإلكترونية */}
+        <Card>
+          <CardHeader>
+            <CardTitle><TrendingUp className="mr-2 inline-block" /> حلول التجارة الإلكترونية</CardTitle>
+            <CardDescription>حلول لوجستية متكاملة لدعم نمو تجارتك الإلكترونية.</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <ul className="list-disc pl-5">
+              <li>تكامل مع منصات التجارة الإلكترونية</li>
+              <li>توصيل سريع وموثوق</li>
+              <li>إدارة المرتجعات</li>
+            </ul>
+            <Button className="mt-4">اكتشف المزيد</Button>
+          </CardContent>
+        </Card>
+
+        {/* Card 6: الاستشارات اللوجستية */}
+        <Card>
+          <CardHeader>
+            <CardTitle><Clock className="mr-2 inline-block" /> الاستشارات اللوجستية</CardTitle>
+            <CardDescription>نقدم استشارات لوجستية لمساعدتك على تحسين أدائك وتقليل التكاليف.</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <ul className="list-disc pl-5">
+              <li>تحليل العمليات اللوجستية</li>
+              <li>تحديد فرص التحسين</li>
+              <li>تقديم حلول مخصصة</li>
+            </ul>
+            <Button className="mt-4">اكتشف المزيد</Button>
+          </CardContent>
+        </Card>
+      </div>
 
       {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="container mx-auto px-4 text-center">
-          <h3 className="text-4xl font-bold text-gray-800 mb-4">ابدأ مشروعك اللوجستي معنا</h3>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            تواصل معنا اليوم واحصل على استشارة مجانية لجميع خدماتنا اللوجستية وخدمات السلامة والجودة
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <WhatsAppButton 
-              phoneNumber={companyInfo.whatsapp}
-              message="مرحباً، أريد الاستفسار عن الخدمات اللوجستية وخدمات السلامة والجودة"
-              variant="cta"
-              text="تواصل عبر الواتس آب"
-            />
-            <div className="flex items-center space-x-2 space-x-reverse text-gray-600">
-              <MessageSquare className="h-5 w-5" />
-              <span>أو اتصل على: {companyInfo.phone}</span>
-            </div>
+      <div className="mt-12 p-6 bg-gray-100 rounded-lg shadow-md">
+        <h2 className="text-2xl font-bold text-center mb-4">تواصل معنا</h2>
+        <div className="flex justify-center space-x-6">
+          <div className="flex items-center">
+            <MapPin className="mr-2 text-gray-600" />
+            <span>العنوان: 123 شارع المثال، المدينة</span>
+          </div>
+          <div className="flex items-center">
+            <Phone className="mr-2 text-gray-600" />
+            <span>الهاتف: +1234567890</span>
+          </div>
+          <div className="flex items-center">
+            <Mail className="mr-2 text-gray-600" />
+            <span>البريد الإلكتروني: info@example.com</span>
           </div>
         </div>
-      </section>
-
-      {/* Floating WhatsApp Button */}
-      <div className="fixed bottom-6 left-6 z-50">
-        <WhatsAppButton 
-          phoneNumber={companyInfo.whatsapp}
-          message="مرحباً، أريد الاستفسار عن الخدمات اللوجستية والسلامة"
-          variant="floating"
-          text="تحدث معنا"
-        />
       </div>
     </div>
   );
