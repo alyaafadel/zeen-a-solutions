@@ -1,4 +1,4 @@
-import { Users, Languages, Megaphone, Code, Truck, ArrowRight, CheckCircle, MessageSquare, GraduationCap } from "lucide-react";
+import { Users, Languages, Megaphone, Code, Truck, ArrowRight, CheckCircle, MessageSquare, GraduationCap, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
@@ -88,6 +88,7 @@ const Index = () => {
     phone: "+966570513821",
     email: "info@zeenaplusolutions.com",
     whatsapp: "+966570513821",
+    linkedin: "https://www.linkedin.com/company/zeen-a-solutions-establishment/",
     location: "الرياض، المملكة العربية السعودية",
     description: "شركة متخصصة في تقديم حلول متكاملة للأعمال تشمل الموارد البشرية، الترجمة، التسويق الرقمي، التطوير التقني، والخدمات اللوجستية."
   };
@@ -111,11 +112,22 @@ const Index = () => {
                 <p className="text-sm text-gray-600">{companyInfo.location}</p>
               </div>
             </div>
-            <WhatsAppButton 
-              phoneNumber={companyInfo.whatsapp}
-              message="مرحباً، أريد الاستفسار عن خدماتكم"
-              variant="header"
-            />
+            <div className="flex items-center space-x-3 space-x-reverse">
+              <a
+                href={companyInfo.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+                title="تابعونا على LinkedIn"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <WhatsAppButton 
+                phoneNumber={companyInfo.whatsapp}
+                message="مرحباً، أريد الاستفسار عن خدماتكم"
+                variant="header"
+              />
+            </div>
           </div>
         </div>
       </header>
@@ -232,9 +244,20 @@ const Index = () => {
               variant="cta"
               text="تواصل عبر الواتس آب"
             />
-            <div className="flex items-center space-x-2 space-x-reverse text-gray-600">
-              <MessageSquare className="h-5 w-5" />
-              <span>أو اتصل على: {companyInfo.phone}</span>
+            <div className="flex items-center space-x-4 space-x-reverse">
+              <div className="flex items-center space-x-2 space-x-reverse text-gray-600">
+                <MessageSquare className="h-5 w-5" />
+                <span>أو اتصل على: {companyInfo.phone}</span>
+              </div>
+              <a
+                href={companyInfo.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 space-x-reverse text-blue-600 hover:text-blue-700 transition-colors"
+              >
+                <Linkedin className="h-5 w-5" />
+                <span>تابعونا على LinkedIn</span>
+              </a>
             </div>
           </div>
         </div>
