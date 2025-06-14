@@ -1,4 +1,5 @@
-import { ArrowRight, CheckCircle, Mail, Phone, MapPin, Users, Target, Award, Languages, UserCheck, TrendingUp, Code, Globe, Briefcase, MessageSquare, Database } from "lucide-react";
+
+import { ArrowRight, CheckCircle, Mail, Phone, MapPin, Users, Target, Award, UserCheck, TrendingUp, Briefcase, MessageSquare, Globe, FileText, Calendar, Clock, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -6,57 +7,85 @@ import { Label } from "@/components/ui/label";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
-  const mainProjects = [
+  const mainServices = [
     {
-      title: "خدمات الترجمة الشاملة",
-      description: "ترجمة احترافية من وإلى جميع اللغات بأعلى معايير الجودة والدقة، مع فريق من المترجمين المحترفين المتخصصين",
-      icon: Languages,
-      specialist: "متخصص اللغات والترجمة",
-      services: ["ترجمة المستندات", "الترجمة الفورية", "المراجعة اللغوية", "التعريب والتوطين"],
-      whatsappMessage: "مرحباً، أريد الاستفسار عن خدمات الترجمة"
+      title: "استقطاب وتوظيف المواهب",
+      description: "البحث عن أفضل المواهب والكفاءات المناسبة لشركتك، مع فحص شامل للمهارات والخبرات وضمان الجودة في الاختيار",
+      icon: Users,
+      specialist: "خبير التوظيف والاستقطاب",
+      services: ["البحث عن المواهب", "فحص وتقييم المرشحين", "إجراء المقابلات", "التحقق من المراجع"],
+      whatsappMessage: "مرحباً، أريد الاستفسار عن خدمات التوظيف والاستقطاب",
+      duration: "2-4 أسابيع",
+      price: "من 500 ريال"
     },
     {
-      title: "حلول الموارد البشرية",
-      description: "خدمات شاملة في إدارة الموارد البشرية من التوظيف إلى التطوير، مع استراتيجيات مبتكرة لتنمية المواهب",
-      icon: UserCheck,
-      specialist: "خبير الموارد البشرية",
-      services: ["التوظيف والاستقطاب", "تطوير المواهب", "إدارة الأداء", "التدريب التخصصي"],
-      whatsappMessage: "مرحباً، أريد الاستفسار عن حلول الموارد البشرية"
+      title: "إعداد الهياكل التنظيمية",
+      description: "تصميم وبناء الهياكل التنظيمية المناسبة لطبيعة عملك، مع تحديد الأدوار والمسؤوليات وخطوط التواصل",
+      icon: Target,
+      specialist: "خبير التنظيم الإداري",
+      services: ["تصميم الهياكل التنظيمية", "تحديد الأدوار والمسؤوليات", "إعداد الوصف الوظيفي", "تحسين سير العمل"],
+      whatsappMessage: "مرحباً، أريد الاستفسار عن خدمات الهياكل التنظيمية",
+      duration: "1-2 أسبوع",
+      price: "من 300 ريال"
     },
     {
-      title: "التسويق الإلكتروني",
-      description: "استراتيجيات تسويقية رقمية متكاملة لتعزيز حضوركم الإلكتروني وزيادة المبيعات عبر جميع المنصات الرقمية",
+      title: "التدريب وتطوير الموظفين",
+      description: "برامج تدريبية مخصصة لتطوير مهارات فريق العمل وزيادة الإنتاجية، مع متابعة مستمرة لقياس التقدم",
       icon: TrendingUp,
-      specialist: "خبير التسويق الرقمي",
-      services: ["إدارة وسائل التواصل", "الإعلانات المدفوعة", "تحسين محركات البحث", "التسويق بالمحتوى"],
-      whatsappMessage: "مرحباً، أريد الاستفسار عن خدمات التسويق الإلكتروني"
+      specialist: "مدرب الموارد البشرية",
+      services: ["تصميم البرامج التدريبية", "التدريب عن بُعد", "تقييم المهارات", "خطط التطوير الشخصي"],
+      whatsappMessage: "مرحباً، أريد الاستفسار عن خدمات التدريب والتطوير",
+      duration: "1-4 أسابيع",
+      price: "من 400 ريال"
     },
     {
-      title: "حلول البرمجة التطبيقية",
-      description: "تطوير التطبيقات والمواقع الإلكترونية بأحدث التقنيات، من التصميم إلى التطبيق النهائي مع الدعم الفني المستمر",
-      icon: Code,
-      specialist: "مطور البرمجيات",
-      services: ["تطوير المواقع", "تطبيقات الهاتف", "أنظمة إدارة قواعد البيانات", "الدعم الفني"],
-      whatsappMessage: "مرحباً، أريد الاستفسار عن حلول البرمجة والتطوير"
+      title: "إدارة الأداء والتقييم",
+      description: "نظم متطورة لقياس وتقييم أداء الموظفين، مع إعداد تقارير شاملة وخطط تحسين الأداء المستمر",
+      icon: Award,
+      specialist: "خبير تقييم الأداء",
+      services: ["أنظمة تقييم الأداء", "تقارير الأداء", "خطط التحسين", "مراجعات دورية"],
+      whatsappMessage: "مرحباً، أريد الاستفسار عن خدمات إدارة الأداء",
+      duration: "2-3 أسابيع",
+      price: "من 600 ريال"
+    },
+    {
+      title: "استشارات الموارد البشرية",
+      description: "استشارات شاملة في جميع جوانب إدارة الموارد البشرية، من السياسات واللوائح إلى حل المشكلات الإدارية",
+      icon: UserCheck,
+      specialist: "مستشار الموارد البشرية",
+      services: ["وضع السياسات", "حل المشكلات الإدارية", "تحسين بيئة العمل", "الامتثال القانوني"],
+      whatsappMessage: "مرحباً، أريد الاستفسار عن الاستشارات الإدارية",
+      duration: "حسب المشروع",
+      price: "من 200 ريال"
+    },
+    {
+      title: "إعداد العقود والوثائق",
+      description: "صياغة عقود العمل والوثائق الرسمية بما يتوافق مع القوانين المحلية، مع ضمان حماية حقوق جميع الأطراف",
+      icon: FileText,
+      specialist: "أخصائي العقود والوثائق",
+      services: ["عقود العمل", "اللوائح الداخلية", "الوثائق القانونية", "مراجعة العقود"],
+      whatsappMessage: "مرحباً، أريد الاستفسار عن خدمات إعداد العقود",
+      duration: "3-7 أيام",
+      price: "من 150 ريال"
     }
   ];
 
   const whyChooseUs = [
-    "فريق من أربعة متخصصين في مجالات مختلفة",
-    "حلول متكاملة تغطي جميع احتياجات الأعمال الحديثة",
-    "خبرة واسعة في التعامل مع العملاء العرب والأجانب",
-    "استخدام أحدث التقنيات والأدوات المتخصصة",
-    "التزام بمعايير الجودة العالمية والتسليم في الوقت المحدد",
-    "دعم فني مستمر وخدمة عملاء متميزة على مدار الساعة"
+    "خبرة عملية في مجال الموارد البشرية لأكثر من 5 سنوات",
+    "تقديم حلول مخصصة تناسب طبيعة كل عمل",
+    "أسعار تنافسية مع جودة عالية في الخدمة",
+    "مرونة في التعامل مع المشاريع الصغيرة والكبيرة",
+    "دعم مستمر حتى بعد انتهاء المشروع",
+    "تسليم في المواعيد المحددة مع ضمان الجودة"
   ];
 
   const companyInfo = {
-    name: "Zeen A Plus Solutions",
-    slogan: "أربعة تخصصات، حلول لا محدودة",
+    name: "خدمات الموارد البشرية المتخصصة",
+    slogan: "شريكك في بناء فريق عمل متميز",
     phone: "+966123456789",
-    email: "info@zeenaplusolutions.com",
+    email: "hr.services@gmail.com",
     whatsapp: "+966123456789",
-    description: "شركة رائدة في تقديم الحلول المتكاملة للأعمال، نجمع بين أربعة تخصصات أساسية لنقدم لعملائنا خدمات شاملة تحت مظلة واحدة."
+    description: "متخصص في تقديم خدمات الموارد البشرية الشاملة للشركات والمؤسسات، مع خبرة واسعة في التوظيف والتدريب وإدارة الأداء."
   };
 
   return (
@@ -67,7 +96,7 @@ const Index = () => {
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-2 space-x-reverse">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z+</span>
+                <UserCheck className="text-white h-6 w-6" />
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-gray-800">{companyInfo.name}</h1>
@@ -77,15 +106,14 @@ const Index = () => {
             <div className="flex items-center space-x-4 space-x-reverse">
               <nav className="hidden md:flex space-x-8 space-x-reverse">
                 <a href="#home" className="text-gray-700 hover:text-blue-600 transition-colors">الرئيسية</a>
-                <a href="#projects" className="text-gray-700 hover:text-blue-600 transition-colors">خدماتنا</a>
-                <a href="#team" className="text-gray-700 hover:text-blue-600 transition-colors">عن الشركة</a>
+                <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors">خدماتنا</a>
+                <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">من نحن</a>
                 <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">اتصل بنا</a>
               </nav>
               <WhatsAppButton 
                 phoneNumber={companyInfo.whatsapp}
-                message="مرحباً، أريد التحدث مع فريق Zeen A Plus Solutions"
-                variant="cta"
-                text="تحدث معنا عبر الواتس آب"
+                message="مرحباً، أريد الاستفسار عن خدمات الموارد البشرية"
+                variant="header"
               />
             </div>
           </div>
@@ -96,68 +124,79 @@ const Index = () => {
       <section id="home" className="py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-5xl font-bold text-gray-800 mb-6">
-            <span className="text-blue-600">أربعة تخصصات</span> في مكان واحد
+            <span className="text-blue-600">خدمات الموارد البشرية</span> المتخصصة
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-            {companyInfo.description}
+            نساعدك في بناء فريق عمل متميز من خلال خدمات التوظيف والتدريب وإدارة الأداء بأعلى معايير الجودة وأسعار تنافسية
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8">
-              <a href="#projects">اكتشف خدماتنا المتكاملة</a>
+              <a href="#services">اكتشف خدماتنا</a>
               <ArrowRight className="mr-2 h-5 w-5" />
             </Button>
             <WhatsAppButton 
               phoneNumber={companyInfo.whatsapp}
-              message="مرحباً، أريد الاستفسار عن خدمات شركة Zeen A Plus Solutions"
+              message="مرحباً، أريد استشارة مجانية عن خدمات الموارد البشرية"
               variant="cta"
-              text="استفسر عن خدماتنا"
+              text="احصل على استشارة مجانية"
             />
           </div>
         </div>
       </section>
 
-      {/* Main Projects Section */}
-      <section id="projects" className="py-20 bg-white">
+      {/* Services Section */}
+      <section id="services" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h3 className="text-4xl font-bold text-gray-800 mb-4">خدماتنا الأربعة الرئيسية</h3>
+            <h3 className="text-4xl font-bold text-gray-800 mb-4">خدماتنا المتخصصة</h3>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              كل خدمة يقودها متخصص مختلف، وجميعها تعمل بتناغم لتقديم حلول شاملة ومتكاملة لعملائنا
+              نقدم مجموعة شاملة من خدمات الموارد البشرية المصممة خصيصاً لتلبية احتياجات شركتك
             </p>
           </div>
           
           <div className="grid lg:grid-cols-2 gap-8">
-            {mainProjects.map((project, index) => (
+            {mainServices.map((service, index) => (
               <Card key={index} className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg overflow-hidden">
                 <CardHeader className="bg-gradient-to-r from-blue-50 to-purple-50 pb-6">
                   <div className="flex items-center space-x-4 space-x-reverse mb-4">
                     <div className="w-16 h-16 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full flex items-center justify-center">
-                      <project.icon className="h-8 w-8 text-blue-600" />
+                      <service.icon className="h-8 w-8 text-blue-600" />
                     </div>
                     <div className="flex-1">
-                      <CardTitle className="text-xl text-gray-800 mb-1">{project.title}</CardTitle>
-                      <p className="text-sm text-blue-600 font-medium">{project.specialist}</p>
+                      <CardTitle className="text-xl text-gray-800 mb-1">{service.title}</CardTitle>
+                      <p className="text-sm text-blue-600 font-medium">{service.specialist}</p>
                     </div>
                   </div>
                   <CardDescription className="text-gray-600 leading-relaxed text-base">
-                    {project.description}
+                    {service.description}
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="pt-6">
-                  <h4 className="font-semibold text-gray-800 mb-3">الخدمات المتاحة:</h4>
-                  <div className="grid grid-cols-2 gap-2 mb-6">
-                    {project.services.map((service, serviceIndex) => (
+                  <div className="flex justify-between items-center mb-4">
+                    <div className="flex items-center space-x-2 space-x-reverse">
+                      <Clock className="h-4 w-4 text-gray-500" />
+                      <span className="text-sm text-gray-600">المدة: {service.duration}</span>
+                    </div>
+                    <div className="flex items-center space-x-2 space-x-reverse">
+                      <Star className="h-4 w-4 text-yellow-500" />
+                      <span className="text-sm font-semibold text-green-600">{service.price}</span>
+                    </div>
+                  </div>
+                  
+                  <h4 className="font-semibold text-gray-800 mb-3">ما نقدمه:</h4>
+                  <div className="grid grid-cols-1 gap-2 mb-6">
+                    {service.services.map((item, serviceIndex) => (
                       <div key={serviceIndex} className="flex items-center space-x-2 space-x-reverse text-sm">
                         <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                        <span className="text-gray-600">{service}</span>
+                        <span className="text-gray-600">{item}</span>
                       </div>
                     ))}
                   </div>
                   <WhatsAppButton 
                     phoneNumber={companyInfo.whatsapp}
-                    message={project.whatsappMessage}
+                    message={service.whatsappMessage}
                     variant="service"
-                    text="استفسر عن هذه الخدمة"
+                    text="اطلب هذه الخدمة"
                   />
                 </CardContent>
               </Card>
@@ -166,19 +205,19 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section id="team" className="py-20 bg-gray-50">
+      {/* About Section */}
+      <section id="about" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h3 className="text-4xl font-bold text-gray-800 mb-4">لماذا نحن الخيار الأمثل؟</h3>
+            <h3 className="text-4xl font-bold text-gray-800 mb-4">لماذا تختارنا؟</h3>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              أربعة متخصصين، أربعة مجالات، رؤية واحدة لتقديم أفضل الخدمات
+              خبرة واسعة في مجال الموارد البشرية مع التزام بالجودة والمواعيد
             </p>
           </div>
           
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h4 className="text-3xl font-bold text-gray-800 mb-6">نقاط قوتنا التنافسية</h4>
+              <h4 className="text-3xl font-bold text-gray-800 mb-6">مميزاتنا التنافسية</h4>
               <div className="grid gap-4">
                 {whyChooseUs.map((feature, index) => (
                   <div key={index} className="flex items-start space-x-3 space-x-reverse">
@@ -191,22 +230,22 @@ const Index = () => {
             
             <div className="bg-white p-8 rounded-2xl shadow-lg">
               <div className="text-center mb-8">
-                <h4 className="text-2xl font-bold text-gray-800 mb-2">إحصائيات النجاح</h4>
-                <p className="text-gray-600">أرقام تتحدث عن جودة خدماتنا</p>
+                <h4 className="text-2xl font-bold text-gray-800 mb-2">إنجازاتنا</h4>
+                <p className="text-gray-600">أرقام تعكس جودة خدماتنا</p>
               </div>
               
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center p-4 bg-blue-50 rounded-lg">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">200+</div>
+                  <div className="text-3xl font-bold text-blue-600 mb-2">100+</div>
                   <div className="text-gray-600 text-sm">مشروع مكتمل</div>
                 </div>
                 <div className="text-center p-4 bg-purple-50 rounded-lg">
-                  <div className="text-3xl font-bold text-purple-600 mb-2">150+</div>
+                  <div className="text-3xl font-bold text-purple-600 mb-2">50+</div>
                   <div className="text-gray-600 text-sm">عميل راضٍ</div>
                 </div>
                 <div className="text-center p-4 bg-green-50 rounded-lg">
-                  <div className="text-3xl font-bold text-green-600 mb-2">4</div>
-                  <div className="text-gray-600 text-sm">تخصصات رئيسية</div>
+                  <div className="text-3xl font-bold text-green-600 mb-2">5+</div>
+                  <div className="text-gray-600 text-sm">سنوات خبرة</div>
                 </div>
                 <div className="text-center p-4 bg-orange-50 rounded-lg">
                   <div className="text-3xl font-bold text-orange-600 mb-2">24/7</div>
@@ -224,7 +263,7 @@ const Index = () => {
           <div className="text-center mb-16">
             <h3 className="text-4xl font-bold text-gray-800 mb-4">ابدأ مشروعك معنا</h3>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              اختر الخدمة التي تحتاجها أو احصل على حل متكامل يجمع بين جميع تخصصاتنا
+              تواصل معنا اليوم واحصل على استشارة مجانية لتطوير الموارد البشرية في شركتك
             </p>
           </div>
           
@@ -243,7 +282,7 @@ const Index = () => {
                     <p className="text-gray-600">{companyInfo.whatsapp}</p>
                     <WhatsAppButton 
                       phoneNumber={companyInfo.whatsapp}
-                      message="مرحباً، أريد الاستفسار عن خدمات الشركة"
+                      message="مرحباً، أريد الاستفسار عن خدمات الموارد البشرية"
                       variant="inline"
                       text="ابدأ المحادثة"
                     />
@@ -272,11 +311,11 @@ const Index = () => {
                 
                 <div className="flex items-center space-x-4 space-x-reverse">
                   <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-                    <Globe className="h-6 w-6 text-orange-600" />
+                    <Briefcase className="h-6 w-6 text-orange-600" />
                   </div>
                   <div>
-                    <h5 className="font-semibold text-gray-800">نطاق الخدمة</h5>
-                    <p className="text-gray-600">محلياً وإقليمياً وعالمياً</p>
+                    <h5 className="font-semibold text-gray-800">طبيعة العمل</h5>
+                    <p className="text-gray-600">خدمات فريلانس متخصصة</p>
                   </div>
                 </div>
               </div>
@@ -285,9 +324,9 @@ const Index = () => {
             {/* Contact Form */}
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-gray-800">احصل على استشارة مجانية</CardTitle>
+                <CardTitle className="text-2xl text-gray-800">احصل على عرض سعر مجاني</CardTitle>
                 <CardDescription>
-                  سنتواصل معك خلال 24 ساعة لمناقشة مشروعك
+                  سنتواصل معك خلال 24 ساعة مع عرض سعر مفصل
                   <br />
                   <span className="text-green-600 font-medium">أو تواصل معنا مباشرة عبر الواتس آب للرد الفوري</span>
                 </CardDescription>
@@ -306,7 +345,7 @@ const Index = () => {
                 
                 <div>
                   <Label htmlFor="company">اسم الشركة</Label>
-                  <Input id="company" placeholder="اسم شركتكم (اختياري)" />
+                  <Input id="company" placeholder="اسم شركتكم" />
                 </div>
                 
                 <div>
@@ -320,14 +359,16 @@ const Index = () => {
                 </div>
                 
                 <div>
-                  <Label htmlFor="service">المشروع المطلوب</Label>
+                  <Label htmlFor="service">الخدمة المطلوبة</Label>
                   <select id="service" className="w-full p-3 border border-gray-300 rounded-md">
-                    <option value="">اختر المشروع</option>
-                    <option value="translation">خدمات الترجمة</option>
-                    <option value="hr">حلول الموارد البشرية</option>
-                    <option value="marketing">التسويق الإلكتروني</option>
-                    <option value="programming">حلول البرمجة</option>
-                    <option value="integrated">حل متكامل (جميع الخدمات)</option>
+                    <option value="">اختر الخدمة</option>
+                    <option value="recruitment">استقطاب وتوظيف المواهب</option>
+                    <option value="structure">إعداد الهياكل التنظيمية</option>
+                    <option value="training">التدريب وتطوير الموظفين</option>
+                    <option value="performance">إدارة الأداء والتقييم</option>
+                    <option value="consulting">استشارات الموارد البشرية</option>
+                    <option value="contracts">إعداد العقود والوثائق</option>
+                    <option value="package">باقة شاملة</option>
                   </select>
                 </div>
                 
@@ -336,7 +377,7 @@ const Index = () => {
                   <textarea 
                     id="message" 
                     className="w-full p-3 border border-gray-300 rounded-md resize-none h-24"
-                    placeholder="أخبرنا عن مشروعك وأهدافك..."
+                    placeholder="أخبرنا عن احتياجاتك وحجم شركتك..."
                   ></textarea>
                 </div>
                 
@@ -346,9 +387,9 @@ const Index = () => {
                   </Button>
                   <WhatsAppButton 
                     phoneNumber={companyInfo.whatsapp}
-                    message="مرحباً، أريد استشارة مجانية عن خدماتكم"
+                    message="مرحباً، أريد عرض سعر لخدمات الموارد البشرية"
                     variant="form"
-                    text="أو تواصل فوراً عبر الواتس آب"
+                    text="أو احصل على عرض سعر فوري عبر الواتس آب"
                   />
                 </div>
               </CardContent>
@@ -360,11 +401,11 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-12">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-5 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
               <div className="flex items-center space-x-2 space-x-reverse mb-4">
                 <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold">Z+</span>
+                  <UserCheck className="text-white h-5 w-5" />
                 </div>
                 <div>
                   <h5 className="text-xl font-bold">{companyInfo.name}</h5>
@@ -376,35 +417,27 @@ const Index = () => {
               </p>
               <WhatsAppButton 
                 phoneNumber={companyInfo.whatsapp}
-                message="مرحباً، أريد معرفة المزيد عن شركة Zeen A Plus Solutions"
+                message="مرحباً، أريد معرفة المزيد عن خدماتكم"
                 variant="footer"
-                text="تواصل معنا عبر الواتس آب"
+                text="تواصل معنا الآن"
               />
             </div>
             
             <div>
               <h6 className="font-semibold mb-4">خدماتنا</h6>
-              <ul className="space-y-2 text-gray-400">
-                <li>خدمات الترجمة الشاملة</li>
-                <li>حلول الموارد البشرية</li>
-                <li>التسويق الإلكتروني</li>
-                <li>حلول البرمجة التطبيقية</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h6 className="font-semibold mb-4">روابط سريعة</h6>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#home" className="hover:text-white transition-colors">الرئيسية</a></li>
-                <li><a href="#projects" className="hover:text-white transition-colors">خدماتنا</a></li>
-                <li><a href="#team" className="hover:text-white transition-colors">عن الشركة</a></li>
-                <li><a href="#contact" className="hover:text-white transition-colors">اتصل بنا</a></li>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li>استقطاب وتوظيف المواهب</li>
+                <li>إعداد الهياكل التنظيمية</li>
+                <li>التدريب والتطوير</li>
+                <li>إدارة الأداء</li>
+                <li>الاستشارات الإدارية</li>
+                <li>إعداد العقود</li>
               </ul>
             </div>
             
             <div>
               <h6 className="font-semibold mb-4">معلومات التواصل</h6>
-              <div className="space-y-2 text-gray-400">
+              <div className="space-y-2 text-gray-400 text-sm">
                 <p className="flex items-center space-x-2 space-x-reverse">
                   <MessageSquare className="h-4 w-4" />
                   <span>{companyInfo.whatsapp}</span>
@@ -414,8 +447,8 @@ const Index = () => {
                   <span>{companyInfo.email}</span>
                 </p>
                 <p className="flex items-center space-x-2 space-x-reverse">
-                  <Globe className="h-4 w-4" />
-                  <span>خدمة عالمية</span>
+                  <Briefcase className="h-4 w-4" />
+                  <span>خدمات فريلانس</span>
                 </p>
               </div>
             </div>
@@ -431,7 +464,7 @@ const Index = () => {
       <div className="fixed bottom-6 left-6 z-50">
         <WhatsAppButton 
           phoneNumber={companyInfo.whatsapp}
-          message="مرحباً، أريد الاستفسار عن خدمات Zeen A Plus Solutions"
+          message="مرحباً، أريد الاستفسار عن خدمات الموارد البشرية"
           variant="floating"
           text="تحدث معنا"
         />
