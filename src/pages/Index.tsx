@@ -1,3 +1,4 @@
+
 import { Users, Languages, Megaphone, Code, Truck, GraduationCap, Briefcase, Star, Bot, Scale } from "lucide-react";
 import Header from "@/components/home/Header";
 import HeroSection from "@/components/home/HeroSection";
@@ -90,6 +91,9 @@ const Index = () => {
         description="Zeen A Plus Solutions - شريكك المتخصص في الموارد البشرية، التطوير التقني، التسويق الرقمي، والخدمات المهنية في السعودية"
         keywords="خدمات الموارد البشرية السعودية، التطوير التقني، التسويق الرقمي، الترجمة المعتمدة، الاستشارات القانونية، التدريب المهني"
       />
+      
+      {/* Header with Logo, Navigation and Mobile Menu */}
+      <Header services={services} companyInfo={companyInfo} />
       
       {/* Hero Section with reduced spacing */}
       <HeroSection companyInfo={companyInfo} />
