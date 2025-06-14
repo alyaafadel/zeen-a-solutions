@@ -1,4 +1,4 @@
-import { Users, Languages, Megaphone, Code, Truck, GraduationCap, Briefcase, Star, Bot } from "lucide-react";
+import { Users, Languages, Megaphone, Code, Truck, GraduationCap, Briefcase, Star, Bot, Scale } from "lucide-react";
 import Header from "@/components/home/Header";
 import HeroSection from "@/components/home/HeroSection";
 import FeaturesSection from "@/components/home/FeaturesSection";
@@ -47,6 +47,12 @@ const Index = () => {
       description: "استراتيجيات تسويق رقمية مبتكرة ومدروسة لزيادة الوصول والمبيعات وبناء الهوية التجارية القوية عبر جميع القنوات الرقمية",
       icon: Megaphone,
       route: "/digital-marketing"
+    },
+    {
+      title: "الاستشارات القانونية للشركات",
+      description: "خدمات قانونية متخصصة وشاملة للشركات والمؤسسات، تشمل التأسيس القانوني، صياغة العقود، الامتثال التنظيمي، وجميع الاستشارات القانونية التجارية",
+      icon: Scale,
+      route: "/legal-services"
     },
     {
       title: "الذكاء الاصطناعي",
