@@ -1,4 +1,3 @@
-
 import { ArrowLeft, Linkedin, Mail, Award, Users, Target, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -9,64 +8,64 @@ const OurTeam = () => {
 
   const founders = [
     {
-      name: "أحمد محمد العلي",
-      position: "المؤسس والرئيس التنفيذي",
-      expertise: "إدارة الأعمال والتطوير الاستراتيجي",
-      experience: "15+ سنة",
-      education: "ماجستير إدارة الأعمال - جامعة الملك سعود",
+      name: "[اسم الخبير الأول]",
+      position: "[المنصب]",
+      expertise: "[مجال التخصص]",
+      experience: "[X+ سنة]",
+      education: "[المؤهل العلمي - الجامعة]",
       achievements: [
-        "قاد أكثر من 200 مشروع ناجح",
-        "خبير معتمد في التطوير التنظيمي",
-        "مدرب معتمد في القيادة الإدارية"
+        "[إنجاز رئيسي أول]",
+        "[إنجاز رئيسي ثاني]",
+        "[إنجاز رئيسي ثالث]"
       ],
-      image: "/lovable-uploads/team-member-1.jpg",
-      linkedin: "https://linkedin.com",
-      email: "ahmed@zeenaplusolutions.com"
+      image: "/placeholder-image.jpg",
+      linkedin: "#",
+      email: "expert1@zeenaplusolutions.com"
     },
     {
-      name: "فاطمة سعد الشهري",
-      position: "نائب الرئيس للموارد البشرية",
-      expertise: "إدارة المواهب والتطوير المهني",
-      experience: "12+ سنة",
-      education: "ماجستير علم النفس التنظيمي - جامعة الإمام",
+      name: "[اسم الخبير الثاني]",
+      position: "[المنصب]",
+      expertise: "[مجال التخصص]",
+      experience: "[X+ سنة]",
+      education: "[المؤهل العلمي - الجامعة]",
       achievements: [
-        "طورت برامج تدريبية لأكثر من 5000 موظف",
-        "خبيرة معتمدة في تقييم الأداء",
-        "حاصلة على شهادة SHRM-SCP الدولية"
+        "[إنجاز رئيسي أول]",
+        "[إنجاز رئيسي ثاني]",
+        "[إنجاز رئيسي ثالث]"
       ],
-      image: "/lovable-uploads/team-member-2.jpg",
-      linkedin: "https://linkedin.com",
-      email: "fatima@zeenaplusolutions.com"
+      image: "/placeholder-image.jpg",
+      linkedin: "#",
+      email: "expert2@zeenaplusolutions.com"
     },
     {
-      name: "محمد عبدالله النجار",
-      position: "مدير التكنولوجيا والتطوير",
-      expertise: "تطوير البرمجيات والحلول الرقمية",
-      experience: "10+ سنوات",
-      education: "بكالوريوس هندسة الحاسوب - جامعة الملك فهد",
+      name: "[اسم الخبير الثالث]",
+      position: "[المنصب]",
+      expertise: "[مجال التخصص]",
+      experience: "[X+ سنوات]",
+      education: "[المؤهل العلمي - الجامعة]",
       achievements: [
-        "طور أكثر من 100 تطبيق ويب وموبايل",
-        "خبير في الذكاء الاصطناعي وعلوم البيانات",
-        "حاصل على شهادات من Google وMicrosoft"
+        "[إنجاز رئيسي أول]",
+        "[إنجاز رئيسي ثاني]",
+        "[إنجاز رئيسي ثالث]"
       ],
-      image: "/lovable-uploads/team-member-3.jpg",
-      linkedin: "https://linkedin.com",
-      email: "mohammed@zeenaplusolutions.com"
+      image: "/placeholder-image.jpg",
+      linkedin: "#",
+      email: "expert3@zeenaplusolutions.com"
     },
     {
-      name: "سارة أحمد القحطاني",
-      position: "مديرة التسويق والعلاقات العامة",
-      expertise: "التسويق الرقمي والعلامات التجارية",
-      experience: "8+ سنوات",
-      education: "ماجستير التسويق - جامعة الأميرة نورة",
+      name: "[اسم الخبير الرابع]",
+      position: "[المنصب]",
+      expertise: "[مجال التخصص]",
+      experience: "[X+ سنوات]",
+      education: "[المؤهل العلمي - الجامعة]",
       achievements: [
-        "نجحت في زيادة مبيعات العملاء بنسبة 300%",
-        "خبيرة معتمدة في Google Ads وFacebook Marketing",
-        "حازت على جوائز التميز في التسويق الرقمي"
+        "[إنجاز رئيسي أول]",
+        "[إنجاز رئيسي ثاني]",
+        "[إنجاز رئيسي ثالث]"
       ],
-      image: "/lovable-uploads/team-member-4.jpg",
-      linkedin: "https://linkedin.com",
-      email: "sara@zeenaplusolutions.com"
+      image: "/placeholder-image.jpg",
+      linkedin: "#",
+      email: "expert4@zeenaplusolutions.com"
     }
   ];
 
