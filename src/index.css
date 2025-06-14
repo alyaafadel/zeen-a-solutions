@@ -16,35 +16,45 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 208 100% 45%;
+    /* Primary purple colors - more vibrant */
+    --primary: 270 85% 50%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 92%;
-    --secondary-foreground: 208 100% 40%;
+    --secondary-foreground: 270 85% 45%;
 
     --muted: 210 40% 92%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
     --accent: 210 40% 92%;
-    --accent-foreground: 208 100% 40%;
+    --accent-foreground: 270 85% 45%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 208 100% 45%;
+    --ring: 270 85% 50%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 208 100% 45%;
+    --sidebar-primary: 270 85% 50%;
     --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 210 40% 92%;
-    --sidebar-accent-foreground: 208 100% 40%;
+    --sidebar-accent-foreground: 270 85% 45%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 208 100% 40%;
+    --sidebar-ring: 270 85% 45%;
+
+    /* Custom brand colors */
+    --brand-purple: 270 85% 50%;
+    --brand-purple-light: 270 70% 60%;
+    --brand-purple-dark: 270 90% 40%;
+    --brand-emerald: 160 84% 39%;
+    --brand-emerald-light: 160 70% 50%;
+    --brand-blue-dark: 215 84% 35%;
+    --brand-blue-dark-light: 215 70% 45%;
   }
 
   .dark {
@@ -57,7 +67,7 @@
     --popover: 210 60% 8%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 208 100% 50%;
+    --primary: 270 80% 60%;
     --primary-foreground: 210 60% 8%;
 
     --secondary: 210 40% 20%;
@@ -74,15 +84,15 @@
 
     --border: 210 40% 20%;
     --input: 210 40% 20%;
-    --ring: 208 100% 55%;
+    --ring: 270 80% 65%;
     --sidebar-background: 210 60% 8%;
     --sidebar-foreground: 210 40% 95%;
-    --sidebar-primary: 208 100% 50%;
+    --sidebar-primary: 270 80% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 210 40% 20%;
     --sidebar-accent-foreground: 210 40% 95%;
     --sidebar-border: 210 40% 20%;
-    --sidebar-ring: 208 100% 50%;
+    --sidebar-ring: 270 80% 60%;
   }
 }
 
@@ -93,30 +103,119 @@
 
   body {
     @apply bg-background text-foreground;
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 1) 0%, 
+      rgba(248, 250, 252, 0.8) 50%, 
+      rgba(241, 245, 249, 0.9) 100%);
+    min-height: 100vh;
   }
 }
 
-/* Custom gentle blue colors for consistent branding */
-.text-brand-blue {
-  color: hsl(208, 80%, 45%);
+/* Enhanced brand color utilities */
+.text-brand-purple {
+  color: hsl(var(--brand-purple));
 }
 
-.bg-brand-blue {
-  background-color: hsl(208, 80%, 45%);
+.bg-brand-purple {
+  background-color: hsl(var(--brand-purple));
 }
 
-.text-brand-blue-light {
-  color: hsl(208, 70%, 55%);
+.text-brand-purple-light {
+  color: hsl(var(--brand-purple-light));
 }
 
-.bg-brand-blue-light {
-  background-color: hsl(208, 70%, 55%);
+.bg-brand-purple-light {
+  background-color: hsl(var(--brand-purple-light));
 }
 
-.hover\:text-brand-blue:hover {
-  color: hsl(208, 85%, 40%);
+.text-brand-purple-dark {
+  color: hsl(var(--brand-purple-dark));
 }
 
-.hover\:bg-brand-blue:hover {
-  background-color: hsl(208, 85%, 40%);
+.bg-brand-purple-dark {
+  background-color: hsl(var(--brand-purple-dark));
+}
+
+/* Secondary accent colors */
+.text-brand-emerald {
+  color: hsl(var(--brand-emerald));
+}
+
+.bg-brand-emerald {
+  background-color: hsl(var(--brand-emerald));
+}
+
+.text-brand-emerald-light {
+  color: hsl(var(--brand-emerald-light));
+}
+
+.bg-brand-emerald-light {
+  background-color: hsl(var(--brand-emerald-light));
+}
+
+.text-brand-blue-dark {
+  color: hsl(var(--brand-blue-dark));
+}
+
+.bg-brand-blue-dark {
+  background-color: hsl(var(--brand-blue-dark));
+}
+
+.text-brand-blue-dark-light {
+  color: hsl(var(--brand-blue-dark-light));
+}
+
+.bg-brand-blue-dark-light {
+  background-color: hsl(var(--brand-blue-dark-light));
+}
+
+/* Hover states */
+.hover\:text-brand-purple:hover {
+  color: hsl(var(--brand-purple-dark));
+}
+
+.hover\:bg-brand-purple:hover {
+  background-color: hsl(var(--brand-purple-dark));
+}
+
+.hover\:text-brand-emerald:hover {
+  color: hsl(var(--brand-emerald));
+}
+
+.hover\:bg-brand-emerald:hover {
+  background-color: hsl(var(--brand-emerald));
+}
+
+/* Enhanced gradients */
+.bg-gradient-purple {
+  background: linear-gradient(135deg, 
+    hsl(var(--brand-purple)) 0%, 
+    hsl(var(--brand-purple-dark)) 100%);
+}
+
+.bg-gradient-purple-emerald {
+  background: linear-gradient(135deg, 
+    hsl(var(--brand-purple)) 0%, 
+    hsl(var(--brand-emerald)) 100%);
+}
+
+.bg-gradient-blue-purple {
+  background: linear-gradient(135deg, 
+    hsl(var(--brand-blue-dark)) 0%, 
+    hsl(var(--brand-purple)) 100%);
+}
+
+/* Subtle background patterns */
+.bg-pattern-dots {
+  background-image: radial-gradient(circle at 2px 2px, rgba(139, 69, 219, 0.1) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+.bg-pattern-subtle {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 1) 0%, 
+    rgba(248, 250, 252, 0.95) 25%,
+    rgba(241, 245, 249, 0.9) 50%,
+    rgba(248, 250, 252, 0.95) 75%,
+    rgba(255, 255, 255, 1) 100%);
 }
