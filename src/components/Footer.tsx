@@ -1,5 +1,4 @@
-
-import { Users, Languages, Megaphone, Code, Truck, GraduationCap, Briefcase, Star, Bot, Home, Sitemap, Mail, Phone, MapPin } from "lucide-react";
+import { Users, Languages, Megaphone, Code, Truck, GraduationCap, Briefcase, Star, Bot, Home, Map, Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { useNavigate } from "react-router-dom";
@@ -119,7 +118,7 @@ const Footer = ({ services, companyInfo }: FooterProps) => {
                     size="sm"
                     className="w-full bg-slate-600 border-slate-500 text-white hover:bg-slate-500"
                   >
-                    <Sitemap className="ml-2 h-4 w-4" />
+                    <Map className="ml-2 h-4 w-4" />
                     خريطة الخدمات
                   </Button>
                 </DialogTrigger>
