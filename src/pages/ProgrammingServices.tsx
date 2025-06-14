@@ -1,13 +1,11 @@
 
-import { Code, ArrowRight, CheckCircle, Home, Monitor, Smartphone, Globe, Database } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { useNavigate } from "react-router-dom";
-import WhatsAppButton from "@/components/WhatsAppButton";
+import { Code, Monitor, Smartphone, Database, Globe } from "lucide-react";
+import ServicePageLayout from "@/components/layout/ServicePageLayout";
+import BenefitsSection from "@/components/services/BenefitsSection";
+import ServicesGrid from "@/components/services/ServicesGrid";
+import SEO from "@/components/SEO";
 
 const ProgrammingServices = () => {
-  const navigate = useNavigate();
-
   const programmingServices = [
     {
       title: "تطوير مواقع الويب",
@@ -35,10 +33,6 @@ const ProgrammingServices = () => {
     }
   ];
 
-  const technologies = [
-    "React", "Node.js", "Python", "PHP", "Laravel", "Flutter", "React Native", "WordPress"
-  ];
-
   const benefits = [
     {
       icon: Monitor,
@@ -57,154 +51,59 @@ const ProgrammingServices = () => {
     }
   ];
 
+  const technologies = [
+    "React", "Node.js", "Python", "PHP", "Laravel", "Flutter", "React Native", "WordPress"
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100" dir="rtl">
-      {/* Header */}
-      <header className="bg-white/80 backdrop-blur-sm shadow-sm border-b sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-2 space-x-reverse">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => navigate('/')}
-                className="flex items-center space-x-2 space-x-reverse"
-              >
-                <Home className="h-4 w-4" />
-                <span>الرئيسية</span>
-              </Button>
-              <span className="text-gray-400">/</span>
-              <Code className="h-5 w-5 text-sky-500" />
-              <span className="font-semibold text-gray-800">خدمات البرمجة</span>
-            </div>
-            <WhatsAppButton 
-              phoneNumber="+966123456789"
-              message="مرحباً، أريد الاستفسار عن خدمات البرمجة"
-              variant="header"
-            />
-          </div>
-        </div>
-      </header>
+    <>
+      <SEO 
+        title="خدمات البرمجة والتطوير"
+        description="تطوير مواقع وتطبيقات احترافية، متاجر إلكترونية، وأنظمة مخصصة باستخدام أحدث التقنيات في السعودية"
+        keywords="تطوير المواقع، البرمجة، تطبيقات الجوال، المتاجر الإلكترونية، الأنظمة المخصصة، السعودية"
+      />
+      
+      <ServicePageLayout
+        title="خدمات البرمجة"
+        description="حلول برمجية متقدمة ومبتكرة"
+        icon={Code}
+        heroTitle="خدمات البرمجة والتطوير"
+        heroDescription="نقدم حلول برمجية متقدمة ومبتكرة لتلبية احتياجات أعمالكم الرقمية بأحدث التقنيات العالمية"
+        phoneNumber="+966570513821"
+        ctaTitle="حول فكرتك إلى واقع رقمي"
+        ctaDescription="احصل على استشارة تقنية مجانية وابدأ مشروعك معنا"
+      >
+        <BenefitsSection 
+          title="مميزات حلولنا البرمجية"
+          benefits={benefits}
+        />
+        
+        <ServicesGrid 
+          title="خدماتنا البرمجية"
+          services={programmingServices}
+          phoneNumber="+966570513821"
+        />
 
-      {/* Hero Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <div className="w-24 h-24 bg-gradient-to-r from-sky-400 to-sky-500 rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-lg">
-              <Code className="h-12 w-12 text-white" />
+        {/* Technologies Section */}
+        <section className="py-16 bg-white/50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <Globe className="h-16 w-16 text-sky-500 mx-auto mb-4" />
+              <h3 className="text-3xl font-bold text-sky-700 mb-4">التقنيات التي نستخدمها</h3>
+              <p className="text-xl text-sky-600">نعمل بأحدث التقنيات والأدوات البرمجية</p>
             </div>
-            <h1 className="text-5xl font-bold text-sky-700 mb-6">خدمات البرمجة والتطوير</h1>
-            <p className="text-xl text-sky-600 mb-12 leading-relaxed">
-              نقدم حلول برمجية متقدمة ومبتكرة لتلبية احتياجات أعمالكم الرقمية بأحدث التقنيات العالمية
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-16 bg-white/50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-sky-700 mb-12">مميزات حلولنا البرمجية</h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-sky-400 to-sky-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <benefit.icon className="h-8 w-8 text-white" />
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+              {technologies.map((tech, index) => (
+                <div key={index} className="text-center p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                  <div className="text-lg font-semibold text-sky-700">{tech}</div>
                 </div>
-                <h4 className="text-xl font-bold text-sky-700 mb-2">{benefit.title}</h4>
-                <p className="text-sky-600">{benefit.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* Services Grid */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-sky-700 mb-12">خدماتنا البرمجية</h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {programmingServices.map((service, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
-                <CardHeader className="bg-sky-50 pb-6">
-                  <CardTitle className="text-2xl text-sky-700 mb-2 text-right">{service.title}</CardTitle>
-                  <CardDescription className="text-sky-600 leading-relaxed text-base text-right">
-                    {service.description}
-                  </CardDescription>
-                  <div className="flex justify-between items-center mt-4 pt-4 border-t border-sky-200">
-                    <div className="text-right">
-                      <div className="text-sm text-sky-500">{service.duration}</div>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent className="pt-6">
-                  <div className="grid grid-cols-2 gap-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center space-x-2 space-x-reverse text-sm">
-                        <CheckCircle className="h-4 w-4 text-sky-500 flex-shrink-0" />
-                        <span className="text-sky-600">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <WhatsAppButton 
-                    phoneNumber="+966123456789"
-                    message={`مرحباً، أريد الاستفسار عن ${service.title}`}
-                    variant="service"
-                    text="اطلب الخدمة الآن"
-                  />
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technologies Section */}
-      <section className="py-16 bg-white/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <Globe className="h-16 w-16 text-sky-500 mx-auto mb-4" />
-            <h3 className="text-3xl font-bold text-sky-700 mb-4">التقنيات التي نستخدمها</h3>
-            <p className="text-xl text-sky-600">نعمل بأحدث التقنيات والأدوات البرمجية</p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            {technologies.map((tech, index) => (
-              <div key={index} className="text-center p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                <div className="text-lg font-semibold text-sky-700">{tech}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-sky-500 to-sky-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h3 className="text-4xl font-bold mb-4">حول فكرتك إلى واقع رقمي</h3>
-          <p className="text-xl mb-8 opacity-90">احصل على استشارة تقنية مجانية وابدأ مشروعك معنا</p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <WhatsAppButton 
-              phoneNumber="+966123456789"
-              message="مرحباً، أريد استشارة تقنية مجانية"
-              variant="cta"
-              text="احصل على استشارة مجانية"
-              className="bg-white text-sky-600 hover:bg-gray-100"
-            />
-            <Button
-              variant="outline"
-              size="lg"
-              onClick={() => navigate('/')}
-              className="border-white text-white hover:bg-white hover:text-sky-600 px-8"
-            >
-              <ArrowRight className="ml-2 h-5 w-5" />
-              العودة للرئيسية
-            </Button>
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </ServicePageLayout>
+    </>
   );
 };
 
