@@ -52,12 +52,13 @@ const Index = () => {
   ];
 
   const companyInfo = {
-    name: "خدمات الموارد البشرية المتخصصة",
-    slogan: "شريكك في بناء فريق عمل متميز",
+    name: "شركة زين إيه بلس للحلول",
+    englishName: "Zeen A Plus Solutions",
+    slogan: "شريكك المتميز في النجاح والتطوير",
     phone: "+966123456789",
-    email: "hr.services@gmail.com",
+    email: "info@zeenaplusolutions.com",
     whatsapp: "+966123456789",
-    description: "متخصص في تقديم خدمات الموارد البشرية الشاملة للشركات والمؤسسات، مع خبرة واسعة في التوظيف والتدريب وإدارة الأداء."
+    description: "شركة متخصصة في تقديم حلول متكاملة للأعمال تشمل الموارد البشرية، الترجمة، التسويق الرقمي، والتطوير التقني."
   };
 
   return (
@@ -66,12 +67,13 @@ const Index = () => {
       <header className="bg-white/80 backdrop-blur-sm shadow-sm border-b sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-2 space-x-reverse">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <Users className="text-white h-6 w-6" />
+            <div className="flex items-center space-x-3 space-x-reverse">
+              <div className="w-14 h-14 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+                <Users className="text-white h-7 w-7" />
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-gray-800">{companyInfo.name}</h1>
+                <p className="text-sm text-gray-500">{companyInfo.englishName}</p>
                 <p className="text-sm text-gray-600">{companyInfo.slogan}</p>
               </div>
             </div>
@@ -87,11 +89,16 @@ const Index = () => {
       {/* Hero Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-5xl font-bold text-gray-800 mb-6">
-            خدمات متكاملة لنجاح أعمالك
-          </h2>
+          <div className="mb-8">
+            <h2 className="text-6xl font-bold text-gray-800 mb-4">
+              {companyInfo.name}
+            </h2>
+            <p className="text-xl text-blue-600 font-semibold mb-2">{companyInfo.englishName}</p>
+            <p className="text-2xl text-gray-700 font-medium mb-6">{companyInfo.slogan}</p>
+          </div>
+          
           <p className="text-xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
-            نقدم خدمات متخصصة في الموارد البشرية، الترجمة الاحترافية، التسويق الرقمي، وتطوير المواقع والتطبيقات
+            {companyInfo.description}
           </p>
 
           {/* Services Grid */}
@@ -144,9 +151,9 @@ const Index = () => {
       <section className="py-20 bg-white/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h3 className="text-4xl font-bold text-gray-800 mb-4">لماذا تختارنا؟</h3>
+            <h3 className="text-4xl font-bold text-gray-800 mb-4">لماذا تختار {companyInfo.name}؟</h3>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              خبرة واسعة وفريق متخصص يضمن لك أفضل الخدمات
+              خبرة واسعة وفريق متخصص يضمن لك أفضل الخدمات والحلول المتكاملة
             </p>
           </div>
           
@@ -174,15 +181,15 @@ const Index = () => {
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="container mx-auto px-4 text-center">
-          <h3 className="text-4xl font-bold text-gray-800 mb-4">ابدأ مشروعك معنا</h3>
+          <h3 className="text-4xl font-bold text-gray-800 mb-4">ابدأ مشروعك مع {companyInfo.name}</h3>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            تواصل معنا اليوم واحصل على استشارة مجانية
+            تواصل معنا اليوم واحصل على استشارة مجانية لجميع خدماتنا
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <WhatsAppButton 
               phoneNumber={companyInfo.whatsapp}
-              message="مرحباً، أريد الاستفسار عن خدماتكم المتنوعة"
+              message="مرحباً، أريد الاستفسار عن خدمات شركة زين إيه بلس للحلول"
               variant="cta"
               text="تواصل عبر الواتس آب"
             />
@@ -198,7 +205,7 @@ const Index = () => {
       <div className="fixed bottom-6 left-6 z-50">
         <WhatsAppButton 
           phoneNumber={companyInfo.whatsapp}
-          message="مرحباً، أريد الاستفسار عن خدماتكم المتنوعة"
+          message="مرحباً، أريد الاستفسار عن خدمات شركة زين إيه بلس للحلول"
           variant="floating"
           text="تحدث معنا"
         />
