@@ -69,17 +69,18 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100" dir="rtl">
-      {/* Header with consistent logo design */}
+      {/* Header with new logo */}
       <header className="bg-white/95 backdrop-blur-md shadow-lg border-b border-slate-200 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            {/* Logo section with consistent design */}
+            {/* Logo section with uploaded image */}
             <div className="flex items-center space-x-3 space-x-reverse">
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-slate-400 to-slate-500 rounded-xl flex items-center justify-center shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                  <div className="text-white font-bold text-lg">Z+</div>
-                </div>
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-slate-300 rounded-full animate-pulse"></div>
+                <img 
+                  src="/lovable-uploads/8838bb20-a5cc-4ab1-9fce-30cdb0f93521.png" 
+                  alt="Zeen A Plus Solutions Logo" 
+                  className="w-12 h-12 object-contain"
+                />
               </div>
               <div>
                 <h1 className="text-xl font-bold bg-gradient-to-r from-slate-500 to-slate-600 bg-clip-text text-transparent">
