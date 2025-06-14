@@ -92,16 +92,6 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
               من نحن
             </Button>
             
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => navigate('/our-team')}
-              className="text-slate-600 hover:text-slate-700 hover:bg-slate-50 transition-all duration-200 font-medium"
-            >
-              <Users className="ml-2 h-4 w-4" />
-              فريقنا
-            </Button>
-            
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button
