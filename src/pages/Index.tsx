@@ -1,4 +1,3 @@
-
 import { Users, Languages, Megaphone, Code, Truck, ArrowRight, CheckCircle, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -87,8 +86,12 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-3 space-x-reverse">
-              <div className="w-14 h-14 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
-                <Users className="text-white h-7 w-7" />
+              <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-lg border">
+                <img 
+                  src="/lovable-uploads/8838bb20-a5cc-4ab1-9fce-30cdb0f93521.png" 
+                  alt="Zeen A Plus Solutions Logo" 
+                  className="w-10 h-10 object-contain"
+                />
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-gray-800">{companyInfo.name}</h1>
