@@ -1,6 +1,7 @@
-import { Users, Languages, Megaphone, Code, Truck, ArrowRight, CheckCircle, MessageSquare, GraduationCap, Linkedin, Briefcase, Info, ServiceIcon, UserPlus, Phone, Settings } from "lucide-react";
+import { Users, Languages, Megaphone, Code, Truck, ArrowRight, CheckCircle, MessageSquare, GraduationCap, Linkedin, Briefcase, Info, UserPlus, Phone, Settings, Star, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { useNavigate } from "react-router-dom";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
@@ -91,6 +92,18 @@ const Index = () => {
       iconColor: "text-emerald-600",
       route: "/career-services",
       features: ["كتابة السيرة الذاتية", "التحضير للمقابلات", "التوجيه المهني", "البحث عن عمل"]
+    },
+    {
+      title: "الحلول المخصصة",
+      brandName: "Zeen Custom Solutions",
+      logo: "⭐",
+      description: "حلول مبتكرة ومخصصة لتلبية احتياجات شركتك الفريدة",
+      icon: Star,
+      color: "from-pink-500 to-pink-600",
+      bgColor: "bg-pink-50",
+      iconColor: "text-pink-600",
+      route: "/custom-solutions",
+      features: ["استشارات متخصصة", "حلول مبتكرة", "تطوير حسب الطلب", "دعم شامل"]
     }
   ];
 
@@ -115,6 +128,20 @@ const Index = () => {
 
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleContactOption = (type: string) => {
+    switch (type) {
+      case 'whatsapp':
+        window.open(`https://wa.me/${companyInfo.whatsapp}?text=مرحباً، أريد التواصل معكم`, '_blank');
+        break;
+      case 'linkedin':
+        window.open(companyInfo.linkedin, '_blank');
+        break;
+      case 'email':
+        window.open(`mailto:${companyInfo.email}?subject=استفسار عن الخدمات`, '_blank');
+        break;
+    }
   };
 
   return (
@@ -162,50 +189,92 @@ const Index = () => {
               <Button
                 variant="ghost"
                 size="sm"
-                onClick={() => scrollToSection('about')}
+                onClick={() => navigate('/about')}
                 className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200"
               >
                 <Info className="ml-2 h-4 w-4" />
                 من نحن
               </Button>
               
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => scrollToSection('services')}
-                className="text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-all duration-200"
-              >
-                <Settings className="ml-2 h-4 w-4" />
-                خدماتنا
-              </Button>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-all duration-200"
+                  >
+                    <Settings className="ml-2 h-4 w-4" />
+                    خدماتنا
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-56 bg-white" align="center">
+                  {services.map((service, index) => (
+                    <DropdownMenuItem 
+                      key={index}
+                      onClick={() => navigate(service.route)}
+                      className="cursor-pointer"
+                    >
+                      <service.icon className="ml-2 h-4 w-4" />
+                      <span>{service.title}</span>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
               
               <Button
                 variant="ghost"
                 size="sm"
-                onClick={() => scrollToSection('join-us')}
+                onClick={() => navigate('/join-us')}
                 className="text-gray-700 hover:text-green-600 hover:bg-green-50 transition-all duration-200"
               >
                 <UserPlus className="ml-2 h-4 w-4" />
                 انضم إلينا
               </Button>
               
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => scrollToSection('contact')}
-                className="text-gray-700 hover:text-orange-600 hover:bg-orange-50 transition-all duration-200"
-              >
-                <Phone className="ml-2 h-4 w-4" />
-                تواصل معنا
-              </Button>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="text-gray-700 hover:text-orange-600 hover:bg-orange-50 transition-all duration-200"
+                  >
+                    <Phone className="ml-2 h-4 w-4" />
+                    تواصل معنا
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-48 bg-white" align="center">
+                  <DropdownMenuItem 
+                    onClick={() => handleContactOption('whatsapp')}
+                    className="cursor-pointer"
+                  >
+                    <MessageSquare className="ml-2 h-4 w-4 text-green-600" />
+                    <span>واتس آب</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem 
+                    onClick={() => handleContactOption('linkedin')}
+                    className="cursor-pointer"
+                  >
+                    <Linkedin className="ml-2 h-4 w-4 text-blue-600" />
+                    <span>لينكد إن</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem 
+                    onClick={() => handleContactOption('email')}
+                    className="cursor-pointer"
+                  >
+                    <Mail className="ml-2 h-4 w-4 text-gray-600" />
+                    <span>البريد الإلكتروني</span>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
               
-              <WhatsAppButton 
-                phoneNumber={companyInfo.whatsapp}
-                message="مرحباً، أريد طلب خدمة مخصصة من Zeen A Plus Solutions"
-                variant="cta"
-                text="طلبك المخصص"
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => navigate('/custom-request')}
                 className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white border-0 px-6"
-              />
+              >
+                طلبك المخصص
+              </Button>
             </div>
           </div>
         </div>
@@ -242,7 +311,7 @@ const Index = () => {
 
             {/* Services in Circular Layout - Improved positioning and design */}
             {services.map((service, index) => {
-              const position = getCircularPosition(index, services.length, 280);
+              const position = getCircularPosition(index, services.length, 300);
               return (
                 <div
                   key={index}
@@ -287,9 +356,9 @@ const Index = () => {
                   </linearGradient>
                 </defs>
                 {services.map((_, index) => {
-                  const currentPos = getCircularPosition(index, services.length, 280);
+                  const currentPos = getCircularPosition(index, services.length, 300);
                   const nextIndex = (index + 1) % services.length;
-                  const nextPos = getCircularPosition(nextIndex, services.length, 280);
+                  const nextPos = getCircularPosition(nextIndex, services.length, 300);
                   
                   return (
                     <line
