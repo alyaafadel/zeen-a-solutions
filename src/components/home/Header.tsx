@@ -67,7 +67,7 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
               className="p-3 bg-gradient-to-r from-slate-500 to-slate-600 hover:from-slate-600 hover:to-slate-700 text-white rounded-xl transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
               title="تابعونا على LinkedIn"
             >
-              <Linkedin className="h-5 w-5" />
+              <Linkedin className="h-5 w-5 text-slate-100" />
             </a>
             <WhatsAppButton 
               phoneNumber={companyInfo.whatsapp}
