@@ -1,6 +1,7 @@
 
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Sparkles, Target, Award } from "lucide-react";
 
 interface CompanyInfo {
   whatsapp: string;
@@ -14,97 +15,83 @@ const HeroSection = ({ companyInfo }: HeroSectionProps) => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden">
-      {/* Unified background with subtle pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50/30 to-neutral-50/50"></div>
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: `radial-gradient(circle at 2px 2px, hsl(var(--brand-blue)) 1px, transparent 0)`,
-        backgroundSize: '32px 32px'
-      }}></div>
-      
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="max-w-6xl mx-auto text-center">
+    <section className="relative pt-16 pb-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 overflow-hidden">
+      {/* Background patterns */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-0 left-0 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+        <div className="absolute top-0 right-0 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-0 left-1/2 w-72 h-72 bg-indigo-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-500"></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
           {/* Main Title */}
           <div className="mb-12">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 leading-tight">
-              <span className="text-neutral-800">شركاؤكم الاستراتيجيون في</span>
-              <span className="block mt-3 bg-gradient-to-r from-brand-blue via-brand-accent-blue to-brand-blue-dark bg-clip-text text-transparent">
-                تحقيق التميز والنمو
+            <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-6">
+              <Sparkles className="w-4 h-4 ml-2" />
+              شريكك الاستراتيجي في النجاح
+            </div>
+            
+            <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <span className="text-gray-900">نحقق أهدافكم مع</span>
+              <span className="block mt-2 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                Zeen A Plus Solutions
               </span>
             </h1>
             
-            <p className="text-xl lg:text-2xl text-neutral-600 leading-relaxed max-w-4xl mx-auto font-medium">
-              في Zeen-A Solutions، نقدم حلولاً متكاملة ومخصصة للشركات والأفراد في مجالات حيوية متنوعة
+            <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+              خدمات متخصصة ومتكاملة في الموارد البشرية، التطوير التقني، التسويق الرقمي، والاستشارات المهنية
             </p>
           </div>
           
-          {/* Key Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div className="group">
-              <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-blue-100/50 group-hover:shadow-xl group-hover:border-brand-blue/20 transition-all duration-300">
-                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-brand-blue to-brand-accent-blue rounded-2xl flex items-center justify-center shadow-lg">
-                  <span className="text-3xl font-bold text-white">+</span>
-                </div>
-                <h3 className="text-xl font-bold text-neutral-800 mb-4">خبرة متخصصة</h3>
-                <p className="text-neutral-600 leading-relaxed">فريق من المتخصصين في كافة المجالات</p>
+          {/* Key Features */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                <Target className="w-6 h-6 text-white" />
               </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">خبرة متخصصة</h3>
+              <p className="text-gray-600">فريق من المحترفين في جميع المجالات</p>
             </div>
             
-            <div className="group">
-              <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-blue-100/50 group-hover:shadow-xl group-hover:border-brand-blue/20 transition-all duration-300">
-                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-brand-accent-blue to-brand-blue-dark rounded-2xl flex items-center justify-center shadow-lg">
-                  <span className="text-3xl font-bold text-white">✓</span>
-                </div>
-                <h3 className="text-xl font-bold text-neutral-800 mb-4">جودة مضمونة</h3>
-                <p className="text-neutral-600 leading-relaxed">نلتزم بأعلى معايير الجودة والاحترافية</p>
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-purple-100 hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl flex items-center justify-center">
+                <Award className="w-6 h-6 text-white" />
               </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">جودة مضمونة</h3>
+              <p className="text-gray-600">نلتزم بأعلى معايير الجودة والاحترافية</p>
             </div>
             
-            <div className="group">
-              <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-blue-100/50 group-hover:shadow-xl group-hover:border-brand-blue/20 transition-all duration-300">
-                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-brand-blue-dark to-brand-blue rounded-2xl flex items-center justify-center shadow-lg">
-                  <span className="text-3xl font-bold text-white">24/7</span>
-                </div>
-                <h3 className="text-xl font-bold text-neutral-800 mb-4">دعم مستمر</h3>
-                <p className="text-neutral-600 leading-relaxed">متابعة ودعم في جميع مراحل العمل</p>
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-indigo-100 hover:shadow-xl transition-all duration-300">
+              <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center">
+                <Sparkles className="w-6 h-6 text-white" />
               </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">دعم مستمر</h3>
+              <p className="text-gray-600">متابعة ودعم في جميع مراحل العمل</p>
             </div>
           </div>
           
           {/* Call to Action */}
-          <div className="bg-gradient-to-r from-white/90 to-blue-50/90 backdrop-blur-sm rounded-3xl p-12 border border-blue-100/50 shadow-xl">
-            <h2 className="text-3xl lg:text-4xl font-bold text-neutral-800 mb-6">
-              انضموا إلى قائمة شركائنا الناجحين
-            </h2>
-            <p className="text-xl text-neutral-600 mb-10 leading-relaxed">
-              تواصلوا معنا اليوم لمناقشة كيف يمكن أن نكون شريككم الأمثل في رحلة النجاح
-            </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button
+              size="lg"
+              onClick={() => navigate('/about')}
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 rounded-xl"
+            >
+              تعرف على قصتنا
+            </Button>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button
-                size="lg"
-                onClick={() => navigate('/about')}
-                className="bg-gradient-to-r from-brand-blue to-brand-accent-blue hover:from-brand-blue-dark hover:to-brand-blue text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 rounded-2xl"
-              >
-                اكتشف قصة نجاحنا
-              </Button>
-              
-              <Button
-                variant="outline"
-                size="lg"
-                onClick={() => window.open(`https://wa.me/${companyInfo.whatsapp}?text=مرحباً، أريد التواصل معكم`, '_blank')}
-                className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white px-8 py-4 text-lg font-semibold rounded-2xl transition-all duration-300"
-              >
-                ابدأ مشروعك معنا
-              </Button>
-            </div>
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={() => window.open(`https://wa.me/${companyInfo.whatsapp}?text=مرحباً، أريد التواصل معكم`, '_blank')}
+              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300"
+            >
+              ابدأ مشروعك معنا
+            </Button>
           </div>
         </div>
       </div>
-      
-      {/* Decorative elements */}
-      <div className="absolute top-32 left-10 w-24 h-24 bg-brand-blue/5 rounded-full blur-xl"></div>
-      <div className="absolute bottom-32 right-10 w-32 h-32 bg-brand-accent-blue/5 rounded-full blur-xl"></div>
     </section>
   );
 };

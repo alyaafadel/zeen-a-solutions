@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { CheckCircle, Users, Target } from "lucide-react";
 
 interface CompanyInfo {
   description: string;
@@ -14,78 +15,78 @@ const AboutPreviewSection = ({ companyInfo }: AboutPreviewSectionProps) => {
   const navigate = useNavigate();
 
   return (
-    <section className="py-24 lg:py-32 relative overflow-hidden">
-      {/* Consistent background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50/30 to-neutral-50/50"></div>
-      <div className="absolute inset-0 opacity-[0.02]" style={{
-        backgroundImage: `linear-gradient(rgba(33, 150, 243, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(33, 150, 243, 0.03) 1px, transparent 1px)`,
-        backgroundSize: '28px 28px'
-      }}></div>
-      
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="max-w-6xl mx-auto text-center">
-          {/* Section Header */}
-          <div className="mb-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-brand-blue to-brand-accent-blue rounded-2xl shadow-lg mb-8">
-              <span className="text-2xl font-bold text-white">🌟</span>
-            </div>
-            
-            <h2 className="text-4xl lg:text-5xl font-bold mb-8">
-              <span className="text-neutral-800">لماذا تختار</span>
-              <span className="block mt-2 bg-gradient-to-r from-brand-blue to-brand-accent-blue bg-clip-text text-transparent">
-                Zeen A Plus Solutions؟
-              </span>
-            </h2>
-          </div>
-          
-          {/* Main Content Card */}
-          <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-12 lg:p-16 border border-blue-100/50 shadow-xl mb-12">
-            <p className="text-xl lg:text-2xl text-neutral-700 leading-relaxed mb-12 font-medium">
-              {companyInfo.description}
-            </p>
-            
-            {/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center group">
-                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-brand-blue to-brand-accent-blue rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-3xl font-bold text-white">🤝</span>
-                </div>
-                <h3 className="text-lg font-bold text-neutral-800 mb-3 group-hover:text-brand-blue transition-colors duration-300">شراكة حقيقية</h3>
-                <p className="text-neutral-600 leading-relaxed">نعمل كجزء من فريقكم</p>
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="container mx-auto px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Content */}
+            <div>
+              <div className="inline-flex items-center px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-6">
+                🌟 لماذا تختارنا؟
               </div>
               
-              <div className="text-center group">
-                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-brand-accent-blue to-brand-blue-dark rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-3xl font-bold text-white">🎯</span>
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                شريكك الموثوق في
+                <span className="block text-blue-600">رحلة النجاح</span>
+              </h2>
+              
+              <p className="text-xl text-gray-600 leading-relaxed mb-8">
+                {companyInfo.description}
+              </p>
+              
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center">
+                  <CheckCircle className="w-6 h-6 text-green-500 ml-3" />
+                  <span className="text-lg text-gray-700">خبرة 8+ سنوات في السوق السعودي</span>
                 </div>
-                <h3 className="text-lg font-bold text-neutral-800 mb-3 group-hover:text-brand-blue transition-colors duration-300">خبرة متنوعة</h3>
-                <p className="text-neutral-600 leading-relaxed">متخصصون في مجالات متعددة</p>
+                <div className="flex items-center">
+                  <CheckCircle className="w-6 h-6 text-green-500 ml-3" />
+                  <span className="text-lg text-gray-700">أكثر من 250 مشروع ناجح</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-6 h-6 text-green-500 ml-3" />
+                  <span className="text-lg text-gray-700">فريق متخصص ومتنوع</span>
+                </div>
               </div>
               
-              <div className="text-center group">
-                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-brand-blue-dark to-brand-blue rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-3xl font-bold text-white">🏆</span>
+              <Button
+                size="lg"
+                onClick={() => navigate('/about')}
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 rounded-xl"
+              >
+                اعرف المزيد عن قصتنا
+              </Button>
+            </div>
+            
+            {/* Features Cards */}
+            <div className="space-y-6">
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
+                  <Users className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-neutral-800 mb-3 group-hover:text-brand-blue transition-colors duration-300">نتائج مضمونة</h3>
-                <p className="text-neutral-600 leading-relaxed">ملتزمون بتحقيق أهدافكم</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">شراكة حقيقية</h3>
+                <p className="text-gray-600">نعمل كجزء من فريقكم لضمان تحقيق أهدافكم بأفضل طريقة ممكنة</p>
+              </div>
+              
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-purple-100 hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
+                  <Target className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">خبرة متنوعة</h3>
+                <p className="text-gray-600">متخصصون في مجالات متعددة لتغطية جميع احتياجاتكم التجارية والمهنية</p>
+              </div>
+              
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-indigo-100 hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center mb-4">
+                  <CheckCircle className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">نتائج مضمونة</h3>
+                <p className="text-gray-600">ملتزمون بتحقيق أهدافكم ونضمن جودة النتائج النهائية</p>
               </div>
             </div>
           </div>
-          
-          {/* Call to Action */}
-          <Button
-            size="lg"
-            onClick={() => navigate('/about')}
-            className="bg-gradient-to-r from-brand-blue to-brand-accent-blue hover:from-brand-blue-dark hover:to-brand-blue text-white px-12 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 rounded-2xl"
-          >
-            اعرف المزيد عن قصتنا
-          </Button>
         </div>
       </div>
-      
-      {/* Decorative elements */}
-      <div className="absolute top-32 right-10 w-24 h-24 bg-brand-blue/5 rounded-full blur-xl"></div>
-      <div className="absolute bottom-32 left-10 w-32 h-32 bg-brand-accent-blue/5 rounded-full blur-xl"></div>
     </section>
   );
 };
