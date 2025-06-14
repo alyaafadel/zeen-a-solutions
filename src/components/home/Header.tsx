@@ -56,22 +56,22 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
   return (
     <>
       <header className="bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200 sticky top-0 z-50">
-        <div className="container mx-auto px-4 sm:px-6 py-6">
+        <div className="container mx-auto px-4 sm:px-6 py-4">
           <div className="flex justify-between items-center">
-            {/* Logo and Company Section - Removed Blue Background */}
-            <div className="flex items-center space-x-6 space-x-reverse">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
+            {/* Logo and Company Section */}
+            <div className="flex items-center space-x-4 space-x-reverse">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center">
                 <img 
                   src="/lovable-uploads/8838bb20-a5cc-4ab1-9fce-30cdb0f93521.png" 
                   alt="Zeen A Plus Solutions Logo" 
-                  className="w-14 h-14 sm:w-18 sm:h-18 object-contain"
+                  className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
                 />
               </div>
-              <div className="flex flex-col justify-center space-y-1">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-brand-blue-dark leading-tight tracking-tight">
+              <div className="flex flex-col justify-center space-y-0">
+                <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-brand-blue-dark leading-tight">
                   Zeen A Plus Solutions
                 </h1>
-                <p className="text-lg sm:text-xl md:text-2xl text-slate-600 font-medium leading-relaxed">
+                <p className="text-sm sm:text-base text-slate-600 font-medium leading-relaxed">
                   شريكك المتخصص في إنجاز المهام والخدمات
                 </p>
               </div>

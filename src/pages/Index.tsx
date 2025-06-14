@@ -1,10 +1,10 @@
+
 import { Users, Languages, Megaphone, Code, Truck, GraduationCap, Briefcase, Star, Bot, Scale } from "lucide-react";
 import Header from "@/components/home/Header";
 import HeroSection from "@/components/home/HeroSection";
 import ServicesSection from "@/components/home/ServicesSection";
 import StatsSection from "@/components/home/StatsSection";
 import AboutPreviewSection from "@/components/home/AboutPreviewSection";
-import ContactSection from "@/components/home/ContactSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Footer from "@/components/Footer";
 
@@ -88,27 +88,22 @@ const Index = () => {
       <Header services={services} companyInfo={companyInfo} />
       
       {/* Hero Section with reduced spacing */}
-      <div className="mb-1 sm:mb-2 md:mb-3">
-        <HeroSection companyInfo={companyInfo} />
-      </div>
+      <HeroSection companyInfo={companyInfo} />
       
-      {/* Services Section - now much closer to Hero */}
-      <div className="mb-8 sm:mb-12 md:mb-16">
+      {/* Services Section */}
+      <div className="mb-6 sm:mb-8 md:mb-10">
         <ServicesSection services={services} />
       </div>
       
-      {/* Stats Section with reduced spacing */}
-      <div className="mb-8 sm:mb-12 md:mb-16">
+      {/* Stats Section */}
+      <div className="mb-6 sm:mb-8 md:mb-10">
         <StatsSection />
       </div>
       
-      {/* About Preview Section with reduced spacing */}
-      <div className="mb-8 sm:mb-12 md:mb-16">
+      {/* About Preview Section */}
+      <div className="mb-6 sm:mb-8 md:mb-10">
         <AboutPreviewSection companyInfo={companyInfo} />
       </div>
-      
-      {/* Contact Section - now directly after About section */}
-      <ContactSection companyInfo={companyInfo} />
 
       {/* Enhanced Floating WhatsApp Button - Mobile Optimized */}
       <div className="fixed bottom-4 left-4 sm:bottom-6 sm:left-6 z-50">
