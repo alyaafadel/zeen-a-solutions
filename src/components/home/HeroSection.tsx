@@ -20,11 +20,10 @@ const HeroSection = ({ companyInfo }: HeroSectionProps) => {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-slate-700 leading-tight">
-            شركاؤكم في إنجاز المهام والخدمات المتخصصة
+            Zeen-A Solutions: شركاؤكم الاستراتيجيون في تحقيق التميز والنمو
           </h1>
           <p className="text-xl md:text-2xl text-slate-600 mb-8 leading-relaxed">
-            نقدم خدمات متخصصة للشركات والأفراد - من الموارد البشرية إلى التطوير التقني والتسويق الرقمي والتطوير المهني. 
-            نعمل معكم كأعضاء فريق متخصصين لإنجاز مهامكم بجودة عالية واحترافية تامة
+            في Zeen-A Solutions، نقدم حلولاً متكاملة ومخصصة للشركات والأفراد في مجالات حيوية تشمل الموارد البشرية، التطوير التقني، التسويق الرقمي، والتطوير المهني. نعمل كجزء لا يتجزأ من فريقكم، ملتزمين بتقديم خبرات متخصصة تضمن إنجاز مهامكم بأعلى معايير الجودة والاحترافية، وتحقيق أهدافكم الاستراتيجية بفعالية.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <WhatsAppButton 
