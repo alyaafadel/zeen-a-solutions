@@ -1,3 +1,4 @@
+
 import { Users, Languages, Megaphone, Code, Truck, ArrowRight, CheckCircle, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -10,6 +11,8 @@ const Index = () => {
   const services = [
     {
       title: "الموارد البشرية",
+      brandName: "Zeen HR Solutions",
+      logo: "👥",
       description: "خدمات شاملة في التوظيف والتدريب وإدارة الأداء",
       icon: Users,
       color: "from-blue-500 to-blue-600",
@@ -20,6 +23,8 @@ const Index = () => {
     },
     {
       title: "خدمات الترجمة",
+      brandName: "Zeen Translation Hub",
+      logo: "🌐",
       description: "ترجمة احترافية للوثائق الرسمية والأكاديمية",
       icon: Languages,
       color: "from-purple-500 to-purple-600",
@@ -30,6 +35,8 @@ const Index = () => {
     },
     {
       title: "التسويق الرقمي",
+      brandName: "Zeen Digital Marketing",
+      logo: "📈",
       description: "استراتيجيات تسويق فعالة لزيادة مبيعاتك",
       icon: Megaphone,
       color: "from-green-500 to-green-600",
@@ -40,6 +47,8 @@ const Index = () => {
     },
     {
       title: "البرمجة والتطوير",
+      brandName: "Zeen Tech Solutions",
+      logo: "💻",
       description: "تطوير مواقع وتطبيقات احترافية بأحدث التقنيات",
       icon: Code,
       color: "from-orange-500 to-orange-600",
@@ -50,6 +59,8 @@ const Index = () => {
     },
     {
       title: "الخدمات اللوجستية",
+      brandName: "Zeen Logistics & 3PL",
+      logo: "🚛",
       description: "حلول لوجستية متكاملة وخدمات 3PL احترافية",
       icon: Truck,
       color: "from-teal-500 to-teal-600",
@@ -107,7 +118,7 @@ const Index = () => {
             {companyInfo.description}
           </p>
 
-          {/* Services Grid - Updated to accommodate 5 services */}
+          {/* Services Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {services.map((service, index) => (
               <Card 
@@ -117,15 +128,21 @@ const Index = () => {
               >
                 <CardHeader className={`${service.bgColor} pb-6 relative`}>
                   <div className="flex items-center justify-between mb-4">
-                    <div className={`w-20 h-20 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center shadow-lg`}>
-                      <service.icon className="h-10 w-10 text-white" />
+                    <div className="flex items-center space-x-3 space-x-reverse">
+                      <div className="text-4xl">{service.logo}</div>
+                      <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center shadow-lg`}>
+                        <service.icon className="h-8 w-8 text-white" />
+                      </div>
                     </div>
                     <ArrowRight className="h-6 w-6 text-gray-400 group-hover:text-gray-600 transition-colors" />
                   </div>
-                  <CardTitle className="text-2xl text-gray-800 mb-2 text-right">{service.title}</CardTitle>
-                  <CardDescription className="text-gray-600 leading-relaxed text-base text-right">
-                    {service.description}
-                  </CardDescription>
+                  <div className="text-right">
+                    <div className="text-sm font-medium text-gray-500 mb-1">{service.brandName}</div>
+                    <CardTitle className="text-2xl text-gray-800 mb-2">{service.title}</CardTitle>
+                    <CardDescription className="text-gray-600 leading-relaxed text-base">
+                      {service.description}
+                    </CardDescription>
+                  </div>
                 </CardHeader>
                 <CardContent className="pt-6">
                   <div className="grid grid-cols-2 gap-2">
