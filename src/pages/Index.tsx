@@ -1,9 +1,9 @@
-
 import { ArrowRight, CheckCircle, Mail, Phone, MapPin, Users, Target, Award, Languages, UserCheck, TrendingUp, Code, Globe, Briefcase, MessageSquare, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   const mainProjects = [
@@ -12,28 +12,32 @@ const Index = () => {
       description: "ترجمة احترافية من وإلى جميع اللغات بأعلى معايير الجودة والدقة، مع فريق من المترجمين المحترفين المتخصصين",
       icon: Languages,
       specialist: "متخصص اللغات والترجمة",
-      services: ["ترجمة المستندات", "الترجمة الفورية", "المراجعة اللغوية", "التعريب والتوطين"]
+      services: ["ترجمة المستندات", "الترجمة الفورية", "المراجعة اللغوية", "التعريب والتوطين"],
+      whatsappMessage: "مرحباً، أريد الاستفسار عن خدمات الترجمة"
     },
     {
       title: "حلول الموارد البشرية",
       description: "خدمات شاملة في إدارة الموارد البشرية من التوظيف إلى التطوير، مع استراتيجيات مبتكرة لتنمية المواهب",
       icon: UserCheck,
       specialist: "خبير الموارد البشرية",
-      services: ["التوظيف والاستقطاب", "تطوير المواهب", "إدارة الأداء", "التدريب التخصصي"]
+      services: ["التوظيف والاستقطاب", "تطوير المواهب", "إدارة الأداء", "التدريب التخصصي"],
+      whatsappMessage: "مرحباً، أريد الاستفسار عن حلول الموارد البشرية"
     },
     {
       title: "التسويق الإلكتروني",
       description: "استراتيجيات تسويقية رقمية متكاملة لتعزيز حضوركم الإلكتروني وزيادة المبيعات عبر جميع المنصات الرقمية",
       icon: TrendingUp,
       specialist: "خبير التسويق الرقمي",
-      services: ["إدارة وسائل التواصل", "الإعلانات المدفوعة", "تحسين محركات البحث", "التسويق بالمحتوى"]
+      services: ["إدارة وسائل التواصل", "الإعلانات المدفوعة", "تحسين محركات البحث", "التسويق بالمحتوى"],
+      whatsappMessage: "مرحباً، أريد الاستفسار عن خدمات التسويق الإلكتروني"
     },
     {
       title: "حلول البرمجة التطبيقية",
       description: "تطوير التطبيقات والمواقع الإلكترونية بأحدث التقنيات، من التصميم إلى التطبيق النهائي مع الدعم الفني المستمر",
       icon: Code,
       specialist: "مطور البرمجيات",
-      services: ["تطوير المواقع", "تطبيقات الهاتف", "أنظمة إدارة قواعد البيانات", "الدعم الفني"]
+      services: ["تطوير المواقع", "تطبيقات الهاتف", "أنظمة إدارة قواعد البيانات", "الدعم الفني"],
+      whatsappMessage: "مرحباً، أريد الاستفسار عن حلول البرمجة والتطوير"
     }
   ];
 
@@ -46,10 +50,19 @@ const Index = () => {
     "دعم فني مستمر وخدمة عملاء متميزة على مدار الساعة"
   ];
 
+  const companyInfo = {
+    name: "Zeen A Plus Solutions",
+    slogan: "أربعة تخصصات، حلول لا محدودة",
+    phone: "+966123456789",
+    email: "info@zeenaplusolutions.com",
+    whatsapp: "+966123456789",
+    description: "شركة رائدة في تقديم الحلول المتكاملة للأعمال، نجمع بين أربعة تخصصات أساسية لنقدم لعملائنا خدمات شاملة تحت مظلة واحدة."
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100" dir="rtl">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
+      <header className="bg-white shadow-sm border-b sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-2 space-x-reverse">
@@ -57,16 +70,24 @@ const Index = () => {
                 <span className="text-white font-bold text-lg">Z+</span>
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-gray-800">Zeen A Plus Solutions</h1>
-                <p className="text-sm text-gray-600">أربعة تخصصات، حلول لا محدودة</p>
+                <h1 className="text-2xl font-bold text-gray-800">{companyInfo.name}</h1>
+                <p className="text-sm text-gray-600">{companyInfo.slogan}</p>
               </div>
             </div>
-            <nav className="hidden md:flex space-x-8 space-x-reverse">
-              <a href="#home" className="text-gray-700 hover:text-blue-600 transition-colors">الرئيسية</a>
-              <a href="#projects" className="text-gray-700 hover:text-blue-600 transition-colors">مشاريعنا</a>
-              <a href="#team" className="text-gray-700 hover:text-blue-600 transition-colors">فريقنا</a>
-              <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">اتصل بنا</a>
-            </nav>
+            <div className="flex items-center space-x-4 space-x-reverse">
+              <nav className="hidden md:flex space-x-8 space-x-reverse">
+                <a href="#home" className="text-gray-700 hover:text-blue-600 transition-colors">الرئيسية</a>
+                <a href="#projects" className="text-gray-700 hover:text-blue-600 transition-colors">خدماتنا</a>
+                <a href="#team" className="text-gray-700 hover:text-blue-600 transition-colors">عن الشركة</a>
+                <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">اتصل بنا</a>
+              </nav>
+              <WhatsAppButton 
+                phoneNumber={companyInfo.whatsapp}
+                message="مرحباً، أريد التحدث مع فريق Zeen A Plus Solutions"
+                variant="cta"
+                text="تحدث معنا عبر الواتس آب"
+              />
+            </div>
           </div>
         </div>
       </header>
@@ -78,17 +99,19 @@ const Index = () => {
             <span className="text-blue-600">أربعة تخصصات</span> في مكان واحد
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-            نحن أربعة أصدقاء متخصصين نجمع خبراتنا المتنوعة في الترجمة والموارد البشرية والتسويق الإلكتروني والبرمجة 
-            لتقديم حلول شاملة ومتكاملة تلبي جميع احتياجات أعملكم تحت مظلة واحدة
+            {companyInfo.description}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8">
-              اكتشف خدماتنا المتكاملة
+              <a href="#projects">اكتشف خدماتنا المتكاملة</a>
               <ArrowRight className="mr-2 h-5 w-5" />
             </Button>
-            <Button variant="outline" size="lg" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8">
-              تحدث مع فريقنا
-            </Button>
+            <WhatsAppButton 
+              phoneNumber={companyInfo.whatsapp}
+              message="مرحباً، أريد الاستفسار عن خدمات شركة Zeen A Plus Solutions"
+              variant="cta"
+              text="استفسر عن خدماتنا"
+            />
           </div>
         </div>
       </section>
@@ -97,9 +120,9 @@ const Index = () => {
       <section id="projects" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h3 className="text-4xl font-bold text-gray-800 mb-4">مشاريعنا الأربعة الرئيسية</h3>
+            <h3 className="text-4xl font-bold text-gray-800 mb-4">خدماتنا الأربعة الرئيسية</h3>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              كل مشروع يقوده متخصص مختلف، وجميعها تعمل بتناغم لتقديم حلول شاملة ومتكاملة لعملائنا
+              كل خدمة يقودها متخصص مختلف، وجميعها تعمل بتناغم لتقديم حلول شاملة ومتكاملة لعملائنا
             </p>
           </div>
           
@@ -122,7 +145,7 @@ const Index = () => {
                 </CardHeader>
                 <CardContent className="pt-6">
                   <h4 className="font-semibold text-gray-800 mb-3">الخدمات المتاحة:</h4>
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="grid grid-cols-2 gap-2 mb-6">
                     {project.services.map((service, serviceIndex) => (
                       <div key={serviceIndex} className="flex items-center space-x-2 space-x-reverse text-sm">
                         <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
@@ -130,6 +153,12 @@ const Index = () => {
                       </div>
                     ))}
                   </div>
+                  <WhatsAppButton 
+                    phoneNumber={companyInfo.whatsapp}
+                    message={project.whatsappMessage}
+                    variant="service"
+                    text="استفسر عن هذه الخدمة"
+                  />
                 </CardContent>
               </Card>
             ))}
@@ -202,16 +231,32 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div>
-              <h4 className="text-2xl font-bold text-gray-800 mb-6">تواصل مع فريقنا</h4>
+              <h4 className="text-2xl font-bold text-gray-800 mb-6">معلومات التواصل</h4>
               
               <div className="space-y-6">
+                <div className="flex items-center space-x-4 space-x-reverse">
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                    <MessageSquare className="h-6 w-6 text-green-600" />
+                  </div>
+                  <div className="flex-1">
+                    <h5 className="font-semibold text-gray-800">واتس آب (الأسرع)</h5>
+                    <p className="text-gray-600">{companyInfo.whatsapp}</p>
+                    <WhatsAppButton 
+                      phoneNumber={companyInfo.whatsapp}
+                      message="مرحباً، أريد الاستفسار عن خدمات الشركة"
+                      variant="inline"
+                      text="ابدأ المحادثة"
+                    />
+                  </div>
+                </div>
+                
                 <div className="flex items-center space-x-4 space-x-reverse">
                   <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
                     <Phone className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
-                    <h5 className="font-semibold text-gray-800">للاستشارات والاستفسارات</h5>
-                    <p className="text-gray-600">+966 XX XXX XXXX</p>
+                    <h5 className="font-semibold text-gray-800">الهاتف</h5>
+                    <p className="text-gray-600">{companyInfo.phone}</p>
                   </div>
                 </div>
                 
@@ -221,16 +266,16 @@ const Index = () => {
                   </div>
                   <div>
                     <h5 className="font-semibold text-gray-800">البريد الإلكتروني</h5>
-                    <p className="text-gray-600">info@zeenaplusolutions.com</p>
+                    <p className="text-gray-600">{companyInfo.email}</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center space-x-4 space-x-reverse">
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                    <Globe className="h-6 w-6 text-green-600" />
+                  <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                    <Globe className="h-6 w-6 text-orange-600" />
                   </div>
                   <div>
-                    <h5 className="font-semibold text-gray-800">نخدم عملائنا</h5>
+                    <h5 className="font-semibold text-gray-800">نطاق الخدمة</h5>
                     <p className="text-gray-600">محلياً وإقليمياً وعالمياً</p>
                   </div>
                 </div>
@@ -241,7 +286,11 @@ const Index = () => {
             <Card className="border-0 shadow-lg">
               <CardHeader>
                 <CardTitle className="text-2xl text-gray-800">احصل على استشارة مجانية</CardTitle>
-                <CardDescription>سنتواصل معك خلال 24 ساعة لمناقشة مشروعك</CardDescription>
+                <CardDescription>
+                  سنتواصل معك خلال 24 ساعة لمناقشة مشروعك
+                  <br />
+                  <span className="text-green-600 font-medium">أو تواصل معنا مباشرة عبر الواتس آب للرد الفوري</span>
+                </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
@@ -291,9 +340,17 @@ const Index = () => {
                   ></textarea>
                 </div>
                 
-                <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                  ابدأ مشروعك معنا
-                </Button>
+                <div className="flex flex-col gap-3">
+                  <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+                    إرسال الطلب
+                  </Button>
+                  <WhatsAppButton 
+                    phoneNumber={companyInfo.whatsapp}
+                    message="مرحباً، أريد استشارة مجانية عن خدماتكم"
+                    variant="form"
+                    text="أو تواصل فوراً عبر الواتس آب"
+                  />
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -310,18 +367,23 @@ const Index = () => {
                   <span className="text-white font-bold">Z+</span>
                 </div>
                 <div>
-                  <h5 className="text-xl font-bold">Zeen A Plus Solutions</h5>
-                  <p className="text-sm text-gray-400">أربعة تخصصات، حلول لا محدودة</p>
+                  <h5 className="text-xl font-bold">{companyInfo.name}</h5>
+                  <p className="text-sm text-gray-400">{companyInfo.slogan}</p>
                 </div>
               </div>
-              <p className="text-gray-400 leading-relaxed">
-                نحن فريق من أربعة متخصصين نقدم حلولاً متكاملة في الترجمة والموارد البشرية والتسويق الإلكتروني والبرمجة. 
-                شراكة قائمة على الخبرة والتميز.
+              <p className="text-gray-400 leading-relaxed mb-4">
+                {companyInfo.description}
               </p>
+              <WhatsAppButton 
+                phoneNumber={companyInfo.whatsapp}
+                message="مرحباً، أريد معرفة المزيد عن شركة Zeen A Plus Solutions"
+                variant="footer"
+                text="تواصل معنا عبر الواتس آب"
+              />
             </div>
             
             <div>
-              <h6 className="font-semibold mb-4">مشاريعنا</h6>
+              <h6 className="font-semibold mb-4">خدماتنا</h6>
               <ul className="space-y-2 text-gray-400">
                 <li>خدمات الترجمة الشاملة</li>
                 <li>حلول الموارد البشرية</li>
@@ -334,27 +396,46 @@ const Index = () => {
               <h6 className="font-semibold mb-4">روابط سريعة</h6>
               <ul className="space-y-2 text-gray-400">
                 <li><a href="#home" className="hover:text-white transition-colors">الرئيسية</a></li>
-                <li><a href="#projects" className="hover:text-white transition-colors">مشاريعنا</a></li>
-                <li><a href="#team" className="hover:text-white transition-colors">فريقنا</a></li>
+                <li><a href="#projects" className="hover:text-white transition-colors">خدماتنا</a></li>
+                <li><a href="#team" className="hover:text-white transition-colors">عن الشركة</a></li>
                 <li><a href="#contact" className="hover:text-white transition-colors">اتصل بنا</a></li>
               </ul>
             </div>
             
             <div>
-              <h6 className="font-semibold mb-4">تواصل معنا</h6>
+              <h6 className="font-semibold mb-4">معلومات التواصل</h6>
               <div className="space-y-2 text-gray-400">
-                <p>info@zeenaplusolutions.com</p>
-                <p>نخدم العملاء محلياً</p>
-                <p>وإقليمياً وعالمياً</p>
+                <p className="flex items-center space-x-2 space-x-reverse">
+                  <MessageSquare className="h-4 w-4" />
+                  <span>{companyInfo.whatsapp}</span>
+                </p>
+                <p className="flex items-center space-x-2 space-x-reverse">
+                  <Mail className="h-4 w-4" />
+                  <span>{companyInfo.email}</span>
+                </p>
+                <p className="flex items-center space-x-2 space-x-reverse">
+                  <Globe className="h-4 w-4" />
+                  <span>خدمة عالمية</span>
+                </p>
               </div>
             </div>
           </div>
           
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Zeen A Plus Solutions. جميع الحقوق محفوظة.</p>
+            <p>&copy; 2024 {companyInfo.name}. جميع الحقوق محفوظة.</p>
           </div>
         </div>
       </footer>
+
+      {/* Floating WhatsApp Button */}
+      <div className="fixed bottom-6 left-6 z-50">
+        <WhatsAppButton 
+          phoneNumber={companyInfo.whatsapp}
+          message="مرحباً، أريد الاستفسار عن خدمات Zeen A Plus Solutions"
+          variant="floating"
+          text="تحدث معنا"
+        />
+      </div>
     </div>
   );
 };
