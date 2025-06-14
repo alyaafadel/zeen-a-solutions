@@ -106,8 +106,16 @@ const Index = () => {
     description: "شركة متخصصة في تقديم حلول متكاملة للأعمال تشمل الموارد البشرية، الترجمة، التسويق الرقمي، التطوير التقني، والخدمات اللوجستية."
   };
 
+  // Calculate positions for circular layout
+  const getCircularPosition = (index: number, total: number, radius: number) => {
+    const angle = (index * 2 * Math.PI) / total - Math.PI / 2; // Start from top
+    const x = Math.cos(angle) * radius;
+    const y = Math.sin(angle) * radius;
+    return { x, y };
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100" dir="rtl">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50" dir="rtl">
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-sm shadow-sm border-b sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
@@ -145,68 +153,76 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="mb-8">
-            <h2 className="text-6xl font-bold text-gray-800 mb-4">
-              {companyInfo.name}
-            </h2>
-            <p className="text-2xl text-gray-700 font-medium mb-6">{companyInfo.slogan}</p>
-          </div>
-          
-          <p className="text-xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
-            {companyInfo.description}
-          </p>
+      {/* Hero Section with Circular Design */}
+      <section className="py-20 min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="container mx-auto px-4">
+          {/* Circular Services Layout */}
+          <div className="relative flex items-center justify-center" style={{ minHeight: '800px' }}>
+            {/* Central Company Info */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="bg-white/90 backdrop-blur-sm rounded-full p-12 shadow-2xl border-4 border-blue-200 text-center max-w-md w-80 h-80 flex flex-col items-center justify-center">
+                <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center shadow-lg border mb-4">
+                  <img 
+                    src="/lovable-uploads/8838bb20-a5cc-4ab1-9fce-30cdb0f93521.png" 
+                    alt="Zeen A Plus Solutions Logo" 
+                    className="w-12 h-12 object-contain"
+                  />
+                </div>
+                <h2 className="text-3xl font-bold text-gray-800 mb-2 leading-tight">
+                  {companyInfo.name}
+                </h2>
+                <p className="text-lg text-gray-600 font-medium mb-3">{companyInfo.slogan}</p>
+                <div className="text-sm text-gray-500">{companyInfo.location}</div>
+              </div>
+            </div>
 
-          {/* Services Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {services.map((service, index) => (
-              <Card 
-                key={index} 
-                className="group hover:shadow-2xl transition-all duration-300 border-0 shadow-lg overflow-hidden cursor-pointer transform hover:-translate-y-2"
-                onClick={() => navigate(service.route)}
-              >
-                <CardHeader className={`${service.bgColor} pb-6 relative`}>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center space-x-3 space-x-reverse">
-                      <div className="text-4xl">{service.logo}</div>
-                      <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center shadow-lg`}>
-                        <service.icon className="h-8 w-8 text-white" />
-                      </div>
+            {/* Services in Circular Layout */}
+            {services.map((service, index) => {
+              const position = getCircularPosition(index, services.length, 320);
+              return (
+                <div
+                  key={index}
+                  className="absolute transition-all duration-300 hover:scale-110 cursor-pointer"
+                  style={{
+                    transform: `translate(${position.x}px, ${position.y}px)`,
+                    left: '50%',
+                    top: '50%',
+                    marginLeft: '-80px',
+                    marginTop: '-80px',
+                  }}
+                  onClick={() => navigate(service.route)}
+                >
+                  <div className={`w-40 h-40 ${service.bgColor} rounded-full flex flex-col items-center justify-center shadow-xl border-4 border-white hover:shadow-2xl transition-all duration-300 group relative overflow-hidden`}>
+                    {/* Background gradient on hover */}
+                    <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-full`}></div>
+                    
+                    {/* Icon */}
+                    <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center shadow-lg mb-2 relative z-10`}>
+                      <service.icon className="h-6 w-6 text-white" />
                     </div>
-                    <ArrowRight className="h-6 w-6 text-gray-400 group-hover:text-gray-600 transition-colors" />
+                    
+                    {/* Service Title */}
+                    <div className="text-center relative z-10">
+                      <h3 className="text-sm font-bold text-gray-800 leading-tight px-2">{service.title}</h3>
+                      <div className="text-xs text-gray-500 mt-1">{service.logo}</div>
+                    </div>
+
+                    {/* Arrow indicator */}
+                    <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-gray-600 transition-colors absolute bottom-3 right-3" />
                   </div>
-                  <div className="text-right">
-                    <div className="text-sm font-medium text-gray-500 mb-1">{service.brandName}</div>
-                    <CardTitle className="text-2xl text-gray-800 mb-2">{service.title}</CardTitle>
-                    <CardDescription className="text-gray-600 leading-relaxed text-base">
-                      {service.description}
-                    </CardDescription>
-                  </div>
-                </CardHeader>
-                <CardContent className="pt-6">
-                  <div className="grid grid-cols-2 gap-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center space-x-2 space-x-reverse text-sm">
-                        <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                        <span className="text-gray-600">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <Button 
-                    className={`w-full mt-6 bg-gradient-to-r ${service.color} hover:opacity-90 text-white`}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      navigate(service.route);
-                    }}
-                  >
-                    استكشف الخدمة
-                    <ArrowRight className="mr-2 h-4 w-4" />
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Description below the circular design */}
+          <div className="text-center mt-16 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-600 leading-relaxed mb-8">
+              {companyInfo.description}
+            </p>
+            <p className="text-lg text-gray-500">
+              انقر على أي خدمة لاستكشاف التفاصيل والحصول على عرض مخصص
+            </p>
           </div>
         </div>
       </section>
