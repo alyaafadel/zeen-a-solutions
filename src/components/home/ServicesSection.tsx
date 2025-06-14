@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import EnhancedIcon from "@/components/ui/enhanced-icon";
 
 interface Service {
   title: string;
@@ -103,7 +104,14 @@ const ServicesSection = ({ services }: ServicesSectionProps) => {
                   index % 3 === 1 ? 'bg-gradient-blue-light' : 
                   'bg-gradient-dark-blue'
                 } rounded-xl flex items-center justify-center mx-auto mb-0.5 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
+                  <EnhancedIcon
+                    icon={service.icon}
+                    size="sm"
+                    variant="gradient"
+                    className="text-white"
+                    ariaLabel={`أيقونة ${service.title}`}
+                    title={service.title}
+                  />
                 </div>
                 <CardTitle className="text-xs sm:text-sm font-bold text-brand-blue-dark group-hover:text-brand-blue transition-colors duration-300 mb-0.5 px-1 leading-tight">
                   {service.title}
@@ -141,7 +149,13 @@ const ServicesSection = ({ services }: ServicesSectionProps) => {
                 />
                 <div className="flex items-center justify-center text-slate-600 group-hover:text-brand-blue transition-colors duration-300">
                   <span className="text-xs font-medium ml-1">اعرف المزيد</span>
-                  <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform duration-300" />
+                  <EnhancedIcon
+                    icon={ArrowRight}
+                    size="sm"
+                    variant="interactive"
+                    className="group-hover:translate-x-1 transition-transform duration-300"
+                    ariaLabel="اعرف المزيد"
+                  />
                 </div>
               </CardContent>
             </Card>

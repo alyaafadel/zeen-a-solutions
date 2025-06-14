@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { useNavigate } from "react-router-dom";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import EnhancedIcon from "@/components/ui/enhanced-icon";
 
 interface Service {
   title: string;
@@ -48,7 +49,13 @@ const Navigation = ({ services, companyInfo }: NavigationProps) => {
         onClick={() => navigate('/about')}
         className="text-slate-600 hover:text-brand-blue hover:bg-brand-light-blue transition-all duration-200 font-medium text-sm px-4 py-3"
       >
-        <Info className="ml-2 h-4 w-4" />
+        <EnhancedIcon
+          icon={Info}
+          size="sm"
+          variant="interactive"
+          className="ml-2"
+          ariaLabel="معلومات عنا"
+        />
         من نحن
       </Button>
       
@@ -59,7 +66,13 @@ const Navigation = ({ services, companyInfo }: NavigationProps) => {
             size="sm"
             className="text-slate-600 hover:text-brand-blue hover:bg-brand-light-blue transition-all duration-200 font-medium text-sm px-4 py-3"
           >
-            <Grid3X3 className="ml-2 h-4 w-4 text-brand-blue" />
+            <EnhancedIcon
+              icon={Grid3X3}
+              size="sm"
+              variant="interactive"
+              className="ml-2 text-brand-blue"
+              ariaLabel="قائمة الخدمات"
+            />
             خدماتنا المتنوعة
           </Button>
         </DropdownMenuTrigger>
@@ -73,7 +86,13 @@ const Navigation = ({ services, companyInfo }: NavigationProps) => {
               onClick={() => navigate(service.route)}
               className="cursor-pointer py-2 px-3 hover:bg-brand-light-blue transition-colors duration-200"
             >
-              <service.icon className="ml-2 h-4 w-4 text-brand-blue" />
+              <EnhancedIcon
+                icon={service.icon}
+                size="sm"
+                variant="interactive"
+                className="ml-2 text-brand-blue"
+                ariaLabel={`أيقونة ${service.title}`}
+              />
               <span className="font-medium text-sm">{service.title}</span>
             </DropdownMenuItem>
           ))}
@@ -86,7 +105,13 @@ const Navigation = ({ services, companyInfo }: NavigationProps) => {
         onClick={() => navigate('/join-us')}
         className="text-slate-600 hover:text-brand-accent-blue hover:bg-blue-50 transition-all duration-200 font-medium text-sm px-4 py-3"
       >
-        <UserPlus className="ml-2 h-4 w-4" />
+        <EnhancedIcon
+          icon={UserPlus}
+          size="sm"
+          variant="interactive"
+          className="ml-2"
+          ariaLabel="انضم إلينا"
+        />
         انضم إلينا
       </Button>
       
@@ -97,7 +122,13 @@ const Navigation = ({ services, companyInfo }: NavigationProps) => {
             size="sm"
             className="text-slate-600 hover:text-brand-blue-dark hover:bg-blue-50 transition-all duration-200 font-medium text-sm px-4 py-3"
           >
-            <Phone className="ml-2 h-4 w-4" />
+            <EnhancedIcon
+              icon={Phone}
+              size="sm"
+              variant="interactive"
+              className="ml-2"
+              ariaLabel="خيارات التواصل"
+            />
             تواصل معنا
           </Button>
         </DropdownMenuTrigger>
@@ -106,21 +137,39 @@ const Navigation = ({ services, companyInfo }: NavigationProps) => {
             onClick={() => handleContactOption('whatsapp')}
             className="cursor-pointer text-sm"
           >
-            <MessageSquare className="ml-2 h-4 w-4 text-slate-600" />
+            <EnhancedIcon
+              icon={MessageSquare}
+              size="sm"
+              variant="interactive"
+              className="ml-2 text-slate-600"
+              ariaLabel="واتس آب"
+            />
             <span>واتس آب</span>
           </DropdownMenuItem>
           <DropdownMenuItem 
             onClick={() => handleContactOption('linkedin')}
             className="cursor-pointer text-sm"
           >
-            <Linkedin className="ml-2 h-4 w-4 text-slate-600" />
+            <EnhancedIcon
+              icon={Linkedin}
+              size="sm"
+              variant="interactive"
+              className="ml-2 text-slate-600"
+              ariaLabel="لينكد إن"
+            />
             <span>لينكد إن</span>
           </DropdownMenuItem>
           <DropdownMenuItem 
             onClick={() => handleContactOption('email')}
             className="cursor-pointer text-sm"
           >
-            <Mail className="ml-2 h-4 w-4 text-slate-600" />
+            <EnhancedIcon
+              icon={Mail}
+              size="sm"
+              variant="interactive"
+              className="ml-2 text-slate-600"
+              ariaLabel="البريد الإلكتروني"
+            />
             <span>البريد الإلكتروني</span>
           </DropdownMenuItem>
         </DropdownMenuContent>
@@ -133,7 +182,13 @@ const Navigation = ({ services, companyInfo }: NavigationProps) => {
         className="p-2 bg-gradient-dark-blue hover:bg-brand-blue-dark text-white rounded-lg transition-all duration-300 shadow-sm hover:shadow-md transform hover:scale-105"
         title="تابعونا على LinkedIn"
       >
-        <Linkedin className="h-4 w-4 text-white" />
+        <EnhancedIcon
+          icon={Linkedin}
+          size="sm"
+          variant="interactive"
+          className="text-white"
+          ariaLabel="تابعونا على LinkedIn"
+        />
       </a>
       
       <WhatsAppButton 

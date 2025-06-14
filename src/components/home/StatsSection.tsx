@@ -1,5 +1,6 @@
 
 import { Briefcase, Users, Shield, Heart } from "lucide-react";
+import EnhancedIcon from "@/components/ui/enhanced-icon";
 
 const StatsSection = () => {
   const stats = [
@@ -18,12 +19,20 @@ const StatsSection = () => {
         </div>
         <div className="grid md:grid-cols-4 gap-6 sm:gap-8">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-3">
-                <stat.icon className="h-7 w-7 sm:h-8 sm:w-8 text-white" />
+            <div key={index} className="text-center group">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-white/30 transition-all duration-300 group-hover:scale-110">
+                <EnhancedIcon
+                  icon={stat.icon}
+                  size="lg"
+                  variant="interactive"
+                  className="text-white"
+                  ariaLabel={`أيقونة ${stat.label}`}
+                  title={stat.label}
+                  animate={true}
+                />
               </div>
-              <div className="text-3xl sm:text-4xl font-bold mb-1 text-slate-100">{stat.number}</div>
-              <div className="text-base sm:text-lg opacity-90">{stat.label}</div>
+              <div className="text-3xl sm:text-4xl font-bold mb-1 text-slate-100 group-hover:text-white transition-colors duration-300">{stat.number}</div>
+              <div className="text-base sm:text-lg opacity-90 group-hover:opacity-100 transition-opacity duration-300">{stat.label}</div>
             </div>
           ))}
         </div>
