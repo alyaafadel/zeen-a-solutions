@@ -78,10 +78,10 @@ const ServicesSection = ({ services }: ServicesSectionProps) => {
   });
 
   return (
-    <section className="py-4 sm:py-6 md:py-8 lg:py-12 bg-pattern-subtle">
+    <section className="py-3 sm:py-4 md:py-5 lg:py-8 bg-pattern-subtle">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-4 sm:mb-6 md:mb-8">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-brand-blue-dark mb-2 sm:mb-2">خدماتنا المتخصصة</h2>
+        <div className="text-center mb-3 sm:mb-4 md:mb-5">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-brand-blue-dark mb-1.5 sm:mb-2">خدماتنا المتخصصة</h2>
           <p className="text-sm sm:text-base md:text-lg text-slate-600 max-w-4xl mx-auto leading-relaxed px-2 mb-1">
             نقدم خدمات احترافية متنوعة للشركات والأفراد - كشركاء متخصصين لإنجاز مهامكم دون الحاجة لتوظيف فرق دائمة
           </p>
@@ -97,28 +97,28 @@ const ServicesSection = ({ services }: ServicesSectionProps) => {
               className="group cursor-pointer hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-white/95 backdrop-blur-sm border-0 shadow-lg text-center h-full flex flex-col"
               onClick={() => navigate(service.route)}
             >
-              <CardHeader className="pb-1 sm:pb-1.5 flex-shrink-0 px-2 sm:px-3 pt-1.5 sm:pt-2">
+              <CardHeader className="pb-0.5 sm:pb-1 flex-shrink-0 px-1.5 sm:px-2 pt-1.5 sm:pt-2">
                 <div className={`w-8 sm:w-10 h-8 sm:h-10 ${
                   index % 3 === 0 ? 'bg-gradient-blue' : 
                   index % 3 === 1 ? 'bg-gradient-blue-light' : 
                   'bg-gradient-dark-blue'
-                } rounded-xl flex items-center justify-center mx-auto mb-1 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                } rounded-xl flex items-center justify-center mx-auto mb-0.5 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                 </div>
                 <CardTitle className="text-xs sm:text-sm font-bold text-brand-blue-dark group-hover:text-brand-blue transition-colors duration-300 mb-0.5 px-1 leading-tight">
                   {service.title}
                 </CardTitle>
-                <CardDescription className="text-slate-600 leading-tight text-xs px-1 line-clamp-3">
+                <CardDescription className="text-slate-600 leading-snug text-xs px-1 line-clamp-3">
                   {service.description}
                 </CardDescription>
               </CardHeader>
               
               {service.benefits && (
-                <div className="px-2 sm:px-3 mb-1 flex-grow">
+                <div className="px-1.5 sm:px-2 mb-1 flex-grow">
                   <div className="text-xs text-brand-blue font-semibold mb-0.5">المزايا الرئيسية:</div>
                   <ul className="text-xs text-slate-600 space-y-0">
                     {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center justify-center leading-tight text-xs">
+                      <li key={idx} className="flex items-center justify-center leading-snug text-xs">
                         <span className="w-1 h-1 bg-brand-blue rounded-full mr-1.5 flex-shrink-0"></span>
                         {benefit}
                       </li>
@@ -127,7 +127,7 @@ const ServicesSection = ({ services }: ServicesSectionProps) => {
                 </div>
               )}
               
-              <CardContent className="pt-0 px-2 sm:px-3 mt-auto pb-1.5">
+              <CardContent className="pt-0 px-1.5 sm:px-2 mt-auto pb-1">
                 <WhatsAppButton 
                   phoneNumber="+966570513821"
                   message={`مرحباً، أريد الاستفسار عن خدمات ${service.title}`}
@@ -137,7 +137,7 @@ const ServicesSection = ({ services }: ServicesSectionProps) => {
                     index % 3 === 0 ? 'bg-gradient-blue hover:bg-brand-accent-blue' : 
                     index % 3 === 1 ? 'bg-gradient-blue-light hover:bg-brand-blue' : 
                     'bg-gradient-dark-blue hover:bg-brand-blue-dark'
-                  } text-white border-0 py-1 mb-1 shadow-md hover:shadow-lg transition-all duration-300 text-xs`}
+                  } text-white border-0 py-1 mb-0.5 shadow-md hover:shadow-lg transition-all duration-300 text-xs`}
                 />
                 <div className="flex items-center justify-center text-slate-600 group-hover:text-brand-blue transition-colors duration-300">
                   <span className="text-xs font-medium ml-1">اعرف المزيد</span>
