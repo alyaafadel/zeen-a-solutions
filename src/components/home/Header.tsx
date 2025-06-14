@@ -1,5 +1,5 @@
 
-import { Users, Info, UserPlus, Phone, Settings, Linkedin, MessageSquare, Mail } from "lucide-react";
+import { Users, Info, UserPlus, Phone, Grid3X3, Linkedin, MessageSquare, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { useNavigate } from "react-router-dom";
@@ -107,21 +107,24 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="text-slate-600 hover:text-slate-700 hover:bg-slate-50 transition-all duration-200 font-medium"
+                  className="text-slate-600 hover:text-slate-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:border-blue-200 transition-all duration-300 font-medium px-6 py-2 rounded-lg border-2 border-transparent shadow-sm hover:shadow-md"
                 >
-                  <Settings className="ml-2 h-4 w-4" />
-                  خدماتنا
+                  <Grid3X3 className="ml-2 h-4 w-4 text-blue-500" />
+                  خدماتنا المتنوعة
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-56 bg-white" align="center">
+              <DropdownMenuContent className="w-64 bg-white shadow-xl border-2 border-blue-100" align="center">
+                <div className="p-2 bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-blue-100">
+                  <p className="text-sm font-semibold text-slate-700 text-center">استكشف جميع خدماتنا</p>
+                </div>
                 {services.map((service, index) => (
                   <DropdownMenuItem 
                     key={index}
                     onClick={() => navigate(service.route)}
-                    className="cursor-pointer"
+                    className="cursor-pointer py-3 px-4 hover:bg-blue-50 transition-colors duration-200"
                   >
-                    <service.icon className="ml-2 h-4 w-4" />
-                    <span>{service.title}</span>
+                    <service.icon className="ml-3 h-5 w-5 text-blue-500" />
+                    <span className="font-medium">{service.title}</span>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
