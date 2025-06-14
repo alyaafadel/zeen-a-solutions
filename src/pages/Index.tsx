@@ -1,4 +1,5 @@
-import { Users, Languages, Megaphone, Code, Truck, ArrowRight, CheckCircle, MessageSquare, GraduationCap, Linkedin } from "lucide-react";
+
+import { Users, Languages, Megaphone, Code, Truck, ArrowRight, CheckCircle, MessageSquare, GraduationCap, Linkedin, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
@@ -79,6 +80,18 @@ const Index = () => {
       iconColor: "text-indigo-600",
       route: "/training-services",
       features: ["دورات تدريبية متخصصة", "ورش عمل تطبيقية", "التدريب الرقمي", "شهادات معتمدة"]
+    },
+    {
+      title: "التوجيه المهني والسيرة الذاتية",
+      brandName: "Zeen Career Solutions",
+      logo: "💼",
+      description: "خدمات شاملة لتطوير مسارك المهني وكتابة السيرة الذاتية",
+      icon: Briefcase,
+      color: "from-emerald-500 to-teal-600",
+      bgColor: "bg-emerald-50",
+      iconColor: "text-emerald-600",
+      route: "/career-services",
+      features: ["كتابة السيرة الذاتية", "التحضير للمقابلات", "التوجيه المهني", "البحث عن عمل"]
     }
   ];
 
