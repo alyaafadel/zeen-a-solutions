@@ -1,5 +1,5 @@
 
-import { ArrowLeft, Target, Eye, Users, Award, Clock, MapPin, Lightbulb, Shield, Handshake, Star, TrendingUp, CheckCircle, Heart, Globe, Zap } from "lucide-react";
+import { ArrowLeft, Target, Eye, Users, Award, Clock, MapPin, Lightbulb, Shield, Handshake, Star, TrendingUp, CheckCircle, Heart, Globe, Zap, UserPlus, Building2, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
@@ -16,55 +16,55 @@ const About = () => {
   };
 
   const achievements = [
-    { icon: Users, number: "200+", label: "مشروع ناجح", color: "from-emerald-500 to-teal-600", bgColor: "bg-emerald-50" },
-    { icon: Star, number: "95%", label: "رضا العملاء", color: "from-amber-500 to-orange-600", bgColor: "bg-amber-50" },
-    { icon: Clock, number: "8+", label: "سنوات تميز", color: "from-violet-500 to-purple-600", bgColor: "bg-violet-50" },
-    { icon: TrendingUp, number: "150+", label: "شريك نجاح", color: "from-rose-500 to-pink-600", bgColor: "bg-rose-50" }
+    { icon: Building2, number: "200+", label: "شراكة ناجحة", color: "from-emerald-500 to-teal-600", bgColor: "bg-emerald-50" },
+    { icon: Star, number: "95%", label: "رضا الشركاء", color: "from-amber-500 to-orange-600", bgColor: "bg-amber-50" },
+    { icon: Rocket, number: "8+", label: "سنوات خبرة", color: "from-violet-500 to-purple-600", bgColor: "bg-violet-50" },
+    { icon: UserPlus, number: "150+", label: "مشروع فردي", color: "from-rose-500 to-pink-600", bgColor: "bg-rose-50" }
   ];
 
   const coreValues = [
     {
-      title: "التميز في الأداء",
-      description: "نسعى دائماً لتقديم أفضل ما لدينا، ونتجاوز توقعات عملائنا في كل مشروع نعمل عليه لضمان تحقيق النتائج المثلى",
-      icon: Award,
+      title: "الشراكة الحقيقية",
+      description: "نعمل كجزء من فريقكم، نفهم ثقافة شركتكم وأهدافكم، ونقدم خدماتنا كأننا موظفون داخليون لديكم",
+      icon: Handshake,
       gradient: "from-blue-600 via-blue-700 to-indigo-800",
       bgGradient: "from-blue-50 to-indigo-100"
     },
     {
-      title: "الشراكة الحقيقية",
-      description: "نؤمن بالعمل كفريق واحد مع عملائنا، نفهم أهدافهم ونعمل معاً لتحقيقها في جو من الثقة والاحترام المتبادل",
-      icon: Handshake,
+      title: "التخصص العميق",
+      description: "كل مشروع يتم تنفيذه من قبل متخصص في المجال المطلوب، مما يضمن جودة عالية وخبرة متقدمة",
+      icon: Target,
       gradient: "from-emerald-600 via-green-700 to-teal-800",
       bgGradient: "from-emerald-50 to-teal-100"
     },
     {
-      title: "الابتكار والإبداع",
-      description: "نواكب التطورات العالمية ونطبق أحدث الحلول والتقنيات المبتكرة لضمان تفوق عملائنا في السوق التنافسي",
-      icon: Lightbulb,
+      title: "المرونة والسرعة",
+      description: "نتكيف مع احتياجاتكم المتغيرة ونقدم حلول سريعة دون تعقيدات الإدارة التقليدية للفرق",
+      icon: Zap,
       gradient: "from-amber-600 via-orange-700 to-red-800",
       bgGradient: "from-amber-50 to-orange-100"
     },
     {
-      title: "الثقة والشفافية",
-      description: "نبني علاقاتنا على أساس الثقة المتبادلة والتواصل الواضح والشفاف، مما يضمن نجاح الشراكة على المدى الطويل",
-      icon: Shield,
+      title: "التكلفة المثلى",
+      description: "نقدم خدمات عالية الجودة بتكلفة أقل من توظيف فريق كامل، مع ضمان النتائج المطلوبة",
+      icon: Award,
       gradient: "from-violet-600 via-purple-700 to-indigo-800",
       bgGradient: "from-violet-50 to-purple-100"
     }
   ];
 
   const whyChooseUs = [
-    { text: "فريق خبراء متخصص في مجالات متنوعة", icon: Users },
-    { text: "حلول مخصصة تناسب احتياجات كل عميل", icon: Target },
-    { text: "دعم فني مستمر على مدار الساعة", icon: Clock },
-    { text: "أسعار تنافسية وخطط دفع مرنة", icon: Heart },
-    { text: "ضمان الجودة وسرعة التنفيذ", icon: Zap },
-    { text: "خبرة واسعة في السوق السعودي", icon: Globe }
+    { text: "متخصصون في العمل مع الشركات الناشئة والمتوسطة", icon: Building2 },
+    { text: "نعمل كأعضاء في فريقكم، ليس كمورد خارجي", icon: UserPlus },
+    { text: "مسؤولية كاملة عن جودة الخدمة المقدمة", icon: Shield },
+    { text: "توفير تكلفة توظيف فريق كامل", icon: TrendingUp },
+    { text: "مرونة في التعامل مع المشاريع المختلفة", icon: Zap },
+    { text: "خبرة عملية في بيئة الأعمال السعودية", icon: Globe }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50" dir="rtl">
-      {/* Enhanced Header */}
+      {/* Header */}
       <header className="bg-white/95 backdrop-blur-xl shadow-lg border-b border-blue-100/50 sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
@@ -88,33 +88,31 @@ const About = () => {
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-800 bg-clip-text text-transparent">
                   {companyInfo.name}
                 </h1>
-                <p className="text-sm text-gray-500">شريكك في النجاح</p>
+                <p className="text-sm text-gray-500">شريكك المتخصص في النجاح</p>
               </div>
             </div>
           </div>
         </div>
       </header>
 
-      {/* Hero Section with Enhanced Design */}
+      {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-900"></div>
         <div className="absolute inset-0 bg-black/20"></div>
-        {/* Animated Background Elements */}
         <div className="absolute top-20 right-20 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-indigo-400/10 rounded-full blur-3xl animate-pulse delay-700"></div>
         
         <div className="container mx-auto px-6 text-center relative z-10">
           <div className="max-w-5xl mx-auto">
             <h1 className="text-6xl md:text-7xl font-bold mb-8 leading-tight text-white">
-              نحن <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-cyan-200">شركاؤكم</span> في
+              نحن <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-cyan-200">جزء من فريقكم</span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-orange-200">التميز والنجاح</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-orange-200">بخبرة متخصصة</span>
             </h1>
             <p className="text-2xl mb-12 max-w-4xl mx-auto leading-relaxed text-blue-100 font-light">
-              في Zeen A Plus Solutions، نحن أكثر من مجرد مقدمي خدمات - نحن شركاؤكم الاستراتيجيون في رحلة النمو والتطوير
+              نعمل مع الشركات الناشئة والمتوسطة كمتخصصين في فريقكم، نقدم خدمات عالية الجودة دون تكلفة توظيف فريق كامل
             </p>
             
-            {/* Enhanced Achievement Cards */}
             <div className="grid md:grid-cols-4 gap-8 mt-16">
               {achievements.map((achievement, index) => (
                 <div 
@@ -133,14 +131,14 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission and Vision with New Layout */}
+      {/* Mission and Vision */}
       <section className="py-24 bg-gradient-to-br from-white via-blue-50 to-indigo-100">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-gray-800 mb-6">رؤيتنا ومهمتنا</h2>
+            <h2 className="text-5xl font-bold text-gray-800 mb-6">مفهومنا في العمل</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              نستشرف المستقبل بعزيمة راسخة ورؤية واضحة لنكون الرواد في تقديم الحلول المتكاملة
+              نؤمن بأن الشركات الناشئة والمتوسطة تحتاج لخبرات متخصصة دون تعقيدات إدارة فرق كاملة
             </p>
           </div>
           
@@ -156,8 +154,8 @@ const About = () => {
               </CardHeader>
               <CardContent className="relative z-10 text-center px-8 pb-12">
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  أن نكون الشريك الاستراتيجي الأكثر ثقة في المنطقة، نساهم في تحويل الأفكار إلى واقع ملموس، 
-                  ونمكن الشركات والأفراد من تحقيق إمكاناتهم الكاملة والوصول إلى مستويات جديدة من النجاح والتميز في عالم يتطور بسرعة
+                  أن نكون الخيار الأول للشركات التي تبحث عن متخصصين يعملون كجزء من فريقها، نساهم في نموها 
+                  وتطورها بمرونة عالية وتكلفة مثلى، ونمكنها من التركيز على أعمالها الأساسية بثقة تامة
                 </p>
               </CardContent>
             </Card>
@@ -173,8 +171,8 @@ const About = () => {
               </CardHeader>
               <CardContent className="relative z-10 text-center px-8 pb-12">
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  نقدم حلولاً متكاملة ومبتكرة في مجالات الموارد البشرية، التقنية، التسويق، والترجمة. 
-                  نعمل بشغف وإتقان لفهم احتياجات عملائنا الفريدة، ونطور استراتيجيات مخصصة تحقق أهدافهم وتفوق توقعاتهم بمعايير عالمية
+                  نقدم خدمات متخصصة في الموارد البشرية، التقنية، التسويق، والترجمة للشركات الناشئة والمتوسطة. 
+                  نعمل كأعضاء في فريقكم، نتحمل المسؤولية الكاملة عن جودة الخدمة، ونحقق أهدافكم بكفاءة ومرونة عالية
                 </p>
               </CardContent>
             </Card>
@@ -182,14 +180,14 @@ const About = () => {
         </div>
       </section>
 
-      {/* Enhanced Core Values */}
+      {/* Core Values */}
       <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-slate-100">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-gray-800 mb-6">قيمنا الأساسية</h2>
+            <h2 className="text-5xl font-bold text-gray-800 mb-6">مبادئ عملنا</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-600 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              المبادئ الراسخة التي تحكم عملنا وتشكل هويتنا المؤسسية وتوجه قراراتنا الاستراتيجية
+              القيم التي تحكم طريقة تعاملنا مع شركائنا وتضمن نجاح الشراكة على المدى الطويل
             </p>
           </div>
           
@@ -213,14 +211,14 @@ const About = () => {
         </div>
       </section>
 
-      {/* Enhanced Why Choose Us */}
+      {/* Why Choose Us */}
       <section className="py-24 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-5xl font-bold text-gray-800 mb-6">لماذا تختار Zeen A Plus Solutions؟</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-teal-600 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              نتميز بمجموعة فريدة من المزايا التنافسية التي تجعلنا الخيار الأمثل والأكثر موثوقية لشركتك
+              مزايا فريدة تجعلنا الشريك المثالي للشركات التي تريد خبرات متخصصة بمرونة عالية
             </p>
           </div>
           
@@ -237,30 +235,29 @@ const About = () => {
         </div>
       </section>
 
-      {/* Enhanced CTA Section */}
+      {/* CTA Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800"></div>
         <div className="absolute inset-0 bg-black/30"></div>
-        {/* Animated elements */}
         <div className="absolute top-10 right-10 w-80 h-80 bg-blue-400/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-10 left-10 w-96 h-96 bg-purple-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         
         <div className="container mx-auto px-6 text-center relative z-10">
           <h2 className="text-5xl md:text-6xl font-bold mb-8 text-white leading-tight">
-            هل أنت مستعد لبدء 
+            هل تبحث عن متخصص 
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-orange-200">رحلة التميز؟</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-orange-200">ينضم لفريقك؟</span>
           </h2>
           <p className="text-2xl mb-12 text-blue-100 max-w-4xl mx-auto leading-relaxed font-light">
-            انضم إلى مئات الشركات والأفراد الذين وثقوا بنا واختاروا Zeen A Plus Solutions شريكاً في نجاحهم. 
-            دعنا نساعدك في تحويل أحلامك إلى حقيقة ملموسة
+            احصل على خبرات متخصصة تعمل معك كجزء من فريقك، بمرونة عالية وتكلفة مثلى. 
+            دعنا نكون شريكك في النجاح والنمو
           </p>
           <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
             <WhatsAppButton 
               phoneNumber={companyInfo.whatsapp}
-              message="مرحباً، أريد معرفة المزيد عن Zeen A Plus Solutions وكيف يمكنكم مساعدتي في تحقيق أهدافي"
+              message="مرحباً، أريد التحدث معكم حول انضمام متخصص من فريقكم لمساعدتنا في مشاريعنا"
               variant="cta"
-              text="ابدأ رحلتك معنا الآن"
+              text="ابدأ الشراكة معنا"
               className="bg-gradient-to-r from-white to-blue-50 text-blue-600 hover:from-blue-50 hover:to-white border-0 px-10 py-4 text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 rounded-2xl"
             />
             <Button
