@@ -97,16 +97,16 @@ const About = () => {
               <span className="font-medium text-sm sm:text-base lg:text-lg">العودة للرئيسية</span>
             </Button>
             <div className="flex items-center space-x-3 sm:space-x-4 space-x-reverse">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-blue rounded-xl flex items-center justify-center shadow-lg border-2 border-white">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-blue rounded-xl flex items-center justify-center shadow-lg border-2 border-white">
                 <img 
                   src="/lovable-uploads/8838bb20-a5cc-4ab1-9fce-30cdb0f93521.png" 
                   alt="Zeen A Plus Solutions Logo" 
-                  className="w-6 h-6 sm:w-7 sm:h-7 object-contain filter brightness-200"
+                  className="w-8 h-8 sm:w-10 sm:h-10 object-contain filter brightness-200"
                 />
               </div>
               <div>
-                <h1 className="text-base sm:text-lg lg:text-xl font-bold text-brand-blue-dark leading-tight">{companyInfo.name}</h1>
-                <p className="text-xs sm:text-sm text-slate-600 leading-tight">شركاؤكم في التميز والإنجاز</p>
+                <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-brand-blue-dark leading-tight">{companyInfo.name}</h1>
+                <p className="text-sm sm:text-base text-slate-600 leading-tight">شركاؤكم في التميز والإنجاز</p>
               </div>
             </div>
           </div>
@@ -281,7 +281,7 @@ const About = () => {
               <CardTitle className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3">
                 دعوة للعمل
               </CardTitle>
-              <CardDescription className="text-base sm:text-lg md:text-xl text-brand-light-blue max-w-4xl mx-auto mb-3">
+              <CardDescription className="text-base sm:text-lg md:text-xl text-white max-w-4xl mx-auto mb-3">
                 انضموا إلى قائمة شركائنا الناجحين. تواصلوا معنا اليوم لمناقشة كيف يمكن لـ Zeen A Plus Solutions أن تكون شريككم الأمثل في رحلة النجاح
               </CardDescription>
             </CardHeader>
