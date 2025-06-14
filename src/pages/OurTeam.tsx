@@ -1,0 +1,250 @@
+
+import { ArrowLeft, Linkedin, Mail, Award, Users, Target, Heart } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
+
+const OurTeam = () => {
+  const navigate = useNavigate();
+
+  const founders = [
+    {
+      name: "أحمد محمد العلي",
+      position: "المؤسس والرئيس التنفيذي",
+      expertise: "إدارة الأعمال والتطوير الاستراتيجي",
+      experience: "15+ سنة",
+      education: "ماجستير إدارة الأعمال - جامعة الملك سعود",
+      achievements: [
+        "قاد أكثر من 200 مشروع ناجح",
+        "خبير معتمد في التطوير التنظيمي",
+        "مدرب معتمد في القيادة الإدارية"
+      ],
+      image: "/lovable-uploads/team-member-1.jpg",
+      linkedin: "https://linkedin.com",
+      email: "ahmed@zeenaplusolutions.com"
+    },
+    {
+      name: "فاطمة سعد الشهري",
+      position: "نائب الرئيس للموارد البشرية",
+      expertise: "إدارة المواهب والتطوير المهني",
+      experience: "12+ سنة",
+      education: "ماجستير علم النفس التنظيمي - جامعة الإمام",
+      achievements: [
+        "طورت برامج تدريبية لأكثر من 5000 موظف",
+        "خبيرة معتمدة في تقييم الأداء",
+        "حاصلة على شهادة SHRM-SCP الدولية"
+      ],
+      image: "/lovable-uploads/team-member-2.jpg",
+      linkedin: "https://linkedin.com",
+      email: "fatima@zeenaplusolutions.com"
+    },
+    {
+      name: "محمد عبدالله النجار",
+      position: "مدير التكنولوجيا والتطوير",
+      expertise: "تطوير البرمجيات والحلول الرقمية",
+      experience: "10+ سنوات",
+      education: "بكالوريوس هندسة الحاسوب - جامعة الملك فهد",
+      achievements: [
+        "طور أكثر من 100 تطبيق ويب وموبايل",
+        "خبير في الذكاء الاصطناعي وعلوم البيانات",
+        "حاصل على شهادات من Google وMicrosoft"
+      ],
+      image: "/lovable-uploads/team-member-3.jpg",
+      linkedin: "https://linkedin.com",
+      email: "mohammed@zeenaplusolutions.com"
+    },
+    {
+      name: "سارة أحمد القحطاني",
+      position: "مديرة التسويق والعلاقات العامة",
+      expertise: "التسويق الرقمي والعلامات التجارية",
+      experience: "8+ سنوات",
+      education: "ماجستير التسويق - جامعة الأميرة نورة",
+      achievements: [
+        "نجحت في زيادة مبيعات العملاء بنسبة 300%",
+        "خبيرة معتمدة في Google Ads وFacebook Marketing",
+        "حازت على جوائز التميز في التسويق الرقمي"
+      ],
+      image: "/lovable-uploads/team-member-4.jpg",
+      linkedin: "https://linkedin.com",
+      email: "sara@zeenaplusolutions.com"
+    }
+  ];
+
+  const companyValues = [
+    {
+      icon: Target,
+      title: "الرؤية المشتركة",
+      description: "نعمل معاً لتحقيق أهداف عملائنا بأعلى معايير الجودة"
+    },
+    {
+      icon: Users,
+      title: "روح الفريق",
+      description: "قوتنا في تنوع خبراتنا وتكاملها لخدمة عملائنا"
+    },
+    {
+      icon: Heart,
+      title: "الشغف والالتزام",
+      description: "نؤمن بأن النجاح يأتي من الشغف والعمل الجاد"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200" dir="rtl">
+      {/* Header */}
+      <header className="bg-white/95 backdrop-blur-md shadow-lg border-b border-slate-200">
+        <div className="container mx-auto px-4 py-6">
+          <div className="flex items-center justify-between">
+            <Button
+              variant="ghost"
+              onClick={() => navigate('/')}
+              className="flex items-center space-x-2 space-x-reverse text-slate-700 hover:text-slate-900"
+            >
+              <ArrowLeft className="h-5 w-5" />
+              <span>العودة للرئيسية</span>
+            </Button>
+            <div className="text-center">
+              <h1 className="text-3xl font-bold bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">
+                فريقنا المتميز
+              </h1>
+              <p className="text-slate-600 mt-2">الخبراء المؤسسون وراء نجاح Zeen A Plus Solutions</p>
+            </div>
+            <div className="w-24"></div>
+          </div>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="py-16 bg-gradient-to-r from-slate-800 to-slate-900 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">نحن فريق من الخبراء المتخصصين</h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
+            يجمعنا الشغف بالتميز والالتزام بتقديم أفضل الحلول لعملائنا. 
+            خبراتنا المتنوعة وتجاربنا الواسعة تمكننا من فهم احتياجاتكم وتحقيق طموحاتكم
+          </p>
+        </div>
+      </section>
+
+      {/* Company Values */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-slate-800 mb-4">قيمنا المؤسسية</h3>
+            <p className="text-lg text-slate-600">المبادئ التي توجه عملنا وتحدد هويتنا</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {companyValues.map((value, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <value.icon className="h-8 w-8 text-white" />
+                </div>
+                <h4 className="text-xl font-bold text-slate-800 mb-2">{value.title}</h4>
+                <p className="text-slate-600">{value.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team Members */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-slate-100">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h3 className="text-4xl font-bold text-slate-800 mb-4">الخبراء المؤسسون</h3>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              تعرف على فريق القيادة الذي يقود رؤية الشركة ويضع استراتيجيات النجاح
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {founders.map((founder, index) => (
+              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 bg-white border-0 shadow-lg overflow-hidden">
+                <CardHeader className="text-center pb-4">
+                  <div className="w-32 h-32 bg-gradient-to-br from-slate-700 to-slate-800 rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl">
+                    <Users className="h-16 w-16 text-white" />
+                  </div>
+                  <h4 className="text-2xl font-bold text-slate-800 mb-2">{founder.name}</h4>
+                  <p className="text-lg font-semibold text-amber-600 mb-2">{founder.position}</p>
+                  <p className="text-slate-600">{founder.expertise}</p>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="flex items-center justify-center space-x-4 space-x-reverse text-sm text-slate-600">
+                    <div className="flex items-center space-x-1 space-x-reverse">
+                      <Award className="h-4 w-4" />
+                      <span>{founder.experience}</span>
+                    </div>
+                  </div>
+                  
+                  <div className="text-center">
+                    <p className="text-sm text-slate-600 mb-3">{founder.education}</p>
+                    
+                    <div className="space-y-2 text-sm text-slate-700">
+                      <h5 className="font-semibold text-slate-800">الإنجازات الرئيسية:</h5>
+                      <ul className="space-y-1">
+                        {founder.achievements.map((achievement, idx) => (
+                          <li key={idx} className="flex items-start space-x-2 space-x-reverse">
+                            <span className="text-amber-500 mt-1">•</span>
+                            <span>{achievement}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="flex justify-center space-x-4 space-x-reverse pt-4 border-t">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => window.open(founder.linkedin, '_blank')}
+                      className="flex items-center space-x-2 space-x-reverse"
+                    >
+                      <Linkedin className="h-4 w-4" />
+                      <span>LinkedIn</span>
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => window.open(`mailto:${founder.email}`, '_blank')}
+                      className="flex items-center space-x-2 space-x-reverse"
+                    >
+                      <Mail className="h-4 w-4" />
+                      <span>تواصل</span>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-16 bg-gradient-to-r from-slate-800 to-slate-900 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h3 className="text-3xl font-bold mb-4">مستعدون لخدمتكم</h3>
+          <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
+            فريقنا من الخبراء جاهز لمساعدتكم في تحقيق أهدافكم وتطوير أعمالكم
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              size="lg"
+              onClick={() => navigate('/custom-request')}
+              className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            >
+              ابدأ مشروعك معنا
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={() => navigate('/')}
+              className="border-white text-white hover:bg-white hover:text-slate-800 px-8 py-3 transition-all duration-300"
+            >
+              تصفح خدماتنا
+            </Button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default OurTeam;

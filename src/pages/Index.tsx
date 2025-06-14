@@ -1,4 +1,3 @@
-
 import { Users, Languages, Megaphone, Code, Truck, ArrowRight, CheckCircle, MessageSquare, GraduationCap, Linkedin, Briefcase, Info, UserPlus, Phone, Settings, Star, Mail, Zap, Shield, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -189,7 +188,7 @@ const Index = () => {
               </a>
               <WhatsAppButton 
                 phoneNumber={companyInfo.whatsapp}
-                message="مرحباً، أريد الاستفسار عن خدماتكم"
+                message="مرحباً، أريد بدء مشروع جديد مع Zeen A Plus Solutions"
                 variant="header"
               />
             </div>
@@ -208,6 +207,16 @@ const Index = () => {
               >
                 <Info className="ml-2 h-4 w-4" />
                 من نحن
+              </Button>
+              
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => navigate('/our-team')}
+                className="text-slate-700 hover:text-slate-800 hover:bg-slate-50 transition-all duration-200 font-medium"
+              >
+                <Users className="ml-2 h-4 w-4" />
+                فريقنا
               </Button>
               
               <DropdownMenu>

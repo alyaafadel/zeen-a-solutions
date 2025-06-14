@@ -16,6 +16,7 @@ import ProgrammingServices from "./pages/ProgrammingServices";
 import LogisticsServices from "./pages/LogisticsServices";
 import TrainingServices from "./pages/TrainingServices";
 import CareerServices from "./pages/CareerServices";
+import OurTeam from "./pages/OurTeam";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
+          <Route path="/our-team" element={<OurTeam />} />
           <Route path="/join-us" element={<JoinUs />} />
           <Route path="/custom-request" element={<CustomRequest />} />
           <Route path="/custom-solutions" element={<CustomSolutions />} />
