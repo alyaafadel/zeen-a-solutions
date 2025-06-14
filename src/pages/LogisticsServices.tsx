@@ -1,5 +1,5 @@
 
-import { Truck, Package, Warehouse, MapPin, Clock, Shield, ArrowRight, CheckCircle, MessageSquare, Users } from "lucide-react";
+import { Truck, Package, Warehouse, MapPin, Clock, Shield, ArrowRight, CheckCircle, MessageSquare, Users, ShieldCheck, QualityIcon as Quality } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
@@ -40,6 +40,22 @@ const LogisticsServices = () => {
       color: "from-orange-500 to-orange-600",
       bgColor: "bg-orange-50", 
       features: ["إدارة المخزون", "معالجة الطلبات", "التوزيع", "خدمة العملاء"]
+    },
+    {
+      title: "خدمات السلامة المهنية",
+      description: "تطبيق أعلى معايير السلامة والصحة المهنية في جميع العمليات اللوجستية",
+      icon: ShieldCheck,
+      color: "from-red-500 to-red-600",
+      bgColor: "bg-red-50",
+      features: ["تقييم المخاطر", "التدريب على السلامة", "فحص المعدات", "الامتثال للمعايير الدولية"]
+    },
+    {
+      title: "ضمان الجودة والتحكم",
+      description: "أنظمة ضمان الجودة الشاملة لضمان أعلى مستوى من الخدمة",
+      icon: Shield,
+      color: "from-indigo-500 to-indigo-600",
+      bgColor: "bg-indigo-50",
+      features: ["فحص الجودة", "ISO معتمد", "التحسين المستمر", "التدقيق الداخلي"]
     }
   ];
 
@@ -58,6 +74,11 @@ const LogisticsServices = () => {
       icon: MapPin,
       title: "تغطية شاملة",
       description: "شبكة توزيع واسعة تغطي جميع المناطق"
+    },
+    {
+      icon: ShieldCheck,
+      title: "معايير السلامة الدولية",
+      description: "التزام كامل بمعايير السلامة والصحة المهنية العالمية"
     }
   ];
 
@@ -66,6 +87,29 @@ const LogisticsServices = () => {
     phone: "+966123456789",
     whatsapp: "+966123456789"
   };
+
+  const specializedServices = [
+    {
+      title: "استشارات السلامة المهنية",
+      description: "تقييم شامل لمخاطر السلامة وتطوير خطط الطوارئ",
+      icon: ShieldCheck
+    },
+    {
+      title: "إدارة الجودة الشاملة",
+      description: "تطبيق أنظمة الجودة العالمية وشهادات الاعتماد",
+      icon: Shield
+    },
+    {
+      title: "التدريب المتخصص",
+      description: "برامج تدريبية للعاملين في القطاع اللوجستي",
+      icon: Users
+    },
+    {
+      title: "الامتثال والتدقيق",
+      description: "مراجعة الامتثال للمعايير الدولية والمحلية",
+      icon: Package
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100" dir="rtl">
@@ -89,12 +133,12 @@ const LogisticsServices = () => {
               </div>
               <div>
                 <h1 className="text-xl font-bold text-gray-800">{companyInfo.name}</h1>
-                <p className="text-sm text-gray-600">الخدمات اللوجستية</p>
+                <p className="text-sm text-gray-600">الخدمات اللوجستية والسلامة</p>
               </div>
             </div>
             <WhatsAppButton 
               phoneNumber={companyInfo.whatsapp}
-              message="مرحباً، أريد الاستفسار عن الخدمات اللوجستية"
+              message="مرحباً، أريد الاستفسار عن الخدمات اللوجستية والسلامة"
               variant="header"
             />
           </div>
@@ -106,16 +150,16 @@ const LogisticsServices = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="mb-12">
             <h2 className="text-5xl font-bold text-gray-800 mb-6">
-              الخدمات اللوجستية وحلول 3PL
+              الخدمات اللوجستية المتكاملة والسلامة المهنية
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               نقدم حلولاً لوجستية متكاملة ومتطورة تشمل التخزين، النقل، وإدارة سلسلة التوريد 
-              بأعلى معايير الجودة والكفاءة لضمان نجاح أعمالك
+              مع التركيز على أعلى معايير السلامة والجودة لضمان نجاح أعمالك
             </p>
           </div>
 
-          {/* Services Grid */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-20">
+          {/* Main Services Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-20">
             {services.map((service, index) => (
               <Card key={index} className="group hover:shadow-2xl transition-all duration-300 border-0 shadow-lg overflow-hidden">
                 <CardHeader className={`${service.bgColor} pb-6`}>
@@ -151,6 +195,30 @@ const LogisticsServices = () => {
         </div>
       </section>
 
+      {/* Specialized Services Section */}
+      <section className="py-20 bg-white/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h3 className="text-4xl font-bold text-gray-800 mb-4">خدمات متخصصة إضافية</h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              خدمات مكملة ومتخصصة تضمن التميز في الأداء والامتثال للمعايير العالمية
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {specializedServices.map((service, index) => (
+              <div key={index} className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                <div className="w-16 h-16 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <service.icon className="h-8 w-8 text-white" />
+                </div>
+                <h4 className="text-lg font-bold text-gray-800 mb-3">{service.title}</h4>
+                <p className="text-gray-600 leading-relaxed text-sm">{service.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-20 bg-white/50">
         <div className="container mx-auto px-4">
@@ -161,7 +229,7 @@ const LogisticsServices = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {features.map((feature, index) => (
               <div key={index} className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -174,7 +242,7 @@ const LogisticsServices = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-5 gap-6">
             <div className="text-center p-6 bg-white rounded-2xl shadow-lg">
               <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
               <div className="text-gray-600">شحنة شهرياً</div>
@@ -191,6 +259,10 @@ const LogisticsServices = () => {
               <div className="text-4xl font-bold text-orange-600 mb-2">24/7</div>
               <div className="text-gray-600">خدمة عملاء</div>
             </div>
+            <div className="text-center p-6 bg-white rounded-2xl shadow-lg">
+              <div className="text-4xl font-bold text-red-600 mb-2">100%</div>
+              <div className="text-gray-600">امتثال للسلامة</div>
+            </div>
           </div>
         </div>
       </section>
@@ -200,13 +272,13 @@ const LogisticsServices = () => {
         <div className="container mx-auto px-4 text-center">
           <h3 className="text-4xl font-bold text-gray-800 mb-4">ابدأ مشروعك اللوجستي معنا</h3>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            تواصل معنا اليوم واحصل على استشارة مجانية لجميع خدماتنا اللوجستية
+            تواصل معنا اليوم واحصل على استشارة مجانية لجميع خدماتنا اللوجستية وخدمات السلامة والجودة
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <WhatsAppButton 
               phoneNumber={companyInfo.whatsapp}
-              message="مرحباً، أريد الاستفسار عن الخدمات اللوجستية وحلول 3PL"
+              message="مرحباً، أريد الاستفسار عن الخدمات اللوجستية وخدمات السلامة والجودة"
               variant="cta"
               text="تواصل عبر الواتس آب"
             />
@@ -222,7 +294,7 @@ const LogisticsServices = () => {
       <div className="fixed bottom-6 left-6 z-50">
         <WhatsAppButton 
           phoneNumber={companyInfo.whatsapp}
-          message="مرحباً، أريد الاستفسار عن الخدمات اللوجستية"
+          message="مرحباً، أريد الاستفسار عن الخدمات اللوجستية والسلامة"
           variant="floating"
           text="تحدث معنا"
         />
