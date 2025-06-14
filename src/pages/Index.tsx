@@ -1,5 +1,5 @@
 
-import { ArrowRight, CheckCircle, Mail, Phone, MapPin, Users, Target, Award } from "lucide-react";
+import { ArrowRight, CheckCircle, Mail, Phone, MapPin, Users, Target, Award, Truck, TrendingUp, HeadphonesIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -8,29 +8,29 @@ import { Label } from "@/components/ui/label";
 const Index = () => {
   const services = [
     {
-      title: "استشارات الأعمال",
-      description: "نقدم استشارات متخصصة لتطوير أعمالكم ووضع الخطط الاستراتيجية المناسبة",
-      icon: Target
+      title: "الحلول التسويقية المتكاملة",
+      description: "نقدم استراتيجيات تسويقية مبتكرة ومخصصة لتحقيق النمو المستدام وزيادة الوصول لعملائكم المستهدفين",
+      icon: TrendingUp
     },
     {
-      title: "الحلول التقنية",
-      description: "حلول تقنية متطورة ومبتكرة لتحسين كفاءة العمل والإنتاجية",
-      icon: Award
+      title: "حلول اللوجستيات الذكية",
+      description: "خدمات لوجستية متطورة تعتمد على أحدث التقنيات لتحسين سلسلة التوريد وضمان الكفاءة التشغيلية",
+      icon: Truck
     },
     {
-      title: "إدارة المشاريع",
-      description: "خدمات إدارة المشاريع الاحترافية لضمان تنفيذ مشاريعكم في الوقت المحدد",
-      icon: Users
+      title: "الاستشارات عن بُعد",
+      description: "خدمات استشارية متخصصة في الموارد البشرية والتسويق لمساعدة الشركات في التغلب على تحديات الأعمال الحديثة",
+      icon: HeadphonesIcon
     }
   ];
 
   const features = [
-    "خبرة أكثر من 10 سنوات في السوق",
-    "فريق عمل محترف ومتخصص",
-    "حلول مبتكرة ومخصصة لكل عميل",
-    "دعم فني متواصل على مدار 24/7",
-    "أسعار تنافسية وجودة عالية",
-    "التزام بالمواعيد والجودة"
+    "فريق من الخبراء المتخصصين في التسويق واللوجستيات",
+    "استخدام أحدث التقنيات وأفضل الممارسات في الصناعة",
+    "استراتيجيات مخصصة تناسب احتياجات كل عميل",
+    "بناء علاقات قوية مع العملاء قائمة على الثقة والتعاون",
+    "خدمات استشارية متكاملة في الموارد البشرية والتسويق",
+    "التزام بتحقيق نتائج قابلة للقياس والنمو المستدام"
   ];
 
   return (
@@ -41,9 +41,9 @@ const Index = () => {
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-2">
               <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">ش</span>
+                <span className="text-white font-bold text-lg">Z</span>
               </div>
-              <h1 className="text-2xl font-bold text-gray-800">شركتي</h1>
+              <h1 className="text-2xl font-bold text-gray-800">Zeen A Solutions</h1>
             </div>
             <nav className="hidden md:flex space-x-8 space-x-reverse">
               <a href="#home" className="text-gray-700 hover:text-blue-600 transition-colors">الرئيسية</a>
@@ -59,20 +59,21 @@ const Index = () => {
       <section id="home" className="py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-5xl font-bold text-gray-800 mb-6">
-            نحن هنا لنساعدك في 
-            <span className="text-blue-600"> تحقيق أهدافك</span>
+            حلول متكاملة في 
+            <span className="text-blue-600"> التسويق واللوجستيات</span>
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            شركة رائدة في تقديم الحلول المتكاملة والخدمات المتميزة للشركات والأفراد. 
-            نحن نؤمن بالجودة والابتكار في كل ما نقدمه.
+            مؤسسة متخصصة في تقديم حلول التسويق واللوجستيات الشاملة لعملائنا. 
+            فريقنا من الخبراء ملتزم بالاستفادة من أحدث التقنيات وأفضل الممارسات في الصناعة 
+            لمساعدة الشركات في تحقيق النمو المستدام والنجاح.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8">
-              ابدأ معنا الآن
+              ابدأ رحلتك معنا
               <ArrowRight className="mr-2 h-5 w-5" />
             </Button>
             <Button variant="outline" size="lg" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8">
-              تعرف على خدماتنا
+              اكتشف حلولنا المتكاملة
             </Button>
           </div>
         </div>
@@ -82,9 +83,9 @@ const Index = () => {
       <section id="services" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h3 className="text-4xl font-bold text-gray-800 mb-4">خدماتنا المتميزة</h3>
+            <h3 className="text-4xl font-bold text-gray-800 mb-4">خدماتنا المتخصصة</h3>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              نقدم مجموعة شاملة من الخدمات المصممة خصيصاً لتلبية احتياجاتكم وتحقيق أهدافكم
+              نقدم مجموعة شاملة من الحلول المتكاملة في التسويق واللوجستيات المصممة لتحقيق أهدافكم التجارية
             </p>
           </div>
           
@@ -113,10 +114,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-4xl font-bold text-gray-800 mb-6">لماذا تختار شركتنا؟</h3>
+              <h3 className="text-4xl font-bold text-gray-800 mb-6">لماذا تختار Zeen A Solutions؟</h3>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                نحن شركة متخصصة في تقديم أفضل الحلول والخدمات لعملائنا. 
-                بفضل خبرتنا الطويلة وفريق العمل المحترف، نضمن لكم الحصول على أعلى مستوى من الجودة والخدمة.
+                في شركتنا، نعطي الأولوية لبناء علاقات قوية مع عملائنا وفهم احتياجاتهم وأهدافهم الفريدة. 
+                من خلال تعزيز التواصل المفتوح والتعاون، نتمكن من تطوير استراتيجيات مخصصة تعالج التحديات المحددة وتحقق نتائج قابلة للقياس.
               </p>
               
               <div className="grid gap-4">
@@ -131,26 +132,26 @@ const Index = () => {
             
             <div className="bg-white p-8 rounded-2xl shadow-lg">
               <div className="text-center mb-6">
-                <h4 className="text-2xl font-bold text-gray-800 mb-2">إحصائيات نفتخر بها</h4>
-                <p className="text-gray-600">أرقام تعكس تميزنا وثقة عملائنا</p>
+                <h4 className="text-2xl font-bold text-gray-800 mb-2">التزامنا بالتميز</h4>
+                <p className="text-gray-600">شريك موثوق للشركات من جميع الأحجام والصناعات</p>
               </div>
               
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">100+</div>
+                  <div className="text-gray-600">عميل راضٍ</div>
+                </div>
+                <div className="text-center">
                   <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
-                  <div className="text-gray-600">عميل سعيد</div>
+                  <div className="text-gray-600">مشروع ناجح</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">1000+</div>
-                  <div className="text-gray-600">مشروع مكتمل</div>
+                  <div className="text-3xl font-bold text-blue-600 mb-2">24/7</div>
+                  <div className="text-gray-600">دعم مستمر</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">10+</div>
-                  <div className="text-gray-600">سنوات خبرة</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">50+</div>
-                  <div className="text-gray-600">موظف محترف</div>
+                  <div className="text-3xl font-bold text-blue-600 mb-2">3+</div>
+                  <div className="text-gray-600">مجالات تخصص</div>
                 </div>
               </div>
             </div>
@@ -164,7 +165,7 @@ const Index = () => {
           <div className="text-center mb-16">
             <h3 className="text-4xl font-bold text-gray-800 mb-4">تواصل معنا</h3>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              نحن هنا للإجابة على استفساراتكم ومساعدتكم في تحقيق أهدافكم
+              نحن هنا لمساعدتكم في تطوير استراتيجيات مخصصة تحقق أهدافكم التجارية
             </p>
           </div>
           
@@ -179,8 +180,8 @@ const Index = () => {
                     <Phone className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
-                    <h5 className="font-semibold text-gray-800">رقم الهاتف</h5>
-                    <p className="text-gray-600">+966 50 123 4567</p>
+                    <h5 className="font-semibold text-gray-800">للاستشارات والاستفسارات</h5>
+                    <p className="text-gray-600">+966 XX XXX XXXX</p>
                   </div>
                 </div>
                 
@@ -190,7 +191,7 @@ const Index = () => {
                   </div>
                   <div>
                     <h5 className="font-semibold text-gray-800">البريد الإلكتروني</h5>
-                    <p className="text-gray-600">info@mycompany.com</p>
+                    <p className="text-gray-600">info@zeenasolutions.com</p>
                   </div>
                 </div>
                 
@@ -199,8 +200,8 @@ const Index = () => {
                     <MapPin className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
-                    <h5 className="font-semibold text-gray-800">العنوان</h5>
-                    <p className="text-gray-600">الرياض، المملكة العربية السعودية</p>
+                    <h5 className="font-semibold text-gray-800">نخدم عملائنا</h5>
+                    <p className="text-gray-600">الشرق الأوسط وشمال أفريقيا</p>
                   </div>
                 </div>
               </div>
@@ -209,42 +210,58 @@ const Index = () => {
             {/* Contact Form */}
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-gray-800">أرسل لنا رسالة</CardTitle>
-                <CardDescription>سنتواصل معك في أقرب وقت ممكن</CardDescription>
+                <CardTitle className="text-2xl text-gray-800">احصل على استشارة مجانية</CardTitle>
+                <CardDescription>سنتواصل معك خلال 24 ساعة لمناقشة احتياجاتك</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="firstName">الاسم الأول</Label>
-                    <Input id="firstName" placeholder="أدخل اسمك الأول" />
+                    <Label htmlFor="firstName">الاسم</Label>
+                    <Input id="firstName" placeholder="الاسم الأول" />
                   </div>
                   <div>
                     <Label htmlFor="lastName">اسم العائلة</Label>
-                    <Input id="lastName" placeholder="أدخل اسم العائلة" />
+                    <Input id="lastName" placeholder="اسم العائلة" />
                   </div>
+                </div>
+                
+                <div>
+                  <Label htmlFor="company">اسم الشركة</Label>
+                  <Input id="company" placeholder="اسم شركتكم" />
                 </div>
                 
                 <div>
                   <Label htmlFor="email">البريد الإلكتروني</Label>
-                  <Input id="email" type="email" placeholder="أدخل بريدك الإلكتروني" />
+                  <Input id="email" type="email" placeholder="البريد الإلكتروني للتواصل" />
                 </div>
                 
                 <div>
                   <Label htmlFor="phone">رقم الهاتف</Label>
-                  <Input id="phone" placeholder="أدخل رقم هاتفك" />
+                  <Input id="phone" placeholder="رقم الهاتف مع رمز الدولة" />
                 </div>
                 
                 <div>
-                  <Label htmlFor="message">الرسالة</Label>
+                  <Label htmlFor="service">الخدمة المطلوبة</Label>
+                  <select id="service" className="w-full p-3 border border-gray-300 rounded-md">
+                    <option value="">اختر الخدمة</option>
+                    <option value="marketing">الحلول التسويقية</option>
+                    <option value="logistics">حلول اللوجستيات</option>
+                    <option value="consultation">الاستشارات عن بُعد</option>
+                    <option value="all">جميع الخدمات</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <Label htmlFor="message">تفاصيل المشروع</Label>
                   <textarea 
                     id="message" 
                     className="w-full p-3 border border-gray-300 rounded-md resize-none h-24"
-                    placeholder="اكتب رسالتك هنا..."
+                    placeholder="أخبرنا عن احتياجاتكم وأهدافكم..."
                   ></textarea>
                 </div>
                 
                 <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                  إرسال الرسالة
+                  احجز استشارتك المجانية
                 </Button>
               </CardContent>
             </Card>
@@ -259,13 +276,23 @@ const Index = () => {
             <div>
               <div className="flex items-center space-x-2 space-x-reverse mb-4">
                 <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold">ش</span>
+                  <span className="text-white font-bold">Z</span>
                 </div>
-                <h5 className="text-xl font-bold">شركتي</h5>
+                <h5 className="text-xl font-bold">Zeen A Solutions</h5>
               </div>
               <p className="text-gray-400 leading-relaxed">
-                شركة رائدة في تقديم الحلول المتكاملة والخدمات المتميزة للشركات والأفراد.
+                مؤسسة متخصصة في تقديم حلول التسويق واللوجستيات الشاملة. شريكك الموثوق لتحقيق النمو المستدام.
               </p>
+            </div>
+            
+            <div>
+              <h6 className="font-semibold mb-4">خدماتنا الرئيسية</h6>
+              <ul className="space-y-2 text-gray-400">
+                <li>الحلول التسويقية المتكاملة</li>
+                <li>حلول اللوجستيات الذكية</li>
+                <li>استشارات الموارد البشرية</li>
+                <li>الاستشارات التسويقية عن بُعد</li>
+              </ul>
             </div>
             
             <div>
@@ -279,27 +306,17 @@ const Index = () => {
             </div>
             
             <div>
-              <h6 className="font-semibold mb-4">خدماتنا</h6>
-              <ul className="space-y-2 text-gray-400">
-                <li>استشارات الأعمال</li>
-                <li>الحلول التقنية</li>
-                <li>إدارة المشاريع</li>
-                <li>الدعم الفني</li>
-              </ul>
-            </div>
-            
-            <div>
               <h6 className="font-semibold mb-4">تواصل معنا</h6>
               <div className="space-y-2 text-gray-400">
-                <p>+966 50 123 4567</p>
-                <p>info@mycompany.com</p>
-                <p>الرياض، السعودية</p>
+                <p>info@zeenasolutions.com</p>
+                <p>نخدم منطقة الشرق الأوسط</p>
+                <p>وشمال أفريقيا</p>
               </div>
             </div>
           </div>
           
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 شركتي. جميع الحقوق محفوظة.</p>
+            <p>&copy; 2024 Zeen A Solutions Establishment. جميع الحقوق محفوظة.</p>
           </div>
         </div>
       </footer>
