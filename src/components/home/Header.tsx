@@ -44,10 +44,10 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
 
   return (
     <header className="bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200 sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-6 py-5">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-4 space-x-reverse">
-            <div className="w-14 h-14 bg-gradient-purple rounded-2xl flex items-center justify-center shadow-md border-2 border-white">
+            <div className="w-14 h-14 bg-gradient-blue rounded-2xl flex items-center justify-center shadow-md border-2 border-white">
               <img 
                 src="/lovable-uploads/8838bb20-a5cc-4ab1-9fce-30cdb0f93521.png" 
                 alt="Zeen A Plus Solutions Logo" 
@@ -55,7 +55,7 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
               />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-slate-700">{companyInfo.name}</h1>
+              <h1 className="text-2xl font-bold text-brand-blue-dark">{companyInfo.name}</h1>
               <p className="text-sm text-slate-600 font-medium">{companyInfo.slogan}</p>
             </div>
           </div>
@@ -64,7 +64,7 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
               href={companyInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-gradient-blue-purple hover:bg-brand-blue-dark text-white rounded-xl transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
+              className="p-3 bg-gradient-dark-blue hover:bg-brand-blue-dark text-white rounded-xl transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
               title="تابعونا على LinkedIn"
             >
               <Linkedin className="h-5 w-5 text-white" />
@@ -80,13 +80,13 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
 
       {/* Navigation Bar */}
       <div className="border-t border-slate-200 bg-white/90 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto px-6 py-4">
           <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
             <Button
               variant="ghost"
               size="sm"
               onClick={() => navigate('/about')}
-              className="text-slate-600 hover:text-brand-purple hover:bg-purple-50 transition-all duration-200 font-medium"
+              className="text-slate-600 hover:text-brand-blue hover:bg-brand-light-blue transition-all duration-200 font-medium"
             >
               <Info className="ml-2 h-4 w-4" />
               من نحن
@@ -97,23 +97,23 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="text-slate-600 hover:text-brand-purple hover:bg-gradient-to-r hover:from-purple-50 hover:to-indigo-50 hover:border-brand-purple-light transition-all duration-300 font-medium px-6 py-2 rounded-lg border-2 border-transparent shadow-sm hover:shadow-md"
+                  className="text-slate-600 hover:text-brand-blue hover:bg-gradient-to-r hover:from-brand-light-blue hover:to-brand-light-blue hover:border-brand-blue-light transition-all duration-300 font-medium px-6 py-2 rounded-lg border-2 border-transparent shadow-sm hover:shadow-md"
                 >
-                  <Grid3X3 className="ml-2 h-4 w-4 text-brand-purple" />
+                  <Grid3X3 className="ml-2 h-4 w-4 text-brand-blue" />
                   خدماتنا المتنوعة
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-64 bg-white shadow-xl border-2 border-purple-100" align="center">
-                <div className="p-2 bg-gradient-to-r from-purple-50 to-indigo-50 border-b border-purple-100">
-                  <p className="text-sm font-semibold text-slate-700 text-center">استكشف جميع خدماتنا</p>
+              <DropdownMenuContent className="w-64 bg-white shadow-xl border-2 border-blue-100" align="center">
+                <div className="p-2 bg-gradient-to-r from-brand-light-blue to-brand-light-blue border-b border-blue-100">
+                  <p className="text-sm font-semibold text-brand-blue-dark text-center">استكشف جميع خدماتنا</p>
                 </div>
                 {services.map((service, index) => (
                   <DropdownMenuItem 
                     key={index}
                     onClick={() => navigate(service.route)}
-                    className="cursor-pointer py-3 px-4 hover:bg-purple-50 transition-colors duration-200"
+                    className="cursor-pointer py-3 px-4 hover:bg-brand-light-blue transition-colors duration-200"
                   >
-                    <service.icon className="ml-3 h-5 w-5 text-brand-purple" />
+                    <service.icon className="ml-3 h-5 w-5 text-brand-blue" />
                     <span className="font-medium">{service.title}</span>
                   </DropdownMenuItem>
                 ))}
@@ -124,7 +124,7 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
               variant="ghost"
               size="sm"
               onClick={() => navigate('/join-us')}
-              className="text-slate-600 hover:text-brand-emerald hover:bg-emerald-50 transition-all duration-200 font-medium"
+              className="text-slate-600 hover:text-brand-accent-blue hover:bg-blue-50 transition-all duration-200 font-medium"
             >
               <UserPlus className="ml-2 h-4 w-4" />
               انضم إلينا
@@ -170,7 +170,7 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
               variant="outline"
               size="sm"
               onClick={() => navigate('/custom-request')}
-              className="bg-gradient-purple hover:bg-brand-purple-dark text-white border-0 px-6 shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+              className="bg-gradient-blue hover:bg-brand-accent-blue text-white border-0 px-6 shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
             >
               طلبك المخصص
             </Button>

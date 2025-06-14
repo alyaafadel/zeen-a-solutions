@@ -16,45 +16,43 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    /* Primary purple colors - more vibrant */
-    --primary: 270 85% 50%;
+    /* Primary blue colors */
+    --primary: 210 100% 50%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 92%;
-    --secondary-foreground: 270 85% 45%;
+    --secondary-foreground: 210 100% 20%;
 
     --muted: 210 40% 92%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
     --accent: 210 40% 92%;
-    --accent-foreground: 270 85% 45%;
+    --accent-foreground: 210 100% 20%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 270 85% 50%;
+    --ring: 210 100% 50%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 270 85% 50%;
+    --sidebar-primary: 210 100% 50%;
     --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 210 40% 92%;
-    --sidebar-accent-foreground: 270 85% 45%;
+    --sidebar-accent-foreground: 210 100% 20%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 270 85% 45%;
+    --sidebar-ring: 210 100% 50%;
 
-    /* Custom brand colors */
-    --brand-purple: 270 85% 50%;
-    --brand-purple-light: 270 70% 60%;
-    --brand-purple-dark: 270 90% 40%;
-    --brand-emerald: 160 84% 39%;
-    --brand-emerald-light: 160 70% 50%;
-    --brand-blue-dark: 215 84% 35%;
-    --brand-blue-dark-light: 215 70% 45%;
+    /* Custom brand colors - Blue theme */
+    --brand-blue: 210 100% 50%;
+    --brand-blue-light: 197 100% 56%;
+    --brand-blue-dark: 210 100% 20%;
+    --brand-light-blue: 197 71% 95%;
+    --brand-accent-blue: 212 100% 56%;
   }
 
   .dark {
@@ -67,7 +65,7 @@
     --popover: 210 60% 8%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 270 80% 60%;
+    --primary: 212 100% 56%;
     --primary-foreground: 210 60% 8%;
 
     --secondary: 210 40% 20%;
@@ -84,15 +82,15 @@
 
     --border: 210 40% 20%;
     --input: 210 40% 20%;
-    --ring: 270 80% 65%;
+    --ring: 212 100% 56%;
     --sidebar-background: 210 60% 8%;
     --sidebar-foreground: 210 40% 95%;
-    --sidebar-primary: 270 80% 60%;
+    --sidebar-primary: 212 100% 56%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 210 40% 20%;
     --sidebar-accent-foreground: 210 40% 95%;
     --sidebar-border: 210 40% 20%;
-    --sidebar-ring: 270 80% 60%;
+    --sidebar-ring: 212 100% 56%;
   }
 }
 
@@ -105,52 +103,53 @@
     @apply bg-background text-foreground;
     background: linear-gradient(135deg, 
       rgba(255, 255, 255, 1) 0%, 
-      rgba(248, 250, 252, 0.8) 50%, 
-      rgba(241, 245, 249, 0.9) 100%);
+      rgba(224, 242, 247, 0.3) 50%, 
+      rgba(224, 242, 247, 0.5) 100%);
     min-height: 100vh;
+  }
+
+  /* Enhanced spacing for text elements */
+  p {
+    margin-bottom: 1em;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+    line-height: 1.4;
+  }
+
+  section {
+    padding: 40px 0;
+    margin-bottom: 30px;
+  }
+
+  ul {
+    margin-bottom: 1em;
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 0.5em;
   }
 }
 
 /* Enhanced brand color utilities */
-.text-brand-purple {
-  color: hsl(var(--brand-purple));
+.text-brand-blue {
+  color: hsl(var(--brand-blue));
 }
 
-.bg-brand-purple {
-  background-color: hsl(var(--brand-purple));
+.bg-brand-blue {
+  background-color: hsl(var(--brand-blue));
 }
 
-.text-brand-purple-light {
-  color: hsl(var(--brand-purple-light));
+.text-brand-blue-light {
+  color: hsl(var(--brand-blue-light));
 }
 
-.bg-brand-purple-light {
-  background-color: hsl(var(--brand-purple-light));
-}
-
-.text-brand-purple-dark {
-  color: hsl(var(--brand-purple-dark));
-}
-
-.bg-brand-purple-dark {
-  background-color: hsl(var(--brand-purple-dark));
-}
-
-/* Secondary accent colors */
-.text-brand-emerald {
-  color: hsl(var(--brand-emerald));
-}
-
-.bg-brand-emerald {
-  background-color: hsl(var(--brand-emerald));
-}
-
-.text-brand-emerald-light {
-  color: hsl(var(--brand-emerald-light));
-}
-
-.bg-brand-emerald-light {
-  background-color: hsl(var(--brand-emerald-light));
+.bg-brand-blue-light {
+  background-color: hsl(var(--brand-blue-light));
 }
 
 .text-brand-blue-dark {
@@ -161,61 +160,69 @@
   background-color: hsl(var(--brand-blue-dark));
 }
 
-.text-brand-blue-dark-light {
-  color: hsl(var(--brand-blue-dark-light));
+.text-brand-light-blue {
+  color: hsl(var(--brand-light-blue));
 }
 
-.bg-brand-blue-dark-light {
-  background-color: hsl(var(--brand-blue-dark-light));
+.bg-brand-light-blue {
+  background-color: hsl(var(--brand-light-blue));
+}
+
+.text-brand-accent-blue {
+  color: hsl(var(--brand-accent-blue));
+}
+
+.bg-brand-accent-blue {
+  background-color: hsl(var(--brand-accent-blue));
 }
 
 /* Hover states */
-.hover\:text-brand-purple:hover {
-  color: hsl(var(--brand-purple-dark));
+.hover\:text-brand-blue:hover {
+  color: hsl(var(--brand-blue-dark));
 }
 
-.hover\:bg-brand-purple:hover {
-  background-color: hsl(var(--brand-purple-dark));
+.hover\:bg-brand-blue:hover {
+  background-color: hsl(var(--brand-blue-dark));
 }
 
-.hover\:text-brand-emerald:hover {
-  color: hsl(var(--brand-emerald));
+.hover\:text-brand-accent-blue:hover {
+  color: hsl(var(--brand-accent-blue));
 }
 
-.hover\:bg-brand-emerald:hover {
-  background-color: hsl(var(--brand-emerald));
+.hover\:bg-brand-accent-blue:hover {
+  background-color: hsl(var(--brand-accent-blue));
 }
 
-/* Enhanced gradients */
-.bg-gradient-purple {
+/* Enhanced gradients with blue theme */
+.bg-gradient-blue {
   background: linear-gradient(135deg, 
-    hsl(var(--brand-purple)) 0%, 
-    hsl(var(--brand-purple-dark)) 100%);
+    hsl(var(--brand-blue)) 0%, 
+    hsl(var(--brand-blue-dark)) 100%);
 }
 
-.bg-gradient-purple-emerald {
+.bg-gradient-blue-light {
   background: linear-gradient(135deg, 
-    hsl(var(--brand-purple)) 0%, 
-    hsl(var(--brand-emerald)) 100%);
+    hsl(var(--brand-blue)) 0%, 
+    hsl(var(--brand-accent-blue)) 100%);
 }
 
-.bg-gradient-blue-purple {
+.bg-gradient-dark-blue {
   background: linear-gradient(135deg, 
     hsl(var(--brand-blue-dark)) 0%, 
-    hsl(var(--brand-purple)) 100%);
+    hsl(var(--brand-blue)) 100%);
 }
 
 /* Subtle background patterns */
 .bg-pattern-dots {
-  background-image: radial-gradient(circle at 2px 2px, rgba(139, 69, 219, 0.1) 1px, transparent 0);
+  background-image: radial-gradient(circle at 2px 2px, rgba(0, 123, 255, 0.1) 1px, transparent 0);
   background-size: 20px 20px;
 }
 
 .bg-pattern-subtle {
   background: linear-gradient(135deg, 
     rgba(255, 255, 255, 1) 0%, 
-    rgba(248, 250, 252, 0.95) 25%,
-    rgba(241, 245, 249, 0.9) 50%,
-    rgba(248, 250, 252, 0.95) 75%,
+    rgba(224, 242, 247, 0.4) 25%,
+    rgba(224, 242, 247, 0.2) 50%,
+    rgba(224, 242, 247, 0.4) 75%,
     rgba(255, 255, 255, 1) 100%);
 }
