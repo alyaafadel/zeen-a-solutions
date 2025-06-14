@@ -1,3 +1,4 @@
+
 import { Users, Languages, Megaphone, Code, Truck, GraduationCap, Briefcase, Star, Bot, Home, Map, Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
@@ -8,6 +9,7 @@ interface Service {
   title: string;
   icon: any;
   route: string;
+  features?: string[];
 }
 
 interface CompanyInfo {
@@ -122,39 +124,86 @@ const Footer = ({ services, companyInfo }: FooterProps) => {
                     خريطة الخدمات
                   </Button>
                 </DialogTrigger>
-                <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto" dir="rtl">
+                <DialogContent className="max-w-7xl max-h-[90vh] overflow-y-auto" dir="rtl">
                   <DialogHeader>
-                    <DialogTitle className="text-2xl text-slate-700 text-center mb-4">
-                      خريطة خدمات Zeen A Plus Solutions
+                    <DialogTitle className="text-3xl text-slate-700 text-center mb-4">
+                      خريطة خدمات Zeen A Plus Solutions - المخطط الكامل للموقع
                     </DialogTitle>
-                    <DialogDescription className="text-center text-slate-600">
-                      جميع خدماتنا المتخصصة في مكان واحد
+                    <DialogDescription className="text-center text-slate-600 text-lg">
+                      جميع خدماتنا المتخصصة وما تحتويه من مميزات في مكان واحد
                     </DialogDescription>
                   </DialogHeader>
                   
-                  <div className="grid md:grid-cols-3 gap-4 mt-6">
+                  <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 mt-8">
                     {services.map((service, index) => (
                       <div
                         key={index}
-                        onClick={() => {
-                          navigate(service.route);
-                        }}
-                        className="p-4 bg-blue-50 rounded-xl border-2 border-blue-100 hover:border-blue-300 cursor-pointer transition-all duration-300 hover:shadow-lg"
+                        className="p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl border-2 border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-xl"
                       >
-                        <div className="flex items-center space-x-3 space-x-reverse mb-3">
-                          <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
-                            <service.icon className="h-5 w-5 text-white" />
+                        <div className="flex items-center space-x-3 space-x-reverse mb-4">
+                          <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
+                            <service.icon className="h-6 w-6 text-white" />
                           </div>
-                          <h3 className="font-semibold text-slate-700">{service.title}</h3>
+                          <h3 className="font-bold text-slate-700 text-lg">{service.title}</h3>
                         </div>
+                        
+                        {service.features && (
+                          <div className="mb-4">
+                            <h4 className="font-semibold text-slate-600 mb-2 text-sm">ما نقدمه في هذه الخدمة:</h4>
+                            <ul className="space-y-1">
+                              {service.features.map((feature, featureIndex) => (
+                                <li key={featureIndex} className="text-slate-600 text-sm flex items-center">
+                                  <span className="w-2 h-2 bg-blue-400 rounded-full ml-2 flex-shrink-0"></span>
+                                  {feature}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                        
                         <Button
                           size="sm"
-                          className="w-full bg-blue-500 hover:bg-blue-600 text-white"
+                          onClick={() => navigate(service.route)}
+                          className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-md hover:shadow-lg transition-all duration-300"
                         >
                           استكشف الخدمة
                         </Button>
                       </div>
                     ))}
+                  </div>
+
+                  <div className="mt-8 p-6 bg-gradient-to-r from-slate-100 to-slate-200 rounded-xl border-2 border-slate-300">
+                    <h4 className="text-xl font-bold text-slate-700 mb-3 text-center">صفحات إضافية</h4>
+                    <div className="grid md:grid-cols-4 gap-4">
+                      <Button
+                        variant="outline"
+                        onClick={() => navigate('/about')}
+                        className="bg-white hover:bg-slate-50 text-slate-700 border-slate-300"
+                      >
+                        من نحن
+                      </Button>
+                      <Button
+                        variant="outline"
+                        onClick={() => navigate('/our-team')}
+                        className="bg-white hover:bg-slate-50 text-slate-700 border-slate-300"
+                      >
+                        فريقنا
+                      </Button>
+                      <Button
+                        variant="outline"
+                        onClick={() => navigate('/join-us')}
+                        className="bg-white hover:bg-slate-50 text-slate-700 border-slate-300"
+                      >
+                        انضم إلينا
+                      </Button>
+                      <Button
+                        variant="outline"
+                        onClick={() => navigate('/custom-request')}
+                        className="bg-white hover:bg-slate-50 text-slate-700 border-slate-300"
+                      >
+                        طلبك المخصص
+                      </Button>
+                    </div>
                   </div>
                 </DialogContent>
               </Dialog>
