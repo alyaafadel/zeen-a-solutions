@@ -55,71 +55,33 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
   return (
     <>
       <header className="bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200 sticky top-0 z-50">
-        <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4 md:py-5">
+        {/* Single Line Layout - Logo, Company Name, and Navigation */}
+        <div className="container mx-auto px-4 sm:px-6 py-2">
           <div className="flex justify-between items-center">
-            {/* Logo Section */}
-            <div className="flex items-center space-x-2 sm:space-x-3 md:space-x-4 space-x-reverse">
-              <div className="w-10 sm:w-12 md:w-14 h-10 sm:h-12 md:h-14 bg-gradient-blue rounded-xl md:rounded-2xl flex items-center justify-center shadow-md border-2 border-white">
+            {/* Logo and Company Section - Compact */}
+            <div className="flex items-center space-x-2 space-x-reverse">
+              <div className="w-8 h-8 sm:w-9 sm:h-9 bg-gradient-blue rounded-lg flex items-center justify-center shadow-md border border-white">
                 <img 
                   src="/lovable-uploads/8838bb20-a5cc-4ab1-9fce-30cdb0f93521.png" 
                   alt="Zeen A Plus Solutions Logo" 
-                  className="w-6 sm:w-7 md:w-9 h-6 sm:h-7 md:h-9 object-contain filter brightness-200"
+                  className="w-5 h-5 sm:w-6 sm:h-6 object-contain filter brightness-200"
                 />
               </div>
               <div>
-                <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-brand-blue-dark">{companyInfo.name}</h1>
-                <p className="text-xs sm:text-sm text-slate-600 font-medium hidden sm:block">{companyInfo.slogan}</p>
+                <h1 className="text-sm sm:text-base md:text-lg font-bold text-brand-blue-dark leading-tight">{companyInfo.name}</h1>
+                <p className="text-xs text-slate-600 font-medium hidden sm:block leading-tight">{companyInfo.slogan}</p>
               </div>
             </div>
 
-            {/* Desktop Actions */}
-            <div className="hidden md:flex items-center space-x-2 sm:space-x-3 space-x-reverse">
-              <a
-                href={companyInfo.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 sm:p-3 bg-gradient-dark-blue hover:bg-brand-blue-dark text-white rounded-lg sm:rounded-xl transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
-                title="تابعونا على LinkedIn"
-              >
-                <Linkedin className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
-              </a>
-              <WhatsAppButton 
-                phoneNumber={companyInfo.whatsapp}
-                message="مرحباً، أريد بدء مشروع جديد مع Zeen A Plus Solutions"
-                variant="header"
-              />
-            </div>
-
-            {/* Mobile Hamburger Button */}
-            <div className="md:hidden">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={toggleMobileMenu}
-                className="p-2 text-brand-blue hover:text-brand-blue-dark hover:bg-brand-light-blue transition-all duration-300 rounded-lg"
-                aria-label="فتح القائمة"
-              >
-                {isMobileMenuOpen ? (
-                  <X className="h-6 w-6" />
-                ) : (
-                  <Menu className="h-6 w-6" />
-                )}
-              </Button>
-            </div>
-          </div>
-        </div>
-
-        {/* Desktop Navigation Bar */}
-        <div className="hidden md:block border-t border-slate-200 bg-white/90 backdrop-blur-sm">
-          <div className="container mx-auto px-4 sm:px-6 py-2 sm:py-3 md:py-4">
-            <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 md:gap-4 lg:gap-8">
+            {/* Desktop Navigation - All in One Line */}
+            <div className="hidden lg:flex items-center space-x-1 xl:space-x-2 space-x-reverse">
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => navigate('/about')}
-                className="text-slate-600 hover:text-brand-blue hover:bg-brand-light-blue transition-all duration-200 font-medium text-xs sm:text-sm px-2 sm:px-3 py-1 sm:py-2"
+                className="text-slate-600 hover:text-brand-blue hover:bg-brand-light-blue transition-all duration-200 font-medium text-xs px-2 py-1.5"
               >
-                <Info className="ml-1 sm:ml-2 h-3 w-3 sm:h-4 sm:w-4" />
+                <Info className="ml-1 h-3 w-3" />
                 من نحن
               </Button>
               
@@ -128,13 +90,13 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="text-slate-600 hover:text-brand-blue hover:bg-gradient-to-r hover:from-brand-light-blue hover:to-brand-light-blue hover:border-brand-blue-light transition-all duration-300 font-medium px-3 sm:px-4 md:px-6 py-1 sm:py-2 rounded-lg border-2 border-transparent shadow-sm hover:shadow-md text-xs sm:text-sm"
+                    className="text-slate-600 hover:text-brand-blue hover:bg-brand-light-blue transition-all duration-200 font-medium text-xs px-2 py-1.5"
                   >
-                    <Grid3X3 className="ml-1 sm:ml-2 h-3 w-3 sm:h-4 sm:w-4 text-brand-blue" />
+                    <Grid3X3 className="ml-1 h-3 w-3 text-brand-blue" />
                     خدماتنا المتنوعة
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-56 sm:w-64 bg-white shadow-xl border-2 border-blue-100" align="center">
+                <DropdownMenuContent className="w-56 bg-white shadow-xl border-2 border-blue-100" align="center">
                   <div className="p-2 bg-gradient-to-r from-brand-light-blue to-brand-light-blue border-b border-blue-100">
                     <p className="text-sm font-semibold text-brand-blue-dark text-center">استكشف جميع خدماتنا</p>
                   </div>
@@ -142,9 +104,9 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
                     <DropdownMenuItem 
                       key={index}
                       onClick={() => navigate(service.route)}
-                      className="cursor-pointer py-2 sm:py-3 px-3 sm:px-4 hover:bg-brand-light-blue transition-colors duration-200"
+                      className="cursor-pointer py-2 px-3 hover:bg-brand-light-blue transition-colors duration-200"
                     >
-                      <service.icon className="ml-2 sm:ml-3 h-4 w-4 sm:h-5 sm:w-5 text-brand-blue" />
+                      <service.icon className="ml-2 h-4 w-4 text-brand-blue" />
                       <span className="font-medium text-sm">{service.title}</span>
                     </DropdownMenuItem>
                   ))}
@@ -155,11 +117,10 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
                 variant="ghost"
                 size="sm"
                 onClick={() => navigate('/join-us')}
-                className="text-slate-600 hover:text-brand-accent-blue hover:bg-blue-50 transition-all duration-200 font-medium text-xs sm:text-sm px-2 sm:px-3 py-1 sm:py-2"
+                className="text-slate-600 hover:text-brand-accent-blue hover:bg-blue-50 transition-all duration-200 font-medium text-xs px-2 py-1.5"
               >
-                <UserPlus className="ml-1 sm:ml-2 h-3 w-3 sm:h-4 sm:w-4" />
-                <span className="hidden sm:inline">انضم إلينا</span>
-                <span className="sm:hidden">انضم</span>
+                <UserPlus className="ml-1 h-3 w-3" />
+                انضم إلينا
               </Button>
               
               <DropdownMenu>
@@ -167,14 +128,13 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="text-slate-600 hover:text-brand-blue-dark hover:bg-blue-50 transition-all duration-200 font-medium text-xs sm:text-sm px-2 sm:px-3 py-1 sm:py-2"
+                    className="text-slate-600 hover:text-brand-blue-dark hover:bg-blue-50 transition-all duration-200 font-medium text-xs px-2 py-1.5"
                   >
-                    <Phone className="ml-1 sm:ml-2 h-3 w-3 sm:h-4 sm:w-4" />
-                    <span className="hidden sm:inline">تواصل معنا</span>
-                    <span className="sm:hidden">تواصل</span>
+                    <Phone className="ml-1 h-3 w-3" />
+                    تواصل معنا
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-44 sm:w-48 bg-white" align="center">
+                <DropdownMenuContent className="w-44 bg-white" align="center">
                   <DropdownMenuItem 
                     onClick={() => handleContactOption('whatsapp')}
                     className="cursor-pointer text-sm"
@@ -198,31 +158,56 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-              
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => navigate('/custom-request')}
-                className="bg-gradient-blue hover:bg-brand-accent-blue text-white border-0 px-3 sm:px-4 md:px-6 shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 text-xs sm:text-sm"
+
+              {/* WhatsApp and LinkedIn buttons in the same line */}
+              <a
+                href={companyInfo.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-1.5 bg-gradient-dark-blue hover:bg-brand-blue-dark text-white rounded-md transition-all duration-300 shadow-sm hover:shadow-md transform hover:scale-105"
+                title="تابعونا على LinkedIn"
               >
-                طلبك المخصص
+                <Linkedin className="h-3 w-3 text-white" />
+              </a>
+              <WhatsAppButton 
+                phoneNumber={companyInfo.whatsapp}
+                message="مرحباً، أريد بدء مشروع جديد مع Zeen A Plus Solutions"
+                variant="header"
+                className="text-xs px-2 py-1.5"
+              />
+            </div>
+
+            {/* Mobile Hamburger Button */}
+            <div className="lg:hidden">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={toggleMobileMenu}
+                className="p-1.5 text-brand-blue hover:text-brand-blue-dark hover:bg-brand-light-blue transition-all duration-300 rounded-lg"
+                aria-label="فتح القائمة"
+              >
+                {isMobileMenuOpen ? (
+                  <X className="h-5 w-5" />
+                ) : (
+                  <Menu className="h-5 w-5" />
+                )}
               </Button>
             </div>
           </div>
         </div>
       </header>
 
-      {/* Mobile Off-Canvas Menu */}
+      {/* Mobile Off-Canvas Menu - Unchanged */}
       {isMobileMenuOpen && (
         <>
           {/* Overlay */}
           <div 
-            className="fixed inset-0 bg-black/50 z-40 md:hidden"
+            className="fixed inset-0 bg-black/50 z-40 lg:hidden"
             onClick={closeMobileMenu}
           />
           
           {/* Off-Canvas Menu */}
-          <div className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl z-50 md:hidden transform transition-transform duration-300 ease-in-out">
+          <div className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl z-50 lg:hidden transform transition-transform duration-300 ease-in-out">
             <div className="flex flex-col h-full">
               {/* Menu Header */}
               <div className="flex items-center justify-between p-6 border-b border-slate-200 bg-gradient-to-r from-brand-light-blue to-white">
@@ -325,16 +310,6 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
                     </div>
                   </div>
                 </nav>
-              </div>
-
-              {/* Menu Footer - CTA Button */}
-              <div className="p-4 border-t border-slate-200 bg-gradient-to-r from-brand-light-blue to-white">
-                <Button
-                  onClick={() => { navigate('/custom-request'); closeMobileMenu(); }}
-                  className="w-full bg-gradient-blue hover:bg-brand-accent-blue text-white border-0 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 rounded-lg font-bold"
-                >
-                  طلبك المخصص
-                </Button>
               </div>
             </div>
           </div>
