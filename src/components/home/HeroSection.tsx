@@ -15,7 +15,7 @@ const HeroSection = ({ companyInfo }: HeroSectionProps) => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative py-16 sm:py-20 md:py-28 overflow-hidden">
+    <section className="relative py-12 sm:py-16 md:py-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-brand-light-blue/30 via-brand-light-blue/10 to-brand-light-blue/20"></div>
       <div className="container mx-auto px-4 sm:px-6 md:px-8 text-center relative z-10">
         <div className="max-w-6xl mx-auto">
@@ -23,10 +23,10 @@ const HeroSection = ({ companyInfo }: HeroSectionProps) => {
             <div className="mb-2 sm:mb-3 md:mb-4">Zeen-A Solutions</div>
             <div className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl">شركاؤكم الاستراتيجيون في تحقيق التميز والنمو</div>
           </h1>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 mb-8 sm:mb-12 md:mb-16 leading-relaxed max-w-5xl mx-auto px-2 sm:px-4">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 mb-8 sm:mb-12 md:mb-14 leading-relaxed max-w-5xl mx-auto px-2 sm:px-4">
             في Zeen-A Solutions، نقدم حلولاً متكاملة ومخصصة للشركات والأفراد في مجالات حيوية تشمل الموارد البشرية، التطوير التقني، التسويق الرقمي، والتطوير المهني. نعمل كجزء لا يتجزأ من فريقكم، ملتزمين بتقديم خبرات متخصصة تضمن إنجاز مهامكم بأعلى معايير الجودة والاحترافية، وتحقيق أهدافكم الاستراتيجية بفعالية.
           </p>
-          <div className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:gap-4 md:gap-8 justify-center items-center px-4">
+          <div className="flex flex-col space-y-6 sm:space-y-0 sm:flex-row sm:gap-8 md:gap-12 justify-center items-center px-4">
             <WhatsAppButton 
               phoneNumber={companyInfo.whatsapp}
               message="مرحباً، أريد الاستفسار عن خدماتكم المتخصصة"
