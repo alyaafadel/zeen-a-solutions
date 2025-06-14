@@ -1,50 +1,91 @@
 
-/* Brand Color System */
+/* Brand Color System - Enhanced */
 :root {
   --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
+  --foreground: 215 25% 27%;
 
   --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
+  --card-foreground: 215 25% 27%;
 
   --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
+  --popover-foreground: 215 25% 27%;
 
-  /* Primary blue colors */
+  /* Primary blue colors - Enhanced */
   --primary: 210 100% 50%;
   --primary-foreground: 210 40% 98%;
 
   --secondary: 210 40% 92%;
-  --secondary-foreground: 210 100% 20%;
+  --secondary-foreground: 215 25% 27%;
 
-  --muted: 210 40% 92%;
-  --muted-foreground: 215.4 16.3% 46.9%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 20% 45%;
 
   --accent: 210 40% 92%;
-  --accent-foreground: 210 100% 20%;
+  --accent-foreground: 215 25% 27%;
 
-  --destructive: 0 84.2% 60.2%;
+  /* Success colors - Green */
+  --success: 142 76% 36%;
+  --success-foreground: 0 0% 100%;
+  --success-light: 142 76% 95%;
+
+  /* Destructive colors - Red */
+  --destructive: 0 84% 60%;
   --destructive-foreground: 210 40% 98%;
+  --destructive-light: 0 84% 95%;
 
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
+  /* Warning colors - Yellow/Gold */
+  --warning: 45 93% 47%;
+  --warning-foreground: 215 25% 27%;
+  --warning-light: 45 93% 95%;
+
+  /* Info colors - Cyan */
+  --info: 189 94% 43%;
+  --info-foreground: 0 0% 100%;
+  --info-light: 189 94% 95%;
+
+  --border: 214 31% 91%;
+  --input: 214 31% 91%;
   --ring: 210 100% 50%;
 
   --radius: 0.5rem;
 
-  /* Custom brand colors - Blue theme */
+  /* Custom brand colors - Enhanced Blue theme */
   --brand-blue: 210 100% 50%;
   --brand-blue-light: 197 100% 56%;
-  --brand-blue-dark: 210 100% 20%;
-  --brand-light-blue: 197 71% 95%;
+  --brand-blue-dark: 210 100% 25%;
+  --brand-blue-darker: 210 100% 15%;
+  --brand-light-blue: 197 71% 97%;
   --brand-accent-blue: 212 100% 56%;
 
+  /* Neutral colors - Enhanced */
+  --neutral-50: 210 20% 98%;
+  --neutral-100: 210 20% 95%;
+  --neutral-200: 210 16% 88%;
+  --neutral-300: 210 14% 78%;
+  --neutral-400: 210 14% 58%;
+  --neutral-500: 210 11% 45%;
+  --neutral-600: 210 13% 35%;
+  --neutral-700: 210 15% 27%;
+  --neutral-800: 210 18% 18%;
+  --neutral-900: 210 22% 12%;
+
+  /* Surface colors */
+  --surface-primary: 0 0% 100%;
+  --surface-secondary: 210 40% 98%;
+  --surface-tertiary: 210 40% 96%;
+
+  /* Text colors - Enhanced contrast */
+  --text-primary: 215 25% 27%;
+  --text-secondary: 215 20% 45%;
+  --text-tertiary: 215 15% 65%;
+  --text-inverse: 0 0% 100%;
+
   --sidebar-background: 0 0% 98%;
-  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-foreground: 215 25% 27%;
   --sidebar-primary: 210 100% 50%;
   --sidebar-primary-foreground: 0 0% 98%;
   --sidebar-accent: 210 40% 92%;
-  --sidebar-accent-foreground: 210 100% 20%;
+  --sidebar-accent-foreground: 215 25% 27%;
   --sidebar-border: 220 13% 91%;
   --sidebar-ring: 210 100% 50%;
 }
@@ -61,14 +102,45 @@
   --secondary: 210 40% 20%;
   --secondary-foreground: 210 40% 98%;
   --muted: 210 40% 20%;
-  --muted-foreground: 215 20.2% 65.1%;
+  --muted-foreground: 215 20% 65%;
   --accent: 210 40% 20%;
   --accent-foreground: 210 40% 98%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
+
+  /* Success colors - Dark mode */
+  --success: 142 76% 45%;
+  --success-foreground: 0 0% 100%;
+  --success-light: 142 76% 15%;
+
+  /* Destructive colors - Dark mode */
+  --destructive: 0 84% 65%;
+  --destructive-foreground: 0 0% 100%;
+  --destructive-light: 0 84% 15%;
+
+  /* Warning colors - Dark mode */
+  --warning: 45 93% 55%;
+  --warning-foreground: 215 25% 27%;
+  --warning-light: 45 93% 15%;
+
+  /* Info colors - Dark mode */
+  --info: 189 94% 50%;
+  --info-foreground: 0 0% 100%;
+  --info-light: 189 94% 15%;
+
   --border: 210 40% 20%;
   --input: 210 40% 20%;
   --ring: 212 100% 56%;
+
+  /* Text colors - Dark mode */
+  --text-primary: 210 40% 98%;
+  --text-secondary: 210 30% 85%;
+  --text-tertiary: 210 20% 70%;
+  --text-inverse: 215 25% 27%;
+
+  /* Surface colors - Dark mode */
+  --surface-primary: 210 60% 8%;
+  --surface-secondary: 210 50% 12%;
+  --surface-tertiary: 210 40% 16%;
+
   --sidebar-background: 210 60% 8%;
   --sidebar-foreground: 210 40% 95%;
   --sidebar-primary: 212 100% 56%;

@@ -1,5 +1,5 @@
 
-/* Base Styles */
+/* Base Styles - Enhanced */
 * {
   @apply border-border;
 }
@@ -7,13 +7,14 @@
 body {
   @apply bg-background text-foreground;
   background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 1) 0%, 
-    rgba(224, 242, 247, 0.3) 50%, 
-    rgba(224, 242, 247, 0.5) 100%);
+    hsl(var(--surface-primary)) 0%, 
+    hsl(var(--surface-secondary)) 50%, 
+    hsl(var(--surface-tertiary)) 100%);
   min-height: 100vh;
+  color: hsl(var(--text-primary));
 }
 
-/* Typography improvements */
+/* Typography improvements - Enhanced contrast */
 p {
   display: block;
   clear: both;
@@ -21,6 +22,7 @@ p {
   line-height: 1.75;
   position: relative;
   z-index: 1;
+  color: hsl(var(--text-secondary));
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,6 +33,20 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.4;
   position: relative;
   z-index: 1;
+  color: hsl(var(--text-primary));
+  font-weight: 700;
+}
+
+h1 {
+  color: hsl(var(--brand-blue-dark));
+}
+
+h2 {
+  color: hsl(var(--brand-blue-dark));
+}
+
+h3 {
+  color: hsl(var(--text-primary));
 }
 
 section {
@@ -55,6 +71,7 @@ li {
   margin-bottom: 1rem;
   line-height: 1.6;
   position: relative;
+  color: hsl(var(--text-secondary));
 }
 
 /* Content container */
@@ -73,17 +90,73 @@ li {
   position: relative;
 }
 
+/* Links - Enhanced */
+a {
+  color: hsl(var(--brand-blue));
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: hsl(var(--brand-blue-dark));
+  text-decoration: underline;
+}
+
+a:focus {
+  @apply focus-brand;
+}
+
+/* Form elements - Enhanced */
+input, textarea, select {
+  color: hsl(var(--text-primary));
+  background-color: hsl(var(--surface-primary));
+  border-color: hsl(var(--neutral-300));
+}
+
+input:focus, textarea:focus, select:focus {
+  @apply focus-brand;
+  border-color: hsl(var(--brand-blue));
+}
+
+/* Button enhancements */
+button {
+  transition: all 0.2s ease;
+}
+
+button:focus {
+  @apply focus-brand;
+}
+
 /* Touch optimization */
 .touch-manipulation {
   touch-action: manipulation;
 }
 
-/* Mobile improvements */
+/* Card enhancements */
+.card-enhanced {
+  background-color: hsl(var(--surface-primary));
+  border: 1px solid hsl(var(--neutral-200));
+  transition: all 0.3s ease;
+}
+
+.card-enhanced:hover {
+  border-color: hsl(var(--brand-blue) / 0.3);
+  box-shadow: 0 8px 25px rgba(33, 150, 243, 0.1);
+}
+
+/* Mobile improvements - Enhanced */
 @media (max-width: 768px) {
+  body {
+    background: linear-gradient(135deg, 
+      hsl(var(--surface-primary)) 0%, 
+      hsl(var(--surface-secondary)) 100%);
+  }
+
   p {
     margin-bottom: 2rem;
     line-height: 1.8;
     padding: 0 0.5rem;
+    color: hsl(var(--text-secondary));
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -91,6 +164,10 @@ li {
     margin-bottom: 2rem;
     line-height: 1.3;
     padding: 0 0.5rem;
+  }
+
+  h1 {
+    color: hsl(var(--brand-blue-dark));
   }
 
   section {
@@ -106,11 +183,56 @@ li {
   li {
     margin-bottom: 1.25rem;
     line-height: 1.7;
+    color: hsl(var(--text-secondary));
   }
 
   button, .btn, [role="button"] {
     min-height: 48px;
     min-width: 48px;
     touch-action: manipulation;
+  }
+
+  /* Enhanced mobile text readability */
+  .mobile-text-primary {
+    color: hsl(var(--text-primary)) !important;
+  }
+
+  .mobile-text-secondary {
+    color: hsl(var(--text-secondary)) !important;
+  }
+}
+
+/* Dark mode specific enhancements */
+@media (prefers-color-scheme: dark) {
+  .auto-dark {
+    color: hsl(var(--text-primary));
+  }
+
+  .auto-dark-secondary {
+    color: hsl(var(--text-secondary));
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  body {
+    background: hsl(var(--surface-primary));
+  }
+
+  p, li {
+    color: hsl(var(--text-primary));
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: hsl(var(--text-primary));
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
