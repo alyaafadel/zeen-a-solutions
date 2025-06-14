@@ -1,5 +1,5 @@
 
-import { ArrowLeft, Target, Eye, Users, Award, Clock, MapPin, Lightbulb, Shield, Handshake, Star, TrendingUp, CheckCircle, Heart, Globe, Zap, UserPlus, Building2, Rocket } from "lucide-react";
+import { ArrowLeft, Target, Eye, Users, Award, Clock, MapPin, Lightbulb, Shield, Handshake, Star, TrendingUp, CheckCircle, Heart, Globe, Zap, UserPlus, Building2, Rocket, Sparkles, Trophy, Compass } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
@@ -16,65 +16,75 @@ const About = () => {
   };
 
   const achievements = [
-    { icon: Building2, number: "200+", label: "شراكة ناجحة" },
+    { icon: Building2, number: "200+", label: "شريك ناجح" },
     { icon: Star, number: "95%", label: "رضا الشركاء" },
     { icon: Rocket, number: "8+", label: "سنوات خبرة" },
-    { icon: UserPlus, number: "150+", label: "مهمة مكتملة" }
+    { icon: Trophy, number: "150+", label: "مهمة مكتملة" }
   ];
 
   const coreValues = [
     {
-      title: "ننضم لفريقكم مؤقتاً",
-      description: "نعمل كأعضاء في فريقكم لفترة محددة حتى إنجاز المهمة المطلوبة، ثم ننتقل للمهمة التالية عند الحاجة",
-      icon: UserPlus
+      title: "الاحترافية",
+      description: "نلتزم بأعلى معايير الجودة والأخلاق المهنية في كل ما نقدمه، ونضمن تسليم العمل بالدقة والإتقان المطلوبين",
+      icon: Award
     },
     {
-      title: "متخصصون في كل مجال",
-      description: "كل مهمة يتولاها متخصص خبير في المجال المطلوب، مما يضمن جودة عالية ونتائج احترافية",
+      title: "المرونة",
+      description: "نتكيف مع متطلباتكم المتغيرة ونقدم حلولاً قابلة للتطوير تلائم احتياجاتكم المتنوعة والمتطورة",
+      icon: Zap
+    },
+    {
+      title: "الابتكار",
+      description: "نسعى باستمرار لتقديم أحدث الحلول والأفكار التي تضمن لكم السبق في مجالكم والتميز في أدائكم",
+      icon: Lightbulb
+    },
+    {
+      title: "الشراكة",
+      description: "نعمل معكم يداً بيد، كجزء لا يتجزأ من فريقكم، لتحقيق الأهداف المشتركة والنجاح المتبادل",
+      icon: Handshake
+    },
+    {
+      title: "النتائج",
+      description: "نركز على تحقيق نتائج ملموسة وقابلة للقياس تساهم في نمو أعمالكم وتطوير مسيرتكم المهنية",
       icon: Target
     },
     {
-      title: "بدون التزامات التوظيف",
-      description: "لا رواتب شهرية، لا تأمينات، لا إجازات - فقط نتائج عالية الجودة بتكلفة المهمة فقط",
+      title: "الثقة",
+      description: "نبني علاقات طويلة الأمد مع شركائنا مبنية على الثقة المتبادلة والشفافية في التعامل",
       icon: Shield
-    },
-    {
-      title: "جاهزون عند الطلب",
-      description: "متاحون للمهام الجديدة في أي وقت، سواء كانت مهام طارئة أو مشاريع مخطط لها مسبقاً",
-      icon: Zap
     }
   ];
 
-  const whyChooseUs = [
-    { 
-      text: "ننجز المهام كأعضاء فريق مؤقتين بدلاً من التوظيف الدائم", 
-      icon: UserPlus,
-      description: "تحصل على خبرة متخصصة لإنجاز مهامك دون تكاليف الموظف الدائم"
+  const whatMakesUsDifferent = [
+    {
+      title: "فريق من الخبراء",
+      description: "نمتلك شبكة واسعة من المتخصصين ذوي الخبرة العميقة في مجالات متنوعة، من الموارد البشرية والتطوير التقني إلى التسويق الرقمي والتطوير المهني",
+      icon: Users
     },
-    { 
-      text: "متخصصون جاهزون فوراً - لا انتظار للتوظيف والتدريب", 
-      icon: Zap,
-      description: "فريقنا مدرب ومؤهل لبدء العمل من اليوم الأول دون فترات انتظار"
+    {
+      title: "حلول مخصصة",
+      description: "نفهم أن كل عميل فريد، ولذلك نقدم حلولاً مصممة خصيصاً لتلبية متطلباتكم الدقيقة، بدلاً من الحلول الجاهزة",
+      icon: Compass
     },
-    { 
-      text: "ندفع فقط مقابل المهام المنجزة - لا رواتب شهرية ثابتة", 
-      icon: TrendingUp,
-      description: "وفر 60-80% من تكلفة الموظف الدائم مع ضمان إنجاز المهام بجودة عالية"
+    {
+      title: "مرونة لا مثيل لها",
+      description: "سواء كنتم بحاجة إلى دعم لمشروع قصير الأجل أو خبرة متخصصة لمهمة محددة، فإننا نقدم لكم الدعم الذي تحتاجونه دون الحاجة إلى التزامات توظيف دائمة",
+      icon: Globe
     },
-    { 
-      text: "مرونة كاملة - متاحون عند الحاجة فقط", 
-      icon: Globe,
-      description: "اطلب خدماتنا عند الحاجة، لا التزامات طويلة المدى أو عقود معقدة"
+    {
+      title: "الجودة والالتزام",
+      description: "نضمن إنجاز المهام بأعلى مستويات الجودة وفي المواعيد المحددة، مع التركيز على التفاصيل لضمان رضاكم التام",
+      icon: CheckCircle
     },
-    { 
-      text: "نتحمل مسؤولية النتائج - ضمان الجودة أو إعادة العمل", 
-      icon: Award,
-      description: "نضمن جودة العمل المنجز ونعيد العمل مجاناً في حالة عدم الرضا"
+    {
+      title: "القيمة المضافة",
+      description: "هدفنا ليس فقط إنجاز المهام، بل تقديم قيمة حقيقية تساهم في تطوير أعمالكم وتحقيق أهدافكم الاستراتيجية",
+      icon: TrendingUp
     },
-    { 
-      text: "خبرة متعددة التخصصات في فريق واحد", 
-      icon: Users,
-      description: "احصل على خبرات متنوعة من التقنية للتسويق للموارد البشرية من مصدر واحد"
+    {
+      title: "الدعم المستمر",
+      description: "نقدم دعماً مستمراً ومتابعة دقيقة لضمان تحقيق النتائج المرجوة والاستفادة القصوى من خدماتنا",
+      icon: Heart
     }
   ];
 
@@ -102,7 +112,7 @@ const About = () => {
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-slate-700">{companyInfo.name}</h1>
-                <p className="text-sm text-slate-600">شركاؤكم المتخصصون</p>
+                <p className="text-sm text-slate-600">شركاؤكم في التميز والإنجاز</p>
               </div>
             </div>
           </div>
@@ -113,15 +123,20 @@ const About = () => {
       <section className="relative py-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-500/5 via-indigo-500/5 to-blue-500/5"></div>
         <div className="container mx-auto px-6 text-center relative z-10">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-slate-700 leading-tight">
-              ننضم لفريقكم 
+              من نحن: Zeen A Plus Solutions
               <br />
-              <span className="text-slate-600">كشركاء متخصصين</span>
+              <span className="text-slate-600">شركاؤكم في التميز والإنجاز</span>
             </h1>
-            <p className="text-xl mb-12 max-w-3xl mx-auto leading-relaxed text-slate-600">
-              نعمل مع الشركات والأفراد كأعضاء فريق مؤقتين لإنجاز المهام المطلوبة. ننهي المهمة بجودة عالية ونكون جاهزين للمهمة التالية عند الحاجة - بدون توظيف دائم أو التزامات طويلة
-            </p>
+            <div className="text-lg mb-8 max-w-4xl mx-auto leading-relaxed text-slate-600 space-y-4">
+              <p>
+                في Zeen A Plus Solutions، نؤمن بأن النجاح في عالم الأعمال اليوم يتطلب مرونة استثنائية، وصولاً سريعاً للخبرات المتخصصة، وشراكات مبنية على الثقة والاحترافية.
+              </p>
+              <p>
+                نحن لسنا مجرد مزودين للخدمات، بل <strong>شركاء استراتيجيون</strong> ننضم إلى فريق عملكم لتقديم حلول متكاملة ومصممة خصيصاً لتلبية احتياجاتكم الفريدة وتحقيق أهدافكم الطموحة.
+              </p>
+            </div>
             
             <div className="grid md:grid-cols-4 gap-6 mt-12">
               {achievements.map((achievement, index) => (
@@ -145,10 +160,10 @@ const About = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-700 mb-4">مفهومنا في الشراكة</h2>
+            <h2 className="text-4xl font-bold text-slate-700 mb-4">رؤيتنا ورسالتنا</h2>
             <div className="w-20 h-1 bg-slate-400 mx-auto mb-4"></div>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              نؤمن بأن الشركات والأفراد يحتاجون لخبرات متخصصة لفترات محددة، وليس بالضرورة موظفين دائمين
+              نسعى لأن نكون الشريك المفضل للشركات والأفراد في تحقيق أهدافهم وتجاوز تحدياتهم
             </p>
           </div>
           
@@ -162,7 +177,7 @@ const About = () => {
               </CardHeader>
               <CardContent className="text-center px-6 pb-8">
                 <p className="text-slate-600 leading-relaxed text-lg">
-                  أن نكون الخيار الأول للشركات والأفراد الذين يحتاجون شركاء متخصصين ينضمون لفريقهم مؤقتاً لإنجاز المهام بجودة عالية وبدون التزامات التوظيف التقليدية
+                  أن نكون الشريك المفضل للشركات والأفراد الباحثين عن حلول مبتكرة وفعالة، تمكنهم من تجاوز التحديات وتحقيق أقصى إمكاناتهم في بيئة عمل متغيرة باستمرار.
                 </p>
               </CardContent>
             </Card>
@@ -172,11 +187,11 @@ const About = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-slate-500 to-slate-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md">
                   <Target className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-3xl text-slate-700 mb-4 font-bold">مهمتنا</CardTitle>
+                <CardTitle className="text-3xl text-slate-700 mb-4 font-bold">رسالتنا</CardTitle>
               </CardHeader>
               <CardContent className="text-center px-6 pb-8">
                 <p className="text-slate-600 leading-relaxed text-lg">
-                  نقدم خدمات متخصصة في مختلف المجالات من خلال انضمامنا لفرق العمل كشركاء مؤقتين. ننجز المهام المطلوبة بأعلى جودة ونكون متاحين للمهام الجديدة عند الحاجة
+                  تقديم خدمات استشارية وتنفيذية عالية الجودة في مجالات متعددة، من خلال فريق من الخبراء المتخصصين الذين يعملون بمرونة وكفاءة، لضمان إنجاز المهام بدقة واحترافية، وتحقيق قيمة مضافة حقيقية لعملائنا.
                 </p>
               </CardContent>
             </Card>
@@ -188,23 +203,23 @@ const About = () => {
       <section className="py-16 bg-gradient-to-br from-slate-50 to-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-700 mb-4">كيف نعمل كشركاء</h2>
+            <h2 className="text-4xl font-bold text-slate-700 mb-4">قيمنا الأساسية</h2>
             <div className="w-20 h-1 bg-slate-400 mx-auto mb-4"></div>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              المبادئ التي تحكم طريقة عملنا كشركاء متخصصين مع فرق العمل
+              المبادئ التي تحكم طريقة عملنا وتوجه كل قراراتنا في رحلة الشراكة معكم
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {coreValues.map((value, index) => (
               <Card key={index} className="bg-white border-slate-200 shadow-md hover:shadow-lg transition-all duration-300">
-                <CardHeader className="p-6">
-                  <div className="w-14 h-14 bg-gradient-to-br from-slate-500 to-slate-600 rounded-xl flex items-center justify-center mb-4 shadow-md">
+                <CardHeader className="text-center p-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-slate-500 to-slate-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-md">
                     <value.icon className="h-7 w-7 text-white" />
                   </div>
-                  <CardTitle className="text-2xl text-slate-700 mb-3 font-bold">{value.title}</CardTitle>
+                  <CardTitle className="text-xl text-slate-700 mb-3 font-bold">{value.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="px-6 pb-6">
+                <CardContent className="px-6 pb-6 text-center">
                   <p className="text-slate-600 leading-relaxed">{value.description}</p>
                 </CardContent>
               </Card>
@@ -213,45 +228,53 @@ const About = () => {
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* What Makes Us Different */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-700 mb-4">لماذا تختار Zeen كشريك؟</h2>
+            <h2 className="text-4xl font-bold text-slate-700 mb-4">ما يميزنا</h2>
             <div className="w-20 h-1 bg-slate-400 mx-auto mb-6"></div>
             <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed mb-4">
-              <span className="font-semibold text-slate-700">لا تحتاج موظفين دائمين</span> - فقط شركاء متخصصين ينضمون لفريقك عند الحاجة وينجزون المهام بجودة عالية
+              نجمع بين <span className="font-semibold text-slate-700">الخبرة العميقة والمرونة الاستثنائية</span> لنكون شركاؤكم الأمثل في تحقيق النجاح
             </p>
             <p className="text-lg text-slate-500 max-w-3xl mx-auto leading-relaxed">
-              أكثر من 200 شريك استفاد من خدماتنا ووفر تكاليف التوظيف والإدارة
+              شبكة واسعة من المتخصصين والحلول المبتكرة في خدمة أهدافكم
             </p>
           </div>
           
           <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {whyChooseUs.map((reason, index) => (
+            {whatMakesUsDifferent.map((item, index) => (
               <Card key={index} className="bg-slate-50 border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4 space-x-reverse">
                     <div className="w-14 h-14 bg-gradient-to-br from-slate-500 to-slate-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
-                      <reason.icon className="h-7 w-7 text-white" />
+                      <item.icon className="h-7 w-7 text-white" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-lg font-bold text-slate-700 mb-2 leading-tight">{reason.text}</h3>
-                      <p className="text-slate-600 leading-relaxed text-sm">{reason.description}</p>
+                      <h3 className="text-xl font-bold text-slate-700 mb-3 leading-tight">{item.title}</h3>
+                      <p className="text-slate-600 leading-relaxed">{item.description}</p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* Testimonial */}
-          <div className="mt-16 text-center">
-            <div className="bg-slate-50 rounded-2xl p-8 max-w-4xl mx-auto border border-slate-200">
-              <div className="text-3xl text-slate-300 mb-4">"</div>
-              <p className="text-xl text-slate-600 leading-relaxed mb-6 italic">
-                "احتجنا متخصص تسويق رقمي لمدة شهرين فقط لإطلاق منتج جديد. بدلاً من توظيف موظف دائم براتب شهري، 
-                تعاملنا مع Zeen كشركاء وانضم أحد خبرائهم لفريقنا، أنجز المهمة بتميز ووفرنا أكثر من 70% من التكلفة"
+      {/* How We Work */}
+      <section className="py-16 bg-gradient-to-br from-slate-50 to-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-slate-700 mb-6">كيف نعمل؟</h2>
+            <div className="w-20 h-1 bg-slate-400 mx-auto mb-8"></div>
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-200">
+              <div className="w-16 h-16 bg-gradient-to-br from-slate-500 to-slate-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md">
+                <Users className="h-8 w-8 text-white" />
+              </div>
+              <p className="text-xl text-slate-600 leading-relaxed mb-6">
+                نحن نعمل <span className="font-bold text-slate-700">كجزء من فريقكم</span>، نقدم الخبرة والدعم اللازمين لإنجاز المهام بكفاءة. 
+                سواء كنتم بحاجة إلى استشارات متخصصة، إدارة مشاريع، أو تنفيذ مهام محددة، فإننا هنا لتقديم الدعم الذي يمكنكم الاعتماد عليه.
               </p>
               <div className="flex items-center justify-center space-x-2 space-x-reverse">
                 <div className="flex">
@@ -259,7 +282,7 @@ const About = () => {
                     <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <span className="text-slate-500 text-sm font-medium">- أحد شركائنا</span>
+                <span className="text-slate-500 text-sm font-medium">- تقييم شركائنا لجودة خدماتنا</span>
               </div>
             </div>
           </div>
@@ -271,29 +294,28 @@ const About = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-slate-600 to-slate-700"></div>
         <div className="container mx-auto px-6 text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
-            تحتاج شريك متخصص 
+            انضموا إلى قائمة شركائنا الناجحين
             <br />
-            <span className="text-slate-200">ينضم لفريقك؟</span>
+            <span className="text-slate-200">ودعونا نساعدكم في تحقيق أهدافكم</span>
           </h2>
           <p className="text-xl mb-10 text-slate-200 max-w-3xl mx-auto leading-relaxed">
-            احصل على خبرات متخصصة تنضم لفريقك مؤقتاً لإنجاز المهام المطلوبة. 
-            بدون توظيف دائم، بدون التزامات طويلة، فقط نتائج عالية الجودة
+            تواصلوا معنا اليوم لمناقشة كيف يمكن لـ Zeen A Plus Solutions أن تكون شريككم الأمثل في رحلة النجاح
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <WhatsAppButton 
               phoneNumber={companyInfo.whatsapp}
-              message="مرحباً، أريد شريك متخصص ينضم لفريقنا لإنجاز مهام محددة"
+              message="مرحباً، أريد التعرف أكثر على خدماتكم وكيف يمكنكم أن تكونوا شركائنا في النجاح"
               variant="cta"
-              text="ابدأ الشراكة معنا"
+              text="تواصل معنا الآن"
               className="bg-white text-slate-600 hover:bg-slate-50 border-0 px-8 py-3 text-lg font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             />
             <Button
               variant="outline"
               size="lg"
-              onClick={() => navigate('/our-team')}
+              onClick={() => navigate('/')}
               className="border-2 border-white text-white hover:bg-white hover:text-slate-600 px-8 py-3 text-lg font-bold transition-all duration-300"
             >
-              تعرف على فريقنا
+              اكتشف خدماتنا
             </Button>
           </div>
         </div>
