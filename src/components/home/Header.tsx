@@ -57,20 +57,20 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
     <>
       <header className="bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200 sticky top-0 z-50">
         {/* Single Line Layout - Logo, Company Name, and Navigation */}
-        <div className="container mx-auto px-4 sm:px-6 py-1.5">
+        <div className="container mx-auto px-4 sm:px-6 py-2.5">
           <div className="flex justify-between items-center">
-            {/* Logo and Company Section - More Compact */}
-            <div className="flex items-center space-x-2 space-x-reverse">
-              <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-blue rounded-lg flex items-center justify-center shadow-md border border-white">
+            {/* Logo and Company Section - Enhanced Size */}
+            <div className="flex items-center space-x-3 space-x-reverse">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-blue rounded-xl flex items-center justify-center shadow-lg border border-white">
                 <img 
                   src="/lovable-uploads/8838bb20-a5cc-4ab1-9fce-30cdb0f93521.png" 
                   alt="Zeen A Plus Solutions Logo" 
-                  className="w-4 h-4 sm:w-5 sm:h-5 object-contain filter brightness-200"
+                  className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 object-contain filter brightness-200"
                 />
               </div>
               <div>
-                <h1 className="text-sm sm:text-base md:text-lg font-bold text-brand-blue-dark leading-tight">{companyInfo.name}</h1>
-                <p className="text-xs text-slate-600 font-medium hidden sm:block leading-tight">{companyInfo.slogan}</p>
+                <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-brand-blue-dark leading-tight">{companyInfo.name}</h1>
+                <p className="text-xs sm:text-sm md:text-base text-slate-600 font-medium hidden sm:block leading-tight">{companyInfo.slogan}</p>
               </div>
             </div>
 
@@ -188,9 +188,9 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
                 aria-label="فتح القائمة"
               >
                 {isMobileMenuOpen ? (
-                  <X className="h-5 w-5" />
+                  <X className="h-6 w-6" />
                 ) : (
-                  <Menu className="h-5 w-5" />
+                  <Menu className="h-6 w-6" />
                 )}
               </Button>
             </div>
@@ -213,16 +213,16 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
               {/* Menu Header */}
               <div className="flex items-center justify-between p-6 border-b border-slate-200 bg-gradient-to-r from-brand-light-blue to-white">
                 <div className="flex items-center space-x-3 space-x-reverse">
-                  <div className="w-10 h-10 bg-gradient-blue rounded-xl flex items-center justify-center shadow-md">
+                  <div className="w-12 h-12 bg-gradient-blue rounded-xl flex items-center justify-center shadow-md">
                     <img 
                       src="/lovable-uploads/8838bb20-a5cc-4ab1-9fce-30cdb0f93521.png" 
                       alt="Logo" 
-                      className="w-6 h-6 object-contain filter brightness-200"
+                      className="w-7 h-7 object-contain filter brightness-200"
                     />
                   </div>
                   <div>
-                    <h2 className="text-sm font-bold text-brand-blue-dark">{companyInfo.name}</h2>
-                    <p className="text-xs text-slate-600">القائمة الرئيسية</p>
+                    <h2 className="text-base font-bold text-brand-blue-dark">{companyInfo.name}</h2>
+                    <p className="text-sm text-slate-600">القائمة الرئيسية</p>
                   </div>
                 </div>
                 <Button
