@@ -16,9 +16,9 @@ const Index = () => {
       logo: "👥",
       description: "خدمات شاملة في التوظيف والتدريب وإدارة الأداء لبناء فريق أحلامك",
       icon: Users,
-      color: "from-blue-500 to-blue-600",
-      bgColor: "bg-blue-50",
-      iconColor: "text-blue-600",
+      color: "from-slate-700 to-slate-800",
+      bgColor: "bg-slate-50",
+      iconColor: "text-slate-700",
       route: "/hr-services",
       features: ["استقطاب المواهب", "الهياكل التنظيمية", "التدريب والتطوير", "إدارة الأداء"]
     },
@@ -28,9 +28,9 @@ const Index = () => {
       logo: "🌐",
       description: "ترجمة احترافية ودقيقة للوثائق الرسمية والأكاديمية بجودة عالية",
       icon: Languages,
-      color: "from-purple-500 to-purple-600",
-      bgColor: "bg-purple-50",
-      iconColor: "text-purple-600",
+      color: "from-slate-600 to-slate-700",
+      bgColor: "bg-slate-50",
+      iconColor: "text-slate-600",
       route: "/translation-services", 
       features: ["الوثائق الرسمية", "الأبحاث الأكاديمية", "متعدد اللغات", "ترجمة عاجلة"]
     },
@@ -40,9 +40,9 @@ const Index = () => {
       logo: "📈",
       description: "استراتيجيات تسويق مبتكرة لزيادة مبيعاتك وتنمية علامتك التجارية",
       icon: Megaphone,
-      color: "from-green-500 to-green-600",
-      bgColor: "bg-green-50",
-      iconColor: "text-green-600",
+      color: "from-slate-700 to-slate-800",
+      bgColor: "bg-slate-50",
+      iconColor: "text-slate-700",
       route: "/digital-marketing",
       features: ["إدارة وسائل التواصل", "الإعلانات المدفوعة", "تحسين SEO", "التسويق بالمحتوى"]
     },
@@ -52,9 +52,9 @@ const Index = () => {
       logo: "💻",
       description: "تطوير مواقع وتطبيقات احترافية بأحدث التقنيات والمعايير العالمية",
       icon: Code,
-      color: "from-orange-500 to-orange-600",
-      bgColor: "bg-orange-50",
-      iconColor: "text-orange-600",
+      color: "from-slate-600 to-slate-700",
+      bgColor: "bg-slate-50",
+      iconColor: "text-slate-600",
       route: "/programming-services",
       features: ["المواقع الإلكترونية", "تطبيقات الجوال", "الأنظمة الإدارية", "الصيانة والدعم"]
     },
@@ -64,9 +64,9 @@ const Index = () => {
       logo: "🚛",
       description: "حلول لوجستية متكاملة وخدمات 3PL احترافية لضمان سلاسة عملياتك",
       icon: Truck,
-      color: "from-teal-500 to-teal-600",
-      bgColor: "bg-teal-50",
-      iconColor: "text-teal-600",
+      color: "from-slate-700 to-slate-800",
+      bgColor: "bg-slate-50",
+      iconColor: "text-slate-700",
       route: "/logistics-services",
       features: ["التخزين والمستودعات", "النقل والتوصيل", "إدارة سلسلة التوريد", "خدمات 3PL"]
     },
@@ -76,9 +76,9 @@ const Index = () => {
       logo: "🎓",
       description: "برامج تدريبية متخصصة ومكثفة لتطوير المهارات المهنية والشخصية",
       icon: GraduationCap,
-      color: "from-indigo-500 to-indigo-600",
-      bgColor: "bg-indigo-50",
-      iconColor: "text-indigo-600",
+      color: "from-slate-600 to-slate-700",
+      bgColor: "bg-slate-50",
+      iconColor: "text-slate-600",
       route: "/training-services",
       features: ["دورات تدريبية متخصصة", "ورش عمل تطبيقية", "التدريب الرقمي", "شهادات معتمدة"]
     },
@@ -88,9 +88,9 @@ const Index = () => {
       logo: "💼",
       description: "خدمات شاملة لتطوير مسارك المهني وبناء هويتك الوظيفية المتميزة",
       icon: Briefcase,
-      color: "from-emerald-500 to-emerald-600",
-      bgColor: "bg-emerald-50",
-      iconColor: "text-emerald-600",
+      color: "from-slate-700 to-slate-800",
+      bgColor: "bg-slate-50",
+      iconColor: "text-slate-700",
       route: "/career-services",
       features: ["كتابة السيرة الذاتية", "التحضير للمقابلات", "التوجيه المهني", "البحث عن عمل"]
     },
@@ -100,9 +100,9 @@ const Index = () => {
       logo: "⭐",
       description: "حلول مبتكرة ومخصصة تماماً لتلبية احتياجات شركتك الفريدة والمتطورة",
       icon: Star,
-      color: "from-pink-500 to-pink-600",
-      bgColor: "bg-pink-50",
-      iconColor: "text-pink-600",
+      color: "from-amber-500 to-amber-600",
+      bgColor: "bg-amber-50",
+      iconColor: "text-amber-600",
       route: "/custom-solutions",
       features: ["استشارات متخصصة", "حلول مبتكرة", "تطوير حسب الطلب", "دعم شامل"]
     }
@@ -159,22 +159,22 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100" dir="rtl">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200" dir="rtl">
       {/* Header */}
-      <header className="bg-white/95 backdrop-blur-md shadow-lg border-b sticky top-0 z-50">
+      <header className="bg-white/95 backdrop-blur-md shadow-lg border-b border-slate-200 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-4 space-x-reverse">
-              <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-xl border-2 border-white">
+              <div className="w-14 h-14 bg-gradient-to-br from-slate-700 to-slate-800 rounded-2xl flex items-center justify-center shadow-xl border-2 border-white">
                 <img 
                   src="/lovable-uploads/8838bb20-a5cc-4ab1-9fce-30cdb0f93521.png" 
                   alt="Zeen A Plus Solutions Logo" 
-                  className="w-9 h-9 object-contain"
+                  className="w-9 h-9 object-contain filter brightness-200"
                 />
               </div>
               <div>
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">{companyInfo.name}</h1>
-                <p className="text-sm text-gray-600 font-medium">{companyInfo.slogan}</p>
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">{companyInfo.name}</h1>
+                <p className="text-sm text-slate-600 font-medium">{companyInfo.slogan}</p>
               </div>
             </div>
             <div className="flex items-center space-x-3 space-x-reverse">
@@ -182,7 +182,7 @@ const Index = () => {
                 href={companyInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="p-3 bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-800 hover:to-slate-900 text-white rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                 title="تابعونا على LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
@@ -197,14 +197,14 @@ const Index = () => {
         </div>
 
         {/* Navigation Bar */}
-        <div className="border-t bg-white/90 backdrop-blur-sm">
+        <div className="border-t border-slate-200 bg-white/90 backdrop-blur-sm">
           <div className="container mx-auto px-4 py-4">
             <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => navigate('/about')}
-                className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 font-medium"
+                className="text-slate-700 hover:text-slate-800 hover:bg-slate-50 transition-all duration-200 font-medium"
               >
                 <Info className="ml-2 h-4 w-4" />
                 من نحن
@@ -215,7 +215,7 @@ const Index = () => {
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-all duration-200 font-medium"
+                    className="text-slate-700 hover:text-slate-800 hover:bg-slate-50 transition-all duration-200 font-medium"
                   >
                     <Settings className="ml-2 h-4 w-4" />
                     خدماتنا
@@ -239,7 +239,7 @@ const Index = () => {
                 variant="ghost"
                 size="sm"
                 onClick={() => navigate('/join-us')}
-                className="text-gray-700 hover:text-green-600 hover:bg-green-50 transition-all duration-200 font-medium"
+                className="text-slate-700 hover:text-slate-800 hover:bg-slate-50 transition-all duration-200 font-medium"
               >
                 <UserPlus className="ml-2 h-4 w-4" />
                 انضم إلينا
@@ -250,7 +250,7 @@ const Index = () => {
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="text-gray-700 hover:text-orange-600 hover:bg-orange-50 transition-all duration-200 font-medium"
+                    className="text-slate-700 hover:text-slate-800 hover:bg-slate-50 transition-all duration-200 font-medium"
                   >
                     <Phone className="ml-2 h-4 w-4" />
                     تواصل معنا
@@ -268,14 +268,14 @@ const Index = () => {
                     onClick={() => handleContactOption('linkedin')}
                     className="cursor-pointer"
                   >
-                    <Linkedin className="ml-2 h-4 w-4 text-blue-600" />
+                    <Linkedin className="ml-2 h-4 w-4 text-slate-600" />
                     <span>لينكد إن</span>
                   </DropdownMenuItem>
                   <DropdownMenuItem 
                     onClick={() => handleContactOption('email')}
                     className="cursor-pointer"
                   >
-                    <Mail className="ml-2 h-4 w-4 text-gray-600" />
+                    <Mail className="ml-2 h-4 w-4 text-slate-600" />
                     <span>البريد الإلكتروني</span>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
@@ -285,7 +285,7 @@ const Index = () => {
                 variant="outline"
                 size="sm"
                 onClick={() => navigate('/custom-request')}
-                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white border-0 px-6 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white border-0 px-6 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
               >
                 طلبك المخصص
               </Button>
@@ -296,13 +296,13 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-purple-600/10 to-pink-600/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-700/10 via-slate-800/10 to-slate-900/10"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-slate-700 via-slate-800 to-slate-900 bg-clip-text text-transparent leading-tight">
               حلول متكاملة لنجاح أعمالك
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-slate-600 mb-8 leading-relaxed">
               نقدم خدمات احترافية متنوعة من الموارد البشرية إلى التطوير التقني والتسويق الرقمي لتحقيق أهدافك
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -317,7 +317,7 @@ const Index = () => {
                 variant="outline"
                 size="lg"
                 onClick={() => navigate('/about')}
-                className="px-8 py-3 text-lg border-2 border-gray-300 hover:border-blue-500 hover:text-blue-600 transition-all duration-300"
+                className="px-8 py-3 text-lg border-2 border-slate-300 hover:border-slate-500 hover:text-slate-700 transition-all duration-300"
               >
                 اعرف المزيد عنا
               </Button>
@@ -326,9 +326,9 @@ const Index = () => {
         </div>
         
         {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-blue-200/30 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-16 h-16 bg-purple-200/30 rounded-full animate-pulse delay-75"></div>
-        <div className="absolute top-40 right-20 w-12 h-12 bg-pink-200/30 rounded-full animate-pulse delay-150"></div>
+        <div className="absolute top-20 left-10 w-20 h-20 bg-slate-200/30 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-16 h-16 bg-slate-300/30 rounded-full animate-pulse delay-75"></div>
+        <div className="absolute top-40 right-20 w-12 h-12 bg-slate-200/30 rounded-full animate-pulse delay-150"></div>
       </section>
 
       {/* Features Section */}
@@ -337,11 +337,11 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-slate-700 to-slate-800 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <feature.icon className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <h3 className="text-xl font-bold text-slate-800 mb-2">{feature.title}</h3>
+                <p className="text-slate-600">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -349,11 +349,11 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-slate-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">خدماتنا المتميزة</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-slate-800 mb-4">خدماتنا المتميزة</h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               نقدم مجموعة شاملة من الخدمات المهنية لتلبية جميع احتياجات شركتك
             </p>
           </div>
@@ -362,22 +362,22 @@ const Index = () => {
             {services.map((service, index) => (
               <Card 
                 key={index} 
-                className="group cursor-pointer hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-white border-0 shadow-lg overflow-hidden"
+                className="group cursor-pointer hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-white border-0 shadow-lg overflow-hidden border-l-4 border-l-slate-700"
                 onClick={() => navigate(service.route)}
               >
                 <CardHeader className="text-center pb-2">
                   <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                     <service.icon className="h-8 w-8 text-white" />
                   </div>
-                  <CardTitle className="text-lg font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
+                  <CardTitle className="text-lg font-bold text-slate-800 group-hover:text-slate-700 transition-colors duration-300">
                     {service.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
-                  <CardDescription className="text-gray-600 mb-4 leading-relaxed">
+                  <CardDescription className="text-slate-600 mb-4 leading-relaxed">
                     {service.description}
                   </CardDescription>
-                  <div className="flex items-center justify-center text-blue-600 group-hover:text-purple-600 transition-colors duration-300">
+                  <div className="flex items-center justify-center text-slate-700 group-hover:text-amber-600 transition-colors duration-300">
                     <span className="text-sm font-medium ml-2">اعرف المزيد</span>
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
@@ -389,7 +389,7 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+      <section className="py-16 bg-gradient-to-r from-slate-800 to-slate-900 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">إنجازاتنا بالأرقام</h2>
@@ -401,7 +401,7 @@ const Index = () => {
                 <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="h-8 w-8 text-white" />
                 </div>
-                <div className="text-4xl font-bold mb-2">{stat.number}</div>
+                <div className="text-4xl font-bold mb-2 text-amber-400">{stat.number}</div>
                 <div className="text-lg opacity-90">{stat.label}</div>
               </div>
             ))}
@@ -413,14 +413,14 @@ const Index = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">لماذا تختار Zeen A Plus Solutions؟</h2>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+            <h2 className="text-3xl font-bold text-slate-800 mb-6">لماذا تختار Zeen A Plus Solutions؟</h2>
+            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
               {companyInfo.description}
             </p>
             <Button
               size="lg"
               onClick={() => navigate('/about')}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-800 hover:to-slate-900 text-white px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             >
               اعرف المزيد عن قصتنا
             </Button>
@@ -429,16 +429,16 @@ const Index = () => {
       </section>
 
       {/* Join Us Section */}
-      <section className="py-16 bg-gradient-to-br from-green-50 to-emerald-50">
+      <section className="py-16 bg-gradient-to-br from-slate-50 to-slate-100">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">انضم إلى فريق المتميزين</h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-slate-800 mb-4">انضم إلى فريق المتميزين</h2>
+          <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
             هل تمتلك خبرة في أحد مجالاتنا؟ انضم إلى شبكة الفريلانسرز المتميزة لدينا
           </p>
           <Button
             size="lg"
             onClick={() => navigate('/join-us')}
-            className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            className="bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-800 hover:to-slate-900 text-white px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
           >
             <UserPlus className="ml-2 h-5 w-5" />
             ابدأ رحلتك معنا
@@ -447,7 +447,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-gradient-to-br from-gray-800 to-gray-900 text-white">
+      <section className="py-16 bg-gradient-to-br from-slate-800 to-slate-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">هل أنت مستعد لبدء مشروعك؟</h2>
           <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
@@ -462,7 +462,7 @@ const Index = () => {
               text="تواصل عبر الواتس آب"
               className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             />
-            <div className="flex items-center space-x-6 space-x-reverse text-gray-300">
+            <div className="flex items-center space-x-6 space-x-reverse text-slate-300">
               <div className="flex items-center space-x-2 space-x-reverse">
                 <Phone className="h-5 w-5" />
                 <span>{companyInfo.phone}</span>
@@ -471,7 +471,7 @@ const Index = () => {
                 href={companyInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 space-x-reverse hover:text-blue-400 transition-colors"
+                className="flex items-center space-x-2 space-x-reverse hover:text-amber-400 transition-colors"
               >
                 <Linkedin className="h-5 w-5" />
                 <span>LinkedIn</span>
