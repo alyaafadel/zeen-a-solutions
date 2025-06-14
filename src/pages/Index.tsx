@@ -1,5 +1,4 @@
-
-import { Users, Languages, Megaphone, Code, Truck, ArrowRight, CheckCircle, MessageSquare, GraduationCap, Linkedin, Briefcase } from "lucide-react";
+import { Users, Languages, Megaphone, Code, Truck, ArrowRight, CheckCircle, MessageSquare, GraduationCap, Linkedin, Briefcase, Info, ServiceIcon, UserPlus, Phone, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
@@ -114,6 +113,10 @@ const Index = () => {
     return { x, y };
   };
 
+  const scrollToSection = (sectionId: string) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50" dir="rtl">
       {/* Header */}
@@ -151,10 +154,65 @@ const Index = () => {
             </div>
           </div>
         </div>
+
+        {/* Navigation Bar */}
+        <div className="border-t bg-white/90 backdrop-blur-sm">
+          <div className="container mx-auto px-4 py-3">
+            <div className="flex flex-wrap justify-center items-center gap-3 md:gap-6">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => scrollToSection('about')}
+                className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200"
+              >
+                <Info className="ml-2 h-4 w-4" />
+                من نحن
+              </Button>
+              
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => scrollToSection('services')}
+                className="text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-all duration-200"
+              >
+                <Settings className="ml-2 h-4 w-4" />
+                خدماتنا
+              </Button>
+              
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => scrollToSection('join-us')}
+                className="text-gray-700 hover:text-green-600 hover:bg-green-50 transition-all duration-200"
+              >
+                <UserPlus className="ml-2 h-4 w-4" />
+                انضم إلينا
+              </Button>
+              
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => scrollToSection('contact')}
+                className="text-gray-700 hover:text-orange-600 hover:bg-orange-50 transition-all duration-200"
+              >
+                <Phone className="ml-2 h-4 w-4" />
+                تواصل معنا
+              </Button>
+              
+              <WhatsAppButton 
+                phoneNumber={companyInfo.whatsapp}
+                message="مرحباً، أريد طلب خدمة مخصصة من Zeen A Plus Solutions"
+                variant="cta"
+                text="طلبك المخصص"
+                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white border-0 px-6"
+              />
+            </div>
+          </div>
+        </div>
       </header>
 
       {/* Hero Section with Improved Circular Design */}
-      <section className="py-16 min-h-screen flex items-center justify-center overflow-hidden">
+      <section id="services" className="py-16 min-h-screen flex items-center justify-center overflow-hidden">
         <div className="container mx-auto px-4">
           {/* Circular Services Layout */}
           <div className="relative flex items-center justify-center" style={{ minHeight: '700px' }}>
@@ -263,7 +321,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-16 bg-white/50">
+      <section id="about" className="py-16 bg-white/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-800 mb-4">لماذا تختار {companyInfo.name}؟</h3>
@@ -293,8 +351,52 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Join Us Section */}
+      <section id="join-us" className="py-16 bg-gradient-to-br from-purple-50 to-blue-50">
+        <div className="container mx-auto px-4 text-center">
+          <h3 className="text-3xl font-bold text-gray-800 mb-4">انضم إلى فريق {companyInfo.name}</h3>
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            نبحث عن المواهب المتميزة للانضمام إلى فريقنا المتنوع في جميع التخصصات
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Users className="h-6 w-6 text-blue-600" />
+              </div>
+              <h4 className="text-xl font-bold text-gray-800 mb-2">بيئة عمل متميزة</h4>
+              <p className="text-gray-600">فريق متعاون وبيئة عمل محفزة للإبداع والنمو المهني</p>
+            </div>
+            
+            <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <GraduationCap className="h-6 w-6 text-green-600" />
+              </div>
+              <h4 className="text-xl font-bold text-gray-800 mb-2">فرص التطوير</h4>
+              <p className="text-gray-600">برامج تدريبية مستمرة وفرص نمو وظيفي واضحة</p>
+            </div>
+            
+            <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Briefcase className="h-6 w-6 text-purple-600" />
+              </div>
+              <h4 className="text-xl font-bold text-gray-800 mb-2">مزايا تنافسية</h4>
+              <p className="text-gray-600">حزمة مزايا شاملة ومرونة في العمل</p>
+            </div>
+          </div>
+          
+          <WhatsAppButton 
+            phoneNumber={companyInfo.whatsapp}
+            message="مرحباً، أريد الاستفسار عن فرص العمل المتاحة في Zeen A Plus Solutions"
+            variant="cta"
+            text="أرسل سيرتك الذاتية"
+            className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white border-0"
+          />
+        </div>
+      </section>
+
       {/* Contact Section */}
-      <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section id="contact" className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="container mx-auto px-4 text-center">
           <h3 className="text-3xl font-bold text-gray-800 mb-4">ابدأ مشروعك مع {companyInfo.name}</h3>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
