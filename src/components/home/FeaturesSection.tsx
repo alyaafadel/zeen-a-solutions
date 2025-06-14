@@ -24,9 +24,9 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section className="py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32 bg-pattern-subtle">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-pattern-subtle">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-16 sm:mb-20 md:mb-24 lg:mb-28">
+        <div className="text-center mb-12 sm:mb-16 md:mb-20 lg:mb-24">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-brand-blue-dark mb-6 sm:mb-8 md:mb-10 leading-tight">لماذا نحن الخيار الأمثل؟</h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed px-2 line-height-mobile">
             نتميز بعناصر أساسية تجعلنا الشريك المثالي لتحقيق أهدافكم بأعلى جودة وكفاءة

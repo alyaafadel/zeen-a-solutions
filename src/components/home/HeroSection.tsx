@@ -15,7 +15,7 @@ const HeroSection = ({ companyInfo }: HeroSectionProps) => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
+    <section className="relative py-8 sm:py-12 md:py-16 lg:py-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-brand-light-blue/30 via-brand-light-blue/10 to-brand-light-blue/20"></div>
       <div className="container mx-auto px-4 sm:px-6 md:px-8 text-center relative z-10">
         <div className="max-w-6xl mx-auto">
@@ -26,7 +26,7 @@ const HeroSection = ({ companyInfo }: HeroSectionProps) => {
           </h1>
           
           {/* Responsive Description with Better Line Height */}
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-slate-600 mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-16 leading-relaxed max-w-5xl mx-auto px-2 sm:px-4 line-height-mobile">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-slate-600 mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-14 leading-relaxed max-w-5xl mx-auto px-2 sm:px-4 line-height-mobile">
             في Zeen-A Solutions، نقدم حلولاً متكاملة ومخصصة للشركات والأفراد في مجالات حيوية تشمل الموارد البشرية، التطوير التقني، التسويق الرقمي، والتطوير المهني. نعمل كجزء لا يتجزأ من فريقكم، ملتزمين بتقديم خبرات متخصصة تضمن إنجاز مهامكم بأعلى معايير الجودة والاحترافية، وتحقيق أهدافكم الاستراتيجية بفعالية.
           </p>
           
