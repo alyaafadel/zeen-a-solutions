@@ -56,25 +56,28 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
   return (
     <>
       <header className="bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200 sticky top-0 z-50">
-        {/* Single Line Layout - Logo, Company Name, and Navigation */}
-        <div className="container mx-auto px-4 sm:px-6 py-2.5">
+        <div className="container mx-auto px-4 sm:px-6 py-4">
           <div className="flex justify-between items-center">
-            {/* Logo and Company Section - Enhanced Size */}
-            <div className="flex items-center space-x-3 space-x-reverse">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-blue rounded-xl flex items-center justify-center shadow-lg border border-white">
+            {/* Logo and Company Section - Balanced Design */}
+            <div className="flex items-center space-x-4 space-x-reverse">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-blue rounded-2xl flex items-center justify-center shadow-lg border border-white/20">
                 <img 
                   src="/lovable-uploads/8838bb20-a5cc-4ab1-9fce-30cdb0f93521.png" 
                   alt="Zeen A Plus Solutions Logo" 
-                  className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 object-contain filter brightness-200"
+                  className="w-8 h-8 sm:w-9 sm:h-9 object-contain filter brightness-200"
                 />
               </div>
-              <div>
-                <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-brand-blue-dark leading-tight">{companyInfo.name}</h1>
-                <p className="text-xs sm:text-sm md:text-base text-slate-600 font-medium hidden sm:block leading-tight">{companyInfo.slogan}</p>
+              <div className="flex flex-col justify-center">
+                <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-brand-blue-dark leading-none mb-1">
+                  {companyInfo.name}
+                </h1>
+                <p className="text-sm sm:text-base text-slate-600 font-medium leading-tight max-w-xs">
+                  {companyInfo.slogan}
+                </p>
               </div>
             </div>
 
-            {/* Desktop Navigation - All in One Line */}
+            {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-1 xl:space-x-2 space-x-reverse">
               <Button
                 variant="ghost"
@@ -184,7 +187,7 @@ const Header = ({ services, companyInfo }: HeaderProps) => {
                 variant="ghost"
                 size="sm"
                 onClick={toggleMobileMenu}
-                className="p-1.5 text-brand-blue hover:text-brand-blue-dark hover:bg-brand-light-blue transition-all duration-300 rounded-lg"
+                className="p-2 text-brand-blue hover:text-brand-blue-dark hover:bg-brand-light-blue transition-all duration-300 rounded-lg"
                 aria-label="فتح القائمة"
               >
                 {isMobileMenuOpen ? (
