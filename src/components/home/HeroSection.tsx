@@ -20,18 +20,18 @@ const HeroSection = ({ companyInfo }: HeroSectionProps) => {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-slate-700 leading-tight">
-            شركاؤكم المتخصصون في إنجاز المشاريع
+            شركاؤكم في إنجاز المهام والخدمات المتخصصة
           </h1>
           <p className="text-xl md:text-2xl text-slate-600 mb-8 leading-relaxed">
-            نعمل معكم كأعضاء فريق متخصصين لإنجاز مشاريعكم في الموارد البشرية، التطوير التقني، والتسويق الرقمي - 
-            دون الحاجة لتوظيف فرق دائمة. نحن مسؤولون عن كل خدمة نقدمها بجودة عالية واحترافية تامة
+            نقدم خدمات متخصصة للشركات والأفراد - من الموارد البشرية إلى التطوير التقني والتسويق الرقمي والتطوير المهني. 
+            نعمل معكم كأعضاء فريق متخصصين لإنجاز مهامكم بجودة عالية واحترافية تامة
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <WhatsAppButton 
               phoneNumber={companyInfo.whatsapp}
-              message="مرحباً، أريد بدء مشروع جديد مع Zeen A Plus Solutions"
+              message="مرحباً، أريد الاستفسار عن خدماتكم المتخصصة"
               variant="cta"
-              text="ابدأ مشروعك معنا"
+              text="احصل على خدمتك الآن"
               className="bg-gradient-to-r from-slate-500 to-slate-600 hover:from-slate-600 hover:to-slate-700 text-white border-0 px-8 py-3 text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             />
             <Button

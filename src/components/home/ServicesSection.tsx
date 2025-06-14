@@ -23,7 +23,7 @@ const ServicesSection = ({ services }: ServicesSectionProps) => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-700 mb-4">خدماتنا المتخصصة</h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            نقدم خدمات احترافية متخصصة كشركاء مؤقتين لشركتكم - بدون تكاليف التوظيف الدائم
+            نقدم خدمات احترافية متنوعة للشركات والأفراد - كشركاء متخصصين لإنجاز مهامكم دون الحاجة لتوظيف فرق دائمة
           </p>
         </div>
 

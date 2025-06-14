@@ -11,7 +11,7 @@ const JoinUsSection = () => {
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl font-bold text-slate-700 mb-4">انضم إلى شبكة المتخصصين لدينا</h2>
         <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-          هل تمتلك خبرة متخصصة؟ انضم إلى شبكة الخبراء المستقلين لدينا وكن جزءاً من مشاريع مميزة
+          هل تمتلك خبرة متخصصة؟ انضم إلى شبكة الخبراء المستقلين لدينا وساعد الشركات والأفراد في إنجاز مهامهم
         </p>
         <Button
           size="lg"

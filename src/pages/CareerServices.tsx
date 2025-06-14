@@ -1,5 +1,5 @@
 
-import { Briefcase, ArrowRight, CheckCircle, Home, User, FileText, Target, TrendingUp } from "lucide-react";
+import { Briefcase, ArrowRight, CheckCircle, Home, User, FileText, Target, TrendingUp, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
@@ -20,6 +20,12 @@ const CareerServices = () => {
       description: "إعداد سيرة ذاتية احترافية تبرز مهاراتك وخبراتك",
       duration: "3-5 أيام",
       features: ["تصميم احترافي", "محتوى متميز", "تحسين ATS", "خطاب تغطية"]
+    },
+    {
+      title: "بناء بروفايل LinkedIn احترافي",
+      description: "إنشاء وتطوير بروفايل LinkedIn متميز يجذب الفرص المهنية",
+      duration: "5-7 أيام",
+      features: ["كتابة ملخص مهني", "تحسين الكلمات المفتاحية", "تصميم المحتوى", "استراتيجية الشبكة"]
     },
     {
       title: "التدريب على المقابلات",
@@ -75,11 +81,11 @@ const CareerServices = () => {
               </Button>
               <span className="text-gray-400">/</span>
               <Briefcase className="h-5 w-5 text-sky-500" />
-              <span className="font-semibold text-gray-800">خدمات التوظيف</span>
+              <span className="font-semibold text-gray-800">التطوير المهني</span>
             </div>
             <WhatsAppButton 
-              phoneNumber="+966123456789"
-              message="مرحباً، أريد الاستفسار عن خدمات التوظيف والمسار المهني"
+              phoneNumber="+966570513821"
+              message="مرحباً، أريد الاستفسار عن خدمات التطوير المهني"
               variant="header"
             />
           </div>
@@ -93,9 +99,9 @@ const CareerServices = () => {
             <div className="w-24 h-24 bg-gradient-to-r from-sky-400 to-sky-500 rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-lg">
               <Briefcase className="h-12 w-12 text-white" />
             </div>
-            <h1 className="text-5xl font-bold text-sky-700 mb-6">خدمات التوظيف والمسار المهني</h1>
+            <h1 className="text-5xl font-bold text-sky-700 mb-6">خدمات التطوير المهني</h1>
             <p className="text-xl text-sky-600 mb-12 leading-relaxed">
-              نساعدك في بناء مسار مهني ناجح من خلال استشارات متخصصة وخدمات شاملة للبحث عن الوظائف وتطوير المهارات المهنية
+              نساعدك في بناء مسار مهني ناجح من خلال استشارات متخصصة وخدمات شاملة تشمل بناء بروفايل LinkedIn الاحترافي والبحث عن الوظائف
             </p>
           </div>
         </div>
@@ -147,7 +153,7 @@ const CareerServices = () => {
                     ))}
                   </div>
                   <WhatsAppButton 
-                    phoneNumber="+966123456789"
+                    phoneNumber="+966570513821"
                     message={`مرحباً، أريد الاستفسار عن ${service.title}`}
                     variant="service"
                     text="اطلب الخدمة الآن"
@@ -165,7 +171,7 @@ const CareerServices = () => {
           <div className="text-center mb-12">
             <FileText className="h-16 w-16 text-sky-500 mx-auto mb-4" />
             <h3 className="text-3xl font-bold text-sky-700 mb-4">من نخدم</h3>
-            <p className="text-xl text-sky-600">خدماتنا مصممة لتناسب جميع فئات الباحثين عن العمل</p>
+            <p className="text-xl text-sky-600">خدماتنا مصممة لتناسب جميع فئات الباحثين عن التطوير المهني</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
@@ -181,12 +187,12 @@ const CareerServices = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-sky-500 to-sky-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h3 className="text-4xl font-bold mb-4">ابدأ مسارك المهني الناجح</h3>
+          <h3 className="text-4xl font-bold mb-4">ابدأ تطوير مسارك المهني</h3>
           <p className="text-xl mb-8 opacity-90">احصل على استشارة مهنية مجانية وخطة عمل واضحة</p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <WhatsAppButton 
-              phoneNumber="+966123456789"
+              phoneNumber="+966570513821"
               message="مرحباً، أريد استشارة مهنية مجانية"
               variant="cta"
               text="احصل على استشارة مجانية"
