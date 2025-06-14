@@ -1,5 +1,4 @@
-
-import { Users, Languages, Megaphone, Code, ArrowRight, CheckCircle, MessageSquare } from "lucide-react";
+import { Users, Languages, Megaphone, Code, Truck, ArrowRight, CheckCircle, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
@@ -48,6 +47,16 @@ const Index = () => {
       iconColor: "text-orange-600",
       route: "/programming-services",
       features: ["المواقع الإلكترونية", "تطبيقات الجوال", "الأنظمة الإدارية", "الصيانة والدعم"]
+    },
+    {
+      title: "الخدمات اللوجستية",
+      description: "حلول لوجستية متكاملة وخدمات 3PL احترافية",
+      icon: Truck,
+      color: "from-teal-500 to-teal-600",
+      bgColor: "bg-teal-50",
+      iconColor: "text-teal-600",
+      route: "/logistics-services",
+      features: ["التخزين والمستودعات", "النقل والتوصيل", "إدارة سلسلة التوريد", "خدمات 3PL"]
     }
   ];
 
@@ -57,7 +66,7 @@ const Index = () => {
     phone: "+966123456789",
     email: "info@zeenaplusolutions.com",
     whatsapp: "+966123456789",
-    description: "شركة متخصصة في تقديم حلول متكاملة للأعمال تشمل الموارد البشرية، الترجمة، التسويق الرقمي، والتطوير التقني."
+    description: "شركة متخصصة في تقديم حلول متكاملة للأعمال تشمل الموارد البشرية، الترجمة، التسويق الرقمي، التطوير التقني، والخدمات اللوجستية."
   };
 
   return (
@@ -98,8 +107,8 @@ const Index = () => {
             {companyInfo.description}
           </p>
 
-          {/* Services Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {/* Services Grid - Updated to accommodate 5 services */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {services.map((service, index) => (
               <Card 
                 key={index} 
@@ -156,15 +165,15 @@ const Index = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center p-6 bg-white rounded-2xl shadow-lg">
-              <div className="text-4xl font-bold text-blue-600 mb-2">100+</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">150+</div>
               <div className="text-gray-600">مشروع مكتمل</div>
             </div>
             <div className="text-center p-6 bg-white rounded-2xl shadow-lg">
-              <div className="text-4xl font-bold text-purple-600 mb-2">50+</div>
+              <div className="text-4xl font-bold text-purple-600 mb-2">80+</div>
               <div className="text-gray-600">عميل راضٍ</div>
             </div>
             <div className="text-center p-6 bg-white rounded-2xl shadow-lg">
-              <div className="text-4xl font-bold text-green-600 mb-2">5+</div>
+              <div className="text-4xl font-bold text-green-600 mb-2">7+</div>
               <div className="text-gray-600">سنوات خبرة</div>
             </div>
             <div className="text-center p-6 bg-white rounded-2xl shadow-lg">
