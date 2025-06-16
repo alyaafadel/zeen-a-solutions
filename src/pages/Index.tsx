@@ -77,7 +77,7 @@ const Index = () => {
     name: "Zeen A Plus Solutions",
     slogan: "شريكك المتخصص في إنجاز المهام والخدمات",
     phone: "+966570513821",
-    email: "info@zeenaplusolutions.com",
+    email: "join@zeenaplusolutions.com",
     whatsapp: "+966570513821",
     linkedin: "https://www.linkedin.com/company/zeen-a-solutions-establishment/",
     location: "الرياض، المملكة العربية السعودية",
