@@ -12,6 +12,12 @@ interface Service {
   features?: string[];
 }
 
+interface CountryOption {
+  country: string;
+  flag: string;
+  phoneNumber: string;
+}
+
 interface CompanyInfo {
   name: string;
   slogan: string;
@@ -20,6 +26,7 @@ interface CompanyInfo {
   whatsapp: string;
   linkedin: string;
   location: string;
+  countries?: CountryOption[];
 }
 
 interface FooterProps {
@@ -209,11 +216,11 @@ const Footer = ({ services, companyInfo }: FooterProps) => {
               </Dialog>
 
               <WhatsAppButton 
-                phoneNumber={companyInfo.whatsapp}
                 message="مرحباً، أريد الاستفسار عن خدماتكم"
                 variant="footer"
                 text="تواصل عبر واتس آب"
                 className="w-full"
+                countries={companyInfo.countries}
               />
 
               <Button

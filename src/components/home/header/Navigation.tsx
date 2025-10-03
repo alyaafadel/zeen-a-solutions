@@ -12,11 +12,18 @@ interface Service {
   route: string;
 }
 
+interface CountryOption {
+  country: string;
+  flag: string;
+  phoneNumber: string;
+}
+
 interface CompanyInfo {
   phone: string;
   email: string;
   whatsapp: string;
   linkedin: string;
+  countries?: CountryOption[];
 }
 
 interface NavigationProps {
@@ -192,10 +199,10 @@ const Navigation = ({ services, companyInfo }: NavigationProps) => {
       </a>
       
       <WhatsAppButton 
-        phoneNumber={companyInfo.whatsapp}
         message="مرحباً، أريد بدء مشروع جديد مع Zeen A Plus Solutions"
         variant="header"
         className="text-sm px-4 py-3"
+        countries={companyInfo.countries}
       />
     </div>
   );
